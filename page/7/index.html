@@ -127,6 +127,26 @@ var _hmt = _hmt || [];
 
 			
 							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										A-test
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/21/06/test/">
+										test
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
 								<li class="file">
 									<a href="/2021/06/21/06/Elastic%20Search%20%E6%B7%BB%E5%8A%A0%20split%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E8%AF%8D%E6%96%B9%E6%B3%95/">
 										Elastic Search 添加 split 自定义分词方法
@@ -945,63 +965,6 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/21/06/orcle%20full%20join%20%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94%20%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/">
-				<h2 class="index-title">
-					orcle full join 多张表横向关联 拼接多张表所需字段
-				</h2>
-				<div class="index-brief">
-					我们在sql中使用最多的关联查询无非是left join.right join,union,union all。这几种关联的区别和用法别的教程都太多了 这里不赘述.这里讲一下full join的用法1.需求    需要做一张统计表 要能实现多级表头但是这个数据又不是一张表中存在的，分为了乔木，灌木，
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/06/radio%E5%8F%96%E6%B6%88%E9%80%89%E4%B8%AD%E5%B9%B6%E8%83%BD%E5%86%8D%E6%AC%A1%E9%80%89%E4%B8%AD/">
-				<h2 class="index-title">
-					radio取消选中并能再次选中
-				</h2>
-				<div class="index-brief">
-					网上很多都是只能取消选中，之后就无法选中了。按照这个方法可以再次选中
-12345678910111213141516$(document).ready(function()&#123;        var old = null; //用来保存原来的对象        $(&quot;.radioC
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/06/spring%20boot%20AOP%20@Before%20@After%20%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%88%87%E9%9D%A2/">
-				<h2 class="index-title">
-					spring boot AOP @Before @After 最简单的切面
-				</h2>
-				<div class="index-brief">
-					写一个最简单明细的切面，希望可以复制了直接用。我会尽量把注释写详细
-1.引入jar因为我是用的springboot，所以只需要引入一个包，如果你习惯的是引入两个包 也可以引入下面的两个包SpingBoot:
-12345&lt;!--aop切面--&gt;&lt;dependency&gt;    &
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/06/21/06/spring%20cloud%20gateway%20%E8%8E%B7%E5%8F%96%E5%85%A5%E5%8F%82/">
 				<h2 class="index-title">
 					spring cloud gateway 获取入参
@@ -1151,10 +1114,70 @@ A模块中我定义了一个@Component
                 </div>
 		</div>	
 	
+		<div class="index-li">
+			<a href="/2021/06/21/06/tomcat%E4%BD%BF%E7%94%A8log4j2%E6%89%93%E6%97%A5%E5%BF%97/">
+				<h2 class="index-title">
+					tomcat使用log4j2打日志
+				</h2>
+				<div class="index-brief">
+					开始前准备 
+
+tomcat版本8.0.51(下载地址：http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.51/bin/apache-tomcat-8.0.51.tar.gz) 2018-05-09可以访问 
+tomcat日志扩展接口包tomca
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/06/vue%20router-link%20%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/">
+				<h2 class="index-title">
+					vue router-link 声明式返回上一页
+				</h2>
+				<div class="index-brief">
+					因为只有一个点击的操作，没有任何其他的逻辑操作，我就不想写一个方法来承载它，就一直在找声明式的写法
+官网文档链接：https://router.vuejs.org/zh/guide/essentials/navigation.html
+在文档中介绍了一种router.go(n)来返回上一页，但是没有
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/06/vue+elementui%20%E6%89%93%E5%BC%80%E5%BC%B9%E7%AA%97%20%E4%BD%86%E6%98%AF%E5%BC%B9%E7%AA%97%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%AA%E4%BC%9A%E5%88%9D%E5%A7%8B%E8%B0%83%E7%94%A8%E4%B8%80%E6%AC%A1/">
+				<h2 class="index-title">
+					vue+elementui 打开弹窗 但是弹窗的接口只会初始调用一次
+				</h2>
+				<div class="index-brief">
+					 使用element的dialog弹窗的时候 
+1234567&lt;el-dialog     :title=&quot;title&quot;     :visible.sync=&quot;dialogVisible&quot;     width=&quot;68vw&quot;   &gt
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/page/6/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/page/6/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/8/">&gt;</a>
 		
 	</div>
 </div>

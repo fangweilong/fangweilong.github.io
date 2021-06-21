@@ -127,6 +127,26 @@ var _hmt = _hmt || [];
 
 			
 							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										A-test
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/21/06/test/">
+										test
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
 								<li class="file">
 									<a href="/2021/06/21/06/Elastic%20Search%20%E6%B7%BB%E5%8A%A0%20split%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E8%AF%8D%E6%96%B9%E6%B3%95/">
 										Elastic Search 添加 split 自定义分词方法
@@ -945,69 +965,6 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/21/06/git%20.gitignore%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
-				<h2 class="index-title">
-					git .gitignore通用配置文件
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/06/idea%E5%85%B3%E9%97%AD%E4%B8%8D%E5%BF%85%E8%A6%81%E7%9A%84%E6%8F%92%E4%BB%B6%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8/">
-				<h2 class="index-title">
-					idea关闭不必要的插件减少内存占用
-				</h2>
-				<div class="index-brief">
-					2020 06009 更新idea版本：2020.1.2项目：spring+springboot+springcloud+mybatis+mybatis-plus+maven 如果跟我差不多的可以参照我的修改自己安装的
-自带的
-
-
-
-2019-07-24更新1.安装的插件2.自带的插件里面有个ide
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/06/idea%E8%AE%BE%E7%BD%AE%E5%88%9B%E5%BB%BA.java%E6%96%87%E4%BB%B6%E7%9A%84%E6%A8%A1%E6%9D%BF/">
-				<h2 class="index-title">
-					idea设置创建.java文件的模板
-				</h2>
-				<div class="index-brief">
-					打开路径
-1File-Settings-Editor-Code style-File and Code Templates-Includea-File Header
-如图所示
-我的模板是这个
-12345/**  *@Description        *@author          $&#12
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/06/21/06/idea%E9%83%A8%E5%88%86%E6%88%96%E6%95%B4%E4%BD%93java%E6%96%87%E4%BB%B6%E4%B8%8D%E7%BC%96%E8%AF%91%E4%B8%BAclass%E6%96%87%E4%BB%B6%20%E6%88%96%E7%BC%96%E8%AF%91%E5%90%8E%E4%B8%8D%E6%98%AF%E6%9C%80%E6%96%B0%E7%9A%84/">
 				<h2 class="index-title">
 					idea部分或整体java文件不编译为class文件 或编译后不是最新的
@@ -1155,10 +1112,89 @@ spark官方文档点击跳转官方文档
                 </div>
 		</div>	
 	
+		<div class="index-li">
+			<a href="/2021/06/21/06/java%20spark%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/">
+				<h2 class="index-title">
+					java spark的使用和配置
+				</h2>
+				<div class="index-brief">
+					前言spark在java使用比较少，多是scala的用法，我这里介绍一下我在项目中使用的代码配置详细算法的使用请点击我主页列表查看
+版本
+
+
+jar
+版本
+说明
+
+
+
+spark
+3.0.1
+
+
+
+scala
+2.12
+这个版本注意和spark版本对应，只是为了引jar包
+
+
+springboot版
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/06/java%20stream%20%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
+				<h2 class="index-title">
+					java stream 各种操作说明
+				</h2>
+				<div class="index-brief">
+					列一下stream常用的Function，防止遗忘map修改的元素需要return后
+peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
+foreach不修改元素，没有return
+filter过滤器，满足条件的才能被通过。留下的元素都是满足
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/06/java.lang.NoSuchMethodError/">
+				<h2 class="index-title">
+					java.lang.NoSuchMethodError
+				</h2>
+				<div class="index-brief">
+					出现这个问题检查
+1.jar包版本    有些jar包对版本有要求，不同版本之间是不互通的，有些还对jdk有强制要求，比如Google的番石榴就要求JDK1.8版本
+2.是否将所有修改的class文件布置到服务器    这个问题是最容易出现的，可能有一天更改的文件较多，布置的时候又是点对点布置，就会
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/page/2/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/page/2/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/4/">&gt;</a>
 		
 	</div>
 </div>

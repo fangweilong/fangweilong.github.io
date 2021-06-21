@@ -127,6 +127,26 @@ var _hmt = _hmt || [];
 
 			
 							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										A-test
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/21/06/test/">
+										test
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
 								<li class="file">
 									<a href="/2021/06/21/06/Elastic%20Search%20%E6%B7%BB%E5%8A%A0%20split%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E8%AF%8D%E6%96%B9%E6%B3%95/">
 										Elastic Search 添加 split 自定义分词方法
@@ -945,68 +965,6 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/21/06/mybtis%E4%BC%A0%E5%85%A5%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0/">
-				<h2 class="index-title">
-					mybtis传入多个参数
-				</h2>
-				<div class="index-brief">
-					我们在调用myabtis的时候往往是传入一个entity或者map。但是在一些特殊情况下例如url传参，这时候再put进map总感觉多此一举。
-controller:
-1234567//@PathVariable注解作用是转义赋值到你指定的参数中@GetMapping(&quot;/user/&#1
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/06/mysql%20%20%20%20%20%20com.mysql.jdbc.exceptions.jdbc4.CommunicationsException/">
-				<h2 class="index-title">
-					mysql      com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
-				</h2>
-				<div class="index-brief">
-					1、现象：   连接mysql时报错
- com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
- 
- 
-
-这个在长时间连接但是又不操作的情况下会报这个错误，虽然可以改mysql的配置文件来达到目的，但是我们是开发不是DBA，所以尽量还是通过程序
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/06/nginx%20%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%EF%BC%9A%E5%A4%9A%E4%B8%AAlocation%E8%BD%AC%E5%8F%91%E4%BB%BB%E6%84%8F%E8%AF%B7%E6%B1%82%E6%88%96%E8%AE%BF%E9%97%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6/">
-				<h2 class="index-title">
-					nginx 基础配置：多个location转发任意请求或访问静态资源文件
-				</h2>
-				<div class="index-brief">
-					2018-08-10更新
-12345678910111213141516171819server &#123;		#监听的端口        listen       80;		#监听的域名        server_name  localhost;		#监听带后缀的url		location ^
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/06/21/06/nginx%20%E8%BD%AC%E5%8F%91%E8%A7%84%E5%88%99%E6%A1%88%E4%BE%8B%E8%AF%A6%E8%A7%A3/">
 				<h2 class="index-title">
 					nginx 转发规则案例详解
@@ -1145,10 +1103,67 @@ XML
                 </div>
 		</div>	
 	
+		<div class="index-li">
+			<a href="/2021/06/21/06/radio%E5%8F%96%E6%B6%88%E9%80%89%E4%B8%AD%E5%B9%B6%E8%83%BD%E5%86%8D%E6%AC%A1%E9%80%89%E4%B8%AD/">
+				<h2 class="index-title">
+					radio取消选中并能再次选中
+				</h2>
+				<div class="index-brief">
+					网上很多都是只能取消选中，之后就无法选中了。按照这个方法可以再次选中
+12345678910111213141516$(document).ready(function()&#123;        var old = null; //用来保存原来的对象        $(&quot;.radioC
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/06/orcle%20full%20join%20%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94%20%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/">
+				<h2 class="index-title">
+					orcle full join 多张表横向关联 拼接多张表所需字段
+				</h2>
+				<div class="index-brief">
+					我们在sql中使用最多的关联查询无非是left join.right join,union,union all。这几种关联的区别和用法别的教程都太多了 这里不赘述.这里讲一下full join的用法1.需求    需要做一张统计表 要能实现多级表头但是这个数据又不是一张表中存在的，分为了乔木，灌木，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/06/spring%20boot%20AOP%20@Before%20@After%20%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%88%87%E9%9D%A2/">
+				<h2 class="index-title">
+					spring boot AOP @Before @After 最简单的切面
+				</h2>
+				<div class="index-brief">
+					写一个最简单明细的切面，希望可以复制了直接用。我会尽量把注释写详细
+1.引入jar因为我是用的springboot，所以只需要引入一个包，如果你习惯的是引入两个包 也可以引入下面的两个包SpingBoot:
+12345&lt;!--aop切面--&gt;&lt;dependency&gt;    &
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/page/5/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/archives/page/7/">7</a><a class="page-number" href="/archives/page/8/">8</a><a class="page-number" href="/archives/page/9/">9</a><a class="extend next" rel="next" href="/archives/page/7/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/5/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/archives/page/7/">7</a><a class="page-number" href="/archives/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/10/">10</a><a class="extend next" rel="next" href="/archives/page/7/">&gt;</a>
 		
 	</div>
 </div>

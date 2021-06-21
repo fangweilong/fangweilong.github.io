@@ -127,6 +127,26 @@ var _hmt = _hmt || [];
 
 			
 							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										A-test
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/21/06/test/">
+										test
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
 								<li class="file">
 									<a href="/2021/06/21/06/Elastic%20Search%20%E6%B7%BB%E5%8A%A0%20split%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E8%AF%8D%E6%96%B9%E6%B3%95/">
 										Elastic Search 添加 split 自定义分词方法
@@ -945,85 +965,6 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/21/06/java%20spark%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/">
-				<h2 class="index-title">
-					java spark的使用和配置
-				</h2>
-				<div class="index-brief">
-					前言spark在java使用比较少，多是scala的用法，我这里介绍一下我在项目中使用的代码配置详细算法的使用请点击我主页列表查看
-版本
-
-
-jar
-版本
-说明
-
-
-
-spark
-3.0.1
-
-
-
-scala
-2.12
-这个版本注意和spark版本对应，只是为了引jar包
-
-
-springboot版
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/06/java%20stream%20%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
-				<h2 class="index-title">
-					java stream 各种操作说明
-				</h2>
-				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/06/java.lang.NoSuchMethodError/">
-				<h2 class="index-title">
-					java.lang.NoSuchMethodError
-				</h2>
-				<div class="index-brief">
-					出现这个问题检查
-1.jar包版本    有些jar包对版本有要求，不同版本之间是不互通的，有些还对jdk有强制要求，比如Google的番石榴就要求JDK1.8版本
-2.是否将所有修改的class文件布置到服务器    这个问题是最容易出现的，可能有一天更改的文件较多，布置的时候又是点对点布置，就会
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/06/21/06/javax.el.PropertyNotFoundException/">
 				<h2 class="index-title">
 					javax.el.PropertyNotFoundException
@@ -1159,10 +1100,68 @@ public c
                 </div>
 		</div>	
 	
+		<div class="index-li">
+			<a href="/2021/06/21/06/kibana%20%E6%9F%A5%E8%AF%A2ES%20%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/">
+				<h2 class="index-title">
+					kibana 查询ES 的一些语法
+				</h2>
+				<div class="index-brief">
+					前言不断增补ing版本    7.8.0替换的关键字使用中文说明，根据需求自行替换
+正文基础知识命令-7.x中的type已经过时，默认设置为_doc| 命令     | url | 解释 ||–|–|–|| put | /索引名称/类型名称/文档ID | 创建文档（指定文档ID） || POST |
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/06/layui%20lay-verify%20form%E8%A1%A8%E5%8D%95%E8%87%AA%E5%AE%9A%E4%B9%89%E9%AA%8C%E8%AF%81%E8%A7%84%E5%88%99/">
+				<h2 class="index-title">
+					layui lay-verify form表单自定义验证规则
+				</h2>
+				<div class="index-brief">
+					官方文档详见：https://www.layui.com/doc/modules/form.html#verify虽然layui的官方文档已经是写的比较详细，但是初次使用的时候总会懵一下，这里纪录一下lay-verify自定义验证规则的时候到底放哪。
+123456789101112html：&lt;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/06/layui%E7%9A%84laydate%E6%8E%A7%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/">
+				<h2 class="index-title">
+					layui的laydate控件的使用
+				</h2>
+				<div class="index-brief">
+					目前使用的layui版，没有单独使用laydate。官网上的例子是每个属性单独设置的，我稍微整合了一下常用属性。
+引入了css和js以后
+1234567891011121314151617181920//初始化时间layui.use(&#x27;laydate&#x27;, function() &
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/page/3/">&lt;</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/9/">9</a><a class="extend next" rel="next" href="/archives/page/5/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/3/">&lt;</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/10/">10</a><a class="extend next" rel="next" href="/archives/page/5/">&gt;</a>
 		
 	</div>
 </div>
