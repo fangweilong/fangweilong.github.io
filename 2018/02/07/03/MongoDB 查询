@@ -9,14 +9,16 @@
 	
 	<title>
 	
-		利用layer实现放大图片的效果 | 
+		MongoDB 查询 | 
 	 
-	Teler的日常
+	房伟龙的日常
 	</title>
 	
 	<!-- keywords,description -->
+	
+		<meta name="keywords" content="fangweilong,fangweilong@outlook.com,hexo" />
 	 
-		<meta name="description" content="日常小站" />
+		<meta name="description" content="fangweilong;日常小站;" />
 	
 
 	<!-- favicon -->
@@ -31,7 +33,7 @@
 		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
 			searchEngine = "https://www.google.com/search?q=";
 		}
-		var homeHost = "wujun234.github.io";
+		var homeHost = "fangweilong.github.io";
 		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
 			homeHost = window.location.host;
 		}
@@ -91,14 +93,22 @@ var _hmt = _hmt || [];
 </script>
 
 <header id="header">
-    <a id="title" href="/" class="logo">Teler的日常</a>
+    <a id="title" href="/" class="logo">房伟龙的日常</a>
 
 	<ul id="menu">
 		<li class="menu-item">
 			<a href="/about" class="menu-item-link">关于我</a>
 		</li>
 	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
 
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
 	
 		<li class="menu-item">
 			<a href="https://github.com/fangweilong" class="menu-item-link" target="_blank">
@@ -155,8 +165,8 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/06/21/05/MongoDB%20%E6%9F%A5%E8%AF%A2">
+								<li class="file active">
+									<a href="/2018/02/07/03/MongoDB%20%E6%9F%A5%E8%AF%A2">
 										MongoDB 查询
 									</a>
 								</li>
@@ -300,7 +310,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/06/21/05/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2">
+									<a href="/2018/02/24/09/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2">
 										idea更改缩进线颜色
 									</a>
 								</li>
@@ -866,8 +876,8 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
-									<a href="/2021/06/21/05/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C">
+								<li class="file">
+									<a href="/2018/02/07/05/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C">
 										利用layer实现放大图片的效果
 									</a>
 								</li>
@@ -903,7 +913,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/06/21/05/%E6%89%8B%E6%9C%BA%E7%A4%BE%E4%BC%9A%E5%8C%96%E5%88%86%E4%BA%AB%E5%88%B0qq%E5%A5%BD%E5%8F%8B%E3%80%81qq%E7%A9%BA%E9%97%B4%E3%80%81%E5%BE%AE%E4%BF%A1%E3%80%81%E5%BE%AE%E4%BF%A1%E6%9C%8B%E5%8F%8B%E5%9C%88%E3%80%81%E5%BE%AE%E5%8D%9A%E7%AD%89(%E5%8C%BA%E5%88%86%E6%B5%8F%E8%A7%88%E5%99%A8)">
+									<a href="/2018/02/07/06/%E6%89%8B%E6%9C%BA%E7%A4%BE%E4%BC%9A%E5%8C%96%E5%88%86%E4%BA%AB%E5%88%B0qq%E5%A5%BD%E5%8F%8B%E3%80%81qq%E7%A9%BA%E9%97%B4%E3%80%81%E5%BE%AE%E4%BF%A1%E3%80%81%E5%BE%AE%E4%BF%A1%E6%9C%8B%E5%8F%8B%E5%9C%88%E3%80%81%E5%BE%AE%E5%8D%9A%E7%AD%89(%E5%8C%BA%E5%88%86%E6%B5%8F%E8%A7%88%E5%99%A8)">
 										手机社会化分享到qq好友、qq空间、微信、微信朋友圈、微博等(区分浏览器)
 									</a>
 								</li>
@@ -936,20 +946,56 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	利用layer实现放大图片的效果
+	MongoDB 查询
 </h1>
 <div class="article-meta">
 	
 	<span>fangweilong</span>
-	<span>2021-06-21 13:04:04</span>
+	<span>2018-02-07 11:03:48</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/java/">java</a>
+                        </i>
+                      
+                        >
+                      
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/java/mongo/">mongo</a>
+                        </i>
+                      
+                    </span>
+                
             
     
 
     
 		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/mongo/">mongo</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/java/">java</a>
+                        </i>
+                    </span>
+                
             
     
 		</div>
@@ -957,15 +1003,23 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<p>引用layer.js</p>
-<p>//小图</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;javascript:amplificationImg(&#x27;图片名&#x27;,&#x27;图片地址&#x27;)&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+	<p>//配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class Mongodb &#123;</span><br><span class="line">   private static String host = &quot;&quot;;//域名</span><br><span class="line">   private static int port = ;//端口</span><br><span class="line">   private static String user = &quot;sc&quot;;</span><br><span class="line">   private static String pwd = &quot;sc_1!$&quot;;</span><br><span class="line"></span><br><span class="line">   public final MongoClient getDB(String dbName) &#123;</span><br><span class="line">      // 连接到MongoDB服务 如果是远程连接可以替换“localhost”为服务器所在IP地址</span><br><span class="line">      // ServerAddress()两个参数分别为 服务器地址 和 端口</span><br><span class="line">      ServerAddress serverAddress = new ServerAddress(host, port);</span><br><span class="line">      List&lt;ServerAddress&gt; addrs = new ArrayList&lt;ServerAddress&gt;();</span><br><span class="line">      addrs.add(serverAddress);</span><br><span class="line"></span><br><span class="line">      // MongoCredential.createScramSha1Credential()三个参数分别为 用户名 数据库名称 密码</span><br><span class="line">      MongoCredential credential = MongoCredential.createScramSha1Credential(user, dbName, pwd.toCharArray());</span><br><span class="line">      List&lt;MongoCredential&gt; credentials = new ArrayList&lt;MongoCredential&gt;();</span><br><span class="line">      credentials.add(credential);</span><br><span class="line"></span><br><span class="line">      // 通过连接认证获取MongoDB连接</span><br><span class="line">      return new MongoClient(addrs, credentials);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>//隐藏域 也就是放大以后的图片位置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img alt=&quot;&quot; style=&quot;display:none&quot; id=&quot;displayImg&quot; src=&quot;&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>//指定库配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">private final static MongoClient client = new Mongodb().getDB(&quot;&quot;);//库名</span><br><span class="line">MongoDatabase mongoDatabase = client.getDatabase(&quot;&quot;);//数据库</span><br><span class="line">MongoCollection&lt;Document&gt; collection = mongoDatabase.getCollection(“”);//表名</span><br><span class="line"></span><br><span class="line">//查询语句</span><br><span class="line">BasicDBList bsList = new BasicDBList();</span><br><span class="line">bsList.add(&quot;&quot;);//添加值</span><br><span class="line">//使用这种方法更简单方便，写起来也命了。另一种方法相当于手拼json，未作记录</span><br><span class="line">Bson _filters = Filters.and(</span><br><span class="line">        Filters.eq(&quot;&quot;, cityName),//属性名  值</span><br><span class="line">        Filters.in(&quot;&quot;,)//要使用 in 函数   值必须为BasicDBList类型</span><br><span class="line">        Filters.gte(&quot;&quot;, ) //大于等于: </span><br><span class="line"> Filters.gt(&quot;&quot;, ) //大于</span><br><span class="line">        Filters.lte(&quot;&quot;,),//小于等于</span><br><span class="line">        Filters.lt(&quot;&quot;,),//小于</span><br><span class="line">  Filters.ne(&quot;&quot;, ),//不等于</span><br><span class="line">        Filters.or(</span><br><span class="line">                Filters.regex(&quot;name&quot;,str),// 属性名 值</span><br><span class="line">                Filters.regex(&quot;category&quot;,str), //属性名 值</span><br><span class="line">                Filters.regex(&quot;detail.address&quot;,str)  //如果不是最外层的属性，则需要从外层属性一层层点进去</span><br><span class="line">        ),</span><br><span class="line"> Filters.near(&quot;point&quot;, new Point(new Position(lng, lat)), 1000000000d, 0d)) //经纬度 必须要创立索引  第一个值为经纬度的属性，第二个是经纬度的值（double），第三个是最大距离，第四个是最小距离  默认包含排序</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<p>//js方法体</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function amplificationImg(name, url) &#123;</span><br><span class="line">   $(&quot;#displayImg&quot;).attr(&quot;src&quot;, url);</span><br><span class="line">   var height = $(&quot;#displayImg&quot;).height();//拿的图片原来宽高，建议自定义宽高</span><br><span class="line">   var width = $(&quot;#displayImg&quot;).width();</span><br><span class="line">   layer.open(&#123;</span><br><span class="line">      type: 1,</span><br><span class="line">      title: false,</span><br><span class="line">      closeBtn: 0,</span><br><span class="line">      shadeClose: true,</span><br><span class="line">      area: [width + &#x27;px&#x27;, height + &#x27;px&#x27;], //宽高</span><br><span class="line">	  content: &quot;&lt;img alt=&quot; + name + &quot; title=&quot; + name + &quot; src=&quot; + url + &quot; /&gt;&quot;</span><br><span class="line">   &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>//总条数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int totalCount = (int) collection.count(_filters);</span><br></pre></td></tr></table></figure>
+
+<p>// 查询器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FindIterable&lt;Document&gt; ret = collection.find();//这样可以创立公共的</span><br></pre></td></tr></table></figure>
+
+<p>//查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ret = ret.filter(_filters).sort(new BasicDBObject(“”,1?1:-1)).skip(pageSize * (pageIndex-1)).limit(pageSize).batchSize(pageSize);//sort 排序前面是属性名，后面是1=正序 -1=倒序    skip 跳过多少条   limit 接下来查到多少条  bathSize  返回的条数</span><br></pre></td></tr></table></figure>
+
+<p>//如果需要对查询结果操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for(Document:document:ret)&#123;</span><br><span class="line">//方法1  直接拿key对应的value</span><br><span class="line">document.get(&quot;key&quot;);</span><br><span class="line">//方法2  转成model   这里不做介绍，mongo的数据是json形式的数据所以直接google json怎么转model就可以</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 </div>
@@ -974,16 +1028,16 @@ var _hmt = _hmt || [];
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/06/21/05/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84">
+              <a href="/2018/02/07/05/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C">
                   <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  使用lambda表达式快捷完成Tree结构
+                  利用layer实现放大图片的效果
               </a>
             
         </div>
         <div class="item right">
             
-              <a href="/2021/06/21/05/%E5%90%AF%E5%8A%A8%E7%B1%BB%E5%90%AF%E5%8A%A8%20%E9%94%99%E8%AF%AF_%20%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BB%20xxx.xxx%20%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">
-                启动类启动 错误_ 找不到或无法加载主类 xxx.xxx 的解决方案
+              <a href="/2018/02/06/11/js_jquery%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%20%E9%9C%80%E8%A6%81%E7%82%B9%E5%87%BB%E4%B8%80%E4%B8%8B%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0">
+                js_jquery获取不到页面元素 需要点击一下才能找到
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
@@ -1000,7 +1054,7 @@ var _hmt = _hmt || [];
 	</div>
 	<div id="footer">
 	<p>
-	©2019-<span id="footerYear"></span> 
+	©2018-<span id="footerYear"></span> 
 	<a href="/">fangweilong</a> 
 	
 	

@@ -11,12 +11,14 @@
 	
 		bootdo框架使用步骤总结 | 
 	 
-	Teler的日常
+	房伟龙的日常
 	</title>
 	
 	<!-- keywords,description -->
+	
+		<meta name="keywords" content="fangweilong,fangweilong@outlook.com,hexo" />
 	 
-		<meta name="description" content="日常小站" />
+		<meta name="description" content="fangweilong;日常小站;" />
 	
 
 	<!-- favicon -->
@@ -31,7 +33,7 @@
 		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
 			searchEngine = "https://www.google.com/search?q=";
 		}
-		var homeHost = "wujun234.github.io";
+		var homeHost = "fangweilong.github.io";
 		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
 			homeHost = window.location.host;
 		}
@@ -91,14 +93,22 @@ var _hmt = _hmt || [];
 </script>
 
 <header id="header">
-    <a id="title" href="/" class="logo">Teler的日常</a>
+    <a id="title" href="/" class="logo">房伟龙的日常</a>
 
 	<ul id="menu">
 		<li class="menu-item">
 			<a href="/about" class="menu-item-link">关于我</a>
 		</li>
 	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
 
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
 	
 		<li class="menu-item">
 			<a href="https://github.com/fangweilong" class="menu-item-link" target="_blank">
@@ -156,7 +166,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/06/21/05/MongoDB%20%E6%9F%A5%E8%AF%A2">
+									<a href="/2018/02/07/03/MongoDB%20%E6%9F%A5%E8%AF%A2">
 										MongoDB 查询
 									</a>
 								</li>
@@ -300,7 +310,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/06/21/05/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2">
+									<a href="/2018/02/24/09/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2">
 										idea更改缩进线颜色
 									</a>
 								</li>
@@ -867,7 +877,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/06/21/05/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C">
+									<a href="/2018/02/07/05/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C">
 										利用layer实现放大图片的效果
 									</a>
 								</li>
@@ -903,7 +913,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/06/21/05/%E6%89%8B%E6%9C%BA%E7%A4%BE%E4%BC%9A%E5%8C%96%E5%88%86%E4%BA%AB%E5%88%B0qq%E5%A5%BD%E5%8F%8B%E3%80%81qq%E7%A9%BA%E9%97%B4%E3%80%81%E5%BE%AE%E4%BF%A1%E3%80%81%E5%BE%AE%E4%BF%A1%E6%9C%8B%E5%8F%8B%E5%9C%88%E3%80%81%E5%BE%AE%E5%8D%9A%E7%AD%89(%E5%8C%BA%E5%88%86%E6%B5%8F%E8%A7%88%E5%99%A8)">
+									<a href="/2018/02/07/06/%E6%89%8B%E6%9C%BA%E7%A4%BE%E4%BC%9A%E5%8C%96%E5%88%86%E4%BA%AB%E5%88%B0qq%E5%A5%BD%E5%8F%8B%E3%80%81qq%E7%A9%BA%E9%97%B4%E3%80%81%E5%BE%AE%E4%BF%A1%E3%80%81%E5%BE%AE%E4%BF%A1%E6%9C%8B%E5%8F%8B%E5%9C%88%E3%80%81%E5%BE%AE%E5%8D%9A%E7%AD%89(%E5%8C%BA%E5%88%86%E6%B5%8F%E8%A7%88%E5%99%A8)">
 										手机社会化分享到qq好友、qq空间、微信、微信朋友圈、微博等(区分浏览器)
 									</a>
 								</li>
@@ -941,7 +951,7 @@ var _hmt = _hmt || [];
 <div class="article-meta">
 	
 	<span>fangweilong</span>
-	<span>2021-06-21 13:04:04</span>
+	<span>2021-06-21 13:57:17</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -1008,7 +1018,7 @@ var _hmt = _hmt || [];
 	</div>
 	<div id="footer">
 	<p>
-	©2019-<span id="footerYear"></span> 
+	©2018-<span id="footerYear"></span> 
 	<a href="/">fangweilong</a> 
 	
 	
