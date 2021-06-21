@@ -970,10 +970,11 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					maven的配置以及IDEA导入本地maven
+					springboot 启动报错 Field roleMapper in ‘’ required a bean of type '' that could not be found.
 				</h2>
 				<div class="index-brief">
-					
+					其实在报错信息上就能看出来问题是什么，但是因为现在文档少，不容易找到解决方案。特此记录意思是扫描不到mapper层，我们需要在Application.java这个启动文件上加一个注解告诉springboot我们的mapper位置在哪
+1@MapperScan(&quot;mapper文件位置&quo
 					...
 				</div>
 			</a>
@@ -988,10 +989,13 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.apache.jasper.JasperException_ Unable to compile class for JSP_
+					springboot 启动时 获取端口和项目名
 				</h2>
 				<div class="index-brief">
-					
+					背景项目启动每次都要手动输url在浏览器中访问，就想能和vue项目一样启动能直接在控制台打印出url
+
+踩坑在项目中获取配置文件的方法为@Value,但是在启动类中无法使用，获取到的全都为null
+使用Environment12345678public static void main(String
 					...
 				</div>
 			</a>
@@ -1006,10 +1010,15 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.springframework.beans.factory.BeanInitializationException_ Could not load properties;
+					springboot 无法扫描到父类模块中的Bean
 				</h2>
 				<div class="index-brief">
-					
+					现象：我定义了两个模块 A 和 B 。B模块依赖A模块
+A模块中我定义了一个@Component
+却发现在B模块中我无法扫描到这个Bean导入注入失败
+
+解决查阅得知，在springboot中的bean扫描是扫描同级目录或者下级目录，也就是不会扫描到依赖包里面的东西。
+但是我又想定义公共Bean，该
 					...
 				</div>
 			</a>
@@ -1024,16 +1033,13 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic Search 添加 split 自定义分词方法
+					springboot+mybatis 事务
 				</h2>
 				<div class="index-brief">
-					版本5.4.2
+					使用
+1@Transactional
+注解原理还不了解，待更新
 
-准备需要删除索引，否则会报已存在的错误
-
-正文
-以 ; 分割，如果需要其他符号的自己修改 pattern 后面的内容
-fielddata是为了aggs，不需要的可以不要12345678910111213141516171819202122232425PUT 索引名&#123;  &
 					...
 				</div>
 			</a>
@@ -1048,41 +1054,14 @@ fielddata是为了aggs，不需要的可以不要1234567891011121314151617181920
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic search 字段指定自带分词器
+					springcloud RestTemplate访问不到其他服务
 				</h2>
 				<div class="index-brief">
-					版本ES5.4.2
- 
-
-自带的几种分词器
-
-
-分词器
-解释
-
-
-
-standard
-标准标记器，标准过滤器，小写过滤器，停止过滤器
-
-
-simple
-小写的分词器
-
-
-stop
-小写标记器，停止过滤器
-
-
-keyword
-不分词，内容整体作为一个值
-
-
-whitespace
-以空格分词
-
-
-lan
+					1.检查启动类或配置类有没有加@EnableDiscoveryClient
+2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
+3.gateway配置、url是否一一对照
+如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
+升级springclou
 					...
 				</div>
 			</a>
@@ -1097,72 +1076,16 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Long 返回给前台 js中丢失精度
+					springcloud gateway 整合swagger3.0.0
 				</h2>
 				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					MinMaxNormalize 规一化算法
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					MongoDB 查询
-				</h2>
-				<div class="index-brief">
-					//配置
-12345678910111213141516171819202122public class Mongodb &#123;   private static String host = &quot;&quot;;//域名   private static int port = ;//端口
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					Navicat 12连接Oracle失败 报错_ORA-28547_或者_oracle library is not loaded_
-				</h2>
-				<div class="index-brief">
-					首先看一下两种错误1：ORA-28547原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。2.oracle library is not loaded其实就是说dll文件不能正确载入
-**
-解决：**这两种问题其实都可以通过一种办法结局详细步骤：
+					版本和说明
+ swagger:3.0.0
+   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
+   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
 
-点击链接前往Ora
+
+单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
 					...
 				</div>
 			</a>
@@ -1177,11 +1100,70 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					No result defined for action,集群服务器出现的数据库连不上
+					tomcat使用log4j2打日志
 				</h2>
 				<div class="index-brief">
-					1.返回类型找不到    这种情况我没出现，但是我在翻阅资料中很多人都有出现，这里不详细介绍，请查阅他人的文章。
-2.集群服务器    即一个oracle有多个ip连接(看oracle的配置文件)。在C#代码中使用一个ip可以连接，但是在java中使用thin方式连接就会报”No result de
+					开始前准备 
+
+tomcat版本8.0.51(下载地址：http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.51/bin/apache-tomcat-8.0.51.tar.gz) 2018-05-09可以访问 
+tomcat日志扩展接口包tomca
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					vue router-link 声明式返回上一页
+				</h2>
+				<div class="index-brief">
+					因为只有一个点击的操作，没有任何其他的逻辑操作，我就不想写一个方法来承载它，就一直在找声明式的写法
+官网文档链接：https://router.vuejs.org/zh/guide/essentials/navigation.html
+在文档中介绍了一种router.go(n)来返回上一页，但是没有
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					vue+elementui 打开弹窗 但是弹窗的接口只会初始调用一次
+				</h2>
+				<div class="index-brief">
+					 使用element的dialog弹窗的时候 
+1234567&lt;el-dialog     :title=&quot;title&quot;     :visible.sync=&quot;dialogVisible&quot;     width=&quot;68vw&quot;   &gt
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					windows terminal settings.json的一些个人配置与注释
+				</h2>
+				<div class="index-brief">
+					版本：1.0.1811.012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273
 					...
 				</div>
 			</a>
@@ -1196,7 +1178,7 @@ lan
 	
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2021/06/page/7/">&lt;</a><a class="page-number" href="/archives/2021/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/06/page/6/">6</a><a class="page-number" href="/archives/2021/06/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/archives/2021/06/page/9/">9</a><a class="page-number" href="/archives/2021/06/page/10/">10</a><a class="extend next" rel="next" href="/archives/2021/06/page/9/">&gt;</a>
 		
 	</div>
 </div>

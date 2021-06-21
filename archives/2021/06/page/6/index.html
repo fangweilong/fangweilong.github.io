@@ -970,10 +970,11 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					maven的配置以及IDEA导入本地maven
+					maven dependencyManagement 子模块不写版本号无法引入
 				</h2>
 				<div class="index-brief">
-					
+					现象在父模块中使用 dependencyManagement 来控制子模块按需引入jar包  而不是照盘全收
+123456789&lt;dependencyManagement&gt;	&lt;dependencies&gt;		&lt;dependency&gt;			&lt;groupId&gt
 					...
 				</div>
 			</a>
@@ -988,10 +989,11 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.apache.jasper.JasperException_ Unable to compile class for JSP_
+					maven添加ojdbc6.jar(11g)包
 				</h2>
 				<div class="index-brief">
-					
+					不要通过oracle官网下，折腾了我一下午都没安装成功。建议通过maven repo网站的下载：https://mvnrepository.com/artifact/oracle/ojdbc6/11.2.0.3
+PS:以下步骤默认你maven已经装好了，配置都做好了。如果配置还没搞好请参阅我另一篇博
 					...
 				</div>
 			</a>
@@ -1006,83 +1008,18 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.springframework.beans.factory.BeanInitializationException_ Could not load properties;
+					myEclipse项目报错叉 但能正常运行
 				</h2>
 				<div class="index-brief">
-					
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					Elastic Search 添加 split 自定义分词方法
-				</h2>
-				<div class="index-brief">
-					版本5.4.2
+					这种情况往往出现在别的项目更换了JDK版本，在当前项目上JDK版本也被更改了。虽然不会对项目造成什么影响，但是看着别扭啊。下面就分享下去除项目红叉的过程，我使用的MyEclipse版本为MyEclipse10。
 
-准备需要删除索引，否则会报已存在的错误
+在项目文件的右上角找到小三角，点击选中 “Filters” 选项
 
-正文
-以 ; 分割，如果需要其他符号的自己修改 pattern 后面的内容
-fielddata是为了aggs，不需要的可以不要12345678910111213141516171819202122232425PUT 索引名&#123;  &
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					Elastic search 字段指定自带分词器
-				</h2>
-				<div class="index-brief">
-					版本ES5.4.2
+如图所示
  
 
-自带的几种分词器
 
 
-分词器
-解释
-
-
-
-standard
-标准标记器，标准过滤器，小写过滤器，停止过滤器
-
-
-simple
-小写的分词器
-
-
-stop
-小写标记器，停止过滤器
-
-
-keyword
-不分词，内容整体作为一个值
-
-
-whitespace
-以空格分词
-
-
-lan
 					...
 				</div>
 			</a>
@@ -1097,13 +1034,13 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Long 返回给前台 js中丢失精度
+					myabtis 使用枚举类 类型转换错误
 				</h2>
 				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
+					如何使用请查看其他博客
+你如果是使用百度查询的，那请仔细看这篇博文。
+在很多的博客中都会是只讲了怎么转换，如果是查询语句，并且使用resultMap的时候是能正常使用的。但是一旦你使用insert的时候 你会发现开始报类型错误(我使用了mybatis log插件 )
+改起来简单 在你具体的sql中那
 					...
 				</div>
 			</a>
@@ -1118,10 +1055,10 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					MinMaxNormalize 规一化算法
+					myabtis传入字符串分割
 				</h2>
 				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
+					123&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#x27;,&#x27;)&quot; open=&quot;(&quot; separator=&quot;,&q
 					...
 				</div>
 			</a>
@@ -1136,11 +1073,11 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					MongoDB 查询
+					mybatis查询数据赋值到model里面为空
 				</h2>
 				<div class="index-brief">
-					//配置
-12345678910111213141516171819202122public class Mongodb &#123;   private static String host = &quot;&quot;;//域名   private static int port = ;//端口
+					因为数据多所以在查询中使用分页，但是发现直接执行sql语句是可以获取到数据，而list里面却是空的
+123456789101112131415161718&lt;select id=&quot;list&quot; resultType=&quot;DaliyDO&quot;&gt;        
 					...
 				</div>
 			</a>
@@ -1155,14 +1092,35 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Navicat 12连接Oracle失败 报错_ORA-28547_或者_oracle library is not loaded_
+					mybtis传入多个参数
 				</h2>
 				<div class="index-brief">
-					首先看一下两种错误1：ORA-28547原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。2.oracle library is not loaded其实就是说dll文件不能正确载入
-**
-解决：**这两种问题其实都可以通过一种办法结局详细步骤：
+					我们在调用myabtis的时候往往是传入一个entity或者map。但是在一些特殊情况下例如url传参，这时候再put进map总感觉多此一举。
+controller:
+1234567//@PathVariable注解作用是转义赋值到你指定的参数中@GetMapping(&quot;/user/&#1
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					mysql      com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+				</h2>
+				<div class="index-brief">
+					1、现象：   连接mysql时报错
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+ 
+ 
 
-点击链接前往Ora
+这个在长时间连接但是又不操作的情况下会报这个错误，虽然可以改mysql的配置文件来达到目的，但是我们是开发不是DBA，所以尽量还是通过程序
 					...
 				</div>
 			</a>
@@ -1177,11 +1135,30 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					No result defined for action,集群服务器出现的数据库连不上
+					nginx 基础配置：多个location转发任意请求或访问静态资源文件
 				</h2>
 				<div class="index-brief">
-					1.返回类型找不到    这种情况我没出现，但是我在翻阅资料中很多人都有出现，这里不详细介绍，请查阅他人的文章。
-2.集群服务器    即一个oracle有多个ip连接(看oracle的配置文件)。在C#代码中使用一个ip可以连接，但是在java中使用thin方式连接就会报”No result de
+					2018-08-10更新
+12345678910111213141516171819server &#123;		#监听的端口        listen       80;		#监听的域名        server_name  localhost;		#监听带后缀的url		location ^
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					nginx 转发规则案例详解
+				</h2>
+				<div class="index-brief">
+					本文以http协议举例，https的暂未列举如有错误请指正
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646
 					...
 				</div>
 			</a>
@@ -1196,7 +1173,7 @@ lan
 	
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2021/06/page/5/">&lt;</a><a class="page-number" href="/archives/2021/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/06/page/4/">4</a><a class="page-number" href="/archives/2021/06/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/archives/2021/06/page/7/">7</a><a class="page-number" href="/archives/2021/06/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/06/page/10/">10</a><a class="extend next" rel="next" href="/archives/2021/06/page/7/">&gt;</a>
 		
 	</div>
 </div>

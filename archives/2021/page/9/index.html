@@ -970,10 +970,33 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					maven的配置以及IDEA导入本地maven
+					window的linux子系统
+				</h2>
+				<div class="index-brief">
+					如何开启安装linux子系统请自行百度，这里只记录一些详细的操作点，给自己一个留档1.安装目录
+1C:\Users\&#123;用户名&#125;\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\L
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					winows 开机自启动 jar nginx redis等
 				</h2>
 				<div class="index-brief">
 					
+jar包需要命令行启动，所以做了一个bat+vbe启动的操作1.1 新建一个文本文件，并修改文件后缀为.bat。我这里文件命名为startup.bat
+```java -jar test.jar```
+
+1.2 其实通过1.1就已经可以启动程序，但是为了防止到生产环境的时候cmd窗口还一直在所以就
 					...
 				</div>
 			</a>
@@ -988,10 +1011,58 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.apache.jasper.JasperException_ Unable to compile class for JSP_
+					wsl debian10使用问题汇总
+				</h2>
+				<div class="index-brief">
+					切换root1sudo su root
+
+访问window目录1cd /mnt
+
+Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
+
+编辑文件如sources.list没
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					一组数差距过大的问题：symbolsize 计算公式
+				</h2>
+				<div class="index-brief">
+					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
+12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					使用java生成微信随机加好友的链接
 				</h2>
 				<div class="index-brief">
 					
+Java写的，其他语言自己翻译，其实就是一个随机数生成
+微信PC复制会自动加空格把这个a标签破坏掉，所以用其他工具复制
+朋友圈发不了，跟（2）一样 会自动加空格把a标签破坏掉，其他自测
+
+先看一下效果你看用微信复制的时候，a标签就被破坏了 要自己重新改一下点击以后进去这个页面。但是这种应该是没有真
 					...
 				</div>
 			</a>
@@ -1006,10 +1077,13 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.springframework.beans.factory.BeanInitializationException_ Could not load properties;
+					使用lambda表达式快捷完成Tree结构
 				</h2>
 				<div class="index-brief">
-					
+					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
+
+PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
+代码123456789101
 					...
 				</div>
 			</a>
@@ -1024,16 +1098,12 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic Search 添加 split 自定义分词方法
+					利用layer实现放大图片的效果
 				</h2>
 				<div class="index-brief">
-					版本5.4.2
-
-准备需要删除索引，否则会报已存在的错误
-
-正文
-以 ; 分割，如果需要其他符号的自己修改 pattern 后面的内容
-fielddata是为了aggs，不需要的可以不要12345678910111213141516171819202122232425PUT 索引名&#123;  &
+					引用layer.js
+//小图
+1&lt;a href=&quot;javascript:amplificationImg(&#x27;图片名&#x27;,&#x27;图片地址&#x27;)&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt
 					...
 				</div>
 			</a>
@@ -1048,41 +1118,11 @@ fielddata是为了aggs，不需要的可以不要1234567891011121314151617181920
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic search 字段指定自带分词器
+					启动类启动 错误_ 找不到或无法加载主类 xxx.xxx 的解决方案
 				</h2>
 				<div class="index-brief">
-					版本ES5.4.2
- 
+					原因未知    通过idea的maven插件，install即可        如果是eclipse等，自行使用maven命令行安装
 
-自带的几种分词器
-
-
-分词器
-解释
-
-
-
-standard
-标准标记器，标准过滤器，小写过滤器，停止过滤器
-
-
-simple
-小写的分词器
-
-
-stop
-小写标记器，停止过滤器
-
-
-keyword
-不分词，内容整体作为一个值
-
-
-whitespace
-以空格分词
-
-
-lan
 					...
 				</div>
 			</a>
@@ -1097,13 +1137,10 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Long 返回给前台 js中丢失精度
+					开发中常用的工具归类
 				</h2>
 				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
+					数据库工具    Navicat pre        优点：可以连接多种数据库，使用更快捷内存占用小        缺点：付费，功能没有官网的工具多    MongoDB Compass Community        优点：mongo数据库图形化工具，单文件直接使用        缺点：速度慢
 					...
 				</div>
 			</a>
@@ -1118,70 +1155,10 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					MinMaxNormalize 规一化算法
+					微信浏览器 访问ajax接口 十秒钟未响应自动重发
 				</h2>
 				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					MongoDB 查询
-				</h2>
-				<div class="index-brief">
-					//配置
-12345678910111213141516171819202122public class Mongodb &#123;   private static String host = &quot;&quot;;//域名   private static int port = ;//端口
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					Navicat 12连接Oracle失败 报错_ORA-28547_或者_oracle library is not loaded_
-				</h2>
-				<div class="index-brief">
-					首先看一下两种错误1：ORA-28547原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。2.oracle library is not loaded其实就是说dll文件不能正确载入
-**
-解决：**这两种问题其实都可以通过一种办法结局详细步骤：
-
-点击链接前往Ora
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					No result defined for action,集群服务器出现的数据库连不上
-				</h2>
-				<div class="index-brief">
-					1.返回类型找不到    这种情况我没出现，但是我在翻阅资料中很多人都有出现，这里不详细介绍，请查阅他人的文章。
-2.集群服务器    即一个oracle有多个ip连接(看oracle的配置文件)。在C#代码中使用一个ip可以连接，但是在java中使用thin方式连接就会报”No result de
+					2018-12-21更新：在url或者ajax带上 connect_redirect=1 这个参数，我在项目中遇到的会自动重发的手机确实不重发了，但是有人说有很小一部分的手机还是会重发原文地址见：https://developers.weixin.qq.com/community/develop/d
 					...
 				</div>
 			</a>
@@ -1196,7 +1173,7 @@ lan
 	
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2021/page/8/">&lt;</a><a class="page-number" href="/archives/2021/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/page/7/">7</a><a class="page-number" href="/archives/2021/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/archives/2021/page/10/">10</a><a class="extend next" rel="next" href="/archives/2021/page/10/">&gt;</a>
 		
 	</div>
 </div>

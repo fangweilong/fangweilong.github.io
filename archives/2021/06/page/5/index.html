@@ -970,10 +970,11 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					maven的配置以及IDEA导入本地maven
+					java访问webservice
 				</h2>
 				<div class="index-brief">
-					
+					import org.dom4j.VisitorSupport;import java.io.InputStream;import java.io.OutputStream;import java.net.HttpURLConnection;import java.net.URL;
+public c
 					...
 				</div>
 			</a>
@@ -988,10 +989,12 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.apache.jasper.JasperException_ Unable to compile class for JSP_
+					jquery 点击浏览器返回上一页按钮并能直接刷新
 				</h2>
 				<div class="index-brief">
-					
+					A，B两个页面，从B页面点击浏览器的返回上一页按钮，跳转到A页面，此时需要A页面重新加载，则可以在A页面加上这一段
+ var isPageHide = false;  
+    window.addEventListener(&#39;pageshow&#39;, function () &#123
 					...
 				</div>
 			</a>
@@ -1006,10 +1009,11 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.springframework.beans.factory.BeanInitializationException_ Could not load properties;
+					jquery 节流防抖
 				</h2>
 				<div class="index-brief">
-					
+					前言在一些大数量或者有延迟性的操作下，为了页面不要每次输入或者点击的时候闪烁，我们需要对接口进行调用频率限制。直接上代码
+代码1234567891011//需要定义在方法外let timeout;function throttling()&#123;	//先清理	clearTimeout(timeo
 					...
 				</div>
 			</a>
@@ -1024,16 +1028,11 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic Search 添加 split 自定义分词方法
+					js jquery 限制input输入框只能输入两位小数的数字
 				</h2>
 				<div class="index-brief">
-					版本5.4.2
-
-准备需要删除索引，否则会报已存在的错误
-
-正文
-以 ; 分割，如果需要其他符号的自己修改 pattern 后面的内容
-fielddata是为了aggs，不需要的可以不要12345678910111213141516171819202122232425PUT 索引名&#123;  &
+					//正整数 两位小数
+123456789101112131415$(&#x27;.inputWrap&#x27;).on(&#x27;input&#x27;, function () &#123;        var num = $(this).val();        if(num.index
 					...
 				</div>
 			</a>
@@ -1048,41 +1047,11 @@ fielddata是为了aggs，不需要的可以不要1234567891011121314151617181920
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic search 字段指定自带分词器
+					js_jquery获取不到页面元素 需要点击一下才能找到
 				</h2>
 				<div class="index-brief">
-					版本ES5.4.2
- 
-
-自带的几种分词器
-
-
-分词器
-解释
-
-
-
-standard
-标准标记器，标准过滤器，小写过滤器，停止过滤器
-
-
-simple
-小写的分词器
-
-
-stop
-小写标记器，停止过滤器
-
-
-keyword
-不分词，内容整体作为一个值
-
-
-whitespace
-以空格分词
-
-
-lan
+					2018-03-23 更新更新内容:检查在获取的时候是不是使用class获取元素，如果是则修改为通过id获取元素。通过id获取元素是可以直接获取到的
+以下为原文  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓在项目中，尤其是后台管理常用到iframe嵌套，但是
 					...
 				</div>
 			</a>
@@ -1097,13 +1066,11 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Long 返回给前台 js中丢失精度
+					kibana 查询ES 的一些语法
 				</h2>
 				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
+					前言不断增补ing版本    7.8.0替换的关键字使用中文说明，根据需求自行替换
+正文基础知识命令-7.x中的type已经过时，默认设置为_doc| 命令     | url | 解释 ||–|–|–|| put | /索引名称/类型名称/文档ID | 创建文档（指定文档ID） || POST |
 					...
 				</div>
 			</a>
@@ -1118,10 +1085,10 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					MinMaxNormalize 规一化算法
+					kindeditor富文本编辑器通过参数初始化限制上传图片等功能
 				</h2>
 				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
+					我们某些时候需要在kindeditor富文本编辑器上限制用户不能使用某些功能，虽然可以通过class来限制，但是这样毫无疑问很low。无意翻到了官网的一篇初始化编辑器的参数。详情点击↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓点击跳转官网原文详情点
 					...
 				</div>
 			</a>
@@ -1136,11 +1103,11 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					MongoDB 查询
+					layui lay-verify form表单自定义验证规则
 				</h2>
 				<div class="index-brief">
-					//配置
-12345678910111213141516171819202122public class Mongodb &#123;   private static String host = &quot;&quot;;//域名   private static int port = ;//端口
+					官方文档详见：https://www.layui.com/doc/modules/form.html#verify虽然layui的官方文档已经是写的比较详细，但是初次使用的时候总会懵一下，这里纪录一下lay-verify自定义验证规则的时候到底放哪。
+123456789101112html：&lt;
 					...
 				</div>
 			</a>
@@ -1155,14 +1122,12 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Navicat 12连接Oracle失败 报错_ORA-28547_或者_oracle library is not loaded_
+					layui的laydate控件的使用
 				</h2>
 				<div class="index-brief">
-					首先看一下两种错误1：ORA-28547原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。2.oracle library is not loaded其实就是说dll文件不能正确载入
-**
-解决：**这两种问题其实都可以通过一种办法结局详细步骤：
-
-点击链接前往Ora
+					目前使用的layui版，没有单独使用laydate。官网上的例子是每个属性单独设置的，我稍微整合了一下常用属性。
+引入了css和js以后
+1234567891011121314151617181920//初始化时间layui.use(&#x27;laydate&#x27;, function() &
 					...
 				</div>
 			</a>
@@ -1177,11 +1142,10 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					No result defined for action,集群服务器出现的数据库连不上
+					mapbox-gl_Style is not done loading
 				</h2>
 				<div class="index-brief">
-					1.返回类型找不到    这种情况我没出现，但是我在翻阅资料中很多人都有出现，这里不详细介绍，请查阅他人的文章。
-2.集群服务器    即一个oracle有多个ip连接(看oracle的配置文件)。在C#代码中使用一个ip可以连接，但是在java中使用thin方式连接就会报”No result de
+					这个错误是因为画的时候样式还没加载完成，下面就调用了。在一些论坛上也能找到别人有遇到这些问题：https://stackoverflow.com/questions/44394573/mapbox-gl-js-style-is-not-done-loading?rq=1https://www.jav
 					...
 				</div>
 			</a>
@@ -1196,7 +1160,7 @@ lan
 	
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2021/06/page/4/">&lt;</a><a class="page-number" href="/archives/2021/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/06/page/3/">3</a><a class="page-number" href="/archives/2021/06/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/2021/06/page/6/">6</a><a class="page-number" href="/archives/2021/06/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/06/page/10/">10</a><a class="extend next" rel="next" href="/archives/2021/06/page/6/">&gt;</a>
 		
 	</div>
 </div>

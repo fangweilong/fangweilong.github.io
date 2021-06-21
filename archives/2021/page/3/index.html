@@ -970,10 +970,12 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					maven的配置以及IDEA导入本地maven
+					filter 拦截器 获取http请求参数
 				</h2>
 				<div class="index-brief">
-					
+					里面一些方法使用了hutool的工具类 可以替换成你自己习惯的 工具类不是记录的主要东西。
+记录点    1.怎么创建拦截器    2.怎么统一管理拦截器是否启用和输用顺序    3.怎么获取传入的参数    4.怎么获取返回值
+直接上代码==============================
 					...
 				</div>
 			</a>
@@ -988,137 +990,7 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.apache.jasper.JasperException_ Unable to compile class for JSP_
-				</h2>
-				<div class="index-brief">
-					
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					org.springframework.beans.factory.BeanInitializationException_ Could not load properties;
-				</h2>
-				<div class="index-brief">
-					
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					Elastic Search 添加 split 自定义分词方法
-				</h2>
-				<div class="index-brief">
-					版本5.4.2
-
-准备需要删除索引，否则会报已存在的错误
-
-正文
-以 ; 分割，如果需要其他符号的自己修改 pattern 后面的内容
-fielddata是为了aggs，不需要的可以不要12345678910111213141516171819202122232425PUT 索引名&#123;  &
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					Elastic search 字段指定自带分词器
-				</h2>
-				<div class="index-brief">
-					版本ES5.4.2
- 
-
-自带的几种分词器
-
-
-分词器
-解释
-
-
-
-standard
-标准标记器，标准过滤器，小写过滤器，停止过滤器
-
-
-simple
-小写的分词器
-
-
-stop
-小写标记器，停止过滤器
-
-
-keyword
-不分词，内容整体作为一个值
-
-
-whitespace
-以空格分词
-
-
-lan
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					Long 返回给前台 js中丢失精度
-				</h2>
-				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					MinMaxNormalize 规一化算法
+					git .gitignore通用配置文件
 				</h2>
 				<div class="index-brief">
 					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
@@ -1134,13 +1006,12 @@ lan
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/06/21/03/">
+			<a href="/2021/06/21/03/hello-world">
 				<h2 class="index-title">
-					MongoDB 查询
+					hello-world
 				</h2>
 				<div class="index-brief">
-					//配置
-12345678910111213141516171819202122public class Mongodb &#123;   private static String host = &quot;&quot;;//域名   private static int port = ;//端口
+					Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
 					...
 				</div>
 			</a>
@@ -1155,14 +1026,15 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Navicat 12连接Oracle失败 报错_ORA-28547_或者_oracle library is not loaded_
+					idea关闭不必要的插件减少内存占用
 				</h2>
 				<div class="index-brief">
-					首先看一下两种错误1：ORA-28547原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。2.oracle library is not loaded其实就是说dll文件不能正确载入
-**
-解决：**这两种问题其实都可以通过一种办法结局详细步骤：
+					2020 06009 更新idea版本：2020.1.2项目：spring+springboot+springcloud+mybatis+mybatis-plus+maven 如果跟我差不多的可以参照我的修改自己安装的
+自带的
 
-点击链接前往Ora
+
+
+2019-07-24更新1.安装的插件2.自带的插件里面有个ide
 					...
 				</div>
 			</a>
@@ -1177,11 +1049,113 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					No result defined for action,集群服务器出现的数据库连不上
+					idea更改缩进线颜色
 				</h2>
 				<div class="index-brief">
-					1.返回类型找不到    这种情况我没出现，但是我在翻阅资料中很多人都有出现，这里不详细介绍，请查阅他人的文章。
-2.集群服务器    即一个oracle有多个ip连接(看oracle的配置文件)。在C#代码中使用一个ip可以连接，但是在java中使用thin方式连接就会报”No result de
+					idea不同的版本会更改一些功能设置的位置，之前将背景色改为了豆沙绿后缩进线就看不到了，在写HTML页面的时候很不舒服，但是网上搜到的一些答案又不对(版本不一致)，花了点功夫找了一下，特此记录。我当前版本为idea 2017.3.4
+1Settings -&gt; Editor -&gt; Colo
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					idea设置创建.java文件的模板
+				</h2>
+				<div class="index-brief">
+					打开路径
+1File-Settings-Editor-Code style-File and Code Templates-Includea-File Header
+如图所示
+我的模板是这个
+12345/**  *@Description        *@author          $&#12
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					idea部分或整体java文件不编译为class文件 或编译后不是最新的
+				</h2>
+				<div class="index-brief">
+					PS：2018-03-08 10:11更新 修改编译的路径        原路径为WebRoot，修改为WebRoot/classes，否则会出现include会找不到jsp等问题
+1.出现这个问题先检查一下输出路径        idea的class输出路径与eclipse是不一样的，idea默认
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					input下拉选择框可以自行输入也可以下拉选择
+				</h2>
+				<div class="index-brief">
+					我这里使用的是原生H5标签  datalist
+1234567&lt;input class=&quot;browsers&quot; list=&quot;browsers&quot;&gt;&lt;datalist id=&quot;browsers&quot;&gt;browsers	&lt;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					java String字符串split分割无效
+				</h2>
+				<div class="index-brief">
+					这个问题之前就遇到过，这次又遇到了特别纪录一下。1。按照我们正常的逻辑走，一串字符串通过split()分割以后会变成数组，我们可以通过下表直接获取到拆分以后的字符串。ok这样是没问题的，我们继续试。
+2。在字符串中通过   |   分割的时候就出现了问题，在此次分割中返回给我们的数据变成了每个字符而
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					java spark k-means算法
+				</h2>
+				<div class="index-brief">
+					配置配置请看我的其他文章 点击跳转
+spark官方文档点击跳转官方文档
+数据训练数据
+
+实体类用了swagger和lombok 不需要的可以删掉
+123456789101112131415161718192021222324252627282930313233343536373839import i
 					...
 				</div>
 			</a>
@@ -1196,7 +1170,7 @@ lan
 	
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2021/page/2/">&lt;</a><a class="page-number" href="/archives/2021/">1</a><a class="page-number" href="/archives/2021/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2021/page/4/">4</a><a class="page-number" href="/archives/2021/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/page/10/">10</a><a class="extend next" rel="next" href="/archives/2021/page/4/">&gt;</a>
 		
 	</div>
 </div>

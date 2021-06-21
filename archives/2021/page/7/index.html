@@ -970,10 +970,11 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					maven的配置以及IDEA导入本地maven
+					nginx部署多个vue项目 分vue-cli2.x和3.x
 				</h2>
 				<div class="index-brief">
-					
+					1.vue-cli3.x在根目录下找到”vue.config.js”更改publicPath: &#39;/portal/&#39; 的 portal 为你自己的项目名，记得前后的”/“
+2.vue-cli2.x找到config/index.js文件找到”build”部分同样的更改assetsPub
 					...
 				</div>
 			</a>
@@ -988,10 +989,11 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.apache.jasper.JasperException_ Unable to compile class for JSP_
+					nginx反向代理 端口丢失
 				</h2>
 				<div class="index-brief">
-					
+					此情况会出现在代理外网情况下 访问端口不是80、443，并且访问url末尾不带 / 的时候
+举例xx.xx.xx.xx:9000/url 经过nginx转代 url会变成      xx.xx.xx.xx/url，而实际资源需求的url是这样的 xx.xx.xx.xx:9000/url/所以我们直接
 					...
 				</div>
 			</a>
@@ -1006,10 +1008,11 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.springframework.beans.factory.BeanInitializationException_ Could not load properties;
+					oracle group by分类查询汇总 没数据的时候让此项显示为0
 				</h2>
 				<div class="index-brief">
-					
+					1.表数据表名:table| id | date ||–|–|| 1 | 2019-05 || 2 | 2019-06 || 3 | 2019-04 || 4 | 2019-06 |
+2.需求现在要求按照指定五个月份统计每个月的数量，这五个月份为:(‘2019-02’,’2019-03’,’2019
 					...
 				</div>
 			</a>
@@ -1024,16 +1027,10 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic Search 添加 split 自定义分词方法
+					oracle mybatis DATE无法存时分秒
 				</h2>
 				<div class="index-brief">
-					版本5.4.2
-
-准备需要删除索引，否则会报已存在的错误
-
-正文
-以 ; 分割，如果需要其他符号的自己修改 pattern 后面的内容
-fielddata是为了aggs，不需要的可以不要12345678910111213141516171819202122232425PUT 索引名&#123;  &
+					1234567891011121314151617&lt;sql id=&quot;sys_sms_id&quot;&gt;SYS_SMS_ID.NEXTVAL&lt;/sql&gt;&lt;insert id=&quot;save&quot; parameterType=&quot;SmsDO&q
 					...
 				</div>
 			</a>
@@ -1048,41 +1045,14 @@ fielddata是为了aggs，不需要的可以不要1234567891011121314151617181920
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic search 字段指定自带分词器
+					oracle 用户被锁
 				</h2>
 				<div class="index-brief">
-					版本ES5.4.2
- 
-
-自带的几种分词器
-
-
-分词器
-解释
-
-
-
-standard
-标准标记器，标准过滤器，小写过滤器，停止过滤器
-
-
-simple
-小写的分词器
-
-
-stop
-小写标记器，停止过滤器
-
-
-keyword
-不分词，内容整体作为一个值
-
-
-whitespace
-以空格分词
-
-
-lan
+					oracle的账户多次输入错误密码会被锁定(十次)，尤其是在新建立的时候动不动被锁记录一下账户被锁的解锁步骤请完整复制代码内容
+1.打开cmd,输入1sqlplus/noloog
+应该会显示时间，这时候表明成功
+2.以dba身份登录1conn / as sysdba
+这样是不需要输入用户名密码就可以
 					...
 				</div>
 			</a>
@@ -1097,13 +1067,15 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Long 返回给前台 js中丢失精度
+					oracle 空间字段在java中能查询出来并返回给接口
 				</h2>
 				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
+					oracle虽然也支持空间信息，但是要做很多配置。比如安装sde等，不如pgsql等内置支持。以下方法只在第三方支持都安装好的情况下适用
+Entity:
+1priavte String shape;
+java里面直接用String类型接就可以了
+XML
+1select  sdo_util.to_gm
 					...
 				</div>
 			</a>
@@ -1118,10 +1090,10 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					MinMaxNormalize 规一化算法
+					orcle full join 多张表横向关联 拼接多张表所需字段
 				</h2>
 				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
+					我们在sql中使用最多的关联查询无非是left join.right join,union,union all。这几种关联的区别和用法别的教程都太多了 这里不赘述.这里讲一下full join的用法1.需求    需要做一张统计表 要能实现多级表头但是这个数据又不是一张表中存在的，分为了乔木，灌木，
 					...
 				</div>
 			</a>
@@ -1136,11 +1108,11 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					MongoDB 查询
+					radio取消选中并能再次选中
 				</h2>
 				<div class="index-brief">
-					//配置
-12345678910111213141516171819202122public class Mongodb &#123;   private static String host = &quot;&quot;;//域名   private static int port = ;//端口
+					网上很多都是只能取消选中，之后就无法选中了。按照这个方法可以再次选中
+12345678910111213141516$(document).ready(function()&#123;        var old = null; //用来保存原来的对象        $(&quot;.radioC
 					...
 				</div>
 			</a>
@@ -1155,14 +1127,12 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Navicat 12连接Oracle失败 报错_ORA-28547_或者_oracle library is not loaded_
+					spring boot AOP @Before @After 最简单的切面
 				</h2>
 				<div class="index-brief">
-					首先看一下两种错误1：ORA-28547原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。2.oracle library is not loaded其实就是说dll文件不能正确载入
-**
-解决：**这两种问题其实都可以通过一种办法结局详细步骤：
-
-点击链接前往Ora
+					写一个最简单明细的切面，希望可以复制了直接用。我会尽量把注释写详细
+1.引入jar因为我是用的springboot，所以只需要引入一个包，如果你习惯的是引入两个包 也可以引入下面的两个包SpingBoot:
+12345&lt;!--aop切面--&gt;&lt;dependency&gt;    &
 					...
 				</div>
 			</a>
@@ -1177,11 +1147,12 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					No result defined for action,集群服务器出现的数据库连不上
+					spring cloud gateway 获取入参
 				</h2>
 				<div class="index-brief">
-					1.返回类型找不到    这种情况我没出现，但是我在翻阅资料中很多人都有出现，这里不详细介绍，请查阅他人的文章。
-2.集群服务器    即一个oracle有多个ip连接(看oracle的配置文件)。在C#代码中使用一个ip可以连接，但是在java中使用thin方式连接就会报”No result de
+					在获取入参的时候，get方式的接口可以直接获取到，但是post形式的body获取以后会造成无法再使用，所以必须经过一层转换以后再读取。
+直接上代码
+12345678910111213141516171819202122232425262728293031323334353637@Componentp
 					...
 				</div>
 			</a>
@@ -1196,7 +1167,7 @@ lan
 	
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2021/page/6/">&lt;</a><a class="page-number" href="/archives/2021/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/page/5/">5</a><a class="page-number" href="/archives/2021/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/archives/2021/page/8/">8</a><a class="page-number" href="/archives/2021/page/9/">9</a><a class="page-number" href="/archives/2021/page/10/">10</a><a class="extend next" rel="next" href="/archives/2021/page/8/">&gt;</a>
 		
 	</div>
 </div>

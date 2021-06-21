@@ -970,10 +970,14 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					maven的配置以及IDEA导入本地maven
+					PostgreSQL 使用数组类型
 				</h2>
 				<div class="index-brief">
-					
+					版本pgsql:9.6navicat:15
+创表使用navicat字段类型字段类型找不到以varchar为例，在navicat中是找不到数组类型的。只能看到varchar类型
+自行设置想定义成数组类型也很简单，直接在后面添加一个 [] 的符号
+保存随意输入一个表名后保存
+注意点保存以后你会发现代表数
 					...
 				</div>
 			</a>
@@ -988,10 +992,10 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.apache.jasper.JasperException_ Unable to compile class for JSP_
+					ajax返回成功却进入了error
 				</h2>
 				<div class="index-brief">
-					
+					1234567891011121314$.ajax(&#123;        type: &quot;POST&quot;,        url: &quot;&quot;,        data: &#123;                    &#125;,        dataTy
 					...
 				</div>
 			</a>
@@ -1006,10 +1010,14 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					org.springframework.beans.factory.BeanInitializationException_ Could not load properties;
+					bootdo框架使用步骤总结
 				</h2>
 				<div class="index-brief">
-					
+					仅作为个人学习纪录，其他人只作为参考，图较少，会不断更新。创建时间 2018-04-19项目地址 bootdo官网
+
+因为从git上下载的文件结构并不是习惯，所以将里面一层的复制到最完成根目录
+idea导入，选择到项目以后，选择maven，一路默认选择到打开项目
+将sql文件复制并在mysql中运行
 					...
 				</div>
 			</a>
@@ -1024,16 +1032,19 @@ var _hmt = _hmt || [];
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic Search 添加 split 自定义分词方法
+					centos7 docker 更换迁移数据目录
 				</h2>
 				<div class="index-brief">
-					版本5.4.2
+					先决条件版本docker version:19.03.3, build a872fc2f86
 
-准备需要删除索引，否则会报已存在的错误
+安装方式使用yum在线安装 离线安装方式因为安装路径等原因 可能导致路径不同 请执行测试
 
-正文
-以 ; 分割，如果需要其他符号的自己修改 pattern 后面的内容
-fielddata是为了aggs，不需要的可以不要12345678910111213141516171819202122232425PUT 索引名&#123;  &
+其他版本未测试
+操作
+进入目录
+1cd /etc/docker
+新建或者编辑文件
+1vi daemon.json
 					...
 				</div>
 			</a>
@@ -1048,41 +1059,16 @@ fielddata是为了aggs，不需要的可以不要1234567891011121314151617181920
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Elastic search 字段指定自带分词器
+					centos7 离线安装docker和docker-compose
 				</h2>
 				<div class="index-brief">
-					版本ES5.4.2
- 
+					实测版本说明centos：7.5
+docker：19.03.5
+docker-compose：1.24.3
 
-自带的几种分词器
-
-
-分词器
-解释
-
-
-
-standard
-标准标记器，标准过滤器，小写过滤器，停止过滤器
-
-
-simple
-小写的分词器
-
-
-stop
-小写标记器，停止过滤器
-
-
-keyword
-不分词，内容整体作为一个值
-
-
-whitespace
-以空格分词
-
-
-lan
+官方资源下载地址自行下载需要的版本。
+[docker](https://download.docker.com/linux/static/stable/x86_64/)
+[docker-co
 					...
 				</div>
 			</a>
@@ -1097,72 +1083,18 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					Long 返回给前台 js中丢失精度
+					docker hadoop伪分布式 java上传报错
 				</h2>
 				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					MinMaxNormalize 规一化算法
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					MongoDB 查询
-				</h2>
-				<div class="index-brief">
-					//配置
-12345678910111213141516171819202122public class Mongodb &#123;   private static String host = &quot;&quot;;//域名   private static int port = ;//端口
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-21</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/21/03/">
-				<h2 class="index-title">
-					Navicat 12连接Oracle失败 报错_ORA-28547_或者_oracle library is not loaded_
-				</h2>
-				<div class="index-brief">
-					首先看一下两种错误1：ORA-28547原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。2.oracle library is not loaded其实就是说dll文件不能正确载入
-**
-解决：**这两种问题其实都可以通过一种办法结局详细步骤：
+					==2020-11-06更新==
+docker-compose 脚本地址
+更新目的原文的解决思路是对的，但是还是有点小问题。使用ip的话要更改好几个地方太麻烦。所以这几天重新试了一遍。
+步骤方法一：更改host
+通过docker ps找到datanode的容器id
 
-点击链接前往Ora
+编辑本机的hosts文件
+
+文件
 					...
 				</div>
 			</a>
@@ -1177,11 +1109,80 @@ lan
 		<div class="index-li">
 			<a href="/2021/06/21/03/">
 				<h2 class="index-title">
-					No result defined for action,集群服务器出现的数据库连不上
+					echarts 词云会渲染两次
 				</h2>
 				<div class="index-brief">
-					1.返回类型找不到    这种情况我没出现，但是我在翻阅资料中很多人都有出现，这里不详细介绍，请查阅他人的文章。
-2.集群服务器    即一个oracle有多个ip连接(看oracle的配置文件)。在C#代码中使用一个ip可以连接，但是在java中使用thin方式连接就会报”No result de
+					词云是比较容易出现这个问题的一个图表，所以拿词云做一个示例。
+在上面这张图中可以比较清晰的看到有两个“数值模拟”的词云，在普通的业务逻辑中，我们只需要在代码中这样写
+1this.chart.setOption(this.config.option, true);
+即可使图表只渲染一次。
+123原理：
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					elementui table 默认勾选
+				</h2>
+				<div class="index-brief">
+					html table&lt;el-table :stripe=&quot;true&quot; style=&quot;width: 100%&quot; border highlight-current-row
+                  ref=&quot;table&quot;
+   
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					elementui 禁止浏览器自动填充用户名密码
+				</h2>
+				<div class="index-brief">
+					浏览器这功能在登录的时候挺好用的，但是在注册和管理的时候就很难受了
+所以
+在普通的input上直接off就行了
+1&lt;input type=&quot;password&quot; autoComplete=&quot;off&quot;/&gt;
+
+而在elementui上使用autoComp
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-06-21</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/06/21/03/">
+				<h2 class="index-title">
+					es 通过reindex实现集群数据迁移
+				</h2>
+				<div class="index-brief">
+					版本老集群ES 5.4新集群ES 7.9
+背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
+说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
+
+步骤
+添加白名
 					...
 				</div>
 			</a>
@@ -1196,7 +1197,7 @@ lan
 	
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/">&lt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/">&gt;</a>
 		
 	</div>
 </div>
