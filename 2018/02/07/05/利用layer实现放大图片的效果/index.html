@@ -9,11 +9,11 @@
 	
 	<title>
 	
-		利用layer实现放大图片的效果 | 
-	 
+		利用layer实现放大图片的效果 |
+	
 	房伟龙的日常
 	</title>
-	
+
 	<!-- keywords,description -->
 	
 		<meta name="keywords" content="fangweilong,fangweilong@outlook.com,hexo" />
@@ -179,7 +179,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -208,7 +207,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -271,7 +269,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -284,7 +281,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -340,7 +336,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -378,7 +373,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -472,7 +466,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -535,7 +528,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -618,7 +610,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -676,7 +667,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -723,7 +713,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -750,7 +739,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -770,7 +758,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -835,11 +822,9 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -895,7 +880,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -915,7 +899,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -962,7 +945,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -991,7 +973,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -1018,7 +999,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -1083,7 +1063,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -1103,7 +1082,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -1132,7 +1110,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -1161,11 +1138,9 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 							<ul>
@@ -1212,7 +1187,6 @@ var _hmt = _hmt || [];
 							</ul>
 			
 								</li>
-								
 							</ul>
 			
 		</div>
@@ -1221,7 +1195,11 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<h1 id="article-title">
+		<head>
+  <!-- Vssue 的样式文件 -->
+  <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
+</head>
+<h1 id="article-title">
 
 	利用layer实现放大图片的效果
 </h1>
@@ -1326,8 +1304,34 @@ var _hmt = _hmt || [];
 
 <script>
 	
+
 	
 </script>
+
+
+<div id="vssue"></div>
+
+<!-- Vue 运行时版 (runtime only)  -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+<!-- 对于 Vue 运行时版，使用渲染函数（render function） -->
+<script>
+	new Vue({
+      el: '#vssue',
+
+      data: {
+        options: {
+          owner: ,
+          repo: ,
+          clientId: ,
+          clientSecret: , // 只有在使用某些平台时需要
+        },
+      },
+
+      template: `<vssue :title="title" :options="options"></vssue>`,
+    })
+</script>
+
 	</div>
 	<div id="footer">
 	<p>
