@@ -1275,7 +1275,8 @@
 
 <div id="vssue"></div>
 <script type='text/javascript'>
-	new Vue({
+window.onload = function() {
+  new Vue({
 		el: '#vssue',
 		data: {
 			title: 'mapbox-gl_Style_is_not_done_loading',
@@ -1288,6 +1289,7 @@
 		},
 		template: `<vssue :title="title" :options="options"></vssue>`
 	})
+}
 </script>
 
 	</div>

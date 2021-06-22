@@ -1276,7 +1276,8 @@
 
 <div id="vssue"></div>
 <script type='text/javascript'>
-	new Vue({
+window.onload = function() {
+  new Vue({
 		el: '#vssue',
 		data: {
 			title: 'java String字符串split分割无效',
@@ -1289,6 +1290,7 @@
 		},
 		template: `<vssue :title="title" :options="options"></vssue>`
 	})
+}
 </script>
 
 	</div>

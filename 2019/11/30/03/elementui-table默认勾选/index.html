@@ -1301,7 +1301,8 @@ let self=this;
 
 <div id="vssue"></div>
 <script type='text/javascript'>
-	new Vue({
+window.onload = function() {
+  new Vue({
 		el: '#vssue',
 		data: {
 			title: 'elementui-table默认勾选',
@@ -1314,6 +1315,7 @@ let self=this;
 		},
 		template: `<vssue :title="title" :options="options"></vssue>`
 	})
+}
 </script>
 
 	</div>

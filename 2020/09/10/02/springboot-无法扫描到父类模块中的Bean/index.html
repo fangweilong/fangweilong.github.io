@@ -1293,7 +1293,8 @@ A模块中我定义了一个@Component
 
 <div id="vssue"></div>
 <script type='text/javascript'>
-	new Vue({
+window.onload = function() {
+  new Vue({
 		el: '#vssue',
 		data: {
 			title: 'springboot-无法扫描到父类模块中的Bean',
@@ -1306,6 +1307,7 @@ A模块中我定义了一个@Component
 		},
 		template: `<vssue :title="title" :options="options"></vssue>`
 	})
+}
 </script>
 
 	</div>

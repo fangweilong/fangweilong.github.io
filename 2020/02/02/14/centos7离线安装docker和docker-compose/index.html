@@ -1302,7 +1302,8 @@ docker-compose：1.24.3
 
 <div id="vssue"></div>
 <script type='text/javascript'>
-	new Vue({
+window.onload = function() {
+  new Vue({
 		el: '#vssue',
 		data: {
 			title: 'centos7离线安装docker和docker-compose',
@@ -1315,6 +1316,7 @@ docker-compose：1.24.3
 		},
 		template: `<vssue :title="title" :options="options"></vssue>`
 	})
+}
 </script>
 
 	</div>

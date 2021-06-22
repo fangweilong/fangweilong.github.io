@@ -1276,7 +1276,8 @@
 
 <div id="vssue"></div>
 <script type='text/javascript'>
-	new Vue({
+window.onload = function() {
+  new Vue({
 		el: '#vssue',
 		data: {
 			title: 'Navicat12连接Oracle失败，报错_ORA-28547_或者_oracle_library_is_not_loaded',
@@ -1289,6 +1290,7 @@
 		},
 		template: `<vssue :title="title" :options="options"></vssue>`
 	})
+}
 </script>
 
 	</div>
