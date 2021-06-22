@@ -1302,24 +1302,20 @@ var _hmt = _hmt || [];
 
 
 <div id="vssue"></div>
-
-<!-- Vue 运行时版 (runtime only)  -->
 <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 
-<!-- 对于 Vue 运行时版，使用渲染函数（render function） -->
+
 <script>
 	new Vue({
       el: '#vssue',
-
       data: {
         options: {
-          owner: ,
-          repo: ,
-          clientId: ,
-          clientSecret: , // 只有在使用某些平台时需要
+          owner: 'fangweilong',
+          repo: 'fangweilong',
+          clientId: '',
+          clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
         },
       },
-
       template: `<vssue :title="title" :options="options"></vssue>`,
     })
 </script>
