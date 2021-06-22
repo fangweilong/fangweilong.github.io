@@ -79,6 +79,19 @@
 	
 		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	
+
+	
+		
+<link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
+
+		
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+		
+<script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
+
+	
+
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
@@ -1312,24 +1325,20 @@
 
 
 <div id="vssue"></div>
-<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-
-
-
 <script>
 	new Vue({
-      el: '#vssue',
-      data: {
-		title: 'xx',
-        options: {
-          owner: 'fangweilong',
-          repo: 'fangweilong.github.io',
-          clientId: '764d4de1eeb295c96019',
-          clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
-        },
-      },
-      template: `<vssue :title="title" :options="options"></vssue>`
-    })
+		el: '#vssue',
+		data: {
+			title: 'java打包成docker images',
+			options: {
+				owner: 'fangweilong',
+				repo: 'fangweilong.github.io',
+				clientId: '764d4de1eeb295c96019',
+				clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
+			},
+		},
+		template: `<vssue :title="title" :options="options"></vssue>`
+	})
 </script>
 
 	</div>
@@ -1347,15 +1356,10 @@
 					次
 				</span>
 				|
-				<span id="busuanzi_container_site_uv">
-					本文总访问量：
-					<span id="busuanzi_value_site_uv">0</span>
-					次
-				</span>
 				
-					<br>
-					Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
-					Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+				<br>
+				Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+				Powered by <a href="//hexo.io" target="_blank">Hexo</a>
 	</p>
 </div>
 <script type="text/javascript">
