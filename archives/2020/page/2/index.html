@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 页面头 -->
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-	
+
 	<!-- title -->
 	
 	<title>
@@ -77,6 +78,10 @@
 	
 		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	
+	<!-- 评论 -->
+	
+		<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
@@ -85,7 +90,7 @@ var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?5131e85b302148d09e74e85b2fd2ce11";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
@@ -1471,30 +1476,31 @@ docker-compose 脚本地址
 </div>
 
 	</div>
-	<div id="footer">
+	<!-- 页面底部 -->
+<div id="footer">
 	<p>
 	©2018-<span id="footerYear"></span> 
-	<a href="/">fangweilong</a> 
-	
+	<a href="/">fangweilong</a>
 	
 		|
 		<span id="busuanzi_container_site_pv">
-			pv
-			<span id="busuanzi_value_site_pv"></span>
+			本站总访问量：
+			<span id="busuanzi_value_site_pv">0</span>
+			次
 		</span>
 		|
-		<span id="busuanzi_container_site_uv"> 
-			uv
-			<span id="busuanzi_value_site_uv"></span>
+		<span id="busuanzi_container_site_uv">
+			本文总访问量：
+			<span id="busuanzi_value_site_uv">0</span>
+			次
 		</span>
 	
 	<br>
 	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
-	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
 	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
 	</p>
 </div>
-<script type="text/javascript"> 
+<script type="text/javascript">
 	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
 </script>
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
