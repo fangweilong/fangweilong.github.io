@@ -1290,20 +1290,22 @@
 
 
 <div id="vssue"></div>
-<script>
-	new Vue({
-		el: '#vssue',
-		data: {
-			title: 'mysql      com.mysql.jdbc.exceptions.jdbc4.CommunicationsException',
-			options: {
-				owner: 'fangweilong',
-				repo: 'fangweilong.github.io',
-				clientId: '764d4de1eeb295c96019',
-				clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
+<script type='text/javascript'>
+	window.onload = function(){
+		new Vue({
+			el: '#vssue',
+			data: {
+				title: 'mysql      com.mysql.jdbc.exceptions.jdbc4.CommunicationsException',
+				options: {
+					owner: 'fangweilong',
+					repo: 'fangweilong.github.io',
+					clientId: '764d4de1eeb295c96019',
+					clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
+				},
 			},
-		},
-		template: `<vssue :title="title" :options="options"></vssue>`
-	})
+			template: `<vssue :title="title" :options="options"></vssue>`
+		})
+	}
 </script>
 
 	</div>
