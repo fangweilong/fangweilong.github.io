@@ -71,6 +71,17 @@
 	
 		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	
+	
+		
+<link rel="stylesheet" href="/lib/vssue/vssue.min.css">
+
+		
+<script src="/lib/vue.min.js"></script>
+
+		
+<script src="/lib/vssue/vssue.github.min.js"></script>
+
+	
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
@@ -1177,11 +1188,7 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<head>
-  <!-- Vssue 的样式文件 -->
-  <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
-</head>
-<h1 id="article-title">
+		<h1 id="article-title">
 
 	Long返回给前台在js中丢失精度
 </h1>
@@ -1260,32 +1267,21 @@
 
 
 
-	
-<link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css">
-
-	
-<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-
-	
-<script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
-
-
 <div id="vssue"></div>
 <script type='text/javascript'>
-
-  new Vue({
-		el: '#vssue',
-		data: {
-			title: 'Long返回给前台在js中丢失精度',
-			options: {
-				owner: 'fangweilong',
-				repo: 'fangweilong.github.io',
-				clientId: '764d4de1eeb295c96019',
-				clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
-			},
-		},
-		template: `<vssue :title="title" :options="options"></vssue>`
-	})
+    new Vue({
+      el: '#vssue',
+      data: {
+        title: 'Long返回给前台在js中丢失精度',
+        options: {
+          owner: 'fangweilong',
+          repo: 'fangweilong.github.io',
+          clientId: '764d4de1eeb295c96019',
+          clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
+        },
+      },
+      template: `<vssue :title="title" :options="options"></vssue>`
+    })
 </script>
 
 	</div>
@@ -1299,13 +1295,13 @@
 				|
 				<span id="busuanzi_container_site_pv">
 					您是第
-					<span id="busuanzi_value_site_pv">0</span>
+					<span class="read_num" id="busuanzi_value_site_pv">0</span>
 					个访问本站的小伙伴
 				</span>
 				|
 				<span id="busuanzi_container_site_uv">
 					这篇文章被阅读了
-					<span id="busuanzi_value_site_uv"></span>
+					<span class="read_num" id="busuanzi_value_site_uv"></span>
 					次
 				</span>
 				

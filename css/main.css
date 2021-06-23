@@ -403,7 +403,7 @@ table td {
 #footer p {
     padding: 5px;
 }
-#footer span {
+#footer .read_num{
     color:red;
 }
 /* @media */
