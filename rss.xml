@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 28 Jun 2021 01:30:44 GMT</pubDate>
-    <lastBuildDate>Mon, 28 Jun 2021 01:30:44 GMT</lastBuildDate>
+    <pubDate>Mon, 28 Jun 2021 03:03:56 GMT</pubDate>
+    <lastBuildDate>Mon, 28 Jun 2021 03:03:56 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -3814,6 +3814,60 @@ What this means is that Alpine based images are only released for early access r
       <enclosure url="https://img-blog.csdnimg.cn/20200901095305595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70#pic_center" type="image/"/>
     </item>
     <item>
+      <title>PostgreSQL使用数组类型</title>
+      <link>https://fangweilong.github.io/2020/06/28/postgresql%E8%BF%9E%E6%8E%A5%E6%95%B0%E8%BF%87%E5%A4%9A/</link>
+      <guid isPermaLink="false">/2020/06/28/postgresql%E8%BF%9E%E6%8E%A5%E6%95%B0%E8%BF%87%E5%A4%9A/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">PostgreSQL使用数组类型</source>
+      <category>postgres</category>
+      <pubDate>Sun, 28 Jun 2020 10:17:52 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="报错信息"> 报错信息</h2>
+<div><pre><code>FATAL: sorry, too many clients already
+</code></pre>
+</div><hr>
+<h2 id="解释"> 解释</h2>
+<p>原因是连接数太多，超过了在配置中设置的max_connections</p>
+<hr>
+<h2 id="查询"> 查询</h2>
+<h3 id="查询设置的最大链接数"> 查询设置的最大链接数</h3>
+<div><pre><code><span>show</span> max_connections<span>;</span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="查询当前使用的链接数"> 查询当前使用的链接数</h3>
+<div><pre><code><span>select</span> <span>count</span><span>(</span><span>1</span><span>)</span> <span>from</span> pg_stat_activity<span>;</span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="查询空闲链接数-空闲链接数太多肯定有问题-可以使用下一条语句看那个ip使用的空闲链接数太多"> 查询空闲链接数-空闲链接数太多肯定有问题，可以使用下一条语句看那个ip使用的空闲链接数太多</h3>
+<div><pre><code><span>select</span> <span>count</span><span>(</span><span>*</span><span>)</span> <span>from</span> pg_stat_activity <span>where</span> state<span>=</span><span>'idle'</span><span>;</span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="查询当前使用的链接数-按照ip分组"> 查询当前使用的链接数-按照ip分组</h3>
+<div><pre><code><span>select</span> <span>count</span><span>(</span><span>*</span><span>)</span> <span>,</span> a<span>.</span>client_addr <span>from</span>  pg_stat_activity a <span>group</span> <span>by</span> a<span>.</span>client_addr
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="解决办法"> 解决办法</h2>
+<h3 id="清除所有的空闲链接-治标"> - 清除所有的空闲链接-治标</h3>
+<div><pre><code><span>SELECT</span> pg_terminate_backend<span>(</span>pid<span>)</span> <span>from</span> pg_stat_activity <span>where</span> state<span>=</span><span>'idle'</span><span>;</span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="增大数据库的最大链接数-治标"> - 增大数据库的最大链接数-治标</h3>
+<div><pre><code><span>SELECT</span> pg_terminate_backend<span>(</span>pid<span>)</span> <span>from</span> pg_stat_activity <span>where</span> state<span>=</span><span>'idle'</span><span>;</span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="更改程序的最大链接数-治本"> - 更改程序的最大链接数-治本</h3>
+<div><pre><code>- springboot+durid
+  spring:
+	datasource
+  		druid:
+  			maxActive: 10
+			minIdle: 2
+			minEvictableIdleTimeMillis: 600000
+			maxEvictableIdleTimeMillis: 900000
+- springboot+datasource
+  spring:
+  	datasource:
+		tomcat:
+  			maxActive: 10
+			minIdle: 2
+			minEvictableIdleTimeMillis: 600000
+			maxEvictableIdleTimeMillis: 900000
+</code></pre>
+</div>]]></content:encoded>
+    </item>
+    <item>
       <title>mysql-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException</title>
       <link>https://fangweilong.github.io/2018/12/19/mysql-com-mysql-jdbc-exceptions-jdbc4-communicationsexception/</link>
       <guid isPermaLink="false">/2018/12/19/mysql-com-mysql-jdbc-exceptions-jdbc4-communicationsexception/</guid>
@@ -6093,14 +6147,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/docs/home.html</link>
       <guid isPermaLink="false">/docs/home.html</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Mon, 28 Jun 2021 01:29:54 GMT</pubDate>
+      <pubDate>Mon, 28 Jun 2021 03:03:09 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/docs/slides.html</link>
       <guid isPermaLink="false">/docs/slides.html</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Mon, 28 Jun 2021 01:29:54 GMT</pubDate>
+      <pubDate>Mon, 28 Jun 2021 03:03:09 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6110,7 +6164,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Mon, 28 Jun 2021 01:29:54 GMT</pubDate>
+      <pubDate>Mon, 28 Jun 2021 03:03:09 GMT</pubDate>
     </item>
   </channel>
 </rss>
