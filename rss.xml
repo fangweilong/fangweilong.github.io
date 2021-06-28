@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 25 Jun 2021 10:04:03 GMT</pubDate>
-    <lastBuildDate>Fri, 25 Jun 2021 10:04:03 GMT</lastBuildDate>
+    <pubDate>Mon, 28 Jun 2021 01:30:44 GMT</pubDate>
+    <lastBuildDate>Mon, 28 Jun 2021 01:30:44 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -344,6 +344,73 @@ values
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20181126162921798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
+      <title>maven的配置以及IDEA导入本地maven</title>
+      <link>https://fangweilong.github.io/2018/01/22/maven%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8Aidea%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0maven/</link>
+      <guid isPermaLink="false">/2018/01/22/maven%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8Aidea%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0maven/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">maven的配置以及IDEA导入本地maven</source>
+      <category>maven</category>
+      <pubDate>Mon, 22 Jan 2018 20:17:30 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="_1-maven安装前先确定你本地的jdk是否安装-环境变量是否配置"> 1.maven安装前先确定你本地的jdk是否安装，环境变量是否配置</h2>
+<hr>
+<h2 id="_2-maven的官网-点击打开官网"> 2.maven的官网:<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener noreferrer">点击打开官网</a></h2>
+<hr>
+<h2 id="_3-下载后解压-我用的是解压版-建议自定义目录-将所有开发中需要用到的例如jdk-idea等都放入同一个文件夹中-这样好找并且好管理。一定要记住你的目录-并且不要出现各种奇怪的字符或者中文-不然出现各种问题哭都来不及"> 3.下载后解压（我用的是解压版），建议自定义目录，将所有开发中需要用到的例如jdk,idea等都放入同一个文件夹中，这样好找并且好管理。一定要记住你的目录！！！并且不要出现各种奇怪的字符或者中文，不然出现各种问题哭都来不及</h2>
+<hr>
+<h2 id="_4-配置maven的环境变量"> 4.配置maven的环境变量</h2>
+<div><pre><code>系统变量：
+MAVEN_HOME = 你的maven路径
+
+用户变量：
+path = %MAVEN_HOME%\bin
+</code></pre>
+</div><hr>
+<h3 id="_5-打开cmd-输入命令"> 5. 打开cmd,输入命令</h3>
+<div><pre><code>	mvn -version
+</code></pre>
+<div><span>1</span><br></div></div><p><img src="https://img-blog.csdn.net/20180122194742713?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="" style="font-size:14px; white-space:pre-wrap; color:rgb(51,51,51); font-family:Verdana; text-indent:28px">
+<p>在这里我们可以看到maven的一些参数，如果有出现这个就不用管，说明我们初始的maven配置成功了</p>
+<hr>
+<h2 id="_6-修改maven的仓库位置-这一步没有需求的可以跳过直接看第7步-不是必需步骤"> 6.修改maven的仓库位置（这一步没有需求的可以跳过直接看第7步，不是必需步骤）</h2>
+<div><pre><code>  找到maven/conf/settings.xml(不是.m2文件夹下的,两个有何不同请看文章结尾)，我的是在D:\Server\maven\conf\settings.xml
+</code></pre>
+</div><img src="https://img-blog.csdn.net/20180122195555425?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">
+<p>找到这一行，按照你自己设置的文件夹的填入地址，以后maven下载的包都会在这个路径下，而不是在C:\Users\admcnm.m2\repository的默认文件夹下面</p>
+<hr>
+<h2 id="_7-修改镜像地址"> 7.修改镜像地址</h2>
+<img src="https://img-blog.csdn.net/20180122200049294?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">
+<p>还是在settings.xml文件中，找到如图所在的位置，添加或修改红框框起来的内容</p>
+<div><pre><code>&lt;mirror&gt;
+	&lt;id&gt;nexus-aliyun&lt;id&gt;
+	&lt;mirrorOf&gt;*&lt;mirrorOf&gt;
+	&lt;name&gt;Nexus aliyun&lt;name&gt;
+	&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;url&gt;
+&lt;mirror&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>修改完以后我们下载jar包都是在阿里云的镜像中下载，而不是国外的地址，速度会快很多</p>
+<hr>
+<h2 id="_8-下载基础包"> 8.下载基础包</h2>
+<p>在cmd中输入命令并执行：</p>
+<div><pre><code>mvn help:system
+</code></pre>
+<div><span>1</span><br></div></div><p>如果此时出现下载各种包，那么maven的基础配置就完成。但是如果你和我一样出现了这种问题</p>
+<div><pre><code>[ERROR] Error executing Maven.
+[ERROR] 3 problems were encountered while building the effective settings
+[WARNING] Unrecognised tag: &#39;activeProfiles&#39; (position: START_TAG seen ...\u4e0d\u5230\u8fd9\u6837\u4e00\u4e2aprofile\uff0cMaven\u5219\u4f1a\u50cf\u5f80\u5e38\u4e00\u6837\u8fd0\u884c\u3002  --;  \r\n            ;activeProfiles;... @288:29)  @ C:\Users\Administrator\.m2\settings.xml, line 288, column 29
+[ERROR] &#39;profiles.profile[test].pluginRepositories.pluginRepository.id&#39; for  is missing @ C:\Users\Administrator\.m2\settings.xml
+[ERROR] &#39;profiles.profile[test].pluginRepositories.pluginRepository.url&#39; for  is missing @ C:\Users\Administrator\.m2\settings.xml
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>那么删除你
+C:\Users\用户名.m2\settings.xml文件后再试。</p>
+<hr>
+<h2 id="_9-idea2017-3-1配置maven"> 9.idea2017.3.1配置maven</h2>
+<img src="https://img-blog.csdn.net/20180122201319636?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<hr>
+<ul>
+<li>.m2文件下的settings.xml文件是我们这台电脑当前登录用户使用的自定义配置文件，其他maven文件中的setting.xml是全局配置文件，当用户配置文件和全局配置文件都存在时系统会默认先使用用户的配置文件，我个人习惯使用全局配置文件，同一路径下好管理，与其他人共同使用时也好统一。*</li>
+</ul>
+]]></content:encoded>
     </item>
     <item>
       <title>java-spark-kMeans算法</title>
@@ -1939,6 +2006,49 @@ public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
       <enclosure url="https://img-blog.csdnimg.cn/20201230165529317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
+      <title>org.apache.jasper.JasperExceptionUnabletocompileclassforJSP</title>
+      <link>https://fangweilong.github.io/2018/01/26/org-apache-jasper-jasperexceptionunabletocompileclassforjsp/</link>
+      <guid isPermaLink="false">/2018/01/26/org-apache-jasper-jasperexceptionunabletocompileclassforjsp/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">org.apache.jasper.JasperExceptionUnabletocompileclassforJSP</source>
+      <category>java</category>
+      <pubDate>Fri, 26 Jan 2018 09:31:26 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="出错信息"> 出错信息</h2>
+<p>出现这种情况往往都是在 include 多个JSP页面后出现，报错信息为:
+ERROR LogErrorInfoImpl:42 - Error Happen:</p>
+<div><pre><code>org.apache.jasper.JasperException: Unable to compile class for JSP:
+
+An error occurred at line: 158 in the generated java file
+
+The code of method _jspService(HttpServletRequest, HttpServletResponse) is exceeding the 65535 bytes limit.
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><div><pre><code><span><span><span>&lt;</span>servlet</span><span>></span></span>
+    <span><span><span>&lt;</span>servlet-name</span><span>></span></span>jsp<span><span><span>&lt;/</span>servlet-name</span><span>></span></span>
+    <span><span><span>&lt;</span>servlet-class</span><span>></span></span>org.apache.jasper.servlet.JspServlet<span><span><span>&lt;/</span>servlet-class</span><span>></span></span>
+    <span><span><span>&lt;</span>init-param</span><span>></span></span>
+        <span><span><span>&lt;</span>param-name</span><span>></span></span>fork<span><span><span>&lt;/</span>param-name</span><span>></span></span>
+        <span><span><span>&lt;</span>param-value</span><span>></span></span>false<span><span><span>&lt;/</span>param-value</span><span>></span></span>
+    <span><span><span>&lt;/</span>init-param</span><span>></span></span>
+    <span><span><span>&lt;</span>init-param</span><span>></span></span>
+        <span><span><span>&lt;</span>param-name</span><span>></span></span>xpoweredBy<span><span><span>&lt;/</span>param-name</span><span>></span></span>
+        <span><span><span>&lt;</span>param-value</span><span>></span></span>false<span><span><span>&lt;/</span>param-value</span><span>></span></span>
+    <span><span><span>&lt;/</span>init-param</span><span>></span></span>
+    <span><span><span>&lt;</span>init-param</span><span>></span></span>
+        <span><span><span>&lt;</span>param-name</span><span>></span></span>enablePooling<span><span><span>&lt;/</span>param-name</span><span>></span></span>
+        <span><span><span>&lt;</span>param-value</span><span>></span></span>false<span><span><span>&lt;/</span>param-value</span><span>></span></span>
+    <span><span><span>&lt;/</span>init-param</span><span>></span></span>
+    <span><span><span>&lt;</span>init-param</span><span>></span></span>
+        <span><span><span>&lt;</span>param-name</span><span>></span></span>mappedfile<span><span><span>&lt;/</span>param-name</span><span>></span></span>
+        <span><span><span>&lt;</span>param-value</span><span>></span></span>false<span><span><span>&lt;/</span>param-value</span><span>></span></span>
+    <span><span><span>&lt;/</span>init-param</span><span>></span></span>
+    <span><span><span>&lt;</span>load-on-startup</span><span>></span></span>3<span><span><span>&lt;/</span>load-on-startup</span><span>></span></span>
+<span><span><span>&lt;/</span>servlet</span><span>></span></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><p>在web.xml中添加上段红色代码，之后重启Tomcat再次即可。</p>
+<hr>
+<p>转载自:https://www.cnblogs.com/mayabei/p/6856602.html</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>Long返回给前台在js中丢失精度</title>
       <link>https://fangweilong.github.io/2021/06/03/long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/</link>
       <guid isPermaLink="false">/2021/06/03/long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/</guid>
@@ -2493,6 +2603,54 @@ OK这样就可以了。</p>
 <span>}</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>org.springframework.beans.factory.BeanInitializationExceptionCouldnotloadproperties;</title>
+      <link>https://fangweilong.github.io/2018/01/24/org-springframework-beans-factory-beaninitializationexceptioncouldnotloadproperties/</link>
+      <guid isPermaLink="false">/2018/01/24/org-springframework-beans-factory-beaninitializationexceptioncouldnotloadproperties/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">org.springframework.beans.factory.BeanInitializationExceptionCouldnotloadproperties;</source>
+      <category>java</category>
+      <pubDate>Wed, 24 Jan 2018 14:21:35 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="基本报错信息表现为"> 基本报错信息表现为:</h2>
+<div><pre><code>严重: Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/db.properties]
+at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:147)
+at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:669)
+at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:461)
+at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5118)
+at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5634)
+at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1571)
+at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1561)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/db.properties]
+at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:140)
+at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:143)
+at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:98)
+at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:175)
+at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:156)
+at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:137)
+... 15 more
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><h3 id="可能性1-没有引入数据源"> 可能性1:没有引入数据源</h3>
+<p>在applicationContext.xml添加数据源   (请根据自己的项目引用)</p>
+<div><pre><code>&lt;context:property-placeholder location=&quot;classpath:db.properties&quot;/&gt;
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="可能性2-引入了数据源但是找不到文件"> 可能性2：引入了数据源但是找不到文件</h3>
+<p>这个问题目前我只在idea中遇到,myEclipse中没出现过。</p>
+<p>找到项目的资源文件(resources),查看是否是这种图标<p><img src="https://img-blog.csdn.net/20180124141515461?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>如果不是则在文件上右键→ Mark Dirextory as</p>
+<img src="https://img-blog.csdn.net/20180124141744475?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">
+<p>将文件属性设置为 Resources Root 后重新编译项目重试(我这边已经改过了，所以在上面看不到有Resources Root属性)</p>
+]]></content:encoded>
     </item>
     <item>
       <title>使用java生成微信随机加好友的链接</title>
@@ -5935,14 +6093,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/docs/home.html</link>
       <guid isPermaLink="false">/docs/home.html</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Fri, 25 Jun 2021 10:02:25 GMT</pubDate>
+      <pubDate>Mon, 28 Jun 2021 01:29:54 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/docs/slides.html</link>
       <guid isPermaLink="false">/docs/slides.html</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Fri, 25 Jun 2021 10:02:25 GMT</pubDate>
+      <pubDate>Mon, 28 Jun 2021 01:29:54 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -5952,7 +6110,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Fri, 25 Jun 2021 10:02:25 GMT</pubDate>
+      <pubDate>Mon, 28 Jun 2021 01:29:54 GMT</pubDate>
     </item>
   </channel>
 </rss>
