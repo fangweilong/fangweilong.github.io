@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 02 Jul 2021 08:03:40 GMT</pubDate>
-    <lastBuildDate>Fri, 02 Jul 2021 08:03:40 GMT</lastBuildDate>
+    <pubDate>Fri, 02 Jul 2021 08:20:23 GMT</pubDate>
+    <lastBuildDate>Fri, 02 Jul 2021 08:20:23 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -3837,9 +3837,11 @@ What this means is that Alpine based images are only released for early access r
 <h2 id="使用case-when"> 使用case when</h2>
 <div><pre><code><span>select</span> <span>*</span> <span>from</span> <span>Table</span> <span>where</span>  <span>(</span><span>case</span> <span>when</span> 值<span>=</span><span>''</span> <span>then</span> <span>1</span><span>=</span><span>1</span> <span>else</span> <span>Table</span><span>.</span>字段<span>=</span>值 <span>end</span> <span>)</span>
 </code></pre>
-<div><span>1</span><br></div></div><p>:::tips
-这里的case when 不是使用的 case 字段 when
-:::</p>
+<div><span>1</span><br></div></div><div><p>提示</p>
+<div><pre><code>这里的 == case when == 不是使用的 == case 字段 when ==
+要使用 == case when 字段='' ==
+</code></pre>
+</div></div>
 ]]></content:encoded>
     </item>
     <item>
@@ -6176,14 +6178,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Fri, 02 Jul 2021 08:01:40 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 08:10:48 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Fri, 02 Jul 2021 08:01:40 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 08:10:48 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6193,7 +6195,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Fri, 02 Jul 2021 08:01:40 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 08:10:48 GMT</pubDate>
     </item>
   </channel>
 </rss>
