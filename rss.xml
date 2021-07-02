@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 28 Jun 2021 03:17:14 GMT</pubDate>
-    <lastBuildDate>Mon, 28 Jun 2021 03:17:14 GMT</lastBuildDate>
+    <pubDate>Fri, 02 Jul 2021 05:43:18 GMT</pubDate>
+    <lastBuildDate>Fri, 02 Jul 2021 05:43:18 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -6134,8 +6134,8 @@ yarn-lock.json
     </item>
     <item>
       <title>个人介绍</title>
-      <link>https://fangweilong.github.io/docs/about.html</link>
-      <guid isPermaLink="false">/docs/about.html</guid>
+      <link>https://fangweilong.github.io/about/</link>
+      <guid isPermaLink="false">/about/</guid>
       <source url="https://fangweilong.github.io/rss.xml">个人介绍</source>
       <pubDate>Wed, 23 Jun 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="个人介绍"> 个人介绍</h1>
@@ -6144,17 +6144,17 @@ yarn-lock.json
     </item>
     <item>
       <title>项目主页</title>
-      <link>https://fangweilong.github.io/docs/home.html</link>
-      <guid isPermaLink="false">/docs/home.html</guid>
+      <link>https://fangweilong.github.io/home/</link>
+      <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Mon, 28 Jun 2021 03:16:23 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 05:39:50 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
-      <link>https://fangweilong.github.io/docs/slides.html</link>
-      <guid isPermaLink="false">/docs/slides.html</guid>
+      <link>https://fangweilong.github.io/slides/</link>
+      <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Mon, 28 Jun 2021 03:16:23 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 05:39:50 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6164,7 +6164,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Mon, 28 Jun 2021 03:16:23 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 05:39:50 GMT</pubDate>
     </item>
   </channel>
 </rss>
