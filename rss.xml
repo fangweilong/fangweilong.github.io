@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 02 Jul 2021 06:19:14 GMT</pubDate>
-    <lastBuildDate>Fri, 02 Jul 2021 06:19:14 GMT</lastBuildDate>
+    <pubDate>Fri, 02 Jul 2021 08:03:40 GMT</pubDate>
+    <lastBuildDate>Fri, 02 Jul 2021 08:03:40 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -397,7 +397,7 @@ path = %MAVEN_HOME%\bin
 <div><span>1</span><br></div></div><p>如果此时出现下载各种包，那么maven的基础配置就完成。但是如果你和我一样出现了这种问题</p>
 <div><pre><code>[ERROR] Error executing Maven.
 [ERROR] 3 problems were encountered while building the effective settings
-[WARNING] Unrecognised tag: &#39;activeProfiles&#39; (position: START_TAG seen ...\u4e0d\u5230\u8fd9\u6837\u4e00\u4e2aprofile\uff0cMaven\u5219\u4f1a\u50cf\u5f80\u5e38\u4e00\u6837\u8fd0\u884c\u3002  --;  \r\n            ;activeProfiles;... @288:29)  @ C:\Users\Administrator\.m2\settings.xml, line 288, column 29
+[WARNING] Unrecognised tags: &#39;activeProfiles&#39; (position: START_TAG seen ...\u4e0d\u5230\u8fd9\u6837\u4e00\u4e2aprofile\uff0cMaven\u5219\u4f1a\u50cf\u5f80\u5e38\u4e00\u6837\u8fd0\u884c\u3002  --;  \r\n            ;activeProfiles;... @288:29)  @ C:\Users\Administrator\.m2\settings.xml, line 288, column 29
 [ERROR] &#39;profiles.profile[test].pluginRepositories.pluginRepository.id&#39; for  is missing @ C:\Users\Administrator\.m2\settings.xml
 [ERROR] &#39;profiles.profile[test].pluginRepositories.pluginRepository.url&#39; for  is missing @ C:\Users\Administrator\.m2\settings.xml
 </code></pre>
@@ -3814,6 +3814,35 @@ What this means is that Alpine based images are only released for early access r
       <enclosure url="https://img-blog.csdnimg.cn/20200901095305595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70#pic_center" type="image/"/>
     </item>
     <item>
+      <title>PostgreSQL在where条件中使用判断条件</title>
+      <link>https://fangweilong.github.io/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</link>
+      <guid isPermaLink="false">/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">PostgreSQL在where条件中使用判断条件</source>
+      <category>postgres</category>
+      <pubDate>Fri, 02 Jul 2021 15:49:03 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="postgresql在where条件中使用判断条件"> PostgreSQL在where条件中使用判断条件</h1>
+<h2 id="需求"> 需求</h2>
+<p>我们平时查询数据是使用的mybatis，所以是这么写的</p>
+<div><pre><code><span>&lt;</span><span>select</span> id<span>=</span><span>"selectTable"</span> resultType<span>=</span><span>"java.util.Map"</span><span>></span>
+    <span>select</span> <span>*</span> <span>from</span> <span>Table</span>
+        <span>&lt;</span><span>where</span><span>></span>
+            <span>&lt;</span><span>if</span> test<span>=</span><span>"keyword!=null and keyword!=''"</span><span>></span>
+                <span>and</span> keyword<span>=</span><span>#{keyword}</span>
+            <span>&lt;</span><span>/</span><span>if</span><span>></span>
+        <span>&lt;</span><span>/</span><span>where</span><span>></span>
+
+<span>&lt;</span><span>select</span><span>></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>但是项目中有个使用动态sql直接查询的需求，在不能使用mybatis等解析查询语句的情况下该怎么实现呢？</p>
+<h2 id="使用case-when"> 使用case when</h2>
+<div><pre><code><span>select</span> <span>*</span> <span>from</span> <span>Table</span> <span>where</span>  <span>(</span><span>case</span> <span>when</span> 值<span>=</span><span>''</span> <span>then</span> <span>1</span><span>=</span><span>1</span> <span>else</span> <span>Table</span><span>.</span>字段<span>=</span>值 <span>end</span> <span>)</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>:::tips
+这里的case when 不是使用的 case 字段 when
+:::</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>PostgreSQL连接数过多</title>
       <link>https://fangweilong.github.io/2021/06/28/postgresql%E8%BF%9E%E6%8E%A5%E6%95%B0%E8%BF%87%E5%A4%9A/</link>
       <guid isPermaLink="false">/2021/06/28/postgresql%E8%BF%9E%E6%8E%A5%E6%95%B0%E8%BF%87%E5%A4%9A/</guid>
@@ -6147,14 +6176,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Fri, 02 Jul 2021 06:17:39 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 08:01:40 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Fri, 02 Jul 2021 06:17:39 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 08:01:40 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6164,7 +6193,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Fri, 02 Jul 2021 06:17:39 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 08:01:40 GMT</pubDate>
     </item>
   </channel>
 </rss>
