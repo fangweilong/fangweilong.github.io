@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 02 Jul 2021 08:47:05 GMT</pubDate>
-    <lastBuildDate>Fri, 02 Jul 2021 08:47:05 GMT</lastBuildDate>
+    <pubDate>Sun, 11 Jul 2021 05:54:18 GMT</pubDate>
+    <lastBuildDate>Sun, 11 Jul 2021 05:54:18 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -370,7 +370,7 @@ path = %MAVEN_HOME%\bin
 <h3 id="_5-打开cmd-输入命令"> 5. 打开cmd,输入命令</h3>
 <div><pre><code>	mvn -version
 </code></pre>
-<div><span>1</span><br></div></div><p><img src="https://img-blog.csdn.net/20180122194742713?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="" style="font-size:14px; white-space:pre-wrap; color:rgb(51,51,51); font-family:Verdana; text-indent:28px">
+<div><span>1</span><br></div></div><p><img src="https://img-blog.csdn.net/20180122194742713?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="" /></p>
 <p>在这里我们可以看到maven的一些参数，如果有出现这个就不用管，说明我们初始的maven配置成功了</p>
 <hr>
 <h2 id="_6-修改maven的仓库位置-这一步没有需求的可以跳过直接看第7步-不是必需步骤"> 6.修改maven的仓库位置（这一步没有需求的可以跳过直接看第7步，不是必需步骤）</h2>
@@ -412,6 +412,7 @@ C:\Users\用户名.m2\settings.xml文件后再试。</p>
 <li>.m2文件下的settings.xml文件是我们这台电脑当前登录用户使用的自定义配置文件，其他maven文件中的setting.xml是全局配置文件，当用户配置文件和全局配置文件都存在时系统会默认先使用用户的配置文件，我个人习惯使用全局配置文件，同一路径下好管理，与其他人共同使用时也好统一。*</li>
 </ul>
 ]]></content:encoded>
+      <enclosure url="https://img-blog.csdn.net/20180122194742713?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" type="image/"/>
     </item>
     <item>
       <title>java-spark-kMeans算法</title>
@@ -1809,6 +1810,204 @@ public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>springcloud-gateway整合swagger3.0.0</title>
+      <link>https://fangweilong.github.io/2020/12/30/springcloud-gateway%E6%95%B4%E5%90%88swagger3-0-0/</link>
+      <guid isPermaLink="false">/2020/12/30/springcloud-gateway%E6%95%B4%E5%90%88swagger3-0-0/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">springcloud-gateway整合swagger3.0.0</source>
+      <category>spring cloud</category>
+      <pubDate>Wed, 30 Dec 2020 17:15:59 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="版本和说明"> 版本和说明</h1>
+<ul>
+<li>swagger:3.0.0</li>
+<li>gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。</li>
+<li>以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3</li>
+</ul>
+<hr>
+<h1 id="单应用"> 单应用</h1>
+<h2 id="pom添加"> pom添加</h2>
+<div><pre><code><span>&lt;</span><span>!</span>-- <span>3.0</span>版本只需要引入一个，不再像2.x版本需要引入两个包 --<span>></span>
+<span>&lt;</span>dependency<span>></span>
+	<span>&lt;</span>groupId<span>></span>io.springfox<span>&lt;</span>/groupId<span>></span>
+    <span>&lt;</span>artifactId<span>></span>springfox-boot-starter<span>&lt;</span>/artifactId<span>></span>
+    <span>&lt;</span>version<span>></span><span>${swagger.version}</span><span>&lt;</span>/version<span>></span>
+<span>&lt;</span>/dependency<span>></span>
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="配置文件"> 配置文件</h2>
+<div><pre><code><span>/**
+ * swagger配制
+ *
+ * @author teler
+ * @date 2020-12-30
+ */</span>
+<span>@Configuration</span>
+<span>public</span> <span>class</span> <span>SwaggerConfig</span> <span>{</span>
+
+	<span>@Value</span><span>(</span><span>"${swagger.enable:true}"</span><span>)</span>
+	<span>private</span> <span>Boolean</span> enable<span>;</span>
+
+	<span>@Bean</span>
+	<span>public</span> <span>Docket</span> <span>api</span><span>(</span><span>)</span> <span>{</span>
+		<span>return</span> <span>new</span> <span>Docket</span><span>(</span><span>DocumentationType</span><span>.</span>OAS_30<span>)</span>
+					   <span>//资源</span>
+				       <span>.</span><span>globalResponses</span><span>(</span><span>HttpMethod</span><span>.</span>GET<span>,</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>)</span>
+				       <span>.</span><span>globalResponses</span><span>(</span><span>HttpMethod</span><span>.</span>PUT<span>,</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>)</span>
+				       <span>.</span><span>globalResponses</span><span>(</span><span>HttpMethod</span><span>.</span>POST<span>,</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>)</span>
+				       <span>.</span><span>globalResponses</span><span>(</span><span>HttpMethod</span><span>.</span>DELETE<span>,</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>)</span>
+					   <span>//是否启动</span>
+				       <span>.</span><span>enable</span><span>(</span>enable<span>)</span>
+					   <span>//头部信息</span>
+				       <span>.</span><span>apiInfo</span><span>(</span><span>apiInfo</span><span>(</span><span>)</span><span>)</span>
+				       <span>.</span><span>select</span><span>(</span><span>)</span>
+				       <span>/**
+				        * RequestHandlerSelectors,配置要扫描接口的方式
+				        * basePackage指定要扫描的包
+				        * any()扫描所有，项目中的所有接口都会被扫描到
+				        * none()不扫描
+				        * withClassAnnotation()扫描类上的注解
+				        * withMethodAnnotation()扫描方法上的注解
+				        */</span>
+				       <span>.</span><span>apis</span><span>(</span><span>RequestHandlerSelectors</span><span>.</span><span>any</span><span>(</span><span>)</span><span>)</span>
+					   <span>//过滤某个路径</span>
+				       <span>.</span><span>paths</span><span>(</span><span>PathSelectors</span><span>.</span><span>any</span><span>(</span><span>)</span><span>)</span>
+				       <span>.</span><span>build</span><span>(</span><span>)</span>
+					   <span>//协议</span>
+				       <span>.</span><span>protocols</span><span>(</span><span>newHashSet</span><span>(</span><span>"https"</span><span>,</span> <span>"http"</span><span>)</span><span>)</span>
+				       <span>.</span><span>securitySchemes</span><span>(</span><span>securitySchemes</span><span>(</span><span>)</span><span>)</span>
+				       <span>.</span><span>securityContexts</span><span>(</span><span>securityContexts</span><span>(</span><span>)</span><span>)</span><span>;</span>
+	<span>}</span>
+
+
+	<span>/**
+	 * API 页面上半部分展示信息
+	 */</span>
+	<span>private</span> <span>ApiInfo</span> <span>apiInfo</span><span>(</span><span>)</span> <span>{</span>
+		<span>return</span> <span>new</span> <span>ApiInfoBuilder</span><span>(</span><span>)</span>
+				       <span>.</span><span>title</span><span>(</span><span>"接口文档"</span><span>)</span>
+				       <span>.</span><span>description</span><span>(</span><span>"@author Teler"</span><span>)</span>
+				       <span>.</span><span>contact</span><span>(</span><span>new</span> <span>Contact</span><span>(</span><span>"Teler"</span><span>,</span> <span>null</span><span>,</span> <span>"teler96@qq.com"</span><span>)</span><span>)</span>
+				       <span>.</span><span>version</span><span>(</span><span>"1.0"</span><span>)</span>
+				       <span>.</span><span>build</span><span>(</span><span>)</span><span>;</span>
+	<span>}</span>
+
+	<span>/**
+	 * 设置接口单独的授权信息
+	 */</span>
+	<span>private</span> <span>List</span><span><span>&lt;</span><span>SecurityScheme</span><span>></span></span> <span>securitySchemes</span><span>(</span><span>)</span> <span>{</span>
+		<span>return</span> <span>Collections</span><span>.</span><span>singletonList</span><span>(</span><span>new</span> <span>ApiKey</span><span>(</span><span>"BASE_TOKEN"</span><span>,</span> <span>"token"</span><span>,</span> <span>"header"</span><span>)</span><span>)</span><span>;</span>
+	<span>}</span>
+
+	<span>/**
+	 * 授权信息全局应用
+	 */</span>
+	<span>private</span> <span>List</span><span><span>&lt;</span><span>SecurityContext</span><span>></span></span> <span>securityContexts</span><span>(</span><span>)</span> <span>{</span>
+		<span>return</span> <span>Collections</span><span>.</span><span>singletonList</span><span>(</span>
+				<span>SecurityContext</span><span>.</span><span>builder</span><span>(</span><span>)</span>
+						<span>.</span><span>securityReferences</span><span>(</span>
+								<span>Collections</span><span>.</span><span>singletonList</span><span>(</span><span>new</span> <span>SecurityReference</span><span>(</span><span>"BASE_TOKEN"</span><span>,</span>
+										<span>new</span> <span>AuthorizationScope</span><span>[</span><span>]</span><span>{</span><span>new</span> <span>AuthorizationScope</span><span>(</span><span>"global"</span><span>,</span> <span>""</span><span>)</span><span>}</span>
+								<span>)</span><span>)</span><span>)</span>
+						<span>//.forPaths(PathSelectors.any())</span>
+						<span>.</span><span>build</span><span>(</span><span>)</span>
+		<span>)</span><span>;</span>
+	<span>}</span>
+
+	<span>@SafeVarargs</span>
+	<span>private</span> <span>final</span> <span><span>&lt;</span><span>T</span><span>></span></span> <span>Set</span><span><span>&lt;</span><span>T</span><span>></span></span> <span>newHashSet</span><span>(</span><span>T</span><span>.</span><span>.</span><span>.</span> ts<span>)</span> <span>{</span>
+		<span>if</span> <span>(</span>ts<span>.</span>length <span>></span> <span>0</span><span>)</span> <span>{</span>
+			<span>return</span> <span>new</span> <span>LinkedHashSet</span><span><span>&lt;</span><span>></span></span><span>(</span><span>Arrays</span><span>.</span><span>asList</span><span>(</span>ts<span>)</span><span>)</span><span>;</span>
+		<span>}</span>
+		<span>return</span> <span>null</span><span>;</span>
+	<span>}</span>
+<span>}</span>
+
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br></div></div><h2 id="访问"> 访问</h2>
+<p>到这一步我们应该就能正常访问swagger文档了，但是要注意3.0的访问页面路径有所变化</p>
+<div><pre><code>http://ip:port/swagger-ui/
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="页面"> 页面</h2>
+<p><img src="https://img-blog.csdnimg.cn/20201230165529317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+<hr>
+<h1 id="微服务"> 微服务</h1>
+<ul>
+<li>gateway版本:2.2.5</li>
+</ul>
+<h2 id="添加文件"> 添加文件</h2>
+<p>MySwaggerResourcesProvider在gateway模块中创建，注意其中的一些注解和说明，否则应用无法正常启动</p>
+<h3 id="myswaggerresourcesprovider"> MySwaggerResourcesProvider</h3>
+<p><em>@Primary这个注解是告诉spring 如果有冲突优先使用当前类 没有这个会报实现类冲突 看源码能发现SwaggerResourcesProvider已经有一个InMemorySwaggerResourcesProvider实现类 但是自带的不能满足我们的要求</em></p>
+<div><pre><code><span>/**
+ * swagger的配置类
+ *
+ * @author teler
+ */</span>
+<span>@Component</span>
+<span>@Primary</span>
+<span>public</span> <span>class</span> <span>MySwaggerResourcesProvider</span> <span>implements</span> <span>SwaggerResourcesProvider</span> <span>{</span>
+
+	<span>/**
+	 * swagger3默认的url后缀
+	 */</span>
+	<span>private</span> <span>static</span> <span>final</span> <span>String</span> SWAGGER2URL <span>=</span> <span>"/v3/api-docs"</span><span>;</span>
+	<span>/**
+	 * 网关路由
+	 */</span>
+	<span>private</span> <span>final</span> <span>RouteLocator</span> routeLocator<span>;</span>
+
+	<span>/**
+	 * 网关应用名称
+	 */</span>
+	<span>@Value</span><span>(</span><span>"${spring.application.name}"</span><span>)</span>
+	<span>private</span> <span>String</span> self<span>;</span>
+
+	<span>@Autowired</span>
+	<span>public</span> <span>MySwaggerResourcesProvider</span><span>(</span><span>RouteLocator</span> routeLocator<span>)</span> <span>{</span>
+		<span>this</span><span>.</span>routeLocator <span>=</span> routeLocator<span>;</span>
+	<span>}</span>
+
+	<span>/**
+	 * 对于gateway来说这块比较重要 让swagger能找到对应的服务
+	 *
+	 * @return
+	 */</span>
+	<span>@Override</span>
+	<span>public</span> <span>List</span><span><span>&lt;</span><span>SwaggerResource</span><span>></span></span> <span>get</span><span>(</span><span>)</span> <span>{</span>
+		<span>List</span><span><span>&lt;</span><span>SwaggerResource</span><span>></span></span> resources <span>=</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>;</span>
+		<span>List</span><span><span>&lt;</span><span>String</span><span>></span></span> routeHosts <span>=</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>;</span>
+		<span>// 获取所有可用的host：serviceId</span>
+		routeLocator<span>.</span><span>getRoutes</span><span>(</span><span>)</span><span>.</span><span>filter</span><span>(</span>route <span>-></span> route<span>.</span><span>getUri</span><span>(</span><span>)</span><span>.</span><span>getHost</span><span>(</span><span>)</span> <span>!=</span> <span>null</span><span>)</span>
+				<span>.</span><span>filter</span><span>(</span>route <span>-></span> <span>!</span>self<span>.</span><span>equals</span><span>(</span>route<span>.</span><span>getUri</span><span>(</span><span>)</span><span>.</span><span>getHost</span><span>(</span><span>)</span><span>)</span><span>)</span>
+				<span>.</span><span>subscribe</span><span>(</span>route <span>-></span> routeHosts<span>.</span><span>add</span><span>(</span>route<span>.</span><span>getUri</span><span>(</span><span>)</span><span>.</span><span>getHost</span><span>(</span><span>)</span><span>)</span><span>)</span><span>;</span>
+
+		<span>// 记录已经添加过的server</span>
+		<span>Set</span><span><span>&lt;</span><span>String</span><span>></span></span> dealed <span>=</span> <span>new</span> <span>HashSet</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>;</span>
+		routeHosts<span>.</span><span>forEach</span><span>(</span>instance <span>-></span> <span>{</span>
+			<span>// 拼接url</span>
+			<span>String</span> url <span>=</span> <span>"/"</span> <span>+</span> instance<span>.</span><span>toLowerCase</span><span>(</span><span>)</span> <span>+</span> SWAGGER2URL<span>;</span>
+			<span>if</span> <span>(</span><span>!</span>dealed<span>.</span><span>contains</span><span>(</span>url<span>)</span><span>)</span> <span>{</span>
+				dealed<span>.</span><span>add</span><span>(</span>url<span>)</span><span>;</span>
+				<span>SwaggerResource</span> swaggerResource <span>=</span> <span>new</span> <span>SwaggerResource</span><span>(</span><span>)</span><span>;</span>
+				swaggerResource<span>.</span><span>setUrl</span><span>(</span>url<span>)</span><span>;</span>
+				swaggerResource<span>.</span><span>setName</span><span>(</span>instance<span>)</span><span>;</span>
+				resources<span>.</span><span>add</span><span>(</span>swaggerResource<span>)</span><span>;</span>
+			<span>}</span>
+		<span>}</span><span>)</span><span>;</span>
+		<span>return</span> resources<span>;</span>
+	<span>}</span>
+<span>}</span>
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br></div></div><h2 id="访问-2"> 访问</h2>
+<p>链接不变，但是我们在右上角能清晰地看到所有的微服务模块已经能正常访问了
+<img src="https://img-blog.csdnimg.cn/20201230171308478.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+<h2 id="未解决"> 未解决</h2>
+<p>找不到中文包的设置方式，虽然说都能看得懂，但是还是想能自己设置语言。</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20201230165529317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
       <title>org.apache.jasper.JasperExceptionUnabletocompileclassforJSP</title>
       <link>https://fangweilong.github.io/2018/01/26/org-apache-jasper-jasperexceptionunabletocompileclassforjsp/</link>
       <guid isPermaLink="false">/2018/01/26/org-apache-jasper-jasperexceptionunabletocompileclassforjsp/</guid>
@@ -3178,15 +3377,15 @@ docker-compose：1.24.3
 <span>echo</span> -e <span>'创建时间:2020-02-02'</span>
 <span>echo</span> -e <span>'更新时间:2020-02-02 22:21'</span>
 
-<span>echo</span> -e <span>'给自己赋权限<span title="\n">\n</span>'</span>
+<span>echo</span> -e <span>'给自己赋权限\n'</span>
 <span>chmod</span> +x ./<span>$0</span>
 
 <span>#初始化</span>
 <span>function</span> <span>init</span><span>(</span><span>)</span><span>{</span>
     <span>clear</span>
-    <span>echo</span> -e <span>'请选择操作<span title="\n">\n</span>'</span>
-    <span>echo</span> -e <span>'1.安装docker<span title="\n">\n</span>'</span>
-    <span>echo</span> -e <span>'2.安装docker-compose<span title="\n">\n</span>'</span>
+    <span>echo</span> -e <span>'请选择操作\n'</span>
+    <span>echo</span> -e <span>'1.安装docker\n'</span>
+    <span>echo</span> -e <span>'2.安装docker-compose\n'</span>
     <span>echo</span> -e <span>'exit:退出'</span>
     
     call
@@ -3194,7 +3393,7 @@ docker-compose：1.24.3
 
 <span>#决定调用什么方法</span>
 <span>function</span> <span>call</span><span>(</span><span>)</span><span>{</span>
-    <span>echo</span> -e <span>'<span title="\n">\n</span>'</span>
+    <span>echo</span> -e <span>'\n'</span>
     <span>read</span> -p <span>'请输入:'</span> INPUT
     <span>case</span> <span>$INPUT</span> <span>in</span>
         <span>1</span><span>)</span>
@@ -3223,54 +3422,54 @@ docker-compose：1.24.3
     searchFile <span>$FILENAME</span>
 
     <span>if</span> <span>[</span> <span>$?</span> -ne <span>0</span> <span>]</span><span>;</span><span>then</span>
-        <span>echo</span> -e <span>'<span title="\n">\n</span>文件不存在'</span>
+        <span>echo</span> -e <span>'\n文件不存在'</span>
         installDocker
     <span>fi</span>
 
-    <span>echo</span> -e <span>'<span title="\n">\n</span>解压文件...'</span>
+    <span>echo</span> -e <span>'\n解压文件...'</span>
     <span>tar</span> -xzvf <span>$FILENAME</span>
     <span>if</span> <span>[</span> <span>$?</span> -eq <span>0</span> <span>]</span><span>;</span><span>then</span>
-        <span>echo</span> -e <span>'<span title="\n">\n</span>将docker目录移到/usr/bin目录下...'</span>
+        <span>echo</span> -e <span>'\n将docker目录移到/usr/bin目录下...'</span>
         <span>cp</span> docker/* /usr/bin/
         <span>if</span> <span>[</span> <span>$?</span> -ne <span>0</span> <span>]</span><span>;</span><span>then</span>
-            <span>echo</span> -e <span>'<span title="\n">\n</span>复制失败'</span>
+            <span>echo</span> -e <span>'\n复制失败'</span>
             <span>exit</span>
         <span>fi</span>
-        <span>echo</span> -e <span>'<span title="\n">\n</span>将docker.service 移到/etc/systemd/system/ 目录...'</span>
+        <span>echo</span> -e <span>'\n将docker.service 移到/etc/systemd/system/ 目录...'</span>
         <span>cp</span> docker.service /etc/systemd/system/
         <span>if</span> <span>[</span> <span>$?</span> -eq <span>0</span> <span>]</span><span>;</span><span>then</span>
-            <span>echo</span> -e <span>'<span title="\n">\n</span>添加文件权限...'</span>
+            <span>echo</span> -e <span>'\n添加文件权限...'</span>
             <span>chmod</span> +x /etc/systemd/system/docker.service
             <span>if</span> <span>[</span> <span>$?</span> -ne <span>0</span> <span>]</span><span>;</span><span>then</span>
-                <span>echo</span> -e <span>'<span title="\n">\n</span>添加失败'</span>
+                <span>echo</span> -e <span>'\n添加失败'</span>
                 <span>exit</span>
             <span>fi</span>
-            <span>echo</span> -e <span>'<span title="\n">\n</span>重新加载配置文件...'</span>
+            <span>echo</span> -e <span>'\n重新加载配置文件...'</span>
             systemctl daemon-reload
             <span>if</span> <span>[</span> <span>$?</span> -ne <span>0</span> <span>]</span><span>;</span><span>then</span>
-                <span>echo</span> -e <span>'<span title="\n">\n</span>加载失败'</span>
+                <span>echo</span> -e <span>'\n加载失败'</span>
                 <span>exit</span>
             <span>fi</span>
-            <span>echo</span> -e <span>'<span title="\n">\n</span>启动docker...'</span>
+            <span>echo</span> -e <span>'\n启动docker...'</span>
             systemctl start docker
             <span>if</span> <span>[</span> <span>$?</span> -ne <span>0</span> <span>]</span><span>;</span><span>then</span>
-                <span>echo</span> -e <span>'<span title="\n">\n</span>启动失败'</span>
+                <span>echo</span> -e <span>'\n启动失败'</span>
                 <span>exit</span>
             <span>fi</span>
-            <span>echo</span> -e <span>'<span title="\n">\n</span>设置开机自启...'</span>
+            <span>echo</span> -e <span>'\n设置开机自启...'</span>
             systemctl <span>enable</span> docker.service
             <span>if</span> <span>[</span> <span>$?</span> -ne <span>0</span> <span>]</span><span>;</span><span>then</span>
-                <span>echo</span> -e <span>'<span title="\n">\n</span>开机启动失败'</span>
+                <span>echo</span> -e <span>'\n开机启动失败'</span>
                 <span>exit</span>
             <span>fi</span>
-            <span>echo</span> -e <span>'<span title="\n">\n</span>docker版本：'</span>
+            <span>echo</span> -e <span>'\ndocker版本：'</span>
             docker -v
         <span>else</span>
-            <span>echo</span> -e <span>'<span title="\n">\n</span>复制失败'</span>
+            <span>echo</span> -e <span>'\n复制失败'</span>
             <span>exit</span>
         <span>fi</span>
     <span>else</span>
-        <span>echo</span> -e <span>'<span title="\n">\n</span>解压失败'</span>
+        <span>echo</span> -e <span>'\n解压失败'</span>
         <span>exit</span>    
     <span>fi</span>
     <span>return</span> <span>0</span>
@@ -3282,20 +3481,20 @@ docker-compose：1.24.3
     searchFile <span>$FILENAME</span>
 
     <span>if</span> <span>[</span> <span>$?</span> -ne <span>0</span> <span>]</span><span>;</span><span>then</span>
-        <span>echo</span> -e <span>'<span title="\n">\n</span>文件不存在'</span>
+        <span>echo</span> -e <span>'\n文件不存在'</span>
         installDockerCompose
     <span>fi</span>
 
-    <span>echo</span> -e <span>'<span title="\n">\n</span>复制文件到/usr/local/bin下 并重命名为docker-compose'</span>
+    <span>echo</span> -e <span>'\n复制文件到/usr/local/bin下 并重命名为docker-compose'</span>
     <span>cp</span> -y <span>$FILENAME</span> /usr/local/bin/docker-compose
     <span>if</span> <span>[</span> <span>$?</span> -ne <span>0</span> <span>]</span><span>;</span><span>then</span>
-        <span>echo</span> -e <span>'<span title="\n">\n</span>赋予执行权限'</span>
+        <span>echo</span> -e <span>'\n赋予执行权限'</span>
         <span>chmod</span> +x /usr/local/bin/docker-compose
 
-        <span>echo</span> <span>'<span title="\n">\n</span>docker-compose版本：'</span>
+        <span>echo</span> <span>'\ndocker-compose版本：'</span>
         docker-compose -v
     <span>else</span> 
-        <span>echo</span> <span>'<span title="\n">\n</span>复制失败'</span>
+        <span>echo</span> <span>'\n复制失败'</span>
     <span>fi</span>
 
 
@@ -3941,204 +4140,6 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>springcloud-gateway整合swagger3.0.0</title>
-      <link>https://fangweilong.github.io/2020/12/30/springcloud-gateway%E6%95%B4%E5%90%88swagger3-0-0/</link>
-      <guid isPermaLink="false">/2020/12/30/springcloud-gateway%E6%95%B4%E5%90%88swagger3-0-0/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">springcloud-gateway整合swagger3.0.0</source>
-      <category>spring cloud</category>
-      <pubDate>Wed, 30 Dec 2020 17:15:59 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="版本和说明"> 版本和说明</h1>
-<ul>
-<li>swagger:3.0.0</li>
-<li>gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。</li>
-<li>以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3</li>
-</ul>
-<hr>
-<h1 id="单应用"> 单应用</h1>
-<h2 id="pom添加"> pom添加</h2>
-<div><pre><code><span>&lt;</span><span>!</span>-- <span>3.0</span>版本只需要引入一个，不再像2.x版本需要引入两个包 --<span>></span>
-<span>&lt;</span>dependency<span>></span>
-	<span>&lt;</span>groupId<span>></span>io.springfox<span>&lt;</span>/groupId<span>></span>
-    <span>&lt;</span>artifactId<span>></span>springfox-boot-starter<span>&lt;</span>/artifactId<span>></span>
-    <span>&lt;</span>version<span>></span><span>${swagger.version}</span><span>&lt;</span>/version<span>></span>
-<span>&lt;</span>/dependency<span>></span>
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="配置文件"> 配置文件</h2>
-<div><pre><code><span>/**
- * swagger配制
- *
- * @author teler
- * @date 2020-12-30
- */</span>
-<span>@Configuration</span>
-<span>public</span> <span>class</span> <span>SwaggerConfig</span> <span>{</span>
-
-	<span>@Value</span><span>(</span><span>"${swagger.enable:true}"</span><span>)</span>
-	<span>private</span> <span>Boolean</span> enable<span>;</span>
-
-	<span>@Bean</span>
-	<span>public</span> <span>Docket</span> <span>api</span><span>(</span><span>)</span> <span>{</span>
-		<span>return</span> <span>new</span> <span>Docket</span><span>(</span><span>DocumentationType</span><span>.</span>OAS_30<span>)</span>
-					   <span>//资源</span>
-				       <span>.</span><span>globalResponses</span><span>(</span><span>HttpMethod</span><span>.</span>GET<span>,</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>)</span>
-				       <span>.</span><span>globalResponses</span><span>(</span><span>HttpMethod</span><span>.</span>PUT<span>,</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>)</span>
-				       <span>.</span><span>globalResponses</span><span>(</span><span>HttpMethod</span><span>.</span>POST<span>,</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>)</span>
-				       <span>.</span><span>globalResponses</span><span>(</span><span>HttpMethod</span><span>.</span>DELETE<span>,</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>)</span>
-					   <span>//是否启动</span>
-				       <span>.</span><span>enable</span><span>(</span>enable<span>)</span>
-					   <span>//头部信息</span>
-				       <span>.</span><span>apiInfo</span><span>(</span><span>apiInfo</span><span>(</span><span>)</span><span>)</span>
-				       <span>.</span><span>select</span><span>(</span><span>)</span>
-				       <span>/**
-				        * RequestHandlerSelectors,配置要扫描接口的方式
-				        * basePackage指定要扫描的包
-				        * any()扫描所有，项目中的所有接口都会被扫描到
-				        * none()不扫描
-				        * withClassAnnotation()扫描类上的注解
-				        * withMethodAnnotation()扫描方法上的注解
-				        */</span>
-				       <span>.</span><span>apis</span><span>(</span><span>RequestHandlerSelectors</span><span>.</span><span>any</span><span>(</span><span>)</span><span>)</span>
-					   <span>//过滤某个路径</span>
-				       <span>.</span><span>paths</span><span>(</span><span>PathSelectors</span><span>.</span><span>any</span><span>(</span><span>)</span><span>)</span>
-				       <span>.</span><span>build</span><span>(</span><span>)</span>
-					   <span>//协议</span>
-				       <span>.</span><span>protocols</span><span>(</span><span>newHashSet</span><span>(</span><span>"https"</span><span>,</span> <span>"http"</span><span>)</span><span>)</span>
-				       <span>.</span><span>securitySchemes</span><span>(</span><span>securitySchemes</span><span>(</span><span>)</span><span>)</span>
-				       <span>.</span><span>securityContexts</span><span>(</span><span>securityContexts</span><span>(</span><span>)</span><span>)</span><span>;</span>
-	<span>}</span>
-
-
-	<span>/**
-	 * API 页面上半部分展示信息
-	 */</span>
-	<span>private</span> <span>ApiInfo</span> <span>apiInfo</span><span>(</span><span>)</span> <span>{</span>
-		<span>return</span> <span>new</span> <span>ApiInfoBuilder</span><span>(</span><span>)</span>
-				       <span>.</span><span>title</span><span>(</span><span>"接口文档"</span><span>)</span>
-				       <span>.</span><span>description</span><span>(</span><span>"@author Teler"</span><span>)</span>
-				       <span>.</span><span>contact</span><span>(</span><span>new</span> <span>Contact</span><span>(</span><span>"Teler"</span><span>,</span> <span>null</span><span>,</span> <span>"teler96@qq.com"</span><span>)</span><span>)</span>
-				       <span>.</span><span>version</span><span>(</span><span>"1.0"</span><span>)</span>
-				       <span>.</span><span>build</span><span>(</span><span>)</span><span>;</span>
-	<span>}</span>
-
-	<span>/**
-	 * 设置接口单独的授权信息
-	 */</span>
-	<span>private</span> <span>List</span><span><span>&lt;</span><span>SecurityScheme</span><span>></span></span> <span>securitySchemes</span><span>(</span><span>)</span> <span>{</span>
-		<span>return</span> <span>Collections</span><span>.</span><span>singletonList</span><span>(</span><span>new</span> <span>ApiKey</span><span>(</span><span>"BASE_TOKEN"</span><span>,</span> <span>"token"</span><span>,</span> <span>"header"</span><span>)</span><span>)</span><span>;</span>
-	<span>}</span>
-
-	<span>/**
-	 * 授权信息全局应用
-	 */</span>
-	<span>private</span> <span>List</span><span><span>&lt;</span><span>SecurityContext</span><span>></span></span> <span>securityContexts</span><span>(</span><span>)</span> <span>{</span>
-		<span>return</span> <span>Collections</span><span>.</span><span>singletonList</span><span>(</span>
-				<span>SecurityContext</span><span>.</span><span>builder</span><span>(</span><span>)</span>
-						<span>.</span><span>securityReferences</span><span>(</span>
-								<span>Collections</span><span>.</span><span>singletonList</span><span>(</span><span>new</span> <span>SecurityReference</span><span>(</span><span>"BASE_TOKEN"</span><span>,</span>
-										<span>new</span> <span>AuthorizationScope</span><span>[</span><span>]</span><span>{</span><span>new</span> <span>AuthorizationScope</span><span>(</span><span>"global"</span><span>,</span> <span>""</span><span>)</span><span>}</span>
-								<span>)</span><span>)</span><span>)</span>
-						<span>//.forPaths(PathSelectors.any())</span>
-						<span>.</span><span>build</span><span>(</span><span>)</span>
-		<span>)</span><span>;</span>
-	<span>}</span>
-
-	<span>@SafeVarargs</span>
-	<span>private</span> <span>final</span> <span><span>&lt;</span><span>T</span><span>></span></span> <span>Set</span><span><span>&lt;</span><span>T</span><span>></span></span> <span>newHashSet</span><span>(</span><span>T</span><span>.</span><span>.</span><span>.</span> ts<span>)</span> <span>{</span>
-		<span>if</span> <span>(</span>ts<span>.</span>length <span>></span> <span>0</span><span>)</span> <span>{</span>
-			<span>return</span> <span>new</span> <span>LinkedHashSet</span><span><span>&lt;</span><span>></span></span><span>(</span><span>Arrays</span><span>.</span><span>asList</span><span>(</span>ts<span>)</span><span>)</span><span>;</span>
-		<span>}</span>
-		<span>return</span> <span>null</span><span>;</span>
-	<span>}</span>
-<span>}</span>
-
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br></div></div><h2 id="访问"> 访问</h2>
-<p>到这一步我们应该就能正常访问swagger文档了，但是要注意3.0的访问页面路径有所变化</p>
-<div><pre><code>http://ip:port/swagger-ui/
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="页面"> 页面</h2>
-<p><img src="https://img-blog.csdnimg.cn/20201230165529317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<hr>
-<h1 id="微服务"> 微服务</h1>
-<ul>
-<li>gateway版本:2.2.5</li>
-</ul>
-<h2 id="添加文件"> 添加文件</h2>
-<p>MySwaggerResourcesProvider在gateway模块中创建，注意其中的一些注解和说明，否则应用无法正常启动</p>
-<h3 id="myswaggerresourcesprovider"> MySwaggerResourcesProvider</h3>
-<p><em>@Primary这个注解是告诉spring 如果有冲突优先使用当前类 没有这个会报实现类冲突 看源码能发现SwaggerResourcesProvider已经有一个InMemorySwaggerResourcesProvider实现类 但是自带的不能满足我们的要求</em></p>
-<div><pre><code><span>/**
- * swagger的配置类
- *
- * @author teler
- */</span>
-<span>@Component</span>
-<span>@Primary</span>
-<span>public</span> <span>class</span> <span>MySwaggerResourcesProvider</span> <span>implements</span> <span>SwaggerResourcesProvider</span> <span>{</span>
-
-	<span>/**
-	 * swagger3默认的url后缀
-	 */</span>
-	<span>private</span> <span>static</span> <span>final</span> <span>String</span> SWAGGER2URL <span>=</span> <span>"/v3/api-docs"</span><span>;</span>
-	<span>/**
-	 * 网关路由
-	 */</span>
-	<span>private</span> <span>final</span> <span>RouteLocator</span> routeLocator<span>;</span>
-
-	<span>/**
-	 * 网关应用名称
-	 */</span>
-	<span>@Value</span><span>(</span><span>"${spring.application.name}"</span><span>)</span>
-	<span>private</span> <span>String</span> self<span>;</span>
-
-	<span>@Autowired</span>
-	<span>public</span> <span>MySwaggerResourcesProvider</span><span>(</span><span>RouteLocator</span> routeLocator<span>)</span> <span>{</span>
-		<span>this</span><span>.</span>routeLocator <span>=</span> routeLocator<span>;</span>
-	<span>}</span>
-
-	<span>/**
-	 * 对于gateway来说这块比较重要 让swagger能找到对应的服务
-	 *
-	 * @return
-	 */</span>
-	<span>@Override</span>
-	<span>public</span> <span>List</span><span><span>&lt;</span><span>SwaggerResource</span><span>></span></span> <span>get</span><span>(</span><span>)</span> <span>{</span>
-		<span>List</span><span><span>&lt;</span><span>SwaggerResource</span><span>></span></span> resources <span>=</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>;</span>
-		<span>List</span><span><span>&lt;</span><span>String</span><span>></span></span> routeHosts <span>=</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>;</span>
-		<span>// 获取所有可用的host：serviceId</span>
-		routeLocator<span>.</span><span>getRoutes</span><span>(</span><span>)</span><span>.</span><span>filter</span><span>(</span>route <span>-></span> route<span>.</span><span>getUri</span><span>(</span><span>)</span><span>.</span><span>getHost</span><span>(</span><span>)</span> <span>!=</span> <span>null</span><span>)</span>
-				<span>.</span><span>filter</span><span>(</span>route <span>-></span> <span>!</span>self<span>.</span><span>equals</span><span>(</span>route<span>.</span><span>getUri</span><span>(</span><span>)</span><span>.</span><span>getHost</span><span>(</span><span>)</span><span>)</span><span>)</span>
-				<span>.</span><span>subscribe</span><span>(</span>route <span>-></span> routeHosts<span>.</span><span>add</span><span>(</span>route<span>.</span><span>getUri</span><span>(</span><span>)</span><span>.</span><span>getHost</span><span>(</span><span>)</span><span>)</span><span>)</span><span>;</span>
-
-		<span>// 记录已经添加过的server</span>
-		<span>Set</span><span><span>&lt;</span><span>String</span><span>></span></span> dealed <span>=</span> <span>new</span> <span>HashSet</span><span><span>&lt;</span><span>></span></span><span>(</span><span>)</span><span>;</span>
-		routeHosts<span>.</span><span>forEach</span><span>(</span>instance <span>-></span> <span>{</span>
-			<span>// 拼接url</span>
-			<span>String</span> url <span>=</span> <span>"/"</span> <span>+</span> instance<span>.</span><span>toLowerCase</span><span>(</span><span>)</span> <span>+</span> SWAGGER2URL<span>;</span>
-			<span>if</span> <span>(</span><span>!</span>dealed<span>.</span><span>contains</span><span>(</span>url<span>)</span><span>)</span> <span>{</span>
-				dealed<span>.</span><span>add</span><span>(</span>url<span>)</span><span>;</span>
-				<span>SwaggerResource</span> swaggerResource <span>=</span> <span>new</span> <span>SwaggerResource</span><span>(</span><span>)</span><span>;</span>
-				swaggerResource<span>.</span><span>setUrl</span><span>(</span>url<span>)</span><span>;</span>
-				swaggerResource<span>.</span><span>setName</span><span>(</span>instance<span>)</span><span>;</span>
-				resources<span>.</span><span>add</span><span>(</span>swaggerResource<span>)</span><span>;</span>
-			<span>}</span>
-		<span>}</span><span>)</span><span>;</span>
-		<span>return</span> resources<span>;</span>
-	<span>}</span>
-<span>}</span>
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br></div></div><h2 id="访问-2"> 访问</h2>
-<p>链接不变，但是我们在右上角能清晰地看到所有的微服务模块已经能正常访问了
-<img src="https://img-blog.csdnimg.cn/20201230171308478.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<h2 id="未解决"> 未解决</h2>
-<p>找不到中文包的设置方式，虽然说都能看得懂，但是还是想能自己设置语言。</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20201230165529317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>oracle-full_join-多张表横向关联，拼接多张表所需字段</title>
       <link>https://fangweilong.github.io/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</link>
       <guid isPermaLink="false">/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</guid>
@@ -4563,7 +4564,8 @@ http {
       <source url="https://fangweilong.github.io/rss.xml">Elastic_Search-通过reindex实现集群数据迁移</source>
       <category>Elastic Search</category>
       <pubDate>Thu, 18 Mar 2021 14:58:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="版本"> 版本</h2>
+      <content:encoded><![CDATA[<h2 id="以下方案仅适用于不同环境的集群数据迁移-如果是同一个集群内直接使用第三步-拉取数据-即可-不需要账号密码等参数"> 以下方案仅适用于不同环境的集群数据迁移，如果是同一个集群内直接使用第三步“拉取数据”即可，不需要账号密码等参数</h2>
+<h2 id="版本"> 版本</h2>
 <p>老集群ES 5.4
 新集群ES 7.9</p>
 <h2 id="背景"> 背景</h2>
@@ -4840,19 +4842,63 @@ http {
 </tbody>
 </table>
 <h2 id="创建"> 创建</h2>
-<div><pre><code>PUT index名
+<div><pre><code>PUT 索引名
 </code></pre>
-<div><span>1</span><br></div></div><h2 id="添加数据"> 添加数据</h2>
-<div><pre><code>POST index名/_doc
+<div><span>1</span><br></div></div><h2 id="创建携带mappings和settings的索引"> 创建携带mappings和settings的索引</h2>
+<div><pre><code>PUT 索引名
+<span>{</span>
+ <span>"settings"</span><span>:</span> <span>{</span>
+    <span>"analysis"</span><span>:</span> <span>{</span>
+      <span>"analyzer"</span><span>:</span> <span>{</span>
+        <span>"default"</span><span>:</span> <span>{</span>
+          <span># 我使用了ik分词，也可以使用其他分词器</span>
+          <span>"type"</span><span>:</span> <span>"ik_max_word"</span>
+        <span>}</span>,
+        <span># 自定义分词器</span>
+        <span>"splitByComma"</span><span>:</span> <span>{</span>
+          <span>"type"</span><span>:</span> <span>"pattern"</span>,
+          <span># 分词规则</span>
+          <span>"pattern"</span><span>:</span> <span>","</span>
+        <span>}</span>
+      <span>}</span>
+    <span>}</span>
+  <span>}</span>,
+  <span>"mappings"</span><span>:</span> <span>{</span>
+    <span>"properties"</span>:<span>{</span>
+      <span>"字段名"</span>:<span>{</span>
+        <span># 也可以设置为keyword</span>
+        <span>"type"</span><span>:</span><span>"text"</span>,
+        <span># 如果只需要一种，就不需要添加下面的</span>
+        <span>"fields"</span>:<span>{</span>
+          <span>"type"</span><span>:</span><span>"keyword"</span>
+        <span>}</span>,
+        <span># 如果并不需要另外分词器，则不加这句。会使用setting中的默认分词器。</span>
+        <span>"analyzer"</span><span>:</span> <span>"splitByComma"</span>
+      <span>}</span>
+    <span>}</span>
+  <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br></div></div><h2 id="测试分词器"> 测试分词器</h2>
+<div><pre><code>GET 索引名/_analyze
+<span>{</span>
+  <span># 填要使用的索引名称</span>
+  <span>"analyzer"</span><span>:</span><span>"ik_max_word"</span>,
+  <span># 输入要分词的文本</span>
+  <span>"text"</span><span>:</span> <span>"文本"</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h2 id="添加数据"> 添加数据</h2>
+<div><pre><code>POST 索引名/_doc
 <span>{</span>
   你要添加的内容
 <span>}</span>
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="删除"> 删除</h2>
-<div><pre><code>DELETE index名
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="删除索引"> 删除索引</h2>
+<div><pre><code>DELETE 索引名
 </code></pre>
 <div><span>1</span><br></div></div><h2 id="查全部-match-all"> 查全部 match_all</h2>
-<div><pre><code>GET index名/_search?pretty
+<div><pre><code>GET 索引名/_search?pretty
 <span>{</span>
   <span>"query"</span><span>:</span> <span>{</span>
     <span>"match_all"</span><span>:</span> <span>{</span><span>}</span>
@@ -4860,7 +4906,7 @@ http {
 <span>}</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h2 id="单条件模糊查询-match"> 单条件模糊查询 match</h2>
-<div><pre><code>GET index名/_search?pretty
+<div><pre><code>GET 索引名/_search?pretty
 <span>{</span>
   <span>"query"</span><span>:</span> <span>{</span>
     <span>"match"</span><span>:</span> <span>{</span>
@@ -4870,7 +4916,7 @@ http {
 <span>}</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h3 id="精确查询-term"> 精确查询 term</h3>
-<div><pre><code>GET index名/_search?pretty
+<div><pre><code>GET 索引名/_search?pretty
 <span>{</span>
   <span>"query"</span><span>:</span> <span>{</span>
     <span>"term"</span><span>:</span> <span>{</span>
@@ -4883,10 +4929,10 @@ http {
 <ul>
 <li>指定查询条数，类似于sql的分页 from size</li>
 </ul>
-<div><pre><code>GET index名/_search?pretty
+<div><pre><code>GET 索引名/_search?pretty
 <span>{</span>
-  <span>"from"</span><span>:</span> <span>0</span>, 
-  <span>"size"</span><span>:</span> <span>2</span>, 
+  <span>"from"</span><span>:</span> <span>0</span>,
+  <span>"size"</span><span>:</span> <span>2</span>,
   <span>"query"</span><span>:</span> <span>{</span>
     <span>"match"</span><span>:</span> <span>{</span>
       <span>"字段"</span><span>:</span> <span>"条件内容"</span>
@@ -4898,14 +4944,27 @@ http {
 <ul>
 <li>限制返回的字段 _source</li>
 </ul>
-<div><pre><code>GET /atlas_cloud_logs/_search?pretty
+<div><pre><code>GET 索引名/_search?pretty
 <span>{</span>
-  <span>"from"</span><span>:</span> <span>0</span>, 
-  <span>"size"</span><span>:</span> <span>2</span>, 
+  <span>"from"</span><span>:</span> <span>0</span>,
+  <span>"size"</span><span>:</span> <span>2</span>,
   <span>"_source"</span><span>:</span> <span>[</span><span>"字段"</span><span>]</span>,
   <span>"query"</span><span>:</span> <span>{</span>
     <span>"match"</span><span>:</span> <span>{</span>
       <span>"字段"</span><span>:</span> <span>"条件内容"</span>
+    <span>}</span>
+  <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="多条件模糊查询-multi-match"> 多条件模糊查询 multi_match</h2>
+<div><pre><code>GET 索引名/_search?pretty
+<span>{</span>
+  <span>"from"</span><span>:</span> <span>0</span>,
+  <span>"size"</span><span>:</span> <span>2</span>,
+  <span>"query"</span><span>:</span> <span>{</span>
+     <span>"multi_match"</span><span>:</span> <span>{</span>
+      <span>"fields"</span>:<span>[</span><span>"字段1"</span>,<span>"字段2"</span><span>]</span>,
+      <span>"query"</span><span>:</span> <span>"条件内容"</span>
     <span>}</span>
   <span>}</span>
 <span>}</span>
@@ -4923,14 +4982,14 @@ http {
 </ul>
 </li>
 </ul>
-<div><pre><code>GET index名/_search?pretty
+<div><pre><code>GET 索引名/_search?pretty
 <span>{</span>
   <span>"query"</span><span>:</span> <span>{</span>
     <span>"bool"</span><span>:</span> <span>{</span>
       <span>"filter"</span><span>:</span> <span>{</span>
         <span>"range"</span><span>:</span> <span>{</span>
           <span>"过滤的字段"</span><span>:</span> <span>{</span>
-            <span>"gte"</span><span>:</span> <span>10</span>, 
+            <span>"gte"</span><span>:</span> <span>10</span>,
             <span>"lte"</span><span>:</span> <span>200</span>
           <span>}</span>
         <span>}</span>
@@ -4940,9 +4999,9 @@ http {
 <span>}</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><h2 id="聚合查询-aggs"> 聚合查询 aggs</h2>
-<div><pre><code>GET /atlas_cloud_logs/_search?pretty
+<div><pre><code>GET 索引名/_search?pretty
 <span>{</span>
-  <span>"size"</span><span>:</span> <span>0</span>, 
+  <span>"size"</span><span>:</span> <span>0</span>,
   <span>"query"</span><span>:</span> <span>{</span>
    <span>"match_all"</span><span>:</span> <span>{</span>
    <span>}</span>
@@ -5617,7 +5676,7 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
 </code></pre>
 </div><h3 id="输出-2"> 输出</h3>
 <p>🎉 💯</p>
-<h3 id="所有的emoji-https-github-com-markdown-it-markdown-it-emoji-blob-master-lib-data-full-json"> (所有的emoji)[https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json]</h3>
+<h3 id="所有的emoji"> <a href="https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json" target="_blank" rel="noopener noreferrer">所有的emoji</a></h3>
 <hr>
 <h2 id="自定义容器"> 自定义容器</h2>
 <h3 id="输入-3"> 输入</h3>
@@ -6269,14 +6328,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Fri, 02 Jul 2021 08:45:00 GMT</pubDate>
+      <pubDate>Sun, 11 Jul 2021 05:51:16 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Fri, 02 Jul 2021 08:45:00 GMT</pubDate>
+      <pubDate>Sun, 11 Jul 2021 05:51:16 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6286,7 +6345,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Fri, 02 Jul 2021 08:45:00 GMT</pubDate>
+      <pubDate>Sun, 11 Jul 2021 05:51:16 GMT</pubDate>
     </item>
   </channel>
 </rss>
