@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 12 Jul 2021 07:58:28 GMT</pubDate>
-    <lastBuildDate>Mon, 12 Jul 2021 07:58:28 GMT</lastBuildDate>
+    <pubDate>Mon, 12 Jul 2021 08:01:52 GMT</pubDate>
+    <lastBuildDate>Mon, 12 Jul 2021 08:01:52 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -4718,6 +4718,31 @@ http {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>Elastic_search-报错汇总</title>
+      <link>https://fangweilong.github.io/2021/07/12/elastic-search-%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/</link>
+      <guid isPermaLink="false">/2021/07/12/elastic-search-%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">Elastic_search-报错汇总</source>
+      <category>Elastic Search</category>
+      <pubDate>Mon, 12 Jul 2021 15:53:26 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="字段聚合"> 字段聚合</h2>
+<div><p>注意</p>
+<p>Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [] in order to load field data by uninverting the inverted index. Note that this can use significant memory.</p>
+</div>
+<h3 id="解决办法"> 解决办法</h3>
+<p>添加fileddata。但是不推荐，占用内存太大。</p>
+<div><pre><code>POST 索引名/_mapping
+    <span>{</span>
+    <span>"properties"</span><span>:</span> <span>{</span>
+        <span>"字段名"</span><span>:</span> <span>{</span>
+            <span>"type"</span><span>:</span> <span>"text"</span>,
+            <span>"fielddata"</span>:true
+        <span>}</span>
+    <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>kibana-查询ES 的一些语法</title>
       <link>https://fangweilong.github.io/2020/08/06/kibana-%E6%9F%A5%E8%AF%A2es-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/</link>
       <guid isPermaLink="false">/2020/08/06/kibana-%E6%9F%A5%E8%AF%A2es-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/</guid>
@@ -6328,14 +6353,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Mon, 12 Jul 2021 07:57:41 GMT</pubDate>
+      <pubDate>Mon, 12 Jul 2021 08:00:06 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Mon, 12 Jul 2021 07:57:41 GMT</pubDate>
+      <pubDate>Mon, 12 Jul 2021 08:00:06 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6345,7 +6370,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Mon, 12 Jul 2021 07:57:41 GMT</pubDate>
+      <pubDate>Mon, 12 Jul 2021 08:00:06 GMT</pubDate>
     </item>
   </channel>
 </rss>
