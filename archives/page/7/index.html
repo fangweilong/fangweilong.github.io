@@ -1189,29 +1189,24 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/18/02/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+			<a href="/2018/06/26/02/java%20String%E5%AD%97%E7%AC%A6%E4%B8%B2split%E5%88%86%E5%89%B2%E6%97%A0%E6%95%88/">
 				<h2 class="index-title">
-					wsl-debian10使用问题汇总
+					java String字符串split分割无效
 				</h2>
 				<div class="index-brief">
-					切换root1sudo su root
-
-访问window目录1cd /mnt
-
-Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
-
-编辑文件如sources.list没
+					这个问题之前就遇到过，这次又遇到了特别纪录一下。1。按照我们正常的逻辑走，一串字符串通过split()分割以后会变成数组，我们可以通过下表直接获取到拆分以后的字符串。ok这样是没问题的，我们继续试。
+2。在字符串中通过   |   分割的时候就出现了问题，在此次分割中返回给我们的数据变成了每个字符而
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-18</span>
+				    <span>2018-06-26</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/wsl/">wsl</a>
+                                        <a href="/categories/java/">java</a>
 										
                                     </span>
                                 
@@ -1221,21 +1216,45 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/06/16/08/springcloud-RestTemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/">
+			<a href="/2018/06/21/08/tomcat%E5%B8%83%E7%BD%AE%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE/">
 				<h2 class="index-title">
-					springcloud-RestTemplate访问不到其他服务
+					tomcat布置多个项目
 				</h2>
 				<div class="index-brief">
-					1.检查启动类或配置类有没有加@EnableDiscoveryClient
-2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
-3.gateway配置、url是否一一对照
-如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
-升级springclou
+					常规的操作是一个Tomcat下只有一个项目，但是需求总是千变万化的，今天就遇到了一个服务器上需要布置两个项目。
+详解步骤：    1、将两个项目打包放入tomcat的webapps目录下（这个步骤就不用说了，直接复制class还是war什么的随你开心）     2、修改tomcat的server.x
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-16</span>
+				    <span>2018-06-21</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/tomcat/">tomcat</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/06/07/06/springboot-Field_roleMapper_in_%E2%80%98%E2%80%99required_a%20_bbean_of_type''that_could_not_be_found./">
+				<h2 class="index-title">
+					springboot-Field_roleMapper_in_‘’required_a _bbean_of_type''that_could_not_be_found.
+				</h2>
+				<div class="index-brief">
+					其实在报错信息上就能看出来问题是什么，但是因为现在文档少，不容易找到解决方案。特此记录意思是扫描不到mapper层，我们需要在Application.java这个启动文件上加一个注解告诉springboot我们的mapper位置在哪
+1@MapperScan(&quot;mapper文件位置&quo
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-06-07</span>
                     
                             
                                 
@@ -1251,7 +1270,7 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                                        <a href="/categories/java/spring-boot/">spring boot</a>
 										
                                     </span>
                                 
@@ -1261,36 +1280,23 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/06/10/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
+			<a href="/2018/05/29/08/oracle%20mybatis%20DATE%E6%97%A0%E6%B3%95%E5%AD%98%E6%97%B6%E5%88%86%E7%A7%92/">
 				<h2 class="index-title">
-					java-stream的各种操作说明
+					oracle mybatis DATE无法存时分秒
 				</h2>
 				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
+					1234567891011121314151617&lt;sql id=&quot;sys_sms_id&quot;&gt;SYS_SMS_ID.NEXTVAL&lt;/sql&gt;&lt;insert id=&quot;save&quot; parameterType=&quot;SmsDO&q
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-10</span>
+				    <span>2018-05-29</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
+                                        <a href="/categories/oracle/">oracle</a>
 										
                                     </span>
                                 
@@ -1300,112 +1306,17 @@ filter过滤器，满足条件的才能被通过。留下的元素都是满足
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/06/03/03/Long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/">
+			<a href="/2018/05/16/05/ajax%E8%BF%94%E5%9B%9E%E6%88%90%E5%8A%9F%E5%8D%B4%E8%BF%9B%E5%85%A5%E4%BA%86error/">
 				<h2 class="index-title">
-					Long返回给前台在js中丢失精度
+					ajax返回成功却进入了error
 				</h2>
 				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
+					123456789101112$.ajax(&#123;        type: &quot;POST&quot;,        url: &quot;&quot;,        data: &#123;&#125;,        dataType: &quot;json&quot;,//注
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-03</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
-				<h2 class="index-title">
-					使用lambda表达式快捷完成Tree结构
-				</h2>
-				<div class="index-brief">
-					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
-
-PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
-代码123456789101
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-05-27</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
-				<h2 class="index-title">
-					MinMaxNormalize规一化算法
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
-				<h2 class="index-title">
-					一组数差距过大的问题：symbolsize计算公式
-				</h2>
-				<div class="index-brief">
-					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
-12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-02</span>
+				    <span>2018-05-16</span>
                     
                             
                                 
@@ -1421,34 +1332,24 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/03/23/07/java%E6%89%93%E5%8C%85%E6%88%90docker-images/">
+			<a href="/2018/05/09/09/radio%E5%8F%96%E6%B6%88%E9%80%89%E4%B8%AD%E5%B9%B6%E8%83%BD%E5%86%8D%E6%AC%A1%E9%80%89%E4%B8%AD/">
 				<h2 class="index-title">
-					java打包成docker-images
+					radio取消选中并能再次选中
 				</h2>
 				<div class="index-brief">
-					一个最简单的jar包的Dockerfile制作openjdk的dockerhub地址
-在代码根目录创建Dockerfile文件，内容如下12345678910111213FROM openjdk:8-alpineLABEL &quot;Author&quot;=&quot;Teler&quot; \
+					网上很多都是只能取消选中，之后就无法选中了。按照这个方法可以再次选中
+12345678910111213141516$(document).ready(function()&#123;        var old = null; //用来保存原来的对象        $(&quot;.radioC
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-03-23</span>
+				    <span>2018-05-09</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/docker/">docker</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/dockerfile/">dockerfile</a>
+                                        <a href="/categories/javascript/">javascript</a>
 										
                                     </span>
                                 
@@ -1458,54 +1359,18 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
+			<a href="/2018/05/04/06/mybatis%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E8%B5%8B%E5%80%BC%E5%88%B0model%E9%87%8C%E9%9D%A2%E4%B8%BA%E7%A9%BA/">
 				<h2 class="index-title">
-					Elastic_Search-通过reindex实现集群数据迁移
+					mybatis查询数据赋值到model里面为空
 				</h2>
 				<div class="index-brief">
-					版本老集群ES 5.4新集群ES 7.9
-背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
-说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
-
-步骤
-添加白名
+					因为数据多所以在查询中使用分页，但是发现直接执行sql语句是可以获取到数据，而list里面却是空的
+123456789101112131415161718&lt;select id=&quot;list&quot; resultType=&quot;DaliyDO&quot;&gt;        
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-03-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ES/">ES</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
-				<h2 class="index-title">
-					springcloud-gateway整合swagger3.0.0
-				</h2>
-				<div class="index-brief">
-					版本和说明
- swagger:3.0.0
-   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
-   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
-
-
-单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
+				    <span>2018-05-04</span>
                     
                             
                                 
@@ -1521,7 +1386,115 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                                        <a href="/categories/mybatis/">mybatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/05/03/08/springboot+mybatis%E4%BA%8B%E5%8A%A1/">
+				<h2 class="index-title">
+					springboot+mybatis事务
+				</h2>
+				<div class="index-brief">
+					使用
+1@Transactional
+注解原理还不了解，待更新
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-05-03</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/java/">java</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/java/spring-boot/">spring boot</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/04/28/02/layui%E7%9A%84laydate%E6%8E%A7%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/">
+				<h2 class="index-title">
+					layui的laydate控件的使用
+				</h2>
+				<div class="index-brief">
+					目前使用的layui版，没有单独使用laydate。官网上的例子是每个属性单独设置的，我稍微整合了一下常用属性。
+引入了css和js以后
+1234567891011121314151617181920//初始化时间layui.use(&#x27;laydate&#x27;, function() &
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-04-28</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/javascript/">javascript</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/javascript/layui/">layui</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/04/25/01/idea%E5%85%B3%E9%97%AD%E4%B8%8D%E5%BF%85%E8%A6%81%E7%9A%84%E6%8F%92%E4%BB%B6%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8/">
+				<h2 class="index-title">
+					idea关闭不必要的插件减少内存占用
+				</h2>
+				<div class="index-brief">
+					2020 06009 更新idea版本：2020.1.2项目：spring+springboot+springcloud+mybatis+mybatis-plus+maven 如果跟我差不多的可以参照我的修改自己安装的
+自带的
+
+
+
+2019-07-24更新1.安装的插件2.自带的插件里面有个ide
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-04-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/idea/">idea</a>
 										
                                     </span>
                                 
@@ -1533,7 +1506,7 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/6/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/archives/page/8/">8</a><a class="page-number" href="/archives/page/9/">9</a><a class="extend next" rel="next" href="/archives/page/8/">&gt;</a>
 		
 	</div>
 </div>

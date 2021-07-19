@@ -1189,188 +1189,9 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/18/02/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+			<a href="/2019/08/30/09/git-.gitignore%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
 				<h2 class="index-title">
-					wsl-debian10使用问题汇总
-				</h2>
-				<div class="index-brief">
-					切换root1sudo su root
-
-访问window目录1cd /mnt
-
-Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
-
-编辑文件如sources.list没
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/wsl/">wsl</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/16/08/springcloud-RestTemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/">
-				<h2 class="index-title">
-					springcloud-RestTemplate访问不到其他服务
-				</h2>
-				<div class="index-brief">
-					1.检查启动类或配置类有没有加@EnableDiscoveryClient
-2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
-3.gateway配置、url是否一一对照
-如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
-升级springclou
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/10/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
-				<h2 class="index-title">
-					java-stream的各种操作说明
-				</h2>
-				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/03/03/Long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/">
-				<h2 class="index-title">
-					Long返回给前台在js中丢失精度
-				</h2>
-				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-03</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
-				<h2 class="index-title">
-					使用lambda表达式快捷完成Tree结构
-				</h2>
-				<div class="index-brief">
-					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
-
-PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
-代码123456789101
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-05-27</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
-				<h2 class="index-title">
-					MinMaxNormalize规一化算法
+					git-.gitignore通用配置文件
 				</h2>
 				<div class="index-brief">
 					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
@@ -1378,13 +1199,13 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-04-16</span>
+				    <span>2019-08-30</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
+                                        <a href="/categories/其它/">其它</a>
 										
                                     </span>
                                 
@@ -1394,118 +1215,19 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
+			<a href="/2019/08/30/07/springboot-AOP%E4%BD%BF%E7%94%A8@Before%E5%92%8C@After%E5%81%9A%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%88%87%E9%9D%A2/">
 				<h2 class="index-title">
-					一组数差距过大的问题：symbolsize计算公式
+					springboot-AOP使用@Before和@After做一个最简单的切面
 				</h2>
 				<div class="index-brief">
-					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
-12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
+					写一个最简单明细的切面，希望可以复制了直接用。我会尽量把注释写详细
+1.引入jar因为我是用的springboot，所以只需要引入一个包，如果你习惯的是引入两个包 也可以引入下面的两个包SpingBoot:
+12345&lt;!--aop切面--&gt;&lt;dependency&gt;    &
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-04-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/javascript/">javascript</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/03/23/07/java%E6%89%93%E5%8C%85%E6%88%90docker-images/">
-				<h2 class="index-title">
-					java打包成docker-images
-				</h2>
-				<div class="index-brief">
-					一个最简单的jar包的Dockerfile制作openjdk的dockerhub地址
-在代码根目录创建Dockerfile文件，内容如下12345678910111213FROM openjdk:8-alpineLABEL &quot;Author&quot;=&quot;Teler&quot; \
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-03-23</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/docker/">docker</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/dockerfile/">dockerfile</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
-				<h2 class="index-title">
-					Elastic_Search-通过reindex实现集群数据迁移
-				</h2>
-				<div class="index-brief">
-					版本老集群ES 5.4新集群ES 7.9
-背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
-说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
-
-步骤
-添加白名
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-03-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ES/">ES</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
-				<h2 class="index-title">
-					springcloud-gateway整合swagger3.0.0
-				</h2>
-				<div class="index-brief">
-					版本和说明
- swagger:3.0.0
-   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
-   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
-
-
-单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
+				    <span>2019-08-30</span>
                     
                             
                                 
@@ -1521,7 +1243,235 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                                        <a href="/categories/java/spring-boot/">spring boot</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2019/08/14/03/%E4%BD%BF%E7%94%A8java%E7%94%9F%E6%88%90%E5%BE%AE%E4%BF%A1%E9%9A%8F%E6%9C%BA%E5%8A%A0%E5%A5%BD%E5%8F%8B%E7%9A%84%E9%93%BE%E6%8E%A5/">
+				<h2 class="index-title">
+					使用java生成微信随机加好友的链接
+				</h2>
+				<div class="index-brief">
+					随机生成链接前言
+Java写的，其他语言自己翻译，其实就是一个随机数生成
+微信PC复制会自动加空格把这个a标签破坏掉，所以用其他工具复制
+朋友圈发不了，跟（2）一样 会自动加空格把a标签破坏掉，其他自测
+
+先看一下效果你看用微信复制的时候，a标签就被破坏了 要自己重新改一下点击以后进去这个页面。但是
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-08-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/java/">java</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2019/08/06/07/vue-router_link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/">
+				<h2 class="index-title">
+					vue-router_link-声明式返回上一页
+				</h2>
+				<div class="index-brief">
+					因为只有一个点击的操作，没有任何其他的逻辑操作，我就不想写一个方法来承载它，就一直在找声明式的写法
+官网文档链接：https://router.vuejs.org/zh/guide/essentials/navigation.html
+在文档中介绍了一种router.go(n)来返回上一页，但是没有
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-08-06</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/vue/">vue</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2019/07/24/02/oracle%20group%20by%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2%E6%B1%87%E6%80%BB%20%E6%B2%A1%E6%95%B0%E6%8D%AE%E7%9A%84%E6%97%B6%E5%80%99%E8%AE%A9%E6%AD%A4%E9%A1%B9%E6%98%BE%E7%A4%BA%E4%B8%BA0/">
+				<h2 class="index-title">
+					oracle group by分类查询汇总 没数据的时候让此项显示为0
+				</h2>
+				<div class="index-brief">
+					1.表数据表名:table| id | date ||–|–|| 1 | 2019-05 || 2 | 2019-06 || 3 | 2019-04 || 4 | 2019-06 |
+2.需求现在要求按照指定五个月份统计每个月的数量，这五个月份为:(‘2019-02’,’2019-03’,’2019
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-07-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/oracle/">oracle</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2019/07/24/01/oracle%E7%A9%BA%E9%97%B4%E5%AD%97%E6%AE%B5%E5%9C%A8java%E4%B8%AD%E8%83%BD%E6%9F%A5%E8%AF%A2%E5%87%BA%E6%9D%A5%E5%B9%B6%E8%BF%94%E5%9B%9E%E7%BB%99%E6%8E%A5%E5%8F%A3/">
+				<h2 class="index-title">
+					oracle空间字段在java中能查询出来并返回给接口
+				</h2>
+				<div class="index-brief">
+					oracle虽然也支持空间信息，但是要做很多配置。比如安装sde等，不如pgsql等内置支持。以下方法只在第三方支持都安装好的情况下适用
+Entity:
+1priavte String shape;
+java里面直接用String类型接就可以了
+XML
+1select  sdo_util.to_gm
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-07-24</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/oracle/">oracle</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2019/07/16/08/nginx-%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AAvue%E9%A1%B9%E7%9B%AE%EF%BC%8C%E5%88%86vue-cli2.x%E5%92%8C3.x/">
+				<h2 class="index-title">
+					nginx-部署多个vue项目，分vue-cli2.x和3.x
+				</h2>
+				<div class="index-brief">
+					1.vue-cli3.x在根目录下找到”vue.config.js”更改publicPath: &#39;/portal/&#39; 的 portal 为你自己的项目名，记得前后的”/“
+2.vue-cli2.x找到config/index.js文件找到”build”部分同样的更改assetsPub
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-07-16</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/nginx/">nginx</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2019/07/12/09/oracle-full_join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94%EF%BC%8C%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/">
+				<h2 class="index-title">
+					oracle-full_join-多张表横向关联，拼接多张表所需字段
+				</h2>
+				<div class="index-brief">
+					我们在sql中使用最多的关联查询无非是left join.right join,union,union all。这几种关联的区别和用法别的教程都太多了 这里不赘述.这里讲一下full join的用法1.需求    需要做一张统计表 要能实现多级表头但是这个数据又不是一张表中存在的，分为了乔木，灌木，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-07-12</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/oracle/">oracle</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2019/07/12/02/oracle%E7%94%A8%E6%88%B7%E8%A2%AB%E9%94%81/">
+				<h2 class="index-title">
+					oracle用户被锁
+				</h2>
+				<div class="index-brief">
+					oracle的账户多次输入错误密码会被锁定(十次)，尤其是在新建立的时候动不动被锁记录一下账户被锁的解锁步骤请完整复制代码内容
+1.打开cmd,输入1sqlplus/noloog
+应该会显示时间，这时候表明成功
+2.以dba身份登录1conn / as sysdba
+这样是不需要输入用户名密码就可以
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-07-12</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/oracle/">oracle</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2019/05/30/08/%E4%B8%AD%E5%9B%BD%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83%E7%82%B9%E5%9D%90%E6%A0%87/">
+				<h2 class="index-title">
+					中国城市中心点坐标
+				</h2>
+				<div class="index-brief">
+					原数据：https://www.cnblogs.com/hhhz/p/7591852.html
+以下为经过整理的地区数据，可以直接复制到json中使用
+12345678910111213141516171819202122232425262728293031323334353637383940414
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-05-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/其它/">其它</a>
 										
                                     </span>
                                 
@@ -1533,7 +1483,7 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2019/">&lt;</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2019/page/3/">3</a><a class="extend next" rel="next" href="/archives/2019/page/3/">&gt;</a>
 		
 	</div>
 </div>

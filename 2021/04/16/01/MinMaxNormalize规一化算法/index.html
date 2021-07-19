@@ -9,6 +9,8 @@
 	
 	<title>
 	
+		MinMaxNormalize规一化算法 |
+	
 	房伟龙的日常
 	</title>
 
@@ -263,7 +265,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
 										MinMaxNormalize规一化算法
 									</a>
@@ -1186,357 +1188,96 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/2021/06/18/02/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
-				<h2 class="index-title">
-					wsl-debian10使用问题汇总
-				</h2>
-				<div class="index-brief">
-					切换root1sudo su root
+		<h1 id="article-title">
 
-访问window目录1cd /mnt
+	MinMaxNormalize规一化算法
+</h1>
+<div class="article-meta">
+	<span>fangweilong</span>
+	<span>2021-04-16 09:52:08</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/java/">java</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
 
-Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/java/">java</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/规一化/">规一化</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
 
-编辑文件如sources.list没
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/wsl/">wsl</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/16/08/springcloud-RestTemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/">
-				<h2 class="index-title">
-					springcloud-RestTemplate访问不到其他服务
-				</h2>
-				<div class="index-brief">
-					1.检查启动类或配置类有没有加@EnableDiscoveryClient
-2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
-3.gateway配置、url是否一一对照
-如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
-升级springclou
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/10/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
-				<h2 class="index-title">
-					java-stream的各种操作说明
-				</h2>
-				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/03/03/Long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/">
-				<h2 class="index-title">
-					Long返回给前台在js中丢失精度
-				</h2>
-				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-03</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
-				<h2 class="index-title">
-					使用lambda表达式快捷完成Tree结构
-				</h2>
-				<div class="index-brief">
-					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
-
-PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
-代码123456789101
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-05-27</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
-				<h2 class="index-title">
-					MinMaxNormalize规一化算法
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
-				<h2 class="index-title">
-					一组数差距过大的问题：symbolsize计算公式
-				</h2>
-				<div class="index-brief">
-					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
-12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/javascript/">javascript</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/03/23/07/java%E6%89%93%E5%8C%85%E6%88%90docker-images/">
-				<h2 class="index-title">
-					java打包成docker-images
-				</h2>
-				<div class="index-brief">
-					一个最简单的jar包的Dockerfile制作openjdk的dockerhub地址
-在代码根目录创建Dockerfile文件，内容如下12345678910111213FROM openjdk:8-alpineLABEL &quot;Author&quot;=&quot;Teler&quot; \
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-03-23</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/docker/">docker</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/dockerfile/">dockerfile</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
-				<h2 class="index-title">
-					Elastic_Search-通过reindex实现集群数据迁移
-				</h2>
-				<div class="index-brief">
-					版本老集群ES 5.4新集群ES 7.9
-背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
-说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
-
-步骤
-添加白名
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-03-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ES/">ES</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
-				<h2 class="index-title">
-					springcloud-gateway整合swagger3.0.0
-				</h2>
-				<div class="index-brief">
-					版本和说明
- swagger:3.0.0
-   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
-   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
-
-
-单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-
-	<div id="index-paginator">
-		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
-		
-	</div>
 </div>
+
+<div id="article-content">
+	<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MinMaxNormalize</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 线性归一化 公式：X(norm) = (X - min) / (max - min)</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> points     原始数据</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> conversion 是否行转列</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> 归一化后的数据</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span>[] normalize(<span class="keyword">double</span>[][] points, <span class="keyword">boolean</span> conversion) &#123;</span><br><span class="line">		<span class="keyword">if</span> (points == <span class="keyword">null</span> || points.length &lt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">0</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//新数组</span></span><br><span class="line">		<span class="keyword">double</span>[][] newPoints = <span class="keyword">new</span> <span class="keyword">double</span>[points[<span class="number">0</span>].length][points.length];</span><br><span class="line">		<span class="keyword">if</span> (conversion) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; points.length; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; points[i].length; j++) &#123;</span><br><span class="line">					newPoints[j][i] = points[i][j];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			newPoints = points;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		Arrays.stream(newPoints).forEach(val -&gt; &#123;</span><br><span class="line">			log.info(<span class="string">&quot;newPoints val:&#123;&#125;&quot;</span>, val);</span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">double</span>[][] p = <span class="keyword">new</span> <span class="keyword">double</span>[newPoints.length][newPoints[<span class="number">0</span>].length];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; newPoints[<span class="number">0</span>].length; j++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; newPoints.length; i++) &#123;</span><br><span class="line">				p[i] = minMax(newPoints[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		Arrays.stream(p).forEach(val -&gt; &#123;</span><br><span class="line">			log.info(<span class="string">&quot;p val:&#123;&#125;&quot;</span>, val);</span><br><span class="line">		&#125;);</span><br><span class="line">		<span class="keyword">double</span>[] sumArry = Arrays.stream(p).mapToDouble(val -&gt; Arrays.stream(val).sum()).toArray();</span><br><span class="line">		<span class="keyword">double</span>[] norArry = proportion(sumArry);</span><br><span class="line">		log.info(<span class="string">&quot;norArry:&#123;&#125;&quot;</span>, norArry);</span><br><span class="line">		<span class="keyword">return</span> norArry;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">double</span>[] minMax(<span class="keyword">double</span>[] points) &#123;</span><br><span class="line">		<span class="keyword">double</span>[] p = <span class="keyword">new</span> <span class="keyword">double</span>[points.length];</span><br><span class="line">		<span class="keyword">double</span> maxV = maxV(points);</span><br><span class="line">		<span class="keyword">double</span> minV = minV(points);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; points.length; i++) &#123;</span><br><span class="line">			p[i] = maxV == minV ? minV : (points[i] - minV) / (maxV - minV);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">double</span>[] proportion(<span class="keyword">double</span>[] points) &#123;</span><br><span class="line">		<span class="keyword">double</span>[] p = <span class="keyword">new</span> <span class="keyword">double</span>[points.length];</span><br><span class="line">		<span class="keyword">double</span> sumNum = Arrays.stream(points).sum();</span><br><span class="line">		log.info(<span class="string">&quot;sumNum:&#123;&#125;&quot;</span>, sumNum);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; points.length; i++) &#123;</span><br><span class="line">			p[i] = NumberUtil.round(points[i] / sumNum, <span class="number">3</span>).doubleValue();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> p;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 获取矩阵的某一列</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> points points</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> column column</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> double[]</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span>[] getMatrixCol(<span class="keyword">double</span>[][] points, <span class="keyword">int</span> column) &#123;</span><br><span class="line">		<span class="keyword">double</span>[] matrixJ = <span class="keyword">new</span> <span class="keyword">double</span>[points.length];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; points.length; i++) &#123;</span><br><span class="line">			matrixJ[i] = points[i][column];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> matrixJ;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 获取数组中的最小值</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> matrixJ matrixJ</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> v</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">minV</span><span class="params">(<span class="keyword">double</span>[] matrixJ)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> Arrays.stream(matrixJ).min().getAsDouble();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 获取数组中的最大值</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> matrixJ matrixJ</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> v</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">maxV</span><span class="params">(<span class="keyword">double</span>[] matrixJ)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> Arrays.stream(matrixJ).max().getAsDouble();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  使用lambda表达式快捷完成Tree结构
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
+                
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+<div id="vssue"></div>
+<script type='text/javascript'>
+    new Vue({
+      el: '#vssue',
+      data: {
+        title: 'MinMaxNormalize规一化算法',
+        options: {
+          owner: 'fangweilong',
+          repo: 'fangweilong.github.io',
+          clientId: '764d4de1eeb295c96019',
+          clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
+        },
+      },
+      template: `<vssue :title="title" :options="options"></vssue>`
+    })
+</script>
 
 	</div>
 	<div id="footer">

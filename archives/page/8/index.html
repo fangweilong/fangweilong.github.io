@@ -1189,29 +1189,27 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/18/02/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+			<a href="/2018/04/20/03/idea%E8%AE%BE%E7%BD%AE%E5%88%9B%E5%BB%BA.java%E6%96%87%E4%BB%B6%E7%9A%84%E6%A8%A1%E6%9D%BF/">
 				<h2 class="index-title">
-					wsl-debian10使用问题汇总
+					idea设置创建.java文件的模板
 				</h2>
 				<div class="index-brief">
-					切换root1sudo su root
-
-访问window目录1cd /mnt
-
-Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
-
-编辑文件如sources.list没
+					打开路径
+1File-Settings-Editor-Code style-File and Code Templates-Includea-File Header
+如图所示
+我的模板是这个
+12345/**  *@Description        *@author          $&#12
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-18</span>
+				    <span>2018-04-20</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/wsl/">wsl</a>
+                                        <a href="/categories/idea/">idea</a>
 										
                                     </span>
                                 
@@ -1221,21 +1219,21 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/06/16/08/springcloud-RestTemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/">
+			<a href="/2018/04/19/09/bootdo%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4%E6%80%BB%E7%BB%93/">
 				<h2 class="index-title">
-					springcloud-RestTemplate访问不到其他服务
+					bootdo框架使用步骤总结
 				</h2>
 				<div class="index-brief">
-					1.检查启动类或配置类有没有加@EnableDiscoveryClient
-2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
-3.gateway配置、url是否一一对照
-如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
-升级springclou
+					2020-06-21 16:01:00食言了 不更新了 自己写框架真快乐
+=================================
+仅作为个人学习纪录，其他人只作为参考，图较少，会不断更新。项目地址 bootdo官网
+
+因为从git上下载的文件结构并不是习惯，所以将里面一层的复制到最完成根
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-16</span>
+				    <span>2018-04-19</span>
                     
                             
                                 
@@ -1251,7 +1249,7 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                                        <a href="/categories/java/bootdo/">bootdo</a>
 										
                                     </span>
                                 
@@ -1261,59 +1259,19 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/06/10/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
+			<a href="/2018/04/19/09/filter%20%E6%8B%A6%E6%88%AA%E5%99%A8%20%E8%8E%B7%E5%8F%96http%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">
 				<h2 class="index-title">
-					java-stream的各种操作说明
+					filter 拦截器 获取http请求参数
 				</h2>
 				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
+					PS:里面一些方法使用了hutool的工具类 可以替换成你自己习惯的 工具类不是记录的主要东西。
+记录点    1.怎么创建拦截器    2.怎么统一管理拦截器是否启用和输用顺序    3.怎么获取传入的参数    4.怎么获取返回值
+直接上代码===========================
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/03/03/Long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/">
-				<h2 class="index-title">
-					Long返回给前台在js中丢失精度
-				</h2>
-				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-03</span>
+				    <span>2018-04-19</span>
                     
                             
                                 
@@ -1329,56 +1287,19 @@ filter过滤器，满足条件的才能被通过。留下的元素都是满足
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
+			<a href="/2018/04/19/01/java%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%EF%BC%8C%E8%B0%83%E7%94%A8.net%E7%9A%84webservice%E4%B9%B1%E7%A0%81/">
 				<h2 class="index-title">
-					使用lambda表达式快捷完成Tree结构
+					java表单提交，调用.net的webservice乱码
 				</h2>
 				<div class="index-brief">
-					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
-
-PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
-代码123456789101
+					昨天调用webservice接口的时候发现传进去的中文参数全部变成了  ‘?’，但是使用main方法去调用的时候一切正常，今天终于解决了，特此记录。
+这是我之前的的form表单
+12&lt;form action=&quot;&quot; method=&quot;post&quot; id=&qu
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-05-27</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
-				<h2 class="index-title">
-					MinMaxNormalize规一化算法
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-16</span>
+				    <span>2018-04-19</span>
                     
                             
                                 
@@ -1394,18 +1315,18 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
+			<a href="/2018/04/18/01/input%E4%B8%8B%E6%8B%89%E9%80%89%E6%8B%A9%E6%A1%86%E5%8F%AF%E4%BB%A5%E8%87%AA%E8%A1%8C%E8%BE%93%E5%85%A5%E4%B9%9F%E5%8F%AF%E4%BB%A5%E4%B8%8B%E6%8B%89%E9%80%89%E6%8B%A9/">
 				<h2 class="index-title">
-					一组数差距过大的问题：symbolsize计算公式
+					input下拉选择框可以自行输入也可以下拉选择
 				</h2>
 				<div class="index-brief">
-					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
-12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
+					我这里使用的是原生H5标签  datalist
+1234567&lt;input class=&quot;browsers&quot; list=&quot;browsers&quot;&gt;&lt;datalist id=&quot;browsers&quot;&gt;browsers	&lt;
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-04-02</span>
+				    <span>2018-04-18</span>
                     
                             
                                 
@@ -1421,91 +1342,18 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/03/23/07/java%E6%89%93%E5%8C%85%E6%88%90docker-images/">
+			<a href="/2018/04/13/07/java%E8%AE%BF%E9%97%AEwebservice/">
 				<h2 class="index-title">
-					java打包成docker-images
+					java访问webservice
 				</h2>
 				<div class="index-brief">
-					一个最简单的jar包的Dockerfile制作openjdk的dockerhub地址
-在代码根目录创建Dockerfile文件，内容如下12345678910111213FROM openjdk:8-alpineLABEL &quot;Author&quot;=&quot;Teler&quot; \
+					直接调用使用这种方法可以较为方便，也比较直观，网上找到的方法感觉不太友好，而且还有区分什么的
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-03-23</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/docker/">docker</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/dockerfile/">dockerfile</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
-				<h2 class="index-title">
-					Elastic_Search-通过reindex实现集群数据迁移
-				</h2>
-				<div class="index-brief">
-					版本老集群ES 5.4新集群ES 7.9
-背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
-说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
-
-步骤
-添加白名
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-03-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ES/">ES</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
-				<h2 class="index-title">
-					springcloud-gateway整合swagger3.0.0
-				</h2>
-				<div class="index-brief">
-					版本和说明
- swagger:3.0.0
-   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
-   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
-
-
-单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
+				    <span>2018-04-13</span>
                     
                             
                                 
@@ -1513,15 +1361,113 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/java/">java</a>
 										
-											>
-										
                                     </span>
                                 
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/03/22/07/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/">
+				<h2 class="index-title">
+					开发中常用的工具归类
+				</h2>
+				<div class="index-brief">
+					数据库工具    Navicat pre        优点：可以连接多种数据库，使用更快捷内存占用小        缺点：付费，功能没有官网的工具多    MongoDB Compass Community        优点：mongo数据库图形化工具，单文件直接使用        缺点：速度慢
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-03-22</span>
+                    
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                                        <a href="/categories/其它/">其它</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/03/20/02/java.lang.NoSuchMethodError/">
+				<h2 class="index-title">
+					java.lang.NoSuchMethodError
+				</h2>
+				<div class="index-brief">
+					出现这个问题检查
+1.jar包版本    有些jar包对版本有要求，不同版本之间是不互通的，有些还对jdk有强制要求，比如Google的番石榴就要求JDK1.8版本
+2.是否将所有修改的class文件布置到服务器    这个问题是最容易出现的，可能有一天更改的文件较多，布置的时候又是点对点布置，就会
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-03-20</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/java/">java</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/03/19/06/javax.el.PropertyNotFoundException/">
+				<h2 class="index-title">
+					javax.el.PropertyNotFoundException
+				</h2>
+				<div class="index-brief">
+					1.model中没有get()和set方法如果没有get()和set()方法，el表达式就会出现javax.el.PropertyNotFoundException错误
+2.model中有get()和set()方法检查过后发现model中有get()和set()方法，并且编译出来的class文件中也
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-03-19</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/java/">java</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/03/08/01/idea%E9%83%A8%E5%88%86%E6%88%96%E6%95%B4%E4%BD%93java%E6%96%87%E4%BB%B6%E4%B8%8D%E7%BC%96%E8%AF%91%E4%B8%BAclass%E6%96%87%E4%BB%B6%EF%BC%8C%E6%88%96%E7%BC%96%E8%AF%91%E5%90%8E%E4%B8%8D%E6%98%AF%E6%9C%80%E6%96%B0%E7%9A%84/">
+				<h2 class="index-title">
+					idea部分或整体java文件不编译为class文件，或编译后不是最新的
+				</h2>
+				<div class="index-brief">
+					PS：2018-03-08 10:11更新 修改编译的路径        原路径为WebRoot，修改为WebRoot/classes，否则会出现include会找不到jsp等问题
+1.出现这个问题先检查一下输出路径        idea的class输出路径与eclipse是不一样的，idea默认
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-03-08</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/idea/">idea</a>
 										
                                     </span>
                                 
@@ -1533,7 +1479,7 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/7/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/6/">6</a><a class="page-number" href="/archives/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/archives/page/9/">9</a><a class="extend next" rel="next" href="/archives/page/9/">&gt;</a>
 		
 	</div>
 </div>

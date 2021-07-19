@@ -1189,29 +1189,23 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/18/02/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+			<a href="/2020/07/08/03/windows-terminal-settings.json%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%B3%A8%E9%87%8A/">
 				<h2 class="index-title">
-					wsl-debian10使用问题汇总
+					windows-terminal-settings.json的一些个人配置与注释
 				</h2>
 				<div class="index-brief">
-					切换root1sudo su root
-
-访问window目录1cd /mnt
-
-Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
-
-编辑文件如sources.list没
+					版本：1.0.1811.012345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-18</span>
+				    <span>2020-07-08</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/wsl/">wsl</a>
+                                        <a href="/categories/window/">window</a>
 										
                                     </span>
                                 
@@ -1221,21 +1215,20 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/06/16/08/springcloud-RestTemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/">
+			<a href="/2020/03/27/09/springboot-%E5%90%AF%E5%8A%A8%E6%97%B6%E8%8E%B7%E5%8F%96%E7%AB%AF%E5%8F%A3%E5%92%8C%E9%A1%B9%E7%9B%AE%E5%90%8D/">
 				<h2 class="index-title">
-					springcloud-RestTemplate访问不到其他服务
+					springboot-启动时获取端口和项目名
 				</h2>
 				<div class="index-brief">
-					1.检查启动类或配置类有没有加@EnableDiscoveryClient
-2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
-3.gateway配置、url是否一一对照
-如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
-升级springclou
+					背景项目启动每次都要手动输url在浏览器中访问，就想能和vue项目一样启动能直接在控制台打印出url
+
+踩坑在项目中获取配置文件的方法为@Value,但是在启动类中无法使用，获取到的全都为null
+使用Environment12345678public static void main(String
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-16</span>
+				    <span>2020-03-27</span>
                     
                             
                                 
@@ -1251,7 +1244,7 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                                        <a href="/categories/java/spring-boot/">spring boot</a>
 										
                                     </span>
                                 
@@ -1261,151 +1254,18 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/06/10/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
+			<a href="/2020/03/25/08/jquery%20%E8%8A%82%E6%B5%81%E9%98%B2%E6%8A%96/">
 				<h2 class="index-title">
-					java-stream的各种操作说明
+					jquery 节流防抖
 				</h2>
 				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
+					前言在一些大数量或者有延迟性的操作下，为了页面不要每次输入或者点击的时候闪烁，我们需要对接口进行调用频率限制。直接上代码
+代码1234567891011//需要定义在方法外let timeout;function throttling()&#123;	//先清理	clearTimeout(timeo
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/03/03/Long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/">
-				<h2 class="index-title">
-					Long返回给前台在js中丢失精度
-				</h2>
-				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-03</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
-				<h2 class="index-title">
-					使用lambda表达式快捷完成Tree结构
-				</h2>
-				<div class="index-brief">
-					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
-
-PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
-代码123456789101
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-05-27</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
-				<h2 class="index-title">
-					MinMaxNormalize规一化算法
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
-				<h2 class="index-title">
-					一组数差距过大的问题：symbolsize计算公式
-				</h2>
-				<div class="index-brief">
-					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
-12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-02</span>
+				    <span>2020-03-25</span>
                     
                             
                                 
@@ -1421,18 +1281,85 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/03/23/07/java%E6%89%93%E5%8C%85%E6%88%90docker-images/">
+			<a href="/2020/03/17/03/nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%AB%AF%E5%8F%A3%E4%B8%A2%E5%A4%B1/">
 				<h2 class="index-title">
-					java打包成docker-images
+					nginx-反向代理端口丢失
 				</h2>
 				<div class="index-brief">
-					一个最简单的jar包的Dockerfile制作openjdk的dockerhub地址
-在代码根目录创建Dockerfile文件，内容如下12345678910111213FROM openjdk:8-alpineLABEL &quot;Author&quot;=&quot;Teler&quot; \
+					此情况会出现在代理外网情况下 访问端口不是80、443，并且访问url末尾不带 / 的时候
+举例xx.xx.xx.xx:9000/url 经过nginx转代 url会变成      xx.xx.xx.xx/url，而实际资源需求的url是这样的 xx.xx.xx.xx:9000/url/所以我们直接
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-03-23</span>
+				    <span>2020-03-17</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/nginx/">nginx</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2020/02/02/14/centos7-docker-%E6%9B%B4%E6%8D%A2%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE%E7%9B%AE%E5%BD%95/">
+				<h2 class="index-title">
+					centos7-docker-更换迁移数据目录
+				</h2>
+				<div class="index-brief">
+					先决条件版本docker version:19.03.3, build a872fc2f86
+
+安装方式使用yum在线安装 离线安装方式因为安装路径等原因 可能导致路径不同 请执行测试
+
+其他版本未测试
+操作
+进入目录
+1cd /etc/docker
+新建或者编辑文件
+1vi daemon.json
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-02-02</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/docker/">docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2020/02/02/14/centos7%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85docker%E5%92%8Cdocker-compose/">
+				<h2 class="index-title">
+					centos7离线安装docker和docker-compose
+				</h2>
+				<div class="index-brief">
+					实测版本说明centos：7.5
+docker：19.03.5
+docker-compose：1.24.3
+
+官方资源下载地址自行下载需要的版本。
+[docker](https://download.docker.com/linux/static/stable/x86_64/)
+[docker-co
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-02-02</span>
                     
                             
                                 
@@ -1448,7 +1375,7 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/dockerfile/">dockerfile</a>
+                                        <a href="/categories/docker-compose/">docker-compose</a>
 										
                                     </span>
                                 
@@ -1458,28 +1385,41 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
+			<a href="/2020/02/02/14/docker-hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F-java%E4%B8%8A%E4%BC%A0%E6%8A%A5%E9%94%99/">
 				<h2 class="index-title">
-					Elastic_Search-通过reindex实现集群数据迁移
+					docker-hadoop伪分布式-java上传报错
 				</h2>
 				<div class="index-brief">
-					版本老集群ES 5.4新集群ES 7.9
-背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
-说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
+					==2020-11-06更新==
+docker-compose 脚本地址
+更新目的原文的解决思路是对的，但是还是有点小问题。使用ip的话要更改好几个地方太麻烦。所以这几天重新试了一遍。
+步骤方法一：更改host
+通过docker ps找到datanode的容器id
 
-步骤
-添加白名
+编辑本机的hosts文件
+
+文件
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-03-18</span>
+				    <span>2020-02-02</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ES/">ES</a>
+                                        <a href="/categories/docker/">docker</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/docker-compose/">docker-compose</a>
 										
                                     </span>
                                 
@@ -1489,23 +1429,19 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
+			<a href="/2019/12/27/03/springcloud-gateway-%E8%8E%B7%E5%8F%96%E5%85%A5%E5%8F%82/">
 				<h2 class="index-title">
-					springcloud-gateway整合swagger3.0.0
+					springcloud-gateway-获取入参
 				</h2>
 				<div class="index-brief">
-					版本和说明
- swagger:3.0.0
-   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
-   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
-
-
-单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
+					在获取入参的时候，get方式的接口可以直接获取到，但是post形式的body获取以后会造成无法再使用，所以必须经过一层转换以后再读取。
+直接上代码
+12345678910111213141516171819202122232425262728293031323334353637@Componentp
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2020-12-30</span>
+				    <span>2019-12-27</span>
                     
                             
                                 
@@ -1530,10 +1466,67 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
                 </div>
 		</div>
 	
+		<div class="index-li">
+			<a href="/2019/12/19/06/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF_%20%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx.xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+				<h2 class="index-title">
+					idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案
+				</h2>
+				<div class="index-brief">
+					原因未知    通过idea的maven插件，install即可        如果是eclipse等，自行使用maven命令行安装
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-19</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/idea/">idea</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2019/12/13/03/echarts%E8%AF%8D%E4%BA%91%E4%BC%9A%E6%B8%B2%E6%9F%93%E4%B8%A4%E6%AC%A1/">
+				<h2 class="index-title">
+					echarts词云会渲染两次
+				</h2>
+				<div class="index-brief">
+					词云是比较容易出现这个问题的一个图表，所以拿词云做一个示例。
+在上面这张图中可以比较清晰的看到有两个“数值模拟”的词云，在普通的业务逻辑中，我们只需要在代码中这样写
+1this.chart.setOption(this.config.option, true);
+即可使图表只渲染一次。
+123原理：
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-13</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/javascript/">javascript</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
 
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/2/">&lt;</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/9/">9</a><a class="extend next" rel="next" href="/archives/page/4/">&gt;</a>
 		
 	</div>
 </div>

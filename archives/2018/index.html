@@ -1189,29 +1189,28 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/18/02/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+			<a href="/2018/12/19/02/mysql-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException/">
 				<h2 class="index-title">
-					wsl-debian10使用问题汇总
+					mysql-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
 				</h2>
 				<div class="index-brief">
-					切换root1sudo su root
+					1、现象：   连接mysql时报错
+ com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+ 
+ 
 
-访问window目录1cd /mnt
-
-Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
-
-编辑文件如sources.list没
+这个在长时间连接但是又不操作的情况下会报这个错误，虽然可以改mysql的配置文件来达到目的，但是我们是开发不是DBA，所以尽量还是通过程序
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-18</span>
+				    <span>2018-12-19</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/wsl/">wsl</a>
+                                        <a href="/categories/mysql/">mysql</a>
 										
                                     </span>
                                 
@@ -1221,191 +1220,17 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/06/16/08/springcloud-RestTemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/">
+			<a href="/2018/11/08/06/%E5%BE%AE%E4%BF%A1%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AEajax%E6%8E%A5%E5%8F%A3%E5%8D%81%E7%A7%92%E9%92%9F%E6%9C%AA%E5%93%8D%E5%BA%94%E8%87%AA%E5%8A%A8%E9%87%8D%E5%8F%91/">
 				<h2 class="index-title">
-					springcloud-RestTemplate访问不到其他服务
+					微信浏览器访问ajax接口十秒钟未响应自动重发
 				</h2>
 				<div class="index-brief">
-					1.检查启动类或配置类有没有加@EnableDiscoveryClient
-2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
-3.gateway配置、url是否一一对照
-如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
-升级springclou
+					2018-12-21更新：在url或者ajax带上 connect_redirect=1 这个参数，我在项目中遇到的会自动重发的手机确实不重发了，但是有人说有很小一部分的手机还是会重发原文地址见：https://developers.weixin.qq.com/community/develop/d
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/10/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
-				<h2 class="index-title">
-					java-stream的各种操作说明
-				</h2>
-				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/03/03/Long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/">
-				<h2 class="index-title">
-					Long返回给前台在js中丢失精度
-				</h2>
-				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-03</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
-				<h2 class="index-title">
-					使用lambda表达式快捷完成Tree结构
-				</h2>
-				<div class="index-brief">
-					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
-
-PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
-代码123456789101
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-05-27</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
-				<h2 class="index-title">
-					MinMaxNormalize规一化算法
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
-				<h2 class="index-title">
-					一组数差距过大的问题：symbolsize计算公式
-				</h2>
-				<div class="index-brief">
-					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
-12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-02</span>
+				    <span>2018-11-08</span>
                     
                             
                                 
@@ -1421,24 +1246,52 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/03/23/07/java%E6%89%93%E5%8C%85%E6%88%90docker-images/">
+			<a href="/2018/11/06/03/jquery%E7%82%B9%E5%87%BB%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5%E6%8C%89%E9%92%AE%E5%B9%B6%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%88%B7%E6%96%B0/">
 				<h2 class="index-title">
-					java打包成docker-images
+					jquery点击浏览器返回上一页按钮并能直接刷新
 				</h2>
 				<div class="index-brief">
-					一个最简单的jar包的Dockerfile制作openjdk的dockerhub地址
-在代码根目录创建Dockerfile文件，内容如下12345678910111213FROM openjdk:8-alpineLABEL &quot;Author&quot;=&quot;Teler&quot; \
+					A，B两个页面，从B页面点击浏览器的返回上一页按钮，跳转到A页面，此时需要A页面重新加载，则可以在A页面加上这一段
+ var isPageHide = false;  
+    window.addEventListener(&#39;pageshow&#39;, function () &#123
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-03-23</span>
+				    <span>2018-11-06</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/docker/">docker</a>
+                                        <a href="/categories/javascript/">javascript</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/10/25/06/layui-lay_verify-form%E8%A1%A8%E5%8D%95%E8%87%AA%E5%AE%9A%E4%B9%89%E9%AA%8C%E8%AF%81%E8%A7%84%E5%88%99/">
+				<h2 class="index-title">
+					layui-lay_verify-form表单自定义验证规则
+				</h2>
+				<div class="index-brief">
+					官方文档详见：https://www.layui.com/doc/modules/form.html#verify虽然layui的官方文档已经是写的比较详细，但是初次使用的时候总会懵一下，这里纪录一下lay-verify自定义验证规则的时候到底放哪。
+123456789101112html：&lt;
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-10-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/javascript/">javascript</a>
 										
 											>
 										
@@ -1448,7 +1301,7 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/dockerfile/">dockerfile</a>
+                                        <a href="/categories/javascript/layui/">layui</a>
 										
                                     </span>
                                 
@@ -1458,28 +1311,24 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
+			<a href="/2018/09/13/06/No_result_defined_for_action,%E9%9B%86%E7%BE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E7%8E%B0%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E4%B8%8D%E4%B8%8A/">
 				<h2 class="index-title">
-					Elastic_Search-通过reindex实现集群数据迁移
+					No_result_defined_for_action,集群服务器出现的数据库连不上
 				</h2>
 				<div class="index-brief">
-					版本老集群ES 5.4新集群ES 7.9
-背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
-说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
-
-步骤
-添加白名
+					1.返回类型找不到    这种情况我没出现，但是我在翻阅资料中很多人都有出现，这里不详细介绍，请查阅他人的文章。
+2.集群服务器    即一个oracle有多个ip连接(看oracle的配置文件)。在C#代码中使用一个ip可以连接，但是在java中使用thin方式连接就会报”No result de
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-03-18</span>
+				    <span>2018-09-13</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ES/">ES</a>
+                                        <a href="/categories/oracle/">oracle</a>
 										
                                     </span>
                                 
@@ -1489,23 +1338,75 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
+			<a href="/2018/08/21/03/tomcat%E4%BD%BF%E7%94%A8log4j2%E6%89%93%E6%97%A5%E5%BF%97/">
 				<h2 class="index-title">
-					springcloud-gateway整合swagger3.0.0
+					tomcat使用log4j2打日志
 				</h2>
 				<div class="index-brief">
-					版本和说明
- swagger:3.0.0
-   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
-   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
+					开始前准备 
 
-
-单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
+tomcat版本8.0.51(下载地址：http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.51/bin/apache-tomcat-8.0.51.tar.gz) 2018-05-09可以访问 
+tomcat日志扩展接口包tomca
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2020-12-30</span>
+				    <span>2018-08-21</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/tomcat/">tomcat</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/08/09/02/nginx-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%EF%BC%9A%E5%A4%9A%E4%B8%AAlocation%E8%BD%AC%E5%8F%91%E4%BB%BB%E6%84%8F%E8%AF%B7%E6%B1%82%E6%88%96%E8%AE%BF%E9%97%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6/">
+				<h2 class="index-title">
+					nginx-基础配置：多个location转发任意请求或访问静态资源文件
+				</h2>
+				<div class="index-brief">
+					2018-08-10更新
+12345678910111213141516171819server &#123;		#监听的端口        listen       80;		#监听的域名        server_name  localhost;		#监听带后缀的url		location ^
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-08-09</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/nginx/">nginx</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/07/13/05/mybatis%E4%BC%A0%E5%85%A5%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0/">
+				<h2 class="index-title">
+					mybatis传入多个参数
+				</h2>
+				<div class="index-brief">
+					我们在调用myabtis的时候往往是传入一个entity或者map。但是在一些特殊情况下例如url传参，这时候再put进map总感觉多此一举。
+controller:
+1234567//@PathVariable注解作用是转义赋值到你指定的参数中@GetMapping(&quot;/user/&#1
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-07-13</span>
                     
                             
                                 
@@ -1521,7 +1422,70 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                                        <a href="/categories/mybatis/">mybatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/06/27/08/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/">
+				<h2 class="index-title">
+					mybatis传入字符串分割
+				</h2>
+				<div class="index-brief">
+					123&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#x27;,&#x27;)&quot; open=&quot;(&quot; separator=&quot;,&q
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-06-27</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/java/">java</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/mybatis/">mybatis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/06/26/02/java%20String%E5%AD%97%E7%AC%A6%E4%B8%B2split%E5%88%86%E5%89%B2%E6%97%A0%E6%95%88/">
+				<h2 class="index-title">
+					java String字符串split分割无效
+				</h2>
+				<div class="index-brief">
+					这个问题之前就遇到过，这次又遇到了特别纪录一下。1。按照我们正常的逻辑走，一串字符串通过split()分割以后会变成数组，我们可以通过下表直接获取到拆分以后的字符串。ok这样是没问题的，我们继续试。
+2。在字符串中通过   |   分割的时候就出现了问题，在此次分割中返回给我们的数据变成了每个字符而
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-06-26</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/java/">java</a>
 										
                                     </span>
                                 
@@ -1533,7 +1497,7 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><a class="page-number" href="/archives/2018/page/4/">4</a><a class="extend next" rel="next" href="/archives/2018/page/2/">&gt;</a>
 		
 	</div>
 </div>

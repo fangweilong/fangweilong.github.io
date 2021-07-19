@@ -9,6 +9,8 @@
 	
 	<title>
 	
+		java-spark-主成分分析算法（pca） |
+	
 	房伟龙的日常
 	</title>
 
@@ -224,7 +226,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2020/12/10/03/java-spark-%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%E7%AE%97%E6%B3%95%EF%BC%88pca%EF%BC%89/">
 										java-spark-主成分分析算法（pca）
 									</a>
@@ -1186,357 +1188,138 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/2021/06/18/02/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
-				<h2 class="index-title">
-					wsl-debian10使用问题汇总
-				</h2>
-				<div class="index-brief">
-					切换root1sudo su root
+		<h1 id="article-title">
 
-访问window目录1cd /mnt
+	java-spark-主成分分析算法（pca）
+</h1>
+<div class="article-meta">
+	<span>fangweilong</span>
+	<span>2020-12-10 11:10:13</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/java/">java</a>
+                        </i>
+                      
+                        >
+                      
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/spark/">spark</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
 
-Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/java/">java</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/spark/">spark</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/pca/">pca</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/主成分分析/">主成分分析</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
 
-编辑文件如sources.list没
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/wsl/">wsl</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/16/08/springcloud-RestTemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/">
-				<h2 class="index-title">
-					springcloud-RestTemplate访问不到其他服务
-				</h2>
-				<div class="index-brief">
-					1.检查启动类或配置类有没有加@EnableDiscoveryClient
-2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
-3.gateway配置、url是否一一对照
-如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
-升级springclou
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/10/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
-				<h2 class="index-title">
-					java-stream的各种操作说明
-				</h2>
-				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/03/03/Long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/">
-				<h2 class="index-title">
-					Long返回给前台在js中丢失精度
-				</h2>
-				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-03</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
-				<h2 class="index-title">
-					使用lambda表达式快捷完成Tree结构
-				</h2>
-				<div class="index-brief">
-					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
-
-PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
-代码123456789101
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-05-27</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
-				<h2 class="index-title">
-					MinMaxNormalize规一化算法
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
-				<h2 class="index-title">
-					一组数差距过大的问题：symbolsize计算公式
-				</h2>
-				<div class="index-brief">
-					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
-12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/javascript/">javascript</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/03/23/07/java%E6%89%93%E5%8C%85%E6%88%90docker-images/">
-				<h2 class="index-title">
-					java打包成docker-images
-				</h2>
-				<div class="index-brief">
-					一个最简单的jar包的Dockerfile制作openjdk的dockerhub地址
-在代码根目录创建Dockerfile文件，内容如下12345678910111213FROM openjdk:8-alpineLABEL &quot;Author&quot;=&quot;Teler&quot; \
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-03-23</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/docker/">docker</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/dockerfile/">dockerfile</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
-				<h2 class="index-title">
-					Elastic_Search-通过reindex实现集群数据迁移
-				</h2>
-				<div class="index-brief">
-					版本老集群ES 5.4新集群ES 7.9
-背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
-说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
-
-步骤
-添加白名
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-03-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ES/">ES</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
-				<h2 class="index-title">
-					springcloud-gateway整合swagger3.0.0
-				</h2>
-				<div class="index-brief">
-					版本和说明
- swagger:3.0.0
-   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
-   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
-
-
-单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-
-	<div id="index-paginator">
-		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
-		
-	</div>
 </div>
+
+<div id="article-content">
+	<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>配置请看我的<a target="_blank" rel="noopener" href="https://blog.csdn.net/tutian2000/article/details/110948695">其他文章 点击跳转</a></p>
+<h3 id="spark官方文档"><a href="#spark官方文档" class="headerlink" title="spark官方文档"></a>spark官方文档</h3><p><a target="_blank" rel="noopener" href="http://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression">点击跳转官方文档</a></p>
+<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><h4 id="训练数据"><a href="#训练数据" class="headerlink" title="训练数据"></a>训练数据</h4><p><img src="https://img-blog.csdnimg.cn/20201210140828346.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<hr>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>PCA算法的应用场景不是太明确，没做太多验证</p>
+<h3 id="实体类"><a href="#实体类" class="headerlink" title="实体类"></a>实体类</h3><p>用了swagger和lombok 不需要的可以删掉</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.ApiModel;</span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.ApiModelProperty;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.validation.constraints.Min;</span><br><span class="line"><span class="keyword">import</span> javax.validation.constraints.NotEmpty;</span><br><span class="line"><span class="keyword">import</span> javax.validation.constraints.NotNull;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 主成分分析算法</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> teler</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@ApiModel(&quot;主成分分析算法&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PcaEntity</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 数据集路径</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;数据源路径&quot;)</span></span><br><span class="line">	<span class="meta">@NotEmpty(message = &quot;数据源路径不能为空&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String dataFilePath;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 迭代次数</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@ApiModelProperty(&quot;维度&quot;)</span></span><br><span class="line">	<span class="meta">@NotNull(message = &quot;k不能为空&quot;)</span></span><br><span class="line">	<span class="meta">@Min(value = 1, message = &quot;k最小值为1&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> Integer k;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><p>里面有些方法是为了保留小数 不需要的自己改</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">transient</span> SparkSession sparkSession;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">pca</span><span class="params">(PcaEntity record)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;================== 主成分分析算法开始===========&quot;</span>);</span><br><span class="line">		Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(ConstantIntEnum.HASH_MAP_INITIAL_CAPACITY.getCode());</span><br><span class="line"></span><br><span class="line">		Dataset&lt;Row&gt; source = getDataSetByHdfs(record.getDataFilePath());</span><br><span class="line">		<span class="comment">//训练数据</span></span><br><span class="line">		;</span><br><span class="line">		map.put(<span class="string">&quot;training&quot;</span>, toList(source));</span><br><span class="line">		<span class="comment">//设置算法参数</span></span><br><span class="line">		PCA pca = <span class="keyword">new</span> PCA()</span><br><span class="line">				          .setInputCol(<span class="string">&quot;features&quot;</span>)</span><br><span class="line">				          .setOutputCol(<span class="string">&quot;pcaFeatures&quot;</span>)</span><br><span class="line">				          .setK(record.getK());</span><br><span class="line">		<span class="comment">//训练模型</span></span><br><span class="line">		PCAModel pcaModel = pca.fit(source);</span><br><span class="line"></span><br><span class="line">		pcaModel.pc();</span><br><span class="line">		<span class="comment">//转化数据</span></span><br><span class="line">		Dataset&lt;Row&gt; predictions = pcaModel.transform(source).select(<span class="string">&quot;pcaFeatures&quot;</span>);</span><br><span class="line">		predictions.show();</span><br><span class="line"></span><br><span class="line">		map.put(<span class="string">&quot;data&quot;</span>, toList(predictions));</span><br><span class="line">		<span class="keyword">return</span> map;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="getDataSetByHdfs方法"><a href="#getDataSetByHdfs方法" class="headerlink" title="getDataSetByHdfs方法"></a>getDataSetByHdfs方法</h3><p>这个方法我与上面的方法放在一个类中，所以sparkSession没重复写</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 从hdfs中取数据</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> dataFilePath 数据路径</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> 数据集合</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> Dataset&lt;Row&gt; <span class="title">getDataSetByHdfs</span><span class="params">(String dataFilePath)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//屏蔽日志</span></span><br><span class="line">		Logger.getLogger(<span class="string">&quot;org.apache.spark&quot;</span>).setLevel(Level.WARN);</span><br><span class="line">		Logger.getLogger(<span class="string">&quot;org.eclipse.jetty.server&quot;</span>).setLevel(Level.OFF);</span><br><span class="line"></span><br><span class="line">		Dataset&lt;Row&gt; dataset;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//我这里的数据是libsvm格式的 如果是其他格式请自行更改</span></span><br><span class="line">			dataset = sparkSession.read().format(<span class="string">&quot;libsvm&quot;</span>).load(dataFilePath);</span><br><span class="line">			log.info(<span class="string">&quot;获取数据结束 &quot;</span>);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			log.info(<span class="string">&quot;读取失败:&#123;&#125; &quot;</span>, e.getMessage());</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> dataset;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="toList"><a href="#toList" class="headerlink" title="toList"></a>toList</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * dataset数据转化为list数据</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> record 数据</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> 数据集合</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">private</span> List&lt;Map&lt;String, String&gt;&gt; toList(Dataset&lt;Row&gt; record) &#123;</span><br><span class="line">		log.info(<span class="string">&quot;格式化结果数据集===============================&quot;</span>);</span><br><span class="line">		List&lt;Map&lt;String, String&gt;&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		String[] columns = record.columns();</span><br><span class="line">		List&lt;Row&gt; rows = record.collectAsList();</span><br><span class="line">		<span class="keyword">for</span> (Row row : rows) &#123;</span><br><span class="line">			Map&lt;String, String&gt; obj = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; columns.length; j++) &#123;</span><br><span class="line">				String col = columns[j];</span><br><span class="line">				Object rowAs = row.getAs(col);</span><br><span class="line">				String val = <span class="string">&quot;&quot;</span>;</span><br><span class="line">				<span class="comment">//如果是数组 </span></span><br><span class="line">				<span class="comment">//这一段不需要的可以只留下else的内容</span></span><br><span class="line">				<span class="keyword">if</span> (rowAs <span class="keyword">instanceof</span> DenseVector) &#123;</span><br><span class="line">					<span class="keyword">if</span> (((DenseVector) rowAs).values() <span class="keyword">instanceof</span> <span class="keyword">double</span>[]) &#123;</span><br><span class="line">						val = ArrayUtil.join(</span><br><span class="line">								Arrays.stream(((DenseVector) rowAs).values())</span><br><span class="line">										.map(rowVal -&gt; NumberUtil.roundDown(rowVal, <span class="number">3</span>).doubleValue()).toArray()</span><br><span class="line">								, <span class="string">&quot;,&quot;</span>)</span><br><span class="line">						;</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						val = rowAs.toString();</span><br><span class="line">					&#125;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					val = rowAs.toString();</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				obj.put(col, val);</span><br><span class="line">				log.info(<span class="string">&quot;列：&#123;&#125;,名：&#123;&#125;,值：&#123;&#125;&quot;</span>, j, col, val);</span><br><span class="line">			&#125;</span><br><span class="line">			list.add(obj);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> list;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/12/10/03/java-spark-kMeans%E7%AE%97%E6%B3%95/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  java-spark-kMeans算法
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/12/10/03/java-spark-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95(naive-bayes)/">
+                java-spark-朴素贝叶斯算法(naive-bayes)
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+<div id="vssue"></div>
+<script type='text/javascript'>
+    new Vue({
+      el: '#vssue',
+      data: {
+        title: 'java-spark-主成分分析算法（pca）',
+        options: {
+          owner: 'fangweilong',
+          repo: 'fangweilong.github.io',
+          clientId: '764d4de1eeb295c96019',
+          clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
+        },
+      },
+      template: `<vssue :title="title" :options="options"></vssue>`
+    })
+</script>
 
 	</div>
 	<div id="footer">

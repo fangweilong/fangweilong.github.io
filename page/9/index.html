@@ -1189,59 +1189,24 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/06/18/02/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+			<a href="/2018/02/26/07/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEjs-Uncaught_TypeError_Cannot_read_property_%E2%80%98gc%E2%80%98_of_undefined/">
 				<h2 class="index-title">
-					wsl-debian10使用问题汇总
+					百度地图js-Uncaught_TypeError_Cannot_read_property_‘gc‘_of_undefined
 				</h2>
 				<div class="index-brief">
-					切换root1sudo su root
-
-访问window目录1cd /mnt
-
-Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
-
-编辑文件如sources.list没
+					我们在使用百度地图的js时往往是这样初始化参数它的
+1234567891011121314var map = new BMap.Map(&quot;allmap&quot;);//请注意这段var lng=&#x27;&#x27;;var	lat=&#x27;&#x27;;   var point 
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-06-18</span>
+				    <span>2018-02-26</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/wsl/">wsl</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/16/08/springcloud-RestTemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/">
-				<h2 class="index-title">
-					springcloud-RestTemplate访问不到其他服务
-				</h2>
-				<div class="index-brief">
-					1.检查启动类或配置类有没有加@EnableDiscoveryClient
-2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
-3.gateway配置、url是否一一对照
-如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
-升级springclou
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
+                                        <a href="/categories/javascript/">javascript</a>
 										
 											>
 										
@@ -1251,7 +1216,7 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                                        <a href="/categories/javascript/百度地图/">百度地图</a>
 										
                                     </span>
                                 
@@ -1261,104 +1226,31 @@ Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)�
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/06/10/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
+			<a href="/2018/02/26/06/myEclipse%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E5%8F%89%EF%BC%8C%E4%BD%86%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C/">
 				<h2 class="index-title">
-					java-stream的各种操作说明
+					myEclipse项目报错叉，但能正常运行
 				</h2>
 				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/03/03/Long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/">
-				<h2 class="index-title">
-					Long返回给前台在js中丢失精度
-				</h2>
-				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-03</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
-				<h2 class="index-title">
-					使用lambda表达式快捷完成Tree结构
-				</h2>
-				<div class="index-brief">
-					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
+					这种情况往往出现在别的项目更换了JDK版本，在当前项目上JDK版本也被更改了。虽然不会对项目造成什么影响，但是看着别扭啊。下面就分享下去除项目红叉的过程，我使用的MyEclipse版本为MyEclipse10。
 
-PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
-代码123456789101
+在项目文件的右上角找到小三角，点击选中 “Filters” 选项
+
+如图所示
+ 
+
+
+
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-05-27</span>
+				    <span>2018-02-26</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
+                                        <a href="/categories/myEclipse/">myEclipse</a>
 										
                                     </span>
                                 
@@ -1368,23 +1260,24 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
+			<a href="/2018/02/24/09/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2/">
 				<h2 class="index-title">
-					MinMaxNormalize规一化算法
+					idea更改缩进线颜色
 				</h2>
 				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
+					idea不同的版本会更改一些功能设置的位置，之前将背景色改为了豆沙绿后缩进线就看不到了，在写HTML页面的时候很不舒服，但是网上搜到的一些答案又不对(版本不一致)，花了点功夫找了一下，特此记录。我当前版本为idea 2017.3.4
+1Settings -&gt; Editor -&gt; Colo
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-04-16</span>
+				    <span>2018-02-24</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
+                                        <a href="/categories/idea/">idea</a>
 										
                                     </span>
                                 
@@ -1394,18 +1287,19 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
+			<a href="/2018/02/07/06/%E6%89%8B%E6%9C%BA%E7%A4%BE%E4%BC%9A%E5%8C%96%E5%88%86%E4%BA%AB%E5%88%B0qq%E5%A5%BD%E5%8F%8B%E3%80%81qq%E7%A9%BA%E9%97%B4%E3%80%81%E5%BE%AE%E4%BF%A1%E3%80%81%E5%BE%AE%E4%BF%A1%E6%9C%8B%E5%8F%8B%E5%9C%88%E3%80%81%E5%BE%AE%E5%8D%9A%E7%AD%89(%E5%8C%BA%E5%88%86%E6%B5%8F%E8%A7%88%E5%99%A8)/">
 				<h2 class="index-title">
-					一组数差距过大的问题：symbolsize计算公式
+					手机社会化分享到qq好友、qq空间、微信、微信朋友圈、微博等(区分浏览器)
 				</h2>
 				<div class="index-brief">
-					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
-12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
+					先下载js包并引用官网:http://www.calledt.com/soshm/github:https://github.com/calledT/soshm
+//隐藏域 点击分享以后弹出本隐藏域
+1&lt;div class=&quot;soshm&quot; id=&quot;share&qu
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-04-02</span>
+				    <span>2018-02-07</span>
                     
                             
                                 
@@ -1421,24 +1315,25 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/03/23/07/java%E6%89%93%E5%8C%85%E6%88%90docker-images/">
+			<a href="/2018/02/07/05/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/">
 				<h2 class="index-title">
-					java打包成docker-images
+					利用layer实现放大图片的效果
 				</h2>
 				<div class="index-brief">
-					一个最简单的jar包的Dockerfile制作openjdk的dockerhub地址
-在代码根目录创建Dockerfile文件，内容如下12345678910111213FROM openjdk:8-alpineLABEL &quot;Author&quot;=&quot;Teler&quot; \
+					引用layer.js
+//小图
+1&lt;a href=&quot;javascript:amplificationImg(&#x27;图片名&#x27;,&#x27;图片地址&#x27;)&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-03-23</span>
+				    <span>2018-02-07</span>
                     
                             
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/docker/">docker</a>
+                                        <a href="/categories/javascript/">javascript</a>
 										
 											>
 										
@@ -1448,7 +1343,7 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/dockerfile/">dockerfile</a>
+                                        <a href="/categories/javascript/layui/">layui</a>
 										
                                     </span>
                                 
@@ -1458,54 +1353,18 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 		</div>
 	
 		<div class="index-li">
-			<a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
+			<a href="/2018/02/07/03/MongoDB%E6%9F%A5%E8%AF%A2/">
 				<h2 class="index-title">
-					Elastic_Search-通过reindex实现集群数据迁移
+					MongoDB查询
 				</h2>
 				<div class="index-brief">
-					版本老集群ES 5.4新集群ES 7.9
-背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
-说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
-
-步骤
-添加白名
+					//配置
+12345678910111213141516171819202122public class Mongodb &#123;   private static String host = &quot;&quot;;//域名   private static int port = ;//端口
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-03-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ES/">ES</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
-				<h2 class="index-title">
-					springcloud-gateway整合swagger3.0.0
-				</h2>
-				<div class="index-brief">
-					版本和说明
- swagger:3.0.0
-   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
-   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
-
-
-单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
+				    <span>2018-02-07</span>
                     
                             
                                 
@@ -1521,7 +1380,88 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                                        <a href="/categories/java/mongo/">mongo</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/02/06/11/js_jquery%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%20%E9%9C%80%E8%A6%81%E7%82%B9%E5%87%BB%E4%B8%80%E4%B8%8B%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0/">
+				<h2 class="index-title">
+					js_jquery获取不到页面元素 需要点击一下才能找到
+				</h2>
+				<div class="index-brief">
+					2018-03-23 更新更新内容:检查在获取的时候是不是使用class获取元素，如果是则修改为通过id获取元素。通过id获取元素是可以直接获取到的
+以下为原文  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓在项目中，尤其是后台管理常用到iframe嵌套，但是
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-02-06</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/javascript/">javascript</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/01/31/13/kindeditor%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E9%80%9A%E8%BF%87%E5%8F%82%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E9%99%90%E5%88%B6%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD/">
+				<h2 class="index-title">
+					kindeditor富文本编辑器通过参数初始化限制上传图片等功能
+				</h2>
+				<div class="index-brief">
+					我们某些时候需要在kindeditor富文本编辑器上限制用户不能使用某些功能，虽然可以通过class来限制，但是这样毫无疑问很low。无意翻到了官网的一篇初始化编辑器的参数。
+详情点击↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓点击跳转官网原文详情
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-01-31</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/其它/">其它</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>
+	
+		<div class="index-li">
+			<a href="/2018/01/31/12/js_jquery%E9%99%90%E5%88%B6input%E8%BE%93%E5%85%A5%E6%A1%86%E5%8F%AA%E8%83%BD%E8%BE%93%E5%85%A5%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97/">
+				<h2 class="index-title">
+					js_jquery限制input输入框只能输入两位小数的数字
+				</h2>
+				<div class="index-brief">
+					//正整数 两位小数
+123456789101112131415$(&#x27;.inputWrap&#x27;).on(&#x27;input&#x27;, function () &#123;        var num = $(this).val();        if(num.index
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2018-01-31</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/javascript/">javascript</a>
 										
                                     </span>
                                 
@@ -1533,7 +1473,7 @@ PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
 
 	<div id="index-paginator">
 		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/page/8/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span>
 		
 	</div>
 </div>

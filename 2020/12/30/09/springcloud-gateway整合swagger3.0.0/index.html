@@ -9,6 +9,8 @@
 	
 	<title>
 	
+		springcloud-gateway整合swagger3.0.0 |
+	
 	房伟龙的日常
 	</title>
 
@@ -355,7 +357,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
 										springcloud-gateway整合swagger3.0.0
 									</a>
@@ -1186,357 +1188,143 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/2021/06/18/02/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
-				<h2 class="index-title">
-					wsl-debian10使用问题汇总
-				</h2>
-				<div class="index-brief">
-					切换root1sudo su root
+		<h1 id="article-title">
 
-访问window目录1cd /mnt
+	springcloud-gateway整合swagger3.0.0
+</h1>
+<div class="article-meta">
+	<span>fangweilong</span>
+	<span>2020-12-30 17:15:59</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/java/">java</a>
+                        </i>
+                      
+                        >
+                      
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/java/spring-cloud/">spring cloud</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
 
-Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)使用root用户更新
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/java/">java</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/spring-cloud/">spring cloud</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/gateway/">gateway</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/swagger3-x/">swagger3.x</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
 
-编辑文件如sources.list没
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/wsl/">wsl</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/16/08/springcloud-RestTemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/">
-				<h2 class="index-title">
-					springcloud-RestTemplate访问不到其他服务
-				</h2>
-				<div class="index-brief">
-					1.检查启动类或配置类有没有加@EnableDiscoveryClient
-2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解
-3.gateway配置、url是否一一对照
-如果上面的你都很确定没问题，那可以比对一下我遇到的问题起因
-升级springclou
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/10/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">
-				<h2 class="index-title">
-					java-stream的各种操作说明
-				</h2>
-				<div class="index-brief">
-					列一下stream常用的Function，防止遗忘map修改的元素需要return后
-peek不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值
-foreach不修改元素，没有return
-filter过滤器，满足条件的才能被通过。留下的元素都是满足
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/06/03/03/Long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/">
-				<h2 class="index-title">
-					Long返回给前台在js中丢失精度
-				</h2>
-				<div class="index-brief">
-					现象1.后台id等使用long（雪花算法生成id）存储2.后台将id返回给前台3.js接收id，发现精度丢失。数字末尾变成了00
-说明在mybatis plus中使用了雪花算法生成id，MP也提供了解决思路，点我跳转
-解决办法我使用了注解处理
-12@JsonSerialize(using=ToStr
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-03</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/05/27/02/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90Tree%E7%BB%93%E6%9E%84/">
-				<h2 class="index-title">
-					使用lambda表达式快捷完成Tree结构
-				</h2>
-				<div class="index-brief">
-					前言以前在java中构建菜单、区划等都是使用递归或是数据库。数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波
-
-PS:数据库我使用了mybatis-plus，所以查数据的写法简化了
-代码123456789101
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-05-27</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/lambda/">lambda</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/16/01/MinMaxNormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/">
-				<h2 class="index-title">
-					MinMaxNormalize规一化算法
-				</h2>
-				<div class="index-brief">
-					123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/04/02/08/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9Asymbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/">
-				<h2 class="index-title">
-					一组数差距过大的问题：symbolsize计算公式
-				</h2>
-				<div class="index-brief">
-					解决的问题当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了
-12345678910111213141516171819/** * symbolsize计算公式 * minSize：最小的尺寸 * coefficientSi
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-04-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/javascript/">javascript</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/03/23/07/java%E6%89%93%E5%8C%85%E6%88%90docker-images/">
-				<h2 class="index-title">
-					java打包成docker-images
-				</h2>
-				<div class="index-brief">
-					一个最简单的jar包的Dockerfile制作openjdk的dockerhub地址
-在代码根目录创建Dockerfile文件，内容如下12345678910111213FROM openjdk:8-alpineLABEL &quot;Author&quot;=&quot;Teler&quot; \
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-03-23</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/docker/">docker</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/dockerfile/">dockerfile</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
-				<h2 class="index-title">
-					Elastic_Search-通过reindex实现集群数据迁移
-				</h2>
-				<div class="index-brief">
-					版本老集群ES 5.4新集群ES 7.9
-背景客户的ES集群做了升级，公司服务器上搭建的ES集群也做了相应升级。现在要把ES5的数据迁移到7.9上。
-说明本文使用的reindex做迁移功能。如果数据量巨大的情况下可以考虑使用dump。reindex适合单索引几万十几万的情况下使用。
-
-步骤
-添加白名
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-03-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ES/">ES</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-		<div class="index-li">
-			<a href="/2020/12/30/09/springcloud-gateway%E6%95%B4%E5%90%88swagger3.0.0/">
-				<h2 class="index-title">
-					springcloud-gateway整合swagger3.0.0
-				</h2>
-				<div class="index-brief">
-					版本和说明
- swagger:3.0.0
-   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。
-   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3
-
-
-单应用pom添加1234567&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/">java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/java/spring-cloud/">spring cloud</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>
-	
-
-	<div id="index-paginator">
-		
-			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
-		
-	</div>
 </div>
+
+<div id="article-content">
+	<h1 id="版本和说明"><a href="#版本和说明" class="headerlink" title="版本和说明"></a>版本和说明</h1><ul>
+<li> swagger:3.0.0</li>
+<li>   gateway微服务的使用方式和单应用没啥区别，只是多了设置右上角模块的操作。</li>
+<li>   以下操作基于你已经搭建成功的服务，只讲怎么添加swagger3</li>
+</ul>
+<hr>
+<h1 id="单应用"><a href="#单应用" class="headerlink" title="单应用"></a>单应用</h1><h2 id="pom添加"><a href="#pom添加" class="headerlink" title="pom添加"></a>pom添加</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 3.0版本只需要引入一个，不再像2.x版本需要引入两个包 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;springfox-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="variable">$&#123;swagger.version&#125;</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * swagger配制</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> teler</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2020-12-30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SwaggerConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Value(&quot;$&#123;swagger.enable:true&#125;&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> Boolean enable;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Docket <span class="title">api</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Docket(DocumentationType.OAS_30)</span><br><span class="line">					   <span class="comment">//资源</span></span><br><span class="line">				       .globalResponses(HttpMethod.GET, <span class="keyword">new</span> ArrayList&lt;&gt;())</span><br><span class="line">				       .globalResponses(HttpMethod.PUT, <span class="keyword">new</span> ArrayList&lt;&gt;())</span><br><span class="line">				       .globalResponses(HttpMethod.POST, <span class="keyword">new</span> ArrayList&lt;&gt;())</span><br><span class="line">				       .globalResponses(HttpMethod.DELETE, <span class="keyword">new</span> ArrayList&lt;&gt;())</span><br><span class="line">					   <span class="comment">//是否启动</span></span><br><span class="line">				       .enable(enable)</span><br><span class="line">					   <span class="comment">//头部信息</span></span><br><span class="line">				       .apiInfo(apiInfo())</span><br><span class="line">				       .select()</span><br><span class="line">				       <span class="comment">/**</span></span><br><span class="line"><span class="comment">				        * RequestHandlerSelectors,配置要扫描接口的方式</span></span><br><span class="line"><span class="comment">				        * basePackage指定要扫描的包</span></span><br><span class="line"><span class="comment">				        * any()扫描所有，项目中的所有接口都会被扫描到</span></span><br><span class="line"><span class="comment">				        * none()不扫描</span></span><br><span class="line"><span class="comment">				        * withClassAnnotation()扫描类上的注解</span></span><br><span class="line"><span class="comment">				        * withMethodAnnotation()扫描方法上的注解</span></span><br><span class="line"><span class="comment">				        */</span></span><br><span class="line">				       .apis(RequestHandlerSelectors.any())</span><br><span class="line">					   <span class="comment">//过滤某个路径</span></span><br><span class="line">				       .paths(PathSelectors.any())</span><br><span class="line">				       .build()</span><br><span class="line">					   <span class="comment">//协议</span></span><br><span class="line">				       .protocols(newHashSet(<span class="string">&quot;https&quot;</span>, <span class="string">&quot;http&quot;</span>))</span><br><span class="line">				       .securitySchemes(securitySchemes())</span><br><span class="line">				       .securityContexts(securityContexts());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * API 页面上半部分展示信息</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> ApiInfo <span class="title">apiInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ApiInfoBuilder()</span><br><span class="line">				       .title(<span class="string">&quot;接口文档&quot;</span>)</span><br><span class="line">				       .description(<span class="string">&quot;@author Teler&quot;</span>)</span><br><span class="line">				       .contact(<span class="keyword">new</span> Contact(<span class="string">&quot;Teler&quot;</span>, <span class="keyword">null</span>, <span class="string">&quot;teler96@qq.com&quot;</span>))</span><br><span class="line">				       .version(<span class="string">&quot;1.0&quot;</span>)</span><br><span class="line">				       .build();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 设置接口单独的授权信息</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> List&lt;SecurityScheme&gt; <span class="title">securitySchemes</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> Collections.singletonList(<span class="keyword">new</span> ApiKey(<span class="string">&quot;BASE_TOKEN&quot;</span>, <span class="string">&quot;token&quot;</span>, <span class="string">&quot;header&quot;</span>));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 授权信息全局应用</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> List&lt;SecurityContext&gt; <span class="title">securityContexts</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> Collections.singletonList(</span><br><span class="line">				SecurityContext.builder()</span><br><span class="line">						.securityReferences(</span><br><span class="line">								Collections.singletonList(<span class="keyword">new</span> SecurityReference(<span class="string">&quot;BASE_TOKEN&quot;</span>,</span><br><span class="line">										<span class="keyword">new</span> AuthorizationScope[]&#123;<span class="keyword">new</span> AuthorizationScope(<span class="string">&quot;global&quot;</span>, <span class="string">&quot;&quot;</span>)&#125;</span><br><span class="line">								)))</span><br><span class="line">						<span class="comment">//.forPaths(PathSelectors.any())</span></span><br><span class="line">						.build()</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@SafeVarargs</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> &lt;T&gt; <span class="function">Set&lt;T&gt; <span class="title">newHashSet</span><span class="params">(T... ts)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (ts.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> LinkedHashSet&lt;&gt;(Arrays.asList(ts));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><p>到这一步我们应该就能正常访问swagger文档了，但是要注意3.0的访问页面路径有所变化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://ip:port/swagger-ui/</span><br></pre></td></tr></table></figure>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p><img src="https://img-blog.csdnimg.cn/20201230165529317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<hr>
+<h1 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h1><ul>
+<li>   gateway版本:2.2.5</li>
+</ul>
+<h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><p>MySwaggerResourcesProvider在gateway模块中创建，注意其中的一些注解和说明，否则应用无法正常启动</p>
+<h3 id="MySwaggerResourcesProvider"><a href="#MySwaggerResourcesProvider" class="headerlink" title="MySwaggerResourcesProvider"></a>MySwaggerResourcesProvider</h3><p><em>@Primary这个注解是告诉spring 如果有冲突优先使用当前类 没有这个会报实现类冲突 看源码能发现SwaggerResourcesProvider已经有一个InMemorySwaggerResourcesProvider实现类 但是自带的不能满足我们的要求</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * swagger的配置类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> teler</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Primary</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySwaggerResourcesProvider</span> <span class="keyword">implements</span> <span class="title">SwaggerResourcesProvider</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * swagger3默认的url后缀</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SWAGGER2URL = <span class="string">&quot;/v3/api-docs&quot;</span>;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 网关路由</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> RouteLocator routeLocator;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 网关应用名称</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Value(&quot;$&#123;spring.application.name&#125;&quot;)</span></span><br><span class="line">	<span class="keyword">private</span> String self;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MySwaggerResourcesProvider</span><span class="params">(RouteLocator routeLocator)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.routeLocator = routeLocator;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 对于gateway来说这块比较重要 让swagger能找到对应的服务</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> List&lt;SwaggerResource&gt; <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		List&lt;SwaggerResource&gt; resources = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		List&lt;String&gt; routeHosts = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		<span class="comment">// 获取所有可用的host：serviceId</span></span><br><span class="line">		routeLocator.getRoutes().filter(route -&gt; route.getUri().getHost() != <span class="keyword">null</span>)</span><br><span class="line">				.filter(route -&gt; !self.equals(route.getUri().getHost()))</span><br><span class="line">				.subscribe(route -&gt; routeHosts.add(route.getUri().getHost()));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 记录已经添加过的server</span></span><br><span class="line">		Set&lt;String&gt; dealed = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">		routeHosts.forEach(instance -&gt; &#123;</span><br><span class="line">			<span class="comment">// 拼接url</span></span><br><span class="line">			String url = <span class="string">&quot;/&quot;</span> + instance.toLowerCase() + SWAGGER2URL;</span><br><span class="line">			<span class="keyword">if</span> (!dealed.contains(url)) &#123;</span><br><span class="line">				dealed.add(url);</span><br><span class="line">				SwaggerResource swaggerResource = <span class="keyword">new</span> SwaggerResource();</span><br><span class="line">				swaggerResource.setUrl(url);</span><br><span class="line">				swaggerResource.setName(instance);</span><br><span class="line">				resources.add(swaggerResource);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		<span class="keyword">return</span> resources;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="访问-1"><a href="#访问-1" class="headerlink" title="访问"></a>访问</h2><p>链接不变，但是我们在右上角能清晰地看到所有的微服务模块已经能正常访问了<br><img src="https://img-blog.csdnimg.cn/20201230171308478.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="未解决"><a href="#未解决" class="headerlink" title="未解决"></a>未解决</h2><p>找不到中文包的设置方式，虽然说都能看得懂，但是还是想能自己设置语言。</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/03/18/06/Elastic_Search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/12/10/03/java-spark-kMeans%E7%AE%97%E6%B3%95/">
+                01 spark
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+<div id="vssue"></div>
+<script type='text/javascript'>
+    new Vue({
+      el: '#vssue',
+      data: {
+        title: 'springcloud-gateway整合swagger3.0.0',
+        options: {
+          owner: 'fangweilong',
+          repo: 'fangweilong.github.io',
+          clientId: '764d4de1eeb295c96019',
+          clientSecret: 'dd4886684dce340a42af81b16a06a1f5b70f549d', // 只有在使用某些平台时需要
+        },
+      },
+      template: `<vssue :title="title" :options="options"></vssue>`
+    })
+</script>
 
 	</div>
 	<div id="footer">
