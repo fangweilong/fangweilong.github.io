@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 19 Jul 2021 06:02:51 GMT</pubDate>
-    <lastBuildDate>Mon, 19 Jul 2021 06:02:51 GMT</lastBuildDate>
+    <pubDate>Mon, 19 Jul 2021 07:09:52 GMT</pubDate>
+    <lastBuildDate>Mon, 19 Jul 2021 07:09:52 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -4281,11 +4281,11 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
     </item>
     <item>
       <title>nginx-反代百度等外网地址</title>
-      <link>https://fangweilong.github.io/2020/07/19/nginx-%E5%8F%8D%E4%BB%A3%E7%99%BE%E5%BA%A6%E7%AD%89%E5%A4%96%E7%BD%91%E5%9C%B0%E5%9D%80/</link>
-      <guid isPermaLink="false">/2020/07/19/nginx-%E5%8F%8D%E4%BB%A3%E7%99%BE%E5%BA%A6%E7%AD%89%E5%A4%96%E7%BD%91%E5%9C%B0%E5%9D%80/</guid>
+      <link>https://fangweilong.github.io/2021/07/19/nginx-%E5%8F%8D%E4%BB%A3%E7%99%BE%E5%BA%A6%E7%AD%89%E5%A4%96%E7%BD%91%E5%9C%B0%E5%9D%80/</link>
+      <guid isPermaLink="false">/2021/07/19/nginx-%E5%8F%8D%E4%BB%A3%E7%99%BE%E5%BA%A6%E7%AD%89%E5%A4%96%E7%BD%91%E5%9C%B0%E5%9D%80/</guid>
       <source url="https://fangweilong.github.io/rss.xml">nginx-反代百度等外网地址</source>
       <category>nginx</category>
-      <pubDate>Sun, 19 Jul 2020 11:46:23 GMT</pubDate>
+      <pubDate>Mon, 19 Jul 2021 11:46:23 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="需求"> 需求</h2>
 <div><pre><code>由一台统一的外网服务器作中转，左右的外网接口请求都走这台服务器。
 考虑下来使用nginx的反代。
@@ -6405,14 +6405,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Mon, 19 Jul 2021 03:53:38 GMT</pubDate>
+      <pubDate>Mon, 19 Jul 2021 07:09:18 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Mon, 19 Jul 2021 03:53:38 GMT</pubDate>
+      <pubDate>Mon, 19 Jul 2021 07:09:18 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6422,7 +6422,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Mon, 19 Jul 2021 03:53:38 GMT</pubDate>
+      <pubDate>Mon, 19 Jul 2021 07:09:18 GMT</pubDate>
     </item>
   </channel>
 </rss>
