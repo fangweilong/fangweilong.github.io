@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 20 Jul 2021 02:44:33 GMT</pubDate>
-    <lastBuildDate>Tue, 20 Jul 2021 02:44:33 GMT</lastBuildDate>
+    <pubDate>Fri, 23 Jul 2021 07:00:23 GMT</pubDate>
+    <lastBuildDate>Fri, 23 Jul 2021 07:00:23 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -4281,6 +4281,81 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
 ]]></content:encoded>
     </item>
     <item>
+      <title>nginx-使用https加密ip</title>
+      <link>https://fangweilong.github.io/2021/07/23/nginx-%E4%BD%BF%E7%94%A8https%E5%8A%A0%E5%AF%86ip/</link>
+      <guid isPermaLink="false">/2021/07/23/nginx-%E4%BD%BF%E7%94%A8https%E5%8A%A0%E5%AF%86ip/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">nginx-使用https加密ip</source>
+      <category>nginx</category>
+      <pubDate>Fri, 23 Jul 2021 14:06:20 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="openssl"> openssl</h2>
+<h3 id="官网"> 官网</h3>
+<div><pre><code>https://www.openssl.org/
+</code></pre>
+</div><h3 id="git自带"> git自带</h3>
+<div><pre><code>我这里采用的是git bash中自带的openssl
+</code></pre>
+</div><h2 id="开始制作"> 开始制作</h2>
+<h3 id="生成-key-私钥"> 生成 .key 私钥</h3>
+<div><pre><code>openssl genrsa -out ssl.key 4096
+</code></pre>
+</div><h3 id="生成csr"> 生成csr</h3>
+<div><pre><code>openssl req -new -key ssl.key -out ssl.csr
+</code></pre>
+</div><div><p>提示</p>
+<p>需要输出 国家 省份 城市 项目名或个人用户名
+如果没有非常严格的硬性要求，自己输入就好</p>
+</div>
+<h3 id="生成crt"> 生成crt</h3>
+<div><pre><code>openssl x509 -req -days 365 -in ssl.csr -signkey ssl.key -out ssl.crt
+</code></pre>
+</div><div><p>提示</p>
+<p>-days:设置过期天数，我这里是设置为了365天</p>
+</div>
+<h2 id="生成总览"> 生成总览</h2>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th style="text-align:center">类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ssl.key</td>
+<td style="text-align:center">KEY文件</td>
+</tr>
+<tr>
+<td>ssl.crt</td>
+<td style="text-align:center">安全证书</td>
+</tr>
+<tr>
+<td>ssl.csr</td>
+<td style="text-align:center">CSR文件</td>
+</tr>
+</tbody>
+</table>
+<p>我们其实只需要里面的ssl.crt和ssl.key</p>
+<h2 id="上传文件并设置"> 上传文件并设置</h2>
+<div><pre><code>server <span>{</span>
+    listen       <span>80</span> ssl<span>;</span>
+    server_name  <span>$hostname</span><span>;</span>
+
+    ssl_certificate /etc/nginx/ssl/ssl.crt<span>;</span>
+    ssl_certificate_key /etc/nginx/ssl/ca.key<span>;</span>
+
+    location / <span>{</span>
+        root   /usr/share/nginx/html<span>;</span>
+        index  index.html index.htm<span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><h2 id="访问"> 访问</h2>
+<p><a href="https://imgtu.com/i/WrOb8S" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/07/23/WrOb8S.md.png" alt="WrOb8S.md.png" /></a>
+虽然浏览器报了不安全，但是起码实现了https加密访问。</p>
+]]></content:encoded>
+      <enclosure url="https://z3.ax1x.com/2021/07/23/WrOb8S.md.png" type="image/png"/>
+    </item>
+    <item>
       <title>nginx-反代百度等外网地址</title>
       <link>https://fangweilong.github.io/2021/07/19/nginx-%E5%8F%8D%E4%BB%A3%E7%99%BE%E5%BA%A6%E7%AD%89%E5%A4%96%E7%BD%91%E5%9C%B0%E5%9D%80/</link>
       <guid isPermaLink="false">/2021/07/19/nginx-%E5%8F%8D%E4%BB%A3%E7%99%BE%E5%BA%A6%E7%AD%89%E5%A4%96%E7%BD%91%E5%9C%B0%E5%9D%80/</guid>
@@ -6406,14 +6481,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Tue, 20 Jul 2021 02:43:35 GMT</pubDate>
+      <pubDate>Fri, 23 Jul 2021 06:57:58 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Tue, 20 Jul 2021 02:43:35 GMT</pubDate>
+      <pubDate>Fri, 23 Jul 2021 06:57:58 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6423,7 +6498,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Tue, 20 Jul 2021 02:43:35 GMT</pubDate>
+      <pubDate>Fri, 23 Jul 2021 06:57:58 GMT</pubDate>
     </item>
   </channel>
 </rss>
