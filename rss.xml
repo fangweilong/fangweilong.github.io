@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 04 Aug 2021 09:41:00 GMT</pubDate>
-    <lastBuildDate>Wed, 04 Aug 2021 09:41:00 GMT</lastBuildDate>
+    <pubDate>Tue, 10 Aug 2021 02:05:39 GMT</pubDate>
+    <lastBuildDate>Tue, 10 Aug 2021 02:05:39 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -5868,6 +5868,28 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
 ]]></content:encoded>
     </item>
     <item>
+      <title>无需软件通过修改注册表实现wind10透明状态栏效果</title>
+      <link>https://fangweilong.github.io/2021/08/10/%E6%97%A0%E9%9C%80%E8%BD%AF%E4%BB%B6%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0wind10%E9%80%8F%E6%98%8E%E7%8A%B6%E6%80%81%E6%A0%8F%E6%95%88%E6%9E%9C/</link>
+      <guid isPermaLink="false">/2021/08/10/%E6%97%A0%E9%9C%80%E8%BD%AF%E4%BB%B6%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0wind10%E9%80%8F%E6%98%8E%E7%8A%B6%E6%80%81%E6%A0%8F%E6%95%88%E6%9E%9C/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">无需软件通过修改注册表实现wind10透明状态栏效果</source>
+      <category>window</category>
+      <pubDate>Tue, 10 Aug 2021 09:55:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="原帖"> 原帖</h2>
+<p>在52pojie上看到的一个帖子，不过原帖中需要手动修改注册表的值。<a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1461968&amp;highlight=%D7%B4%CC%AC%C0%B8" target="_blank" rel="noopener noreferrer">点击我跳转</a></p>
+<h2 id="代码"> 代码</h2>
+<p>我给做成了bat文件，双击调用</p>
+<div><pre><code>@REM 在 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced 路径下添加一个 REG_DWORD类型的TaskbarAcrylicOpacity文件，值为 0
+reg add HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarAcrylicOpacity /t REG_DWORD /d 0
+
+@REM 重启任务管理器
+taskkill /f /im explorer.exe &amp; start explorer.exe
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="效果"> 效果</h2>
+<p><a href="https://imgtu.com/i/fGfzxU" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/08/10/fGfzxU.png" alt="fGfzxU.png" /></a></p>
+]]></content:encoded>
+      <enclosure url="https://z3.ax1x.com/2021/08/10/fGfzxU.png" type="image/png"/>
+    </item>
+    <item>
       <title>git-.gitignore通用配置文件</title>
       <link>https://fangweilong.github.io/2019/08/30/git-gitignore%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</link>
       <guid isPermaLink="false">/2019/08/30/git-gitignore%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</guid>
@@ -6481,14 +6503,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Wed, 04 Aug 2021 09:37:02 GMT</pubDate>
+      <pubDate>Tue, 10 Aug 2021 02:04:53 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Wed, 04 Aug 2021 09:37:02 GMT</pubDate>
+      <pubDate>Tue, 10 Aug 2021 02:04:53 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6498,7 +6520,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Wed, 04 Aug 2021 09:37:02 GMT</pubDate>
+      <pubDate>Tue, 10 Aug 2021 02:04:53 GMT</pubDate>
     </item>
   </channel>
 </rss>
