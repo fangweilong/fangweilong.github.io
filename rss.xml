@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 10 Aug 2021 02:05:39 GMT</pubDate>
-    <lastBuildDate>Tue, 10 Aug 2021 02:05:39 GMT</lastBuildDate>
+    <pubDate>Wed, 11 Aug 2021 05:50:04 GMT</pubDate>
+    <lastBuildDate>Wed, 11 Aug 2021 05:50:04 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -4855,6 +4855,49 @@ http {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>window的linux子系统-wsl</title>
+      <link>https://fangweilong.github.io/2019/09/04/window%E7%9A%84linux%E5%AD%90%E7%B3%BB%E7%BB%9F-wsl/</link>
+      <guid isPermaLink="false">/2019/09/04/window%E7%9A%84linux%E5%AD%90%E7%B3%BB%E7%BB%9F-wsl/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">window的linux子系统-wsl</source>
+      <category>wsl</category>
+      <pubDate>Wed, 04 Sep 2019 18:05:22 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="如何开启安装linux子系统请自行百度-这里只记录一些详细的操作点-给自己一个留档"> 如何开启安装linux子系统请自行百度，这里只记录一些详细的操作点，给自己一个留档</h2>
+<p>1.安装目录</p>
+<div><pre><code>C:\Users\{用户名}\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs
+</code></pre>
+<div><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+<p>2.访问磁盘目录</p>
+<div><pre><code>cd /mnt
+</code></pre>
+<div><span>1</span><br></div></div><p>这样就能进入本地磁盘了，通过ls -h就能看到C盘的目录（不知道为什么是绿色，应该可以看出来）</p>
+<p><img src="https://img-blog.csdnimg.cn/20190904180106536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+附上几个ls的命令</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>显示指定目录下所有子目录与文件，包括隐藏文件</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>以列表方式显示文件的详细信息</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>配合 -l 以人性化的方式显示文件大小</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
       <title>kibana-查询ES 的一些语法</title>
       <link>https://fangweilong.github.io/2020/08/06/kibana-%E6%9F%A5%E8%AF%A2es-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/</link>
       <guid isPermaLink="false">/2020/08/06/kibana-%E6%9F%A5%E8%AF%A2es-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/</guid>
@@ -5171,49 +5214,6 @@ http {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>window的linux子系统-wsl</title>
-      <link>https://fangweilong.github.io/2019/09/04/window%E7%9A%84linux%E5%AD%90%E7%B3%BB%E7%BB%9F-wsl/</link>
-      <guid isPermaLink="false">/2019/09/04/window%E7%9A%84linux%E5%AD%90%E7%B3%BB%E7%BB%9F-wsl/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">window的linux子系统-wsl</source>
-      <category>wsl</category>
-      <pubDate>Wed, 04 Sep 2019 18:05:22 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="如何开启安装linux子系统请自行百度-这里只记录一些详细的操作点-给自己一个留档"> 如何开启安装linux子系统请自行百度，这里只记录一些详细的操作点，给自己一个留档</h2>
-<p>1.安装目录</p>
-<div><pre><code>C:\Users\{用户名}\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs
-</code></pre>
-<div><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<p>2.访问磁盘目录</p>
-<div><pre><code>cd /mnt
-</code></pre>
-<div><span>1</span><br></div></div><p>这样就能进入本地磁盘了，通过ls -h就能看到C盘的目录（不知道为什么是绿色，应该可以看出来）</p>
-<p><img src="https://img-blog.csdnimg.cn/20190904180106536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-附上几个ls的命令</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-a</td>
-<td>显示指定目录下所有子目录与文件，包括隐藏文件</td>
-</tr>
-<tr>
-<td>-l</td>
-<td>以列表方式显示文件的详细信息</td>
-</tr>
-<tr>
-<td>-h</td>
-<td>配合 -l 以人性化的方式显示文件大小</td>
-</tr>
-</tbody>
-</table>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>wsl-debian10使用问题汇总</title>
       <link>https://fangweilong.github.io/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
       <guid isPermaLink="false">/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
@@ -5272,7 +5272,15 @@ http {
       <source url="https://fangweilong.github.io/rss.xml">idea关闭不必要的插件减少内存占用</source>
       <category>idea</category>
       <pubDate>Wed, 25 Apr 2018 09:44:26 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="_2020-06009-更新"> 2020 06009 更新</h1>
+      <content:encoded><![CDATA[<h1 id="_2021-08-11更新"> 2021-08-11更新</h1>
+<h2 id="idea版本-2021-2"> idea版本：2021.2</h2>
+<h2 id="项目"> 项目</h2>
+<p>spring + springboot + springcloud + mybatis + mybatis-plus + maven + python 如果跟我差不多的可以参照我的修改</p>
+<h2 id="长图-不清晰的可以保存后查看"> 长图，不清晰的可以保存后查看</h2>
+<p><a href="https://imgtu.com/i/fUCSIJ" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/08/11/fUCSIJ.png" alt="fUCSIJ.png" /></a>
+<a href="https://imgtu.com/i/fUCaJs" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/08/11/fUCaJs.png" alt="fUCaJs.png" /></a></p>
+<hr>
+<h1 id="_2020-06009-更新"> 2020 06009 更新</h1>
 <h2 id="idea版本-2020-1-2"> idea版本：2020.1.2</h2>
 <h2 id="项目-spring-springboot-springcloud-mybatis-mybatis-plus-maven-如果跟我差不多的可以参照我的修改"> 项目：spring+springboot+springcloud+mybatis+mybatis-plus+maven 如果跟我差不多的可以参照我的修改</h2>
 <h3 id="自己安装的"> 自己安装的</h3>
@@ -5315,7 +5323,7 @@ Groovy一定得留着，否则快捷生成get/set/tostring等方法会无法使�
 idea在java开发中是很好用，但是内存占用太高，里面有很多的插件是用不到的，所以现在我经过一个个使用测试，只留下了这部分插件。
 <img src="https://img-blog.csdn.net/20180425094331834?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" /><img src="https://img-blog.csdn.net/20180425094339290?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" /><img src="https://img-blog.csdn.net/20180425094345784?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" /></p>
 ]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20200609201450788.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+      <enclosure url="https://z3.ax1x.com/2021/08/11/fUCSIJ.png" type="image/png"/>
     </item>
     <item>
       <title>idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</title>
@@ -6503,14 +6511,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Tue, 10 Aug 2021 02:04:53 GMT</pubDate>
+      <pubDate>Wed, 11 Aug 2021 05:45:34 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Tue, 10 Aug 2021 02:04:53 GMT</pubDate>
+      <pubDate>Wed, 11 Aug 2021 05:45:34 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6520,7 +6528,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Tue, 10 Aug 2021 02:04:53 GMT</pubDate>
+      <pubDate>Wed, 11 Aug 2021 05:45:34 GMT</pubDate>
     </item>
   </channel>
 </rss>
