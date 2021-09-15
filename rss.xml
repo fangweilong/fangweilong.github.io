@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 15 Sep 2021 02:53:58 GMT</pubDate>
-    <lastBuildDate>Wed, 15 Sep 2021 02:53:58 GMT</lastBuildDate>
+    <pubDate>Wed, 15 Sep 2021 08:56:33 GMT</pubDate>
+    <lastBuildDate>Wed, 15 Sep 2021 08:56:33 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -5900,10 +5900,10 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
 <span># 如果没需要的话可以不装，在下面的配置中也去掉即可</span>
 Install-Module posh-git -Scope CurrentUser
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>::: 如果下载没进度
-我在安装过程中出现从nuget下载速度只有几K的情况，所以可以直接打开网站进行离线下载。下载地址：https://www.powershellgallery.com/packages/oh-my-posh/3.180.3
-下载完成后，更改.nupkg后缀名为.zip，解压.zip后将文件夹复制到C:/Users/{用户名}/Documents/PowerShell/Modules/下。注意文件夹名称应该为&quot;oh-my-posh&quot;，不要带版本号。
-:::</p>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><div><p>警告</p>
+<p>我在安装过程中出现从nuget下载速度只有几K的情况，所以可以直接打开网站进行离线下载。下载地址：https://www.powershellgallery.com/packages/oh-my-posh/3.180.3
+下载完成后，更改.nupkg后缀名为.zip，解压.zip后将文件夹复制到C:/Users/{用户名}/Documents/PowerShell/Modules/下。注意文件夹名称应该为&quot;oh-my-posh&quot;，不要带版本号。</p>
+</div>
 <h3 id="寻找配置文件"> 寻找配置文件</h3>
 <div><pre><code><span># $PROFILE可以提示你powershell的配置文件在哪。但是你有时候会发现找不到这个文件，这时候可以使用下一条命令</span>
 <span>$PROFILE</span>
@@ -6742,14 +6742,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Wed, 15 Sep 2021 02:53:20 GMT</pubDate>
+      <pubDate>Wed, 15 Sep 2021 08:55:38 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Wed, 15 Sep 2021 02:53:20 GMT</pubDate>
+      <pubDate>Wed, 15 Sep 2021 08:55:38 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6759,7 +6759,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Wed, 15 Sep 2021 02:53:20 GMT</pubDate>
+      <pubDate>Wed, 15 Sep 2021 08:55:38 GMT</pubDate>
     </item>
   </channel>
 </rss>
