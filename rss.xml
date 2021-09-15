@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 11 Aug 2021 05:50:04 GMT</pubDate>
-    <lastBuildDate>Wed, 11 Aug 2021 05:50:04 GMT</lastBuildDate>
+    <pubDate>Wed, 15 Sep 2021 02:19:53 GMT</pubDate>
+    <lastBuildDate>Wed, 15 Sep 2021 02:19:53 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -4855,49 +4855,6 @@ http {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>window的linux子系统-wsl</title>
-      <link>https://fangweilong.github.io/2019/09/04/window%E7%9A%84linux%E5%AD%90%E7%B3%BB%E7%BB%9F-wsl/</link>
-      <guid isPermaLink="false">/2019/09/04/window%E7%9A%84linux%E5%AD%90%E7%B3%BB%E7%BB%9F-wsl/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">window的linux子系统-wsl</source>
-      <category>wsl</category>
-      <pubDate>Wed, 04 Sep 2019 18:05:22 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="如何开启安装linux子系统请自行百度-这里只记录一些详细的操作点-给自己一个留档"> 如何开启安装linux子系统请自行百度，这里只记录一些详细的操作点，给自己一个留档</h2>
-<p>1.安装目录</p>
-<div><pre><code>C:\Users\{用户名}\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs
-</code></pre>
-<div><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<p>2.访问磁盘目录</p>
-<div><pre><code>cd /mnt
-</code></pre>
-<div><span>1</span><br></div></div><p>这样就能进入本地磁盘了，通过ls -h就能看到C盘的目录（不知道为什么是绿色，应该可以看出来）</p>
-<p><img src="https://img-blog.csdnimg.cn/20190904180106536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-附上几个ls的命令</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-a</td>
-<td>显示指定目录下所有子目录与文件，包括隐藏文件</td>
-</tr>
-<tr>
-<td>-l</td>
-<td>以列表方式显示文件的详细信息</td>
-</tr>
-<tr>
-<td>-h</td>
-<td>配合 -l 以人性化的方式显示文件大小</td>
-</tr>
-</tbody>
-</table>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>kibana-查询ES 的一些语法</title>
       <link>https://fangweilong.github.io/2020/08/06/kibana-%E6%9F%A5%E8%AF%A2es-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/</link>
       <guid isPermaLink="false">/2020/08/06/kibana-%E6%9F%A5%E8%AF%A2es-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/</guid>
@@ -5212,6 +5169,49 @@ http {
 
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>window的linux子系统-wsl</title>
+      <link>https://fangweilong.github.io/2019/09/04/window%E7%9A%84linux%E5%AD%90%E7%B3%BB%E7%BB%9F-wsl/</link>
+      <guid isPermaLink="false">/2019/09/04/window%E7%9A%84linux%E5%AD%90%E7%B3%BB%E7%BB%9F-wsl/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">window的linux子系统-wsl</source>
+      <category>wsl</category>
+      <pubDate>Wed, 04 Sep 2019 18:05:22 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="如何开启安装linux子系统请自行百度-这里只记录一些详细的操作点-给自己一个留档"> 如何开启安装linux子系统请自行百度，这里只记录一些详细的操作点，给自己一个留档</h2>
+<p>1.安装目录</p>
+<div><pre><code>C:\Users\{用户名}\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs
+</code></pre>
+<div><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+<p>2.访问磁盘目录</p>
+<div><pre><code>cd /mnt
+</code></pre>
+<div><span>1</span><br></div></div><p>这样就能进入本地磁盘了，通过ls -h就能看到C盘的目录（不知道为什么是绿色，应该可以看出来）</p>
+<p><img src="https://img-blog.csdnimg.cn/20190904180106536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+附上几个ls的命令</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>显示指定目录下所有子目录与文件，包括隐藏文件</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>以列表方式显示文件的详细信息</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>配合 -l 以人性化的方式显示文件大小</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>wsl-debian10使用问题汇总</title>
@@ -5876,6 +5876,60 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
 ]]></content:encoded>
     </item>
     <item>
+      <title>powershell安装oh-my-posh进行增强和美化</title>
+      <link>https://fangweilong.github.io/2021/09/15/powershell%E5%AE%89%E8%A3%85oh-my-posh%E8%BF%9B%E8%A1%8C%E5%A2%9E%E5%BC%BA%E5%92%8C%E7%BE%8E%E5%8C%96/</link>
+      <guid isPermaLink="false">/2021/09/15/powershell%E5%AE%89%E8%A3%85oh-my-posh%E8%BF%9B%E8%A1%8C%E5%A2%9E%E5%BC%BA%E5%92%8C%E7%BE%8E%E5%8C%96/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">powershell安装oh-my-posh进行增强和美化</source>
+      <category>window</category>
+      <pubDate>Wed, 15 Sep 2021 09:38:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="效果"> 效果</h2>
+<p><a href="https://imgtu.com/i/4EOpge" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/09/15/4EOpge.md.png" alt="4EOpge.md.png" /></a></p>
+<h2 id="前言"> 前言</h2>
+<p>mac有oh-my-zsh，样式让我看的很眼馋，无意中在github上看到了一个oh-my-posh项目，是可以对windoow终端进行美化的，果断花时间折腾一下。</p>
+<h2 id="参考链接"> 参考链接</h2>
+<p><a href="https://github.com/JanDeDobbeleer/oh-my-posh" target="_blank" rel="noopener noreferrer">github项目链接</a><br>
+<a href="https://ohmyposh.dev/docs/pwsh" target="_blank" rel="noopener noreferrer">powershell安装文档</a><br>
+<a href="https://github.com/JanDeDobbeleer/oh-my-posh/issues/825" target="_blank" rel="noopener noreferrer">安装以后不生效问题</a></p>
+<h2 id="安装步骤"> 安装步骤</h2>
+<div><p>提示</p>
+<div><pre><code>官网文档有安装步骤，本文章是对官方文档的补充说明
+</code></pre>
+</div></div>
+<h3 id="安装插件"> 安装插件</h3>
+<div><pre><code>Install-Module oh-my-posh -Scope CurrentUser
+<span># 如果没需要的话可以不装，在下面的配置中也去掉即可</span>
+Install-Module posh-git -Scope CurrentUser
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>::: 如果下载没进度
+我在安装过程中出现从nuget下载速度只有几K的情况，所以可以直接打开网站进行离线下载。下载地址：https://www.powershellgallery.com/packages/oh-my-posh/3.180.3
+下载完成后，更改.nupkg后缀名为.zip，解压.zip后将文件夹复制到C:/Users/{用户名}/Documents/PowerShell/Modules/下。注意文件夹名称应该为&quot;oh-my-posh&quot;，不要带版本号。
+:::</p>
+<h3 id="寻找配置文件"> 寻找配置文件</h3>
+<div><pre><code><span># $PROFILE可以提示你powershell的配置文件在哪。但是你有时候会发现找不到这个文件，这时候可以使用下一条命令</span>
+<span>$PROFILE</span>
+<span># 如果没有配置文件，则新建一个配置文件</span>
+<span>if</span> <span>(</span><span>!</span><span>(</span>Test-Path -Path <span>$PROFILE</span> <span>))</span> <span>{</span> New-Item -Type File -Path <span>$PROFILE</span> -Force <span>}</span>
+<span># 用记事本打开配置文件</span>
+notepad <span>$PROFILE</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h3 id="更改配置"> 更改配置</h3>
+<div><pre><code>Import-Module posh-git
+Import-Module oh-my-posh
+Set-PoshPrompt -Theme stelbent.minimal
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>Set-PoshPrompt -Theme 后面跟主题名。查找主题使用以下命令：</p>
+<div><pre><code>Get-PoshThemes
+</code></pre>
+<div><span>1</span><br></div></div><div><p>注意</p>
+<p>这步比较重要，官方文档没有写要更改配置文件，导致我每次进来以后都要重新Set-PoshPrompt -Theme。在配置文件中加上以后，每次打开powershell都会自动加载插件</p>
+</div>
+<h3 id="配置生效"> 配置生效</h3>
+<div><pre><code><span>.</span><span>$PROFILE</span>
+</code></pre>
+<div><span>1</span><br></div></div>]]></content:encoded>
+      <enclosure url="https://z3.ax1x.com/2021/09/15/4EOpge.md.png" type="image/png"/>
+    </item>
+    <item>
       <title>无需软件通过修改注册表实现wind10透明状态栏效果</title>
       <link>https://fangweilong.github.io/2021/08/10/%E6%97%A0%E9%9C%80%E8%BD%AF%E4%BB%B6%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0wind10%E9%80%8F%E6%98%8E%E7%8A%B6%E6%80%81%E6%A0%8F%E6%95%88%E6%9E%9C/</link>
       <guid isPermaLink="false">/2021/08/10/%E6%97%A0%E9%9C%80%E8%BD%AF%E4%BB%B6%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0wind10%E9%80%8F%E6%98%8E%E7%8A%B6%E6%80%81%E6%A0%8F%E6%95%88%E6%9E%9C/</guid>
@@ -6497,13 +6551,190 @@ yarn-lock.json
 ]]></content:encoded>
     </item>
     <item>
-      <title>个人介绍</title>
+      <title>联系方式</title>
       <link>https://fangweilong.github.io/about/</link>
       <guid isPermaLink="false">/about/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">个人介绍</source>
+      <source url="https://fangweilong.github.io/rss.xml">联系方式</source>
       <pubDate>Wed, 23 Jun 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="个人介绍"> 个人介绍</h1>
-<p>这是一个个人介绍页</p>
+      <content:encoded><![CDATA[<h1 id="联系方式"> 联系方式</h1>
+<ul>
+<li>手机：   17626675521</li>
+<li>Email： fangweilong@outlook.com</li>
+<li>QQ：nbsp<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570915261&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">点击加好友</a></li>
+</ul>
+<hr>
+<h1 id="个人信息"> 个人信息</h1>
+<ul>
+<li>房伟龙/男/1996</li>
+<li>无锡南洋职业技术学院</li>
+<li>工作年限：2016-至今</li>
+<li>个人博客：https://fangweilong.github.io/</li>
+<li>Github：https://github.com/fangweilong</li>
+<li>期望职位：Java高级程序员</li>
+<li>期望薪资：税前13k-15k</li>
+<li>期望城市：江苏无锡</li>
+</ul>
+<hr>
+<h1 id="先放着-暂时不准备更新"> 先放着 暂时不准备更新</h1>
+<h1 id="工作经历"> 工作经历</h1>
+<h2 id="广州都市圈网络科技有限公司无锡分公司-2019年04月-至今"> 广州都市圈网络科技有限公司无锡分公司（ 2019年04月 ~ 至今 ）</h2>
+<h2 id="浙江凯路科技有限公司-2018年04月-2019年4月"> 浙江凯路科技有限公司 （ 2018年04月 ~ 2019年4月 ）</h2>
+<h3 id="医院点餐系统"> 医院点餐系统</h3>
+<h2 id="无锡实创科技有限公司-2016年11月-2018年04月"> 无锡实创科技有限公司 （ 2016年11月 ~ 2018年04月 ）</h2>
+<h3 id="互联家"> 互联家</h3>
+<p>第一个独立上手的项目。</p>
+<hr>
+<h1 id="开源项目和作品"> 开源项目和作品</h1>
+<p>（这一段用于放置工作以外的、可证明你的能力的材料）</p>
+<h2 id="开源项目"> 开源项目</h2>
+<p>（对于程序员来讲，没有什么比Show me the code能有说服力了）</p>
+<ul>
+<li><a href="http://github.com/yourname/projectname" target="_blank" rel="noopener noreferrer">STU</a>：项目的简要说明，Star和Fork数多的可以注明</li>
+<li><a href="http://github.com/yourname/projectname" target="_blank" rel="noopener noreferrer">WXYZ</a>：项目的简要说明，Star和Fork数多的可以注明</li>
+</ul>
+<h2 id="技术文章"> 技术文章</h2>
+<p>（挑选你写作或翻译的技术文章，好的文章可以从侧面证实你的表达和沟通能力，也帮助招聘方更了解你）</p>
+<ul>
+<li><a href="http://get.jobdeer.com/706.get" target="_blank" rel="noopener noreferrer">一个产品经理眼中的云计算：前生今世和未来</a></li>
+<li><a href="http://get.jobdeer.com/343.get" target="_blank" rel="noopener noreferrer">来自HeroKu的HTTP API 设计指南(翻译文章)</a> （ <code>好的翻译文章可以侧证你对英文技术文档的阅读能力</code>）</li>
+</ul>
+<h2 id="演讲和讲义"> 演讲和讲义</h2>
+<p>（放置你代表公司在一些技术会议上做过的演讲，以及你在公司分享时制作的讲义）</p>
+<ul>
+<li>2014架构师大会演讲：<a href="http://jobdeer.com" target="_blank" rel="noopener noreferrer">如何通过Docker优化内部开发</a></li>
+<li>9月公司内部分享：<a href="http://jobdeer.com" target="_blank" rel="noopener noreferrer">云计算的前生今世</a></li>
+</ul>
+<h1 id="技能清单"> 技能清单</h1>
+<p>（我一般主张将技能清单写入到工作经历里边去。不过很难完整，所以有这么一段也不错）</p>
+<p>以下均为我熟练使用的技能</p>
+<ul>
+<li>Web开发：PHP/Hack/Node</li>
+<li>Web框架：ThinkPHP/Yaf/Yii/Lavaral/LazyPHP</li>
+<li>前端框架：Bootstrap/AngularJS/EmberJS/HTML5/Cocos2dJS/ionic</li>
+<li>前端工具：Bower/Gulp/SaSS/LeSS/PhoneGap</li>
+<li>数据库相关：MySQL/PgSQL/PDO/SQLite</li>
+<li>版本管理、文档和自动化部署工具：Svn/Git/PHPDoc/Phing/Composer</li>
+<li>单元测试：PHPUnit/SimpleTest/Qunit</li>
+<li>云和开放平台：SAE/BAE/AWS/微博开放平台/微信应用开发</li>
+</ul>
+<h2 id="参考技能关键字"> 参考技能关键字</h2>
+<p>本技能关键字列表是从最近招聘Java的数百份JD中统计出来的，括号中是出现的词频。如果你的简历要投递给有机器（简历分选系统）和不如机器（不懂技术的HR）筛选简历环节的地方，请一定从下边高频关键词中选择5～10个适合你自己的。</p>
+<ul>
+<li>java(730)</li>
+<li>spring(305)</li>
+<li>web(260)</li>
+<li>mysql(250)</li>
+<li>oracle(207)</li>
+<li>linux(198)</li>
+<li>j2ee(182)</li>
+<li>javascript(177)</li>
+<li>sql(176)</li>
+<li>hibernate(169)</li>
+<li>html(139)</li>
+<li>tomcat(132)</li>
+<li>struts(128)</li>
+<li>jquery(116)</li>
+<li>jsp(106)</li>
+<li>ajax(96)</li>
+<li>css(94)</li>
+<li>ibatis(84)</li>
+<li>mvc(77)</li>
+<li>servlet(71)</li>
+<li>xml(70)</li>
+<li>js(62)</li>
+<li>eclipse(51)</li>
+<li>mybatis(51)</li>
+<li>jboss(47)</li>
+<li>struts2(47)</li>
+<li>weblogic(46)</li>
+<li>redis(46)</li>
+<li>apache(45)</li>
+<li>http(44)</li>
+<li>shell(39)</li>
+<li>python(38)</li>
+<li>hadoop(37)</li>
+<li>nosql(35)</li>
+<li>ssh(35)</li>
+<li>sqlserver(33)</li>
+<li>mongodb(33)</li>
+<li>svn(32)</li>
+<li>uml(32)</li>
+<li>json(27)</li>
+<li>unix(27)</li>
+<li>maven(27)</li>
+<li>nginx(26)</li>
+<li>webservice(25)</li>
+<li>jdbc(24)</li>
+<li>memcached(23)</li>
+<li>tcp(22)</li>
+<li>resin(22)</li>
+<li>jvm(21)</li>
+<li>socket(21)</li>
+<li>db2(19)</li>
+<li>springmvc(19)</li>
+<li>websphere(16)</li>
+<li>soa(16)</li>
+<li>mina(14)</li>
+<li>android(14)</li>
+<li>extjs(13)</li>
+<li>erp(12)</li>
+<li>memcache(12)</li>
+<li>api(11)</li>
+<li>jetty(11)</li>
+<li>myeclipse(11)</li>
+<li>ext(10)</li>
+<li>git(10)</li>
+<li>jpa(10)</li>
+<li>svm(9)</li>
+<li>php(9)</li>
+<li>jms(9)</li>
+<li>ruby(9)</li>
+<li>lucene(8)</li>
+<li>html5(8)</li>
+<li>postgresql(8)</li>
+<li>crm(7)</li>
+<li>javaee(7)</li>
+<li>sybase(7)</li>
+<li>freemarker(6)</li>
+<li>cache(6)</li>
+<li>jsf(6)</li>
+<li>j2se(6)</li>
+<li>jbpm(6)</li>
+<li>cvs(6)</li>
+<li>junit(6)</li>
+<li>visio(6)</li>
+<li>netty(6)</li>
+<li>hbase(6)</li>
+<li>nio(6)</li>
+<li>powerdesigner(6)</li>
+<li>oo(6)</li>
+<li>aop(6)</li>
+<li>workflow(5)</li>
+<li>restful(5)</li>
+<li>ios(5)</li>
+<li>ant(5)</li>
+<li>mssql(5)</li>
+<li>orm(5)</li>
+<li>rose(5)</li>
+<li>solr(5)</li>
+<li>webwork(5)</li>
+<li>zookeeper(4)</li>
+<li>soap(4)</li>
+<li>o2o(4)</li>
+<li>wap(4)</li>
+<li>cxf(4)</li>
+<li>thrift(4)</li>
+<li>xmpp(3)</li>
+<li>p2p(3)</li>
+<li>javabean(3)</li>
+<li>jee(3)</li>
+<li>hdfs(3)</li>
+<li>dom(3)</li>
+<li>hibernate3(3)</li>
+</ul>
+<hr>
+<h1 id="致谢"> 致谢</h1>
+<p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -6511,14 +6742,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Wed, 11 Aug 2021 05:45:34 GMT</pubDate>
+      <pubDate>Wed, 15 Sep 2021 02:18:34 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Wed, 11 Aug 2021 05:45:34 GMT</pubDate>
+      <pubDate>Wed, 15 Sep 2021 02:18:34 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6528,7 +6759,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Wed, 11 Aug 2021 05:45:34 GMT</pubDate>
+      <pubDate>Wed, 15 Sep 2021 02:18:34 GMT</pubDate>
     </item>
   </channel>
 </rss>
