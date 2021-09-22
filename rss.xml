@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 22 Sep 2021 03:20:50 GMT</pubDate>
-    <lastBuildDate>Wed, 22 Sep 2021 03:20:50 GMT</lastBuildDate>
+    <pubDate>Wed, 22 Sep 2021 07:02:05 GMT</pubDate>
+    <lastBuildDate>Wed, 22 Sep 2021 07:02:05 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -4564,6 +4564,43 @@ http {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>nginx-部署多个vue项目，分vue-cli2.x和3.x</title>
+      <link>https://fangweilong.github.io/2019/07/16/nginx-%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AAvue%E9%A1%B9%E7%9B%AE-%E5%88%86vue-cli2-x%E5%92%8C3-x/</link>
+      <guid isPermaLink="false">/2019/07/16/nginx-%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AAvue%E9%A1%B9%E7%9B%AE-%E5%88%86vue-cli2-x%E5%92%8C3-x/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">nginx-部署多个vue项目，分vue-cli2.x和3.x</source>
+      <category>nginx</category>
+      <pubDate>Tue, 16 Jul 2019 16:23:23 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="_1-vue-cli3-x"> 1.vue-cli3.x</h2>
+<p><img src="https://img-blog.csdnimg.cn/2019071613392824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+在根目录下找到&quot;vue.config.js&quot;
+<img src="https://img-blog.csdnimg.cn/20190716134038552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+更改<code>publicPath: '/portal/'</code> 的 portal 为你自己的项目名，记得前后的&quot;/&quot;</p>
+<h2 id="_2-vue-cli2-x"> 2.vue-cli2.x</h2>
+<p>找到config/index.js文件
+<img src="https://img-blog.csdnimg.cn/2019071616150043.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+找到&quot;build&quot;部分
+<img src="https://img-blog.csdnimg.cn/20190716161557630.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+同样的更改<code>assetsPublicPath: '/gardan/',</code>为你自己的项目名， 别忘了前后的&quot;/&quot;</p>
+<p>3.nginx的配置
+在nginx的html下新建两个文件夹，一个gardan，一个portal</p>
+<p>打开config/nginx.conf文件夹，按照下面的配置项更改，我做了部分删减，只留下了实际更改的部分</p>
+<div><pre><code>server {
+        listen       8080;
+        server_name  localhost;
+
+        location /gardan {#项目1
+			try_files $uri $uri/ /gardan/index.html;#指定到目录下的index.jtml
+		}
+		
+		location /portal {//项目2
+			try_files $uri $uri/ /portal/index.html;#指定到目录下的index.jtml
+		}
+    }
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div>]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/2019071613392824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
       <title>vue-router_link-声明式返回上一页</title>
       <link>https://fangweilong.github.io/2019/08/06/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</link>
       <guid isPermaLink="false">/2019/08/06/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</guid>
@@ -5132,43 +5169,6 @@ http {
 
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>nginx-部署多个vue项目，分vue-cli2.x和3.x</title>
-      <link>https://fangweilong.github.io/2019/07/16/nginx-%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AAvue%E9%A1%B9%E7%9B%AE-%E5%88%86vue-cli2-x%E5%92%8C3-x/</link>
-      <guid isPermaLink="false">/2019/07/16/nginx-%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AAvue%E9%A1%B9%E7%9B%AE-%E5%88%86vue-cli2-x%E5%92%8C3-x/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">nginx-部署多个vue项目，分vue-cli2.x和3.x</source>
-      <category>nginx</category>
-      <pubDate>Tue, 16 Jul 2019 16:23:23 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="_1-vue-cli3-x"> 1.vue-cli3.x</h2>
-<p><img src="https://img-blog.csdnimg.cn/2019071613392824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-在根目录下找到&quot;vue.config.js&quot;
-<img src="https://img-blog.csdnimg.cn/20190716134038552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-更改<code>publicPath: '/portal/'</code> 的 portal 为你自己的项目名，记得前后的&quot;/&quot;</p>
-<h2 id="_2-vue-cli2-x"> 2.vue-cli2.x</h2>
-<p>找到config/index.js文件
-<img src="https://img-blog.csdnimg.cn/2019071616150043.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-找到&quot;build&quot;部分
-<img src="https://img-blog.csdnimg.cn/20190716161557630.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-同样的更改<code>assetsPublicPath: '/gardan/',</code>为你自己的项目名， 别忘了前后的&quot;/&quot;</p>
-<p>3.nginx的配置
-在nginx的html下新建两个文件夹，一个gardan，一个portal</p>
-<p>打开config/nginx.conf文件夹，按照下面的配置项更改，我做了部分删减，只留下了实际更改的部分</p>
-<div><pre><code>server {
-        listen       8080;
-        server_name  localhost;
-
-        location /gardan {#项目1
-			try_files $uri $uri/ /gardan/index.html;#指定到目录下的index.jtml
-		}
-		
-		location /portal {//项目2
-			try_files $uri $uri/ /portal/index.html;#指定到目录下的index.jtml
-		}
-    }
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div>]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/2019071613392824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>window的linux子系统-wsl</title>
@@ -6575,196 +6575,127 @@ yarn-lock.json
 <li>期望城市：<strong>江苏无锡</strong></li>
 </ul>
 <hr>
-<h1 id="先放着-暂时不准备更新"> 先放着 暂时不准备更新</h1>
+<h1 id="开源项目和技能"> 开源项目和技能</h1>
+<h2 id="开源项目"> 开源项目</h2>
+<ul>
+<li>[docker]：docker-compose的快捷镜像构建
+<ul>
+<li><a href="https://github.com/fangweilong/docker-warehouse" target="_blank" rel="noopener noreferrer">github直达</a></li>
+<li><a href="https://gitee.com/Teler/docker-warehouse" target="_blank" rel="noopener noreferrer">gitee备用地址</a>。</li>
+</ul>
+</li>
+<li>[shell]：centos7的运维脚本，包含docker的安装管理、nginx的安装管理、用户的新增删除等
+<ul>
+<li><a href="https://github.com/fangweilong/shell-manage" target="_blank" rel="noopener noreferrer">github直达</a></li>
+<li><a href="https://gitee.com/Teler/shell-manage" target="_blank" rel="noopener noreferrer">gitee备用地址</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="技术博客"> 技术博客</h2>
+<ul>
+<li><a href="https://fangweilong.github.io/" target="_blank" rel="noopener noreferrer">github.io</a></li>
+<li><a href="https://blog.csdn.net/tutian2000?type=blog" target="_blank" rel="noopener noreferrer">csdn,更新已经迁移到github</a></li>
+</ul>
+<h2 id="高阅读文章"> 高阅读文章</h2>
+<ul>
+<li><a href="https://blog.csdn.net/tutian2000/article/details/83379648" target="_blank" rel="noopener noreferrer">layui lay-verify form表单自定义验证规则</a></li>
+<li><a href="https://blog.csdn.net/tutian2000/article/details/81531513" target="_blank" rel="noopener noreferrer">nginx 基础配置：多个location转发任意请求或访问静态资源文件</a></li>
+<li><a href="https://blog.csdn.net/tutian2000/article/details/79377382" target="_blank" rel="noopener noreferrer">百度地图js Uncaught TypeError: Cannot read property 'gc of undefined</a></li>
+</ul>
+<h2 id="技能关键字"> 技能关键字</h2>
+<ul>
+<li>java</li>
+<li>Spring Boot
+<ul>
+<li>Spring Cloud Alibaba</li>
+</ul>
+</li>
+<li>postgresql</li>
+<li>linux
+<ul>
+<li>centos</li>
+<li>debian</li>
+</ul>
+</li>
+<li>python</li>
+<li>docker
+<ul>
+<li>docker-compose</li>
+<li>DockerFile</li>
+</ul>
+</li>
+<li>javascript
+<ul>
+<li>vue</li>
+</ul>
+</li>
+</ul>
+<hr>
 <h1 id="工作经历"> 工作经历</h1>
-<blockquote>
-<p>广州都市圈网络科技有限公司无锡分公司（ 2019年04月 ~ 至今 ）</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>岗位</p>
-<blockquote>
-<p>技术经理</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<h2 id="广州都市圈网络科技有限公司无锡分公司-2019年04月-至今"> 广州都市圈网络科技有限公司无锡分公司（ 2019年04月 ~ 至今 ）</h2>
+<h3 id="岗位"> 岗位</h3>
+<h4 id="技术经理"> 技术经理</h4>
 <h3 id="工作内容"> 工作内容</h3>
 <h4 id="负责团队项目开发工作"> 负责团队项目开发工作</h4>
 <h3 id="项目"> 项目</h3>
+<blockquote>
+<p>图谱类</p>
+<blockquote>
+<p>根据从各种平台汇总收集的人才、专利、论文等信息进行二次抽取、汇总、分析，形成完整的历史动态链，供领导参观、决策。
+在原有项目（Spring MVC）基础上，以SpringBoot、Mybatis-plus、Vue等技术为扩展重建技术体系，加快开发速度，优化开发效率。</p>
+</blockquote>
+</blockquote>
+<h4 id="贴图"> 贴图</h4>
+<p><a href="https://imgtu.com/i/4NGaVK" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/09/22/4NGaVK.png" alt="4NGaVK.png" /></a>
+<a href="https://imgtu.com/i/4NGI2j" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/09/22/4NGI2j.jpg" alt="4NGI2j.jpg" /></a></p>
+<blockquote>
+<p>工具类</p>
+<blockquote>
+<p>将常见的算法，如<em>线性回归、贝叶斯、DBSCAN、K-MEANS、基尼指数、首位度算法</em>等，结合以前抽取分析的数据，在单一页面上应用真实数据帮助用户更透彻、直观的了解到发展规律等变化情况。
+个人在这种综合类型项目中学习了spring cloud的作用和使用，自行搭建并帮助项目顺利完成。</p>
+</blockquote>
+</blockquote>
+<h4 id="贴图-2"> 贴图</h4>
+<p><a href="https://imgtu.com/i/4NJsFU" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/09/22/4NJsFU.jpg" alt="4NJsFU.jpg" /></a></p>
+<blockquote>
+<p>应用类</p>
+<blockquote>
+<p>为收集企业填报信息提供便利的功能
+<a href="https://imgtu.com/i/4NrNqg" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/09/22/4NrNqg.jpg" alt="4NrNqg.jpg" /></a></p>
+</blockquote>
+</blockquote>
 <hr>
 <h2 id="浙江凯路科技有限公司-2018年04月-2019年4月"> 浙江凯路科技有限公司 （ 2018年04月 ~ 2019年4月 ）</h2>
+<h3 id="岗位-2"> 岗位</h3>
+<h4 id="java开发"> JAVA开发</h4>
+<h3 id="工作内容-2"> 工作内容</h3>
+<h4 id="开发各种项目软件-如点餐系统、课程排版预约系统"> 开发各种项目软件，如点餐系统、课程排版预约系统</h4>
+<h3 id="项目-2"> 项目</h3>
 <h3 id="医院点餐系统"> 医院点餐系统</h3>
 <hr>
 <h2 id="无锡实创科技有限公司-2016年11月-2018年04月"> 无锡实创科技有限公司 （ 2016年11月 ~ 2018年04月 ）</h2>
 <h3 id="互联家"> 互联家</h3>
-<p>第一个独立上手的项目。</p>
-<hr>
-<h1 id="开源项目和作品"> 开源项目和作品</h1>
-<p>（这一段用于放置工作以外的、可证明你的能力的材料）</p>
-<h2 id="开源项目"> 开源项目</h2>
-<p>（对于程序员来讲，没有什么比Show me the code能有说服力了）</p>
-<ul>
-<li><a href="http://github.com/yourname/projectname" target="_blank" rel="noopener noreferrer">STU</a>：项目的简要说明，Star和Fork数多的可以注明</li>
-<li><a href="http://github.com/yourname/projectname" target="_blank" rel="noopener noreferrer">WXYZ</a>：项目的简要说明，Star和Fork数多的可以注明</li>
-</ul>
-<h2 id="技术文章"> 技术文章</h2>
-<p>（挑选你写作或翻译的技术文章，好的文章可以从侧面证实你的表达和沟通能力，也帮助招聘方更了解你）</p>
-<ul>
-<li><a href="http://get.jobdeer.com/706.get" target="_blank" rel="noopener noreferrer">一个产品经理眼中的云计算：前生今世和未来</a></li>
-<li><a href="http://get.jobdeer.com/343.get" target="_blank" rel="noopener noreferrer">来自HeroKu的HTTP API 设计指南(翻译文章)</a> （ <code>好的翻译文章可以侧证你对英文技术文档的阅读能力</code>）</li>
-</ul>
-<h2 id="演讲和讲义"> 演讲和讲义</h2>
-<p>（放置你代表公司在一些技术会议上做过的演讲，以及你在公司分享时制作的讲义）</p>
-<ul>
-<li>2014架构师大会演讲：<a href="http://jobdeer.com" target="_blank" rel="noopener noreferrer">如何通过Docker优化内部开发</a></li>
-<li>9月公司内部分享：<a href="http://jobdeer.com" target="_blank" rel="noopener noreferrer">云计算的前生今世</a></li>
-</ul>
-<h1 id="技能清单"> 技能清单</h1>
-<p>（我一般主张将技能清单写入到工作经历里边去。不过很难完整，所以有这么一段也不错）</p>
-<p>以下均为我熟练使用的技能</p>
-<ul>
-<li>Web开发：PHP/Hack/Node</li>
-<li>Web框架：ThinkPHP/Yaf/Yii/Lavaral/LazyPHP</li>
-<li>前端框架：Bootstrap/AngularJS/EmberJS/HTML5/Cocos2dJS/ionic</li>
-<li>前端工具：Bower/Gulp/SaSS/LeSS/PhoneGap</li>
-<li>数据库相关：MySQL/PgSQL/PDO/SQLite</li>
-<li>版本管理、文档和自动化部署工具：Svn/Git/PHPDoc/Phing/Composer</li>
-<li>单元测试：PHPUnit/SimpleTest/Qunit</li>
-<li>云和开放平台：SAE/BAE/AWS/微博开放平台/微信应用开发</li>
-</ul>
-<h2 id="参考技能关键字"> 参考技能关键字</h2>
-<p>本技能关键字列表是从最近招聘Java的数百份JD中统计出来的，括号中是出现的词频。如果你的简历要投递给有机器（简历分选系统）和不如机器（不懂技术的HR）筛选简历环节的地方，请一定从下边高频关键词中选择5～10个适合你自己的。</p>
-<ul>
-<li>java(730)</li>
-<li>spring(305)</li>
-<li>web(260)</li>
-<li>mysql(250)</li>
-<li>oracle(207)</li>
-<li>linux(198)</li>
-<li>j2ee(182)</li>
-<li>javascript(177)</li>
-<li>sql(176)</li>
-<li>hibernate(169)</li>
-<li>html(139)</li>
-<li>tomcat(132)</li>
-<li>struts(128)</li>
-<li>jquery(116)</li>
-<li>jsp(106)</li>
-<li>ajax(96)</li>
-<li>css(94)</li>
-<li>ibatis(84)</li>
-<li>mvc(77)</li>
-<li>servlet(71)</li>
-<li>xml(70)</li>
-<li>js(62)</li>
-<li>eclipse(51)</li>
-<li>mybatis(51)</li>
-<li>jboss(47)</li>
-<li>struts2(47)</li>
-<li>weblogic(46)</li>
-<li>redis(46)</li>
-<li>apache(45)</li>
-<li>http(44)</li>
-<li>shell(39)</li>
-<li>python(38)</li>
-<li>hadoop(37)</li>
-<li>nosql(35)</li>
-<li>ssh(35)</li>
-<li>sqlserver(33)</li>
-<li>mongodb(33)</li>
-<li>svn(32)</li>
-<li>uml(32)</li>
-<li>json(27)</li>
-<li>unix(27)</li>
-<li>maven(27)</li>
-<li>nginx(26)</li>
-<li>webservice(25)</li>
-<li>jdbc(24)</li>
-<li>memcached(23)</li>
-<li>tcp(22)</li>
-<li>resin(22)</li>
-<li>jvm(21)</li>
-<li>socket(21)</li>
-<li>db2(19)</li>
-<li>springmvc(19)</li>
-<li>websphere(16)</li>
-<li>soa(16)</li>
-<li>mina(14)</li>
-<li>android(14)</li>
-<li>extjs(13)</li>
-<li>erp(12)</li>
-<li>memcache(12)</li>
-<li>api(11)</li>
-<li>jetty(11)</li>
-<li>myeclipse(11)</li>
-<li>ext(10)</li>
-<li>git(10)</li>
-<li>jpa(10)</li>
-<li>svm(9)</li>
-<li>php(9)</li>
-<li>jms(9)</li>
-<li>ruby(9)</li>
-<li>lucene(8)</li>
-<li>html5(8)</li>
-<li>postgresql(8)</li>
-<li>crm(7)</li>
-<li>javaee(7)</li>
-<li>sybase(7)</li>
-<li>freemarker(6)</li>
-<li>cache(6)</li>
-<li>jsf(6)</li>
-<li>j2se(6)</li>
-<li>jbpm(6)</li>
-<li>cvs(6)</li>
-<li>junit(6)</li>
-<li>visio(6)</li>
-<li>netty(6)</li>
-<li>hbase(6)</li>
-<li>nio(6)</li>
-<li>powerdesigner(6)</li>
-<li>oo(6)</li>
-<li>aop(6)</li>
-<li>workflow(5)</li>
-<li>restful(5)</li>
-<li>ios(5)</li>
-<li>ant(5)</li>
-<li>mssql(5)</li>
-<li>orm(5)</li>
-<li>rose(5)</li>
-<li>solr(5)</li>
-<li>webwork(5)</li>
-<li>zookeeper(4)</li>
-<li>soap(4)</li>
-<li>o2o(4)</li>
-<li>wap(4)</li>
-<li>cxf(4)</li>
-<li>thrift(4)</li>
-<li>xmpp(3)</li>
-<li>p2p(3)</li>
-<li>javabean(3)</li>
-<li>jee(3)</li>
-<li>hdfs(3)</li>
-<li>dom(3)</li>
-<li>hibernate3(3)</li>
-</ul>
+<p>第一个独立上手的项目。从.net平台迁移到java。
+集购物、旅游、直播、酒店等多种平台为一体的电商平台</p>
 <hr>
 <h1 id="致谢"> 致谢</h1>
 <p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
 ]]></content:encoded>
+      <enclosure url="https://z3.ax1x.com/2021/09/22/4NGaVK.png" type="image/png"/>
     </item>
     <item>
       <title>项目主页</title>
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Wed, 22 Sep 2021 03:20:00 GMT</pubDate>
+      <pubDate>Wed, 22 Sep 2021 06:59:38 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Wed, 22 Sep 2021 03:20:00 GMT</pubDate>
+      <pubDate>Wed, 22 Sep 2021 06:59:38 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6774,7 +6705,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Wed, 22 Sep 2021 03:20:00 GMT</pubDate>
+      <pubDate>Wed, 22 Sep 2021 06:59:38 GMT</pubDate>
     </item>
   </channel>
 </rss>
