@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 22 Sep 2021 07:35:37 GMT</pubDate>
-    <lastBuildDate>Wed, 22 Sep 2021 07:35:37 GMT</lastBuildDate>
+    <pubDate>Thu, 14 Oct 2021 01:36:33 GMT</pubDate>
+    <lastBuildDate>Thu, 14 Oct 2021 01:36:33 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -5892,7 +5892,8 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
 <a href="https://github.com/JanDeDobbeleer/oh-my-posh/issues/825" target="_blank" rel="noopener noreferrer">安装以后不生效问题</a></p>
 <h2 id="安装步骤"> 安装步骤</h2>
 <div><p>提示</p>
-<div><pre><code>官网文档有安装步骤，本文章是对官方文档的补充说明
+<div><pre><code>官网文档有安装步骤，本文章是对官方文档的补充说明。
+安装仅举例powershell说明，winget、scoop请查看官方文档
 </code></pre>
 </div></div>
 <h3 id="安装插件"> 安装插件</h3>
@@ -5912,7 +5913,7 @@ Install-Module posh-git -Scope CurrentUser
 <span># 用记事本打开配置文件</span>
 notepad <span>$PROFILE</span>
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h3 id="更改配置"> 更改配置</h3>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h3 id="更改配置1-powershell"> 更改配置1.powershell</h3>
 <div><pre><code>Import-Module posh-git
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme stelbent.minimal
@@ -5923,6 +5924,27 @@ Set-PoshPrompt -Theme stelbent.minimal
 <div><span>1</span><br></div></div><div><p>注意</p>
 <p>这步比较重要，官方文档没有写要更改配置文件，导致我每次进来以后都要重新Set-PoshPrompt -Theme。在配置文件中加上以后，每次打开powershell都会自动加载插件</p>
 </div>
+<h3 id="更改配置2-winget"> 更改配置2.winget</h3>
+<div><pre><code>oh-my-posh --init --shell pwsh --config ~/stelbent.minimal.omp.json <span>|</span> Invoke-Expression
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="更改配置3-scoop"> 更改配置3.scoop</h3>
+<div><pre><code>oh-my-posh --init --shell pwsh --config <span>"<span><span>$(</span>scoop prefix oh-my-posh<span>)</span></span><span title="\t">\t</span>hemes\stelbent.minimal.omp.json"</span> <span>|</span> Invoke-Expression
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="推荐安装插件"> 推荐安装插件</h3>
+<p><a href="https://github.com/PowerShell/PSReadLine" target="_blank" rel="noopener noreferrer">PSReadLine</a> <br>
+<a href="https://github.com/mattparkes/PoShFuck" target="_blank" rel="noopener noreferrer">PoShFuck</a>
+<a href="https://github.com/dahlbyk/posh-git" target="_blank" rel="noopener noreferrer">posh-git</a></p>
+<h3 id="我自己的配置文件"> 我自己的配置文件</h3>
+<div><pre><code>Import-Module PoShFuck
+Import-Module PSReadLine
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-PoshPrompt -Theme my
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><div><p>提示</p>
+<div><pre><code>我是通过powershell安装的。winget或scoop请查看其他配置
+</code></pre>
+</div></div>
 <h3 id="配置生效"> 配置生效</h3>
 <div><pre><code><span>.</span><span>$PROFILE</span>
 </code></pre>
@@ -6688,14 +6710,14 @@ yarn-lock.json
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Wed, 22 Sep 2021 07:34:17 GMT</pubDate>
+      <pubDate>Thu, 14 Oct 2021 01:31:37 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Wed, 22 Sep 2021 07:34:17 GMT</pubDate>
+      <pubDate>Thu, 14 Oct 2021 01:31:37 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6705,7 +6727,7 @@ yarn-lock.json
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Wed, 22 Sep 2021 07:34:17 GMT</pubDate>
+      <pubDate>Thu, 14 Oct 2021 01:31:37 GMT</pubDate>
     </item>
   </channel>
 </rss>
