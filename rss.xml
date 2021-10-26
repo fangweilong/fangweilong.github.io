@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 26 Oct 2021 05:39:40 GMT</pubDate>
-    <lastBuildDate>Tue, 26 Oct 2021 05:39:40 GMT</lastBuildDate>
+    <pubDate>Tue, 26 Oct 2021 09:47:08 GMT</pubDate>
+    <lastBuildDate>Tue, 26 Oct 2021 09:47:08 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -6345,13 +6345,26 @@ yarn-lock.json
       <pubDate>Tue, 26 Oct 2021 10:50:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="官网"> 官网</h2>
 <p><a href="https://github.com/rime/weasel" target="_blank" rel="noopener noreferrer">github</a></p>
-<h2 id="文件夹"> 文件夹</h2>
-<div><pre><code>用户数据文件夹
-C:\Users\${user}\AppData\Roaming\Rime
-</code></pre>
-</div><h3 id="文件夹下的文件作用"> 文件夹下的文件作用</h3>
+<h2 id="用户数据文件夹"> 用户数据文件夹</h2>
+<p>C:\Users${user}\AppData\Roaming\Rime</p>
+<h2 id="文件结构"> 文件结构</h2>
+<h3 id="统一标识"> 统一标识</h3>
+<p>├── default.custom.yaml # 全局配置</br>
+├── squirrel.custom.yaml # 外观定制</br>
+├── custom_phrase.txt # 个人短语定制</br>
+├── &lt;词库名&gt;.userdb # 记录用户用字习惯中的文件夹（自动生成）</br>
+├── installation.yaml # 安装信息</br>
+├── user.yaml # 用户状态信息</br>
+├── build # 部署输入方案时产生文件所在的文件夹</br>
+├── &lt;方案标识&gt;.schema.yaml # 预设输入方案</br>
+├── &lt;方案标识&gt;.custom.yaml # 用户对预设输入方案的定制信息</br>
+├── &lt;词库名&gt;.dict.yaml # 主词库</br>
+├── &lt;词库名&gt;.extended.dict.yaml # 副词库</br>
+├── &lt;词库名&gt;.cn_en.dict.yaml # 副词库 - 中英文混合短语</br>
+├── &lt;词库名&gt;.hanyu.dict.yaml # 副词库 - 汉语大词典</br>
+├── &lt;词库名&gt;.poetry.dict.yaml # 副词库 - 唐诗宋词、千家集、楚辞、诗经</br>
+└── &lt;词库名&gt;.sgmain.dict.yaml # 副词库 - 电脑软件分类、计算机术语、全国省地市区县地名、穴位、西药药名、经典小说、音乐专业词库、网络流行新词</br></p>
 <h4 id="default-custom-yaml"> default.custom.yaml</h4>
-<p>自定义设置全部放入这个文件中，全局起作用</p>
 <div><pre><code># 全局样式、功能的设置
 patch:
   schema_list: # 输入方案列表
@@ -6984,14 +6997,14 @@ patch:
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Tue, 26 Oct 2021 05:38:08 GMT</pubDate>
+      <pubDate>Tue, 26 Oct 2021 09:39:29 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Tue, 26 Oct 2021 05:38:08 GMT</pubDate>
+      <pubDate>Tue, 26 Oct 2021 09:39:29 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -7001,7 +7014,7 @@ patch:
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Tue, 26 Oct 2021 05:38:08 GMT</pubDate>
+      <pubDate>Tue, 26 Oct 2021 09:39:29 GMT</pubDate>
     </item>
   </channel>
 </rss>
