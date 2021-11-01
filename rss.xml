@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 26 Oct 2021 09:47:08 GMT</pubDate>
-    <lastBuildDate>Tue, 26 Oct 2021 09:47:08 GMT</lastBuildDate>
+    <pubDate>Mon, 01 Nov 2021 09:26:33 GMT</pubDate>
+    <lastBuildDate>Mon, 01 Nov 2021 09:26:33 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -5069,6 +5069,68 @@ http {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>Elastic_search-添加帐号密码</title>
+      <link>https://fangweilong.github.io/2021/11/01/elastic-search-%E6%B7%BB%E5%8A%A0%E5%B8%90%E5%8F%B7%E5%AF%86%E7%A0%81/</link>
+      <guid isPermaLink="false">/2021/11/01/elastic-search-%E6%B7%BB%E5%8A%A0%E5%B8%90%E5%8F%B7%E5%AF%86%E7%A0%81/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">Elastic_search-添加帐号密码</source>
+      <category>Elastic Search</category>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="编辑elasticsearch-yml"> 编辑elasticsearch.yml</h2>
+<p>elasticsearch.yml中追加内容</p>
+<div><pre><code># 设置必须要登录
+xpack.security.enabled: true
+# 设置加密方式
+xpack.license.self_generated.type: basic
+xpack.security.transport.ssl.enabled: true
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="重启es"> 重启es</h2>
+<h2 id="生成帐号密码"> 生成帐号密码</h2>
+<p>如果你的服务器是Centos7，可以直接执行</p>
+<div><pre><code>/usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive
+</code></pre>
+<div><span>1</span><br></div></div><p>否则可以通过命令寻找</p>
+<div><pre><code><span>find</span> / -name <span>'elasticsearch-setup-passwords'</span>
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="输入密码"> 输入密码</h2>
+<p>此时你的终端中会出现提示输入对应帐号的密码即可。</p>
+<div><p>提示</p>
+<p>Your cluster health is currently RED.
+This means that some cluster data is unavailable and your cluster is not fully functional.</p>
+<p>It is recommended that you resolve the issues with your cluster before running elasticsearch-setup-passwords.
+It is very likely that the password changes will fail when run against an unhealthy cluster.</p>
+<p>Do you want to continue with the password setup process [y/N]Y</p>
+<p>Initiating the setup of passwords for reserved users elastic,apm_system,kibana,kibana_system,logstash_system,beats_system,remote_monitoring_user.
+You will be prompted to enter passwords as the process progresses.
+Please confirm that you would like to continue [y/N]Y</p>
+<p>Enter password for [elastic]:
+Reenter password for [elastic]:
+Enter password for [apm_system]:
+Reenter password for [apm_system]:
+Enter password for [kibana_system]:
+Reenter password for [kibana_system]:
+Enter password for [logstash_system]:
+Reenter password for [logstash_system]:
+Enter password for [beats_system]:
+Reenter password for [beats_system]:
+Enter password for [remote_monitoring_user]:</p>
+</div>
+<h2 id="简单加密"> 简单加密</h2>
+<div><p>警告</p>
+<p>ajax连接极度不安全，所以我做了一个简单加密。但是仍不推荐这么做</p>
+</div>
+<p>1.<a href="https://www.base64encode.org/" target="_blank" rel="noopener noreferrer">点击我打开网页进行加密</a></p>
+<p>2.输入格式：elastic:password</p>
+<p>3.此时你会得到一串字符串，这就是我们需要使用的帐号密码加密串。</p>
+<h2 id="ajax设置"> ajax设置</h2>
+<p>在你的header中添加</p>
+<div><pre><code>Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+</code></pre>
+<div><span>1</span><br></div></div><div><p>提示</p>
+<p>注意Basic和后面的字符串中需要有个空格，我被这个耽搁了半个小时</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
       <title>kibana-查询ES 的一些语法</title>
       <link>https://fangweilong.github.io/2020/08/06/kibana-%E6%9F%A5%E8%AF%A2es-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/</link>
       <guid isPermaLink="false">/2020/08/06/kibana-%E6%9F%A5%E8%AF%A2es-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/</guid>
@@ -6997,24 +7059,24 @@ patch:
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Tue, 26 Oct 2021 09:39:29 GMT</pubDate>
-    </item>
-    <item>
-      <title>幻灯片页</title>
-      <link>https://fangweilong.github.io/slides/</link>
-      <guid isPermaLink="false">/slides/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Tue, 26 Oct 2021 09:39:29 GMT</pubDate>
-      <content:encoded><![CDATA[
-<i>Not supported content</i>]]></content:encoded>
-      <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
+      <pubDate>Mon, 01 Nov 2021 09:25:49 GMT</pubDate>
     </item>
     <item>
       <title>房伟龙的日常</title>
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Tue, 26 Oct 2021 09:39:29 GMT</pubDate>
+      <pubDate>Mon, 01 Nov 2021 09:25:49 GMT</pubDate>
+    </item>
+    <item>
+      <title>幻灯片页</title>
+      <link>https://fangweilong.github.io/slides/</link>
+      <guid isPermaLink="false">/slides/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
+      <pubDate>Mon, 01 Nov 2021 09:25:49 GMT</pubDate>
+      <content:encoded><![CDATA[
+<i>Not supported content</i>]]></content:encoded>
+      <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
     </item>
   </channel>
 </rss>
