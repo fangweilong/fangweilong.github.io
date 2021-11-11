@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 01 Nov 2021 09:26:33 GMT</pubDate>
-    <lastBuildDate>Mon, 01 Nov 2021 09:26:33 GMT</lastBuildDate>
+    <pubDate>Thu, 11 Nov 2021 07:46:52 GMT</pubDate>
+    <lastBuildDate>Thu, 11 Nov 2021 07:46:52 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -160,96 +160,6 @@ values
 ]]></content:encoded>
     </item>
     <item>
-      <title>使用lambda表达式快捷完成Tree结构</title>
-      <link>https://fangweilong.github.io/2021/05/27/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90tree%E7%BB%93%E6%9E%84/</link>
-      <guid isPermaLink="false">/2021/05/27/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90tree%E7%BB%93%E6%9E%84/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">使用lambda表达式快捷完成Tree结构</source>
-      <category>lambda</category>
-      <pubDate>Thu, 27 May 2021 10:01:48 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="前言"> 前言</h2>
-<p>以前在java中构建菜单、区划等都是使用递归或是数据库。
-数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波</p>
-<hr>
-<p>PS:数据库我使用了mybatis-plus，所以查数据的写法简化了</p>
-<h3 id="代码"> 代码</h3>
-<div><pre><code>		<span>//查找所有菜单，正序排序</span>
-		<span>List</span><span><span>&lt;</span><span>MenuEntity</span><span>></span></span> list <span>=</span> <span>this</span><span>.</span><span>list</span><span>(</span><span>Wrappers</span><span>.</span><span>lambdaQuery</span><span>(</span><span>MenuEntity</span><span>.</span><span>class</span><span>)</span>
-				                                  <span>.</span><span>eq</span><span>(</span><span>MenuEntity</span><span>::</span><span>getHide</span><span>,</span> 		<span>BoolStateEnum</span><span>.</span>FALSE<span>.</span><span>getCode</span><span>(</span><span>)</span><span>)</span>
-				                                  <span>.</span><span>orderByAsc</span><span>(</span><span>MenuEntity</span><span>::</span><span>getSort</span><span>)</span><span>)</span><span>;</span>
-		<span>//找寻下级菜单，利用.map来保证引用地址相同</span>
-		list<span>.</span><span>stream</span><span>(</span><span>)</span>
-				<span>.</span><span>map</span><span>(</span>ele <span>-></span> <span>{</span>
-					ele<span>.</span><span>setChildren</span><span>(</span><span>this</span><span>.</span><span>fromTree</span><span>(</span>ele<span>,</span> list<span>)</span><span>)</span><span>;</span>
-					<span>return</span> ele<span>;</span>
-				<span>}</span><span>)</span>
-				<span>.</span><span>collect</span><span>(</span><span>Collectors</span><span>.</span><span>toList</span><span>(</span><span>)</span><span>)</span><span>;</span>
-
-		<span>//过滤出最上级的菜单</span>
-		<span>return</span> list<span>.</span><span>stream</span><span>(</span><span>)</span>
-				       <span>.</span><span>filter</span><span>(</span>ele <span>-></span> ele<span>.</span><span>getParentId</span><span>(</span><span>)</span> <span>==</span> <span>null</span><span>)</span>
-				       <span>.</span><span>collect</span><span>(</span><span>Collectors</span><span>.</span><span>toList</span><span>(</span><span>)</span><span>)</span><span>;</span>
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><div><pre><code>
-<span>/**
-	 * 找寻指定菜单的下级菜单
-	 *
-	 * @param menuEntity 当前菜单
-	 * @param list       所有的菜单list
-	 * @return 下级菜单
-	 */</span>
-	<span>private</span> <span>List</span><span><span>&lt;</span><span>MenuEntity</span><span>></span></span> <span>fromTree</span><span>(</span><span>MenuEntity</span> menuEntity<span>,</span> <span>List</span><span><span>&lt;</span><span>MenuEntity</span><span>></span></span> list<span>)</span> <span>{</span>
-		<span>return</span> list<span>.</span><span>stream</span><span>(</span><span>)</span>
-				       <span>.</span><span>filter</span><span>(</span>ele <span>-></span> menuEntity<span>.</span><span>getId</span><span>(</span><span>)</span><span>.</span><span>equals</span><span>(</span>ele<span>.</span><span>getParentId</span><span>(</span><span>)</span><span>)</span><span>)</span>
-				       <span>.</span><span>collect</span><span>(</span><span>Collectors</span><span>.</span><span>toList</span><span>(</span><span>)</span><span>)</span><span>;</span>
-	<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>MenuEntity</span> <span>{</span>
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"ID"</span><span>)</span>
-	<span>@TableId</span>
-	<span>private</span> <span>Long</span> id<span>;</span>
-
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"创建时间"</span><span>)</span>
-	<span>private</span> <span>LocalDateTime</span> createTime<span>;</span>
-
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"创建人ID"</span><span>)</span>
-	<span>private</span> <span>String</span> createUserId<span>;</span>
-
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"修改时间"</span><span>)</span>
-	<span>private</span> <span>LocalDateTime</span> updateTime<span>;</span>
-
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"修改人ID"</span><span>)</span>
-	<span>private</span> <span>String</span> updateUserId<span>;</span>
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"节点名"</span><span>)</span>
-	<span>private</span> <span>String</span> name<span>;</span>
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"所有上级节点id列表 为空时表示最顶层"</span><span>)</span>
-	<span>private</span> <span>Long</span> parentId<span>;</span>
-
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"菜单类型 0=节点 1=菜单 2=按钮"</span><span>)</span>
-	<span>private</span> <span>int</span> menuType<span>;</span>
-
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"图标"</span><span>)</span>
-	<span>private</span> <span>String</span> icon<span>;</span>
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"url"</span><span>)</span>
-	<span>private</span> <span>String</span> url<span>;</span>
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"hash路由"</span><span>)</span>
-	<span>private</span> <span>String</span> hash<span>;</span>
-
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"是否隐藏 0=不隐藏 1=隐藏"</span><span>)</span>
-	<span>private</span> <span>int</span> hide<span>;</span>
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"排序，从小到大正向排序"</span><span>)</span>
-	<span>private</span> <span>int</span> sort<span>;</span>
-
-	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"下级菜单集合"</span><span>)</span>
-	<span>@TableField</span><span>(</span>exist <span>=</span> <span>false</span><span>)</span>
-	<span>private</span> <span>List</span><span><span>&lt;</span><span>MenuEntity</span><span>></span></span> children<span>;</span>
-
-
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
       <title>maven-dependencyManagement子模块不写版本号无法引入</title>
       <link>https://fangweilong.github.io/2019/12/23/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</link>
       <guid isPermaLink="false">/2019/12/23/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</guid>
@@ -345,6 +255,96 @@ values
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20181126162921798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
+      <title>使用lambda表达式快捷完成Tree结构</title>
+      <link>https://fangweilong.github.io/2021/05/27/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90tree%E7%BB%93%E6%9E%84/</link>
+      <guid isPermaLink="false">/2021/05/27/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90tree%E7%BB%93%E6%9E%84/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">使用lambda表达式快捷完成Tree结构</source>
+      <category>lambda</category>
+      <pubDate>Thu, 27 May 2021 10:01:48 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="前言"> 前言</h2>
+<p>以前在java中构建菜单、区划等都是使用递归或是数据库。
+数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波</p>
+<hr>
+<p>PS:数据库我使用了mybatis-plus，所以查数据的写法简化了</p>
+<h3 id="代码"> 代码</h3>
+<div><pre><code>		<span>//查找所有菜单，正序排序</span>
+		<span>List</span><span><span>&lt;</span><span>MenuEntity</span><span>></span></span> list <span>=</span> <span>this</span><span>.</span><span>list</span><span>(</span><span>Wrappers</span><span>.</span><span>lambdaQuery</span><span>(</span><span>MenuEntity</span><span>.</span><span>class</span><span>)</span>
+				                                  <span>.</span><span>eq</span><span>(</span><span>MenuEntity</span><span>::</span><span>getHide</span><span>,</span> 		<span>BoolStateEnum</span><span>.</span>FALSE<span>.</span><span>getCode</span><span>(</span><span>)</span><span>)</span>
+				                                  <span>.</span><span>orderByAsc</span><span>(</span><span>MenuEntity</span><span>::</span><span>getSort</span><span>)</span><span>)</span><span>;</span>
+		<span>//找寻下级菜单，利用.map来保证引用地址相同</span>
+		list<span>.</span><span>stream</span><span>(</span><span>)</span>
+				<span>.</span><span>map</span><span>(</span>ele <span>-></span> <span>{</span>
+					ele<span>.</span><span>setChildren</span><span>(</span><span>this</span><span>.</span><span>fromTree</span><span>(</span>ele<span>,</span> list<span>)</span><span>)</span><span>;</span>
+					<span>return</span> ele<span>;</span>
+				<span>}</span><span>)</span>
+				<span>.</span><span>collect</span><span>(</span><span>Collectors</span><span>.</span><span>toList</span><span>(</span><span>)</span><span>)</span><span>;</span>
+
+		<span>//过滤出最上级的菜单</span>
+		<span>return</span> list<span>.</span><span>stream</span><span>(</span><span>)</span>
+				       <span>.</span><span>filter</span><span>(</span>ele <span>-></span> ele<span>.</span><span>getParentId</span><span>(</span><span>)</span> <span>==</span> <span>null</span><span>)</span>
+				       <span>.</span><span>collect</span><span>(</span><span>Collectors</span><span>.</span><span>toList</span><span>(</span><span>)</span><span>)</span><span>;</span>
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><div><pre><code>
+<span>/**
+	 * 找寻指定菜单的下级菜单
+	 *
+	 * @param menuEntity 当前菜单
+	 * @param list       所有的菜单list
+	 * @return 下级菜单
+	 */</span>
+	<span>private</span> <span>List</span><span><span>&lt;</span><span>MenuEntity</span><span>></span></span> <span>fromTree</span><span>(</span><span>MenuEntity</span> menuEntity<span>,</span> <span>List</span><span><span>&lt;</span><span>MenuEntity</span><span>></span></span> list<span>)</span> <span>{</span>
+		<span>return</span> list<span>.</span><span>stream</span><span>(</span><span>)</span>
+				       <span>.</span><span>filter</span><span>(</span>ele <span>-></span> menuEntity<span>.</span><span>getId</span><span>(</span><span>)</span><span>.</span><span>equals</span><span>(</span>ele<span>.</span><span>getParentId</span><span>(</span><span>)</span><span>)</span><span>)</span>
+				       <span>.</span><span>collect</span><span>(</span><span>Collectors</span><span>.</span><span>toList</span><span>(</span><span>)</span><span>)</span><span>;</span>
+	<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><div><pre><code><span>public</span> <span>class</span> <span>MenuEntity</span> <span>{</span>
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"ID"</span><span>)</span>
+	<span>@TableId</span>
+	<span>private</span> <span>Long</span> id<span>;</span>
+
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"创建时间"</span><span>)</span>
+	<span>private</span> <span>LocalDateTime</span> createTime<span>;</span>
+
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"创建人ID"</span><span>)</span>
+	<span>private</span> <span>String</span> createUserId<span>;</span>
+
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"修改时间"</span><span>)</span>
+	<span>private</span> <span>LocalDateTime</span> updateTime<span>;</span>
+
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"修改人ID"</span><span>)</span>
+	<span>private</span> <span>String</span> updateUserId<span>;</span>
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"节点名"</span><span>)</span>
+	<span>private</span> <span>String</span> name<span>;</span>
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"所有上级节点id列表 为空时表示最顶层"</span><span>)</span>
+	<span>private</span> <span>Long</span> parentId<span>;</span>
+
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"菜单类型 0=节点 1=菜单 2=按钮"</span><span>)</span>
+	<span>private</span> <span>int</span> menuType<span>;</span>
+
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"图标"</span><span>)</span>
+	<span>private</span> <span>String</span> icon<span>;</span>
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"url"</span><span>)</span>
+	<span>private</span> <span>String</span> url<span>;</span>
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"hash路由"</span><span>)</span>
+	<span>private</span> <span>String</span> hash<span>;</span>
+
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"是否隐藏 0=不隐藏 1=隐藏"</span><span>)</span>
+	<span>private</span> <span>int</span> hide<span>;</span>
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"排序，从小到大正向排序"</span><span>)</span>
+	<span>private</span> <span>int</span> sort<span>;</span>
+
+	<span>@ApiModelProperty</span><span>(</span>value <span>=</span> <span>"下级菜单集合"</span><span>)</span>
+	<span>@TableField</span><span>(</span>exist <span>=</span> <span>false</span><span>)</span>
+	<span>private</span> <span>List</span><span><span>&lt;</span><span>MenuEntity</span><span>></span></span> children<span>;</span>
+
+
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>maven的配置以及IDEA导入本地maven</title>
@@ -2492,19 +2492,6 @@ OK这样就可以了。</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>javax.el.PropertyNotFoundException</title>
-      <link>https://fangweilong.github.io/2018/03/19/javax-el-propertynotfoundexception/</link>
-      <guid isPermaLink="false">/2018/03/19/javax-el-propertynotfoundexception/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">javax.el.PropertyNotFoundException</source>
-      <category>java</category>
-      <pubDate>Mon, 19 Mar 2018 14:03:04 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="_1-model中没有get-和set方法"> 1.model中没有get()和set方法</h2>
-<p><em>如果没有get()和set()方法，el表达式就会出现javax.el.PropertyNotFoundException错误</em></p>
-<h2 id="_2-model中有get-和set-方法"> 2.model中有get()和set()方法</h2>
-<p><em>检查过后发现model中有get()和set()方法，并且编译出来的class文件中也有get()和set()方法，但是就是报错。这时候检查你的字段开头是不是大写字母开头，<strong>如果是大写字母则更改为小写字母开头</strong>。el表达式是找get()方法读取值的，我们需要使用规范的规则来命名我们的变量名。</em></p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>java表单提交，调用.net的webservice乱码</title>
       <link>https://fangweilong.github.io/2018/04/19/java%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4-%E8%B0%83%E7%94%A8-net%E7%9A%84webservice%E4%B9%B1%E7%A0%81/</link>
       <guid isPermaLink="false">/2018/04/19/java%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4-%E8%B0%83%E7%94%A8-net%E7%9A%84webservice%E4%B9%B1%E7%A0%81/</guid>
@@ -2526,6 +2513,19 @@ OK这样就可以了。</p>
 <li>request添加编码格式</li>
 <li>encoding中文字符串</li>
 </ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>javax.el.PropertyNotFoundException</title>
+      <link>https://fangweilong.github.io/2018/03/19/javax-el-propertynotfoundexception/</link>
+      <guid isPermaLink="false">/2018/03/19/javax-el-propertynotfoundexception/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">javax.el.PropertyNotFoundException</source>
+      <category>java</category>
+      <pubDate>Mon, 19 Mar 2018 14:03:04 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="_1-model中没有get-和set方法"> 1.model中没有get()和set方法</h2>
+<p><em>如果没有get()和set()方法，el表达式就会出现javax.el.PropertyNotFoundException错误</em></p>
+<h2 id="_2-model中有get-和set-方法"> 2.model中有get()和set()方法</h2>
+<p><em>检查过后发现model中有get()和set()方法，并且编译出来的class文件中也有get()和set()方法，但是就是报错。这时候检查你的字段开头是不是大写字母开头，<strong>如果是大写字母则更改为小写字母开头</strong>。el表达式是找get()方法读取值的，我们需要使用规范的规则来命名我们的变量名。</em></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -3753,6 +3753,37 @@ What this means is that Alpine based images are only released for early access r
 ]]></content:encoded>
     </item>
     <item>
+      <title>PostgreSQL在where条件中使用判断条件</title>
+      <link>https://fangweilong.github.io/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</link>
+      <guid isPermaLink="false">/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">PostgreSQL在where条件中使用判断条件</source>
+      <category>postgres</category>
+      <pubDate>Fri, 02 Jul 2021 15:49:03 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="postgresql在where条件中使用判断条件"> PostgreSQL在where条件中使用判断条件</h1>
+<h2 id="需求"> 需求</h2>
+<p>我们平时查询数据是使用的mybatis，所以是这么写的</p>
+<div><pre><code><span>&lt;</span><span>select</span> id<span>=</span><span>"selectTable"</span> resultType<span>=</span><span>"java.util.Map"</span><span>></span>
+    <span>select</span> <span>*</span> <span>from</span> <span>Table</span>
+        <span>&lt;</span><span>where</span><span>></span>
+            <span>&lt;</span><span>if</span> test<span>=</span><span>"keyword!=null and keyword!=''"</span><span>></span>
+                <span>and</span> keyword<span>=</span><span>#{keyword}</span>
+            <span>&lt;</span><span>/</span><span>if</span><span>></span>
+        <span>&lt;</span><span>/</span><span>where</span><span>></span>
+
+<span>&lt;</span><span>select</span><span>></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>但是项目中有个使用动态sql直接查询的需求，在不能使用mybatis等解析查询语句的情况下该怎么实现呢？</p>
+<h2 id="使用case-when"> 使用case when</h2>
+<div><pre><code><span>select</span> <span>*</span> <span>from</span> <span>Table</span> <span>where</span>  <span>(</span><span>case</span> <span>when</span> 值<span>=</span><span>''</span> <span>then</span> <span>1</span><span>=</span><span>1</span> <span>else</span> <span>Table</span><span>.</span>字段<span>=</span>值 <span>end</span> <span>)</span>
+</code></pre>
+<div><span>1</span><br></div></div><div><p>提示</p>
+<div><pre><code>这里的 == case when == 不是使用的 == case 字段 when ==
+要使用 == case when 字段='' ==
+</code></pre>
+</div></div>
+]]></content:encoded>
+    </item>
+    <item>
       <title>PostgreSQL使用数组类型</title>
       <link>https://fangweilong.github.io/2020/09/01/postgresql%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B/</link>
       <guid isPermaLink="false">/2020/09/01/postgresql%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B/</guid>
@@ -4028,37 +4059,6 @@ What this means is that Alpine based images are only released for early access r
 </table>
 ]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20200901095305595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70#pic_center" type="image/"/>
-    </item>
-    <item>
-      <title>PostgreSQL在where条件中使用判断条件</title>
-      <link>https://fangweilong.github.io/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</link>
-      <guid isPermaLink="false">/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">PostgreSQL在where条件中使用判断条件</source>
-      <category>postgres</category>
-      <pubDate>Fri, 02 Jul 2021 15:49:03 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="postgresql在where条件中使用判断条件"> PostgreSQL在where条件中使用判断条件</h1>
-<h2 id="需求"> 需求</h2>
-<p>我们平时查询数据是使用的mybatis，所以是这么写的</p>
-<div><pre><code><span>&lt;</span><span>select</span> id<span>=</span><span>"selectTable"</span> resultType<span>=</span><span>"java.util.Map"</span><span>></span>
-    <span>select</span> <span>*</span> <span>from</span> <span>Table</span>
-        <span>&lt;</span><span>where</span><span>></span>
-            <span>&lt;</span><span>if</span> test<span>=</span><span>"keyword!=null and keyword!=''"</span><span>></span>
-                <span>and</span> keyword<span>=</span><span>#{keyword}</span>
-            <span>&lt;</span><span>/</span><span>if</span><span>></span>
-        <span>&lt;</span><span>/</span><span>where</span><span>></span>
-
-<span>&lt;</span><span>select</span><span>></span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>但是项目中有个使用动态sql直接查询的需求，在不能使用mybatis等解析查询语句的情况下该怎么实现呢？</p>
-<h2 id="使用case-when"> 使用case when</h2>
-<div><pre><code><span>select</span> <span>*</span> <span>from</span> <span>Table</span> <span>where</span>  <span>(</span><span>case</span> <span>when</span> 值<span>=</span><span>''</span> <span>then</span> <span>1</span><span>=</span><span>1</span> <span>else</span> <span>Table</span><span>.</span>字段<span>=</span>值 <span>end</span> <span>)</span>
-</code></pre>
-<div><span>1</span><br></div></div><div><p>提示</p>
-<div><pre><code>这里的 == case when == 不是使用的 == case 字段 when ==
-要使用 == case when 字段='' ==
-</code></pre>
-</div></div>
-]]></content:encoded>
     </item>
     <item>
       <title>PostgreSQL连接数过多</title>
@@ -5614,20 +5614,6 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
       <enclosure url="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
-      <title>idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案</title>
-      <link>https://fangweilong.github.io/2019/12/19/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
-      <guid isPermaLink="false">/2019/12/19/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案</source>
-      <category>idea</category>
-      <pubDate>Thu, 19 Dec 2019 14:00:37 GMT</pubDate>
-      <content:encoded><![CDATA[<p>原因未知
-通过idea的maven插件，install即可
-<img src="https://img-blog.csdnimg.cn/20191219135916540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-如果是eclipse等，自行使用maven命令行安装</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20191219135916540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>idea更改缩进线颜色</title>
       <link>https://fangweilong.github.io/2018/02/24/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2/</link>
       <guid isPermaLink="false">/2018/02/24/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2/</guid>
@@ -5640,6 +5626,20 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
 <div><span>1</span><br></div></div><h2 id=""> <img src="http://img.blog.csdn.net/20180224172326891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" /></h2>
 ]]></content:encoded>
       <enclosure url="http://img.blog.csdn.net/20180224172326891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
+    </item>
+    <item>
+      <title>idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案</title>
+      <link>https://fangweilong.github.io/2019/12/19/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <guid isPermaLink="false">/2019/12/19/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案</source>
+      <category>idea</category>
+      <pubDate>Thu, 19 Dec 2019 14:00:37 GMT</pubDate>
+      <content:encoded><![CDATA[<p>原因未知
+通过idea的maven插件，install即可
+<img src="https://img-blog.csdnimg.cn/20191219135916540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+如果是eclipse等，自行使用maven命令行安装</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20191219135916540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>idea设置创建.java文件的模板</title>
@@ -6383,6 +6383,40 @@ yarn-lock.json
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br><span>111</span><br><span>112</span><br><span>113</span><br><span>114</span><br><span>115</span><br><span>116</span><br><span>117</span><br><span>118</span><br><span>119</span><br><span>120</span><br><span>121</span><br><span>122</span><br><span>123</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>gitlab升级</title>
+      <link>https://fangweilong.github.io/2021/11/11/gitlab%E5%8D%87%E7%BA%A7/</link>
+      <guid isPermaLink="false">/2021/11/11/gitlab%E5%8D%87%E7%BA%A7/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">gitlab升级</source>
+      <category>git</category>
+      <pubDate>Thu, 11 Nov 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>本文主要是跨版本升级，记录一下官网的一些文档链接方便以后查看。下文是以centos7版本的命令，其他发行版请查看<a href="https://docs.gitlab.com/ee/update/package/" target="_blank" rel="noopener noreferrer">gitlab官网</a></p>
+<hr>
+<h3 id="跨版本升级"> 跨版本升级</h3>
+<div><p>警告</p>
+<div><pre><code>查看[官网升级路线](https://docs.gitlab.com/ee/update/#upgrade-paths)。注意不允许跨多级版本升级，gitlab会报错.
+例如从13.3.8升级到14.0.x，不要直接升级，最起码经过13.8.8 -&gt; 13.12.x -&gt; 14.0.x 这几次升级
+</code></pre>
+</div></div>
+<h4 id="在线安装"> 在线安装</h4>
+<h5 id="添加库"> 添加库</h5>
+<div><pre><code><span>curl</span> -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh <span>|</span> <span>sudo</span> <span>bash</span>
+</code></pre>
+<div><span>1</span><br></div></div><h5 id="查找版本"> 查找版本</h5>
+<div><pre><code>yum list docker-ce --showduplicates <span>|</span> <span>sort</span> -r
+</code></pre>
+<div><span>1</span><br></div></div><h5 id="安装指定版本-基于官网升级路线"> 安装指定版本(基于官网升级路线)</h5>
+<div><pre><code>yum <span>install</span> gitlab-ce-<span>&lt;</span>version<span>></span>
+</code></pre>
+<div><span>1</span><br></div></div><h5 id="每个版本升级完成后启动gitlab并查看功能是否正常-正常的情况下再继续下一步"> 每个版本升级完成后启动gitlab并查看功能是否正常，正常的情况下再继续下一步</h5>
+<h4 id="离线安装"> 离线安装</h4>
+<p><a href="https://packages.gitlab.com/gitlab/gitlab-ce?page=1" target="_blank" rel="noopener noreferrer">官方包地址</a></p>
+<hr>
+<h3 id="小版本更新"> 小版本更新</h3>
+<div><pre><code><span>sudo</span> yum <span>install</span> gitlab-ce
+</code></pre>
+<div><span>1</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>kindeditor富文本编辑器通过参数初始化限制上传图片等功能</title>
       <link>https://fangweilong.github.io/2018/01/31/kindeditor%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E9%80%9A%E8%BF%87%E5%8F%82%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E9%99%90%E5%88%B6%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD/</link>
       <guid isPermaLink="false">/2018/01/31/kindeditor%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E9%80%9A%E8%BF%87%E5%8F%82%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E9%99%90%E5%88%B6%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD/</guid>
@@ -7055,25 +7089,25 @@ patch:
       <enclosure url="https://z3.ax1x.com/2021/09/22/4NGaVK.png" type="image/png"/>
     </item>
     <item>
-      <title>项目主页</title>
-      <link>https://fangweilong.github.io/home/</link>
-      <guid isPermaLink="false">/home/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Mon, 01 Nov 2021 09:25:49 GMT</pubDate>
-    </item>
-    <item>
       <title>房伟龙的日常</title>
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Mon, 01 Nov 2021 09:25:49 GMT</pubDate>
+      <pubDate>Thu, 11 Nov 2021 07:44:11 GMT</pubDate>
+    </item>
+    <item>
+      <title>项目主页</title>
+      <link>https://fangweilong.github.io/home/</link>
+      <guid isPermaLink="false">/home/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
+      <pubDate>Thu, 11 Nov 2021 07:44:11 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Mon, 01 Nov 2021 09:25:49 GMT</pubDate>
+      <pubDate>Thu, 11 Nov 2021 07:44:11 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
