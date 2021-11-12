@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 11 Nov 2021 07:46:52 GMT</pubDate>
-    <lastBuildDate>Thu, 11 Nov 2021 07:46:52 GMT</lastBuildDate>
+    <pubDate>Fri, 12 Nov 2021 03:00:06 GMT</pubDate>
+    <lastBuildDate>Fri, 12 Nov 2021 03:00:06 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -140,123 +140,6 @@ values
 ]]></content:encoded>
     </item>
     <item>
-      <title>java-stream的各种操作说明</title>
-      <link>https://fangweilong.github.io/2021/06/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/</link>
-      <guid isPermaLink="false">/2021/06/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">java-stream的各种操作说明</source>
-      <category>lambda</category>
-      <pubDate>Thu, 10 Jun 2021 18:03:40 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="列一下stream常用的function-防止遗忘"> 列一下stream常用的Function，防止遗忘</h1>
-<h2 id="map"> map</h2>
-<p>修改的元素需要return后</p>
-<h2 id="peek"> peek</h2>
-<p>不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值</p>
-<h2 id="foreach"> foreach</h2>
-<p>不修改元素，没有return</p>
-<h2 id="filter"> filter</h2>
-<p>过滤器，满足条件的才能被通过。留下的元素都是满足条件的</p>
-<h2 id="stored"> stored</h2>
-<p>排序</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>maven-dependencyManagement子模块不写版本号无法引入</title>
-      <link>https://fangweilong.github.io/2019/12/23/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</link>
-      <guid isPermaLink="false">/2019/12/23/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">maven-dependencyManagement子模块不写版本号无法引入</source>
-      <category>maven</category>
-      <pubDate>Mon, 23 Dec 2019 09:50:34 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="现象"> 现象</h1>
-<p>在父模块中使用 dependencyManagement 来控制子模块按需引入jar包  而不是照盘全收</p>
-<div><pre><code>&lt;dependencyManagement&gt;
-	&lt;dependencies&gt;
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
-			&lt;artifactId&gt;spring-cloud-starter-gateway&lt;/artifactId&gt;
-		&lt;/dependency&gt;
-	&lt;/dependencies&gt;
-&lt;/dependencyManagement&gt;
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>但是在子模块中继承父类并引入jar包的时候</p>
-<div><pre><code>&lt;parent&gt;
-		&lt;groupId&gt;cn.o&lt;/groupId&gt;
-		&lt;artifactId&gt;atlas-cloud&lt;/artifactId&gt;
-		&lt;version&gt;1.0.0&lt;/version&gt;
-	&lt;/parent&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>却发现
-<img src="https://img-blog.csdnimg.cn/20191223094842701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-无法引入这个jar包3</p>
-<h1 id="解决"> 解决</h1>
-<p>在子模块中按需引入 需要和父模块一样用 dependencyManagement</p>
-<div><pre><code>   &lt;dependencyManagement&gt;
-        &lt;dependencies&gt;
-            &lt;!--gateway--&gt;
-            &lt;dependency&gt;
-                &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
-                &lt;artifactId&gt;spring-cloud-starter-gateway&lt;/artifactId&gt;
-            &lt;/dependency&gt;
-
-        &lt;/dependencies&gt;
-    &lt;/dependencyManagement&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div>]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20191223094842701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
-      <title>maven-install提示找不到pom</title>
-      <link>https://fangweilong.github.io/2021/06/25/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</link>
-      <guid isPermaLink="false">/2021/06/25/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">maven-install提示找不到pom</source>
-      <category>maven</category>
-      <pubDate>Fri, 25 Jun 2021 17:18:07 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="mvn-install"> mvn install</h2>
-<p>结果发现报错</p>
-<div><pre><code>The goal you specified requires a project to execute but there is no POM <span>in</span> this directory
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="思考"> 思考</h2>
-<ul>
-<li>这不对啊！其他同事的电脑上直接安装成功啊。这不科学。</li>
-<li>跟我maven版本有关？换个版本试试。失败...</li>
-<li>jdk有关？我也用的是openjdk11啊</li>
-</ul>
-<h2 id="解决"> 解决</h2>
-<p>结果无意中打开cmd执行了一下 我靠为什么成功了？
-<img src="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" alt="成功示例" /></p>
-<h2 id="powershell和cmd"> powershell和cmd</h2>
-<p>powershell百分百失败，cmd可以成功。我也不知道为啥</p>
-]]></content:encoded>
-      <enclosure url="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" type="image/png"/>
-    </item>
-    <item>
-      <title>maven添加ojdbc6.jar(11g)包</title>
-      <link>https://fangweilong.github.io/2018/11/26/maven%E6%B7%BB%E5%8A%A0ojdbc6-jar-11g-%E5%8C%85/</link>
-      <guid isPermaLink="false">/2018/11/26/maven%E6%B7%BB%E5%8A%A0ojdbc6-jar-11g-%E5%8C%85/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">maven添加ojdbc6.jar(11g)包</source>
-      <category>maven</category>
-      <pubDate>Mon, 26 Nov 2018 16:55:08 GMT</pubDate>
-      <content:encoded><![CDATA[<p><em>不要通过oracle官网下，折腾了我一下午都没安装成功。
-建议通过maven repo网站的下载：https://mvnrepository.com/artifact/oracle/ojdbc6/11.2.0.3</em></p>
-<p>PS:以下步骤默认你maven已经装好了，配置都做好了。如果配置还没搞好请参阅我另一篇博客：https://blog.csdn.net/tutian2000/article/details/79132758
-1.点击红框下，下载jar包到本地<img src="https://img-blog.csdnimg.cn/20181126162921798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-2.执行cmd命令</p>
-<div><pre><code>mvn install:install-file -Dfile=C:/Users/Teler/Downloads/ojdbc6-11.2.0.3.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.3 -Dpackaging=jar
-</code></pre>
-<div><span>1</span><br></div></div><p>如果你是通过我上面提供的链接下载的，那么除了&quot;-Dfile=&quot;后面的本地路径改成你自己的以外什么都不要动。
-3.显示build success即安装成功
-没图，安装的时候忘了截图了
-4.项目引用</p>
-<div><pre><code>&lt;dependency&gt;
-   &lt;groupId&gt;com.oracle&lt;/groupId&gt;
-   &lt;artifactId&gt;ojdbc6&lt;/artifactId&gt;
-   &lt;version&gt;11.2.0.3&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20181126162921798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>使用lambda表达式快捷完成Tree结构</title>
       <link>https://fangweilong.github.io/2021/05/27/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90tree%E7%BB%93%E6%9E%84/</link>
       <guid isPermaLink="false">/2021/05/27/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90tree%E7%BB%93%E6%9E%84/</guid>
@@ -345,6 +228,123 @@ values
 <span>}</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>maven-dependencyManagement子模块不写版本号无法引入</title>
+      <link>https://fangweilong.github.io/2019/12/23/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</link>
+      <guid isPermaLink="false">/2019/12/23/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">maven-dependencyManagement子模块不写版本号无法引入</source>
+      <category>maven</category>
+      <pubDate>Mon, 23 Dec 2019 09:50:34 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="现象"> 现象</h1>
+<p>在父模块中使用 dependencyManagement 来控制子模块按需引入jar包  而不是照盘全收</p>
+<div><pre><code>&lt;dependencyManagement&gt;
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-cloud-starter-gateway&lt;/artifactId&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+&lt;/dependencyManagement&gt;
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>但是在子模块中继承父类并引入jar包的时候</p>
+<div><pre><code>&lt;parent&gt;
+		&lt;groupId&gt;cn.o&lt;/groupId&gt;
+		&lt;artifactId&gt;atlas-cloud&lt;/artifactId&gt;
+		&lt;version&gt;1.0.0&lt;/version&gt;
+	&lt;/parent&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>却发现
+<img src="https://img-blog.csdnimg.cn/20191223094842701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+无法引入这个jar包3</p>
+<h1 id="解决"> 解决</h1>
+<p>在子模块中按需引入 需要和父模块一样用 dependencyManagement</p>
+<div><pre><code>   &lt;dependencyManagement&gt;
+        &lt;dependencies&gt;
+            &lt;!--gateway--&gt;
+            &lt;dependency&gt;
+                &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-cloud-starter-gateway&lt;/artifactId&gt;
+            &lt;/dependency&gt;
+
+        &lt;/dependencies&gt;
+    &lt;/dependencyManagement&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div>]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20191223094842701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
+      <title>java-stream的各种操作说明</title>
+      <link>https://fangweilong.github.io/2021/06/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/</link>
+      <guid isPermaLink="false">/2021/06/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">java-stream的各种操作说明</source>
+      <category>lambda</category>
+      <pubDate>Thu, 10 Jun 2021 18:03:40 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="列一下stream常用的function-防止遗忘"> 列一下stream常用的Function，防止遗忘</h1>
+<h2 id="map"> map</h2>
+<p>修改的元素需要return后</p>
+<h2 id="peek"> peek</h2>
+<p>不会直接修改原来的元素，但是如果元素是对象，那么可以通过set之类的操作修改原来的元素，不需要返回值</p>
+<h2 id="foreach"> foreach</h2>
+<p>不修改元素，没有return</p>
+<h2 id="filter"> filter</h2>
+<p>过滤器，满足条件的才能被通过。留下的元素都是满足条件的</p>
+<h2 id="stored"> stored</h2>
+<p>排序</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>maven-install提示找不到pom</title>
+      <link>https://fangweilong.github.io/2021/06/25/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</link>
+      <guid isPermaLink="false">/2021/06/25/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">maven-install提示找不到pom</source>
+      <category>maven</category>
+      <pubDate>Fri, 25 Jun 2021 17:18:07 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="mvn-install"> mvn install</h2>
+<p>结果发现报错</p>
+<div><pre><code>The goal you specified requires a project to execute but there is no POM <span>in</span> this directory
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="思考"> 思考</h2>
+<ul>
+<li>这不对啊！其他同事的电脑上直接安装成功啊。这不科学。</li>
+<li>跟我maven版本有关？换个版本试试。失败...</li>
+<li>jdk有关？我也用的是openjdk11啊</li>
+</ul>
+<h2 id="解决"> 解决</h2>
+<p>结果无意中打开cmd执行了一下 我靠为什么成功了？
+<img src="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" alt="成功示例" /></p>
+<h2 id="powershell和cmd"> powershell和cmd</h2>
+<p>powershell百分百失败，cmd可以成功。我也不知道为啥</p>
+]]></content:encoded>
+      <enclosure url="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" type="image/png"/>
+    </item>
+    <item>
+      <title>maven添加ojdbc6.jar(11g)包</title>
+      <link>https://fangweilong.github.io/2018/11/26/maven%E6%B7%BB%E5%8A%A0ojdbc6-jar-11g-%E5%8C%85/</link>
+      <guid isPermaLink="false">/2018/11/26/maven%E6%B7%BB%E5%8A%A0ojdbc6-jar-11g-%E5%8C%85/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">maven添加ojdbc6.jar(11g)包</source>
+      <category>maven</category>
+      <pubDate>Mon, 26 Nov 2018 16:55:08 GMT</pubDate>
+      <content:encoded><![CDATA[<p><em>不要通过oracle官网下，折腾了我一下午都没安装成功。
+建议通过maven repo网站的下载：https://mvnrepository.com/artifact/oracle/ojdbc6/11.2.0.3</em></p>
+<p>PS:以下步骤默认你maven已经装好了，配置都做好了。如果配置还没搞好请参阅我另一篇博客：https://blog.csdn.net/tutian2000/article/details/79132758
+1.点击红框下，下载jar包到本地<img src="https://img-blog.csdnimg.cn/20181126162921798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+2.执行cmd命令</p>
+<div><pre><code>mvn install:install-file -Dfile=C:/Users/Teler/Downloads/ojdbc6-11.2.0.3.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.3 -Dpackaging=jar
+</code></pre>
+<div><span>1</span><br></div></div><p>如果你是通过我上面提供的链接下载的，那么除了&quot;-Dfile=&quot;后面的本地路径改成你自己的以外什么都不要动。
+3.显示build success即安装成功
+没图，安装的时候忘了截图了
+4.项目引用</p>
+<div><pre><code>&lt;dependency&gt;
+   &lt;groupId&gt;com.oracle&lt;/groupId&gt;
+   &lt;artifactId&gt;ojdbc6&lt;/artifactId&gt;
+   &lt;version&gt;11.2.0.3&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20181126162921798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>maven的配置以及IDEA导入本地maven</title>
@@ -1581,37 +1581,6 @@ public void before(){}
       <enclosure url="https://img-blog.csdn.net/2018060714520428?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
     </item>
     <item>
-      <title>springboot-启动时获取端口和项目名</title>
-      <link>https://fangweilong.github.io/2020/03/27/springboot-%E5%90%AF%E5%8A%A8%E6%97%B6%E8%8E%B7%E5%8F%96%E7%AB%AF%E5%8F%A3%E5%92%8C%E9%A1%B9%E7%9B%AE%E5%90%8D/</link>
-      <guid isPermaLink="false">/2020/03/27/springboot-%E5%90%AF%E5%8A%A8%E6%97%B6%E8%8E%B7%E5%8F%96%E7%AB%AF%E5%8F%A3%E5%92%8C%E9%A1%B9%E7%9B%AE%E5%90%8D/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">springboot-启动时获取端口和项目名</source>
-      <category>spring boot</category>
-      <pubDate>Fri, 27 Mar 2020 17:45:12 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="背景"> 背景</h2>
-<h3 id="项目启动每次都要手动输url在浏览器中访问-就想能和vue项目一样启动能直接在控制台打印出url"> 项目启动每次都要手动输url在浏览器中访问，就想能和vue项目一样启动能直接在控制台打印出url</h3>
-<p><img src="https://img-blog.csdnimg.cn/20200327173925228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<hr>
-<h2 id="踩坑"> 踩坑</h2>
-<h3 id="在项目中获取配置文件的方法为-value-但是在启动类中无法使用-获取到的全都为null"> 在项目中获取配置文件的方法为@Value,但是在启动类中无法使用，获取到的全都为null</h3>
-<hr>
-<h2 id="使用"> 使用</h2>
-<h3 id="environment"> Environment</h3>
-<div><pre><code> public static void main<span>(</span>String<span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        ConfigurableApplicationContext context <span>=</span> SpringApplication.run<span>(</span>Application.class, args<span>)</span><span>;</span>
-
-        Environment environment <span>=</span> context.getBean<span>(</span>Environment.class<span>)</span><span>;</span>
-
-		System.out.println<span>(</span><span>"访问链接：http://localhost:"</span> +environment.getProperty<span>(</span><span>"server.port"</span><span>)</span>+environment.getProperty<span>(</span><span>"server.servlet.context-path"</span><span>)</span><span>;</span>
-      <span>)</span><span>;</span>
- <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><hr>
-<h2 id="效果"> 效果</h2>
-<p><img src="https://img-blog.csdnimg.cn/20200327174347119.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20200327173925228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>springboot-AOP使用@Before和@After做一个最简单的切面</title>
       <link>https://fangweilong.github.io/2020/09/10/springboot-%E6%97%A0%E6%B3%95%E6%89%AB%E6%8F%8F%E5%88%B0%E7%88%B6%E7%B1%BB%E6%A8%A1%E5%9D%97%E4%B8%AD%E7%9A%84bean/</link>
       <guid isPermaLink="false">/2020/09/10/springboot-%E6%97%A0%E6%B3%95%E6%89%AB%E6%8F%8F%E5%88%B0%E7%88%B6%E7%B1%BB%E6%A8%A1%E5%9D%97%E4%B8%AD%E7%9A%84bean/</guid>
@@ -1648,34 +1617,35 @@ A模块中我定义了一个@Component
 ]]></content:encoded>
     </item>
     <item>
-      <title>springcloud-RestTemplate访问不到其他服务</title>
-      <link>https://fangweilong.github.io/2021/06/16/springcloud-resttemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/</link>
-      <guid isPermaLink="false">/2021/06/16/springcloud-resttemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">springcloud-RestTemplate访问不到其他服务</source>
-      <category>spring cloud</category>
-      <pubDate>Wed, 16 Jun 2021 16:42:17 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="_1-检查启动类或配置类有没有加-enablediscoveryclient"> 1.检查启动类或配置类有没有加@EnableDiscoveryClient</h2>
+      <title>springboot-启动时获取端口和项目名</title>
+      <link>https://fangweilong.github.io/2020/03/27/springboot-%E5%90%AF%E5%8A%A8%E6%97%B6%E8%8E%B7%E5%8F%96%E7%AB%AF%E5%8F%A3%E5%92%8C%E9%A1%B9%E7%9B%AE%E5%90%8D/</link>
+      <guid isPermaLink="false">/2020/03/27/springboot-%E5%90%AF%E5%8A%A8%E6%97%B6%E8%8E%B7%E5%8F%96%E7%AB%AF%E5%8F%A3%E5%92%8C%E9%A1%B9%E7%9B%AE%E5%90%8D/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">springboot-启动时获取端口和项目名</source>
+      <category>spring boot</category>
+      <pubDate>Fri, 27 Mar 2020 17:45:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="背景"> 背景</h2>
+<h3 id="项目启动每次都要手动输url在浏览器中访问-就想能和vue项目一样启动能直接在控制台打印出url"> 项目启动每次都要手动输url在浏览器中访问，就想能和vue项目一样启动能直接在控制台打印出url</h3>
+<p><img src="https://img-blog.csdnimg.cn/20200327173925228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
 <hr>
-<h2 id="_2-检查-resttemplate有没有加-bean-loadbalanced-非必须-注解"> 2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解</h2>
+<h2 id="踩坑"> 踩坑</h2>
+<h3 id="在项目中获取配置文件的方法为-value-但是在启动类中无法使用-获取到的全都为null"> 在项目中获取配置文件的方法为@Value,但是在启动类中无法使用，获取到的全都为null</h3>
 <hr>
-<h2 id="_3-gateway配置、url是否一一对照"> 3.gateway配置、url是否一一对照</h2>
-<hr>
-<h2 id="如果上面的你都很确定没问题-那可以比对一下我遇到的问题"> 如果上面的你都很确定没问题，那可以比对一下我遇到的问题</h2>
-<h3 id="起因"> 起因</h3>
-<ul>
-<li>升级springcloud 2020.0版本及以上</li>
-<li>没有修改访问代码</li>
-</ul>
-<h3 id="解决办法"> 解决办法</h3>
-<p>我翻看了一下spring的官方文档发现更换了写法，RestTemplate无法直接生效了。
-在你的pom中添加一个引用</p>
-<div><pre><code><span><span>&lt;</span>dependency<span>></span></span>
-   <span><span>&lt;</span>groupId<span>></span></span>org<span>.</span>springframework<span>.</span>cloud<span>&lt;</span><span>/</span>groupId<span>></span>
-   <span><span>&lt;</span>artifactId<span>></span></span>spring<span>-</span>cloud<span>-</span>starter<span>-</span>loadbalancer<span>&lt;</span><span>/</span>artifactId<span>></span>
-<span>&lt;</span><span>/</span>dependency<span>></span>
+<h2 id="使用"> 使用</h2>
+<h3 id="environment"> Environment</h3>
+<div><pre><code> public static void main<span>(</span>String<span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        ConfigurableApplicationContext context <span>=</span> SpringApplication.run<span>(</span>Application.class, args<span>)</span><span>;</span>
+
+        Environment environment <span>=</span> context.getBean<span>(</span>Environment.class<span>)</span><span>;</span>
+
+		System.out.println<span>(</span><span>"访问链接：http://localhost:"</span> +environment.getProperty<span>(</span><span>"server.port"</span><span>)</span>+environment.getProperty<span>(</span><span>"server.servlet.context-path"</span><span>)</span><span>;</span>
+      <span>)</span><span>;</span>
+ <span>}</span>
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>RestTemplate就能继续愉快的使用了</p>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><hr>
+<h2 id="效果"> 效果</h2>
+<p><img src="https://img-blog.csdnimg.cn/20200327174347119.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
 ]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20200327173925228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>springcloud-gateway-获取入参</title>
@@ -1808,6 +1778,36 @@ public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
 
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>springcloud-RestTemplate访问不到其他服务</title>
+      <link>https://fangweilong.github.io/2021/06/16/springcloud-resttemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/</link>
+      <guid isPermaLink="false">/2021/06/16/springcloud-resttemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">springcloud-RestTemplate访问不到其他服务</source>
+      <category>spring cloud</category>
+      <pubDate>Wed, 16 Jun 2021 16:42:17 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="_1-检查启动类或配置类有没有加-enablediscoveryclient"> 1.检查启动类或配置类有没有加@EnableDiscoveryClient</h2>
+<hr>
+<h2 id="_2-检查-resttemplate有没有加-bean-loadbalanced-非必须-注解"> 2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解</h2>
+<hr>
+<h2 id="_3-gateway配置、url是否一一对照"> 3.gateway配置、url是否一一对照</h2>
+<hr>
+<h2 id="如果上面的你都很确定没问题-那可以比对一下我遇到的问题"> 如果上面的你都很确定没问题，那可以比对一下我遇到的问题</h2>
+<h3 id="起因"> 起因</h3>
+<ul>
+<li>升级springcloud 2020.0版本及以上</li>
+<li>没有修改访问代码</li>
+</ul>
+<h3 id="解决办法"> 解决办法</h3>
+<p>我翻看了一下spring的官方文档发现更换了写法，RestTemplate无法直接生效了。
+在你的pom中添加一个引用</p>
+<div><pre><code><span><span>&lt;</span>dependency<span>></span></span>
+   <span><span>&lt;</span>groupId<span>></span></span>org<span>.</span>springframework<span>.</span>cloud<span>&lt;</span><span>/</span>groupId<span>></span>
+   <span><span>&lt;</span>artifactId<span>></span></span>spring<span>-</span>cloud<span>-</span>starter<span>-</span>loadbalancer<span>&lt;</span><span>/</span>artifactId<span>></span>
+<span>&lt;</span><span>/</span>dependency<span>></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>RestTemplate就能继续愉快的使用了</p>
+]]></content:encoded>
     </item>
     <item>
       <title>springcloud-gateway整合swagger3.0.0</title>
@@ -2450,6 +2450,21 @@ public class LogFilter implements Filter {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>java.lang.NoSuchMethodError</title>
+      <link>https://fangweilong.github.io/2018/03/20/java-lang-nosuchmethoderror/</link>
+      <guid isPermaLink="false">/2018/03/20/java-lang-nosuchmethoderror/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">java.lang.NoSuchMethodError</source>
+      <category>java</category>
+      <pubDate>Tue, 20 Mar 2018 10:25:27 GMT</pubDate>
+      <content:encoded><![CDATA[<p><strong>出现这个问题检查</strong></p>
+<p><strong>1.jar包版本</strong>
+有些jar包对版本有要求，不同版本之间是不互通的，有些还对jdk有强制要求，比如Google的番石榴就要求JDK1.8版本</p>
+<p><strong>2.是否将所有修改的class文件布置到服务器</strong>
+这个问题是最容易出现的，可能有一天更改的文件较多，布置的时候又是点对点布置，就会遗漏掉一两个class文件。
+解决办法就是在每次更改文件就用文本记下来，或者用Git等版本控制读取到更改记录，一个个文件对照着布置。</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>java-String字符串split分割无效</title>
       <link>https://fangweilong.github.io/2018/06/26/java-string%E5%AD%97%E7%AC%A6%E4%B8%B2split%E5%88%86%E5%89%B2%E6%97%A0%E6%95%88/</link>
       <guid isPermaLink="false">/2018/06/26/java-string%E5%AD%97%E7%AC%A6%E4%B8%B2split%E5%88%86%E5%89%B2%E6%97%A0%E6%95%88/</guid>
@@ -2477,18 +2492,16 @@ OK这样就可以了。</p>
       <enclosure url="https://img-blog.csdn.net/20180626095402193?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
     </item>
     <item>
-      <title>java.lang.NoSuchMethodError</title>
-      <link>https://fangweilong.github.io/2018/03/20/java-lang-nosuchmethoderror/</link>
-      <guid isPermaLink="false">/2018/03/20/java-lang-nosuchmethoderror/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">java.lang.NoSuchMethodError</source>
+      <title>javax.el.PropertyNotFoundException</title>
+      <link>https://fangweilong.github.io/2018/03/19/javax-el-propertynotfoundexception/</link>
+      <guid isPermaLink="false">/2018/03/19/javax-el-propertynotfoundexception/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">javax.el.PropertyNotFoundException</source>
       <category>java</category>
-      <pubDate>Tue, 20 Mar 2018 10:25:27 GMT</pubDate>
-      <content:encoded><![CDATA[<p><strong>出现这个问题检查</strong></p>
-<p><strong>1.jar包版本</strong>
-有些jar包对版本有要求，不同版本之间是不互通的，有些还对jdk有强制要求，比如Google的番石榴就要求JDK1.8版本</p>
-<p><strong>2.是否将所有修改的class文件布置到服务器</strong>
-这个问题是最容易出现的，可能有一天更改的文件较多，布置的时候又是点对点布置，就会遗漏掉一两个class文件。
-解决办法就是在每次更改文件就用文本记下来，或者用Git等版本控制读取到更改记录，一个个文件对照着布置。</p>
+      <pubDate>Mon, 19 Mar 2018 14:03:04 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="_1-model中没有get-和set方法"> 1.model中没有get()和set方法</h2>
+<p><em>如果没有get()和set()方法，el表达式就会出现javax.el.PropertyNotFoundException错误</em></p>
+<h2 id="_2-model中有get-和set-方法"> 2.model中有get()和set()方法</h2>
+<p><em>检查过后发现model中有get()和set()方法，并且编译出来的class文件中也有get()和set()方法，但是就是报错。这时候检查你的字段开头是不是大写字母开头，<strong>如果是大写字母则更改为小写字母开头</strong>。el表达式是找get()方法读取值的，我们需要使用规范的规则来命名我们的变量名。</em></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -2513,19 +2526,6 @@ OK这样就可以了。</p>
 <li>request添加编码格式</li>
 <li>encoding中文字符串</li>
 </ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>javax.el.PropertyNotFoundException</title>
-      <link>https://fangweilong.github.io/2018/03/19/javax-el-propertynotfoundexception/</link>
-      <guid isPermaLink="false">/2018/03/19/javax-el-propertynotfoundexception/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">javax.el.PropertyNotFoundException</source>
-      <category>java</category>
-      <pubDate>Mon, 19 Mar 2018 14:03:04 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="_1-model中没有get-和set方法"> 1.model中没有get()和set方法</h2>
-<p><em>如果没有get()和set()方法，el表达式就会出现javax.el.PropertyNotFoundException错误</em></p>
-<h2 id="_2-model中有get-和set-方法"> 2.model中有get()和set()方法</h2>
-<p><em>检查过后发现model中有get()和set()方法，并且编译出来的class文件中也有get()和set()方法，但是就是报错。这时候检查你的字段开头是不是大写字母开头，<strong>如果是大写字母则更改为小写字母开头</strong>。el表达式是找get()方法读取值的，我们需要使用规范的规则来命名我们的变量名。</em></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -2923,32 +2923,6 @@ $.each(vm.tableData, function (index, item) {
 </div>]]></content:encoded>
     </item>
     <item>
-      <title>js_jquery获取不到页面元素 需要点击一下才能找到</title>
-      <link>https://fangweilong.github.io/2018/02/06/js-jquery%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0-%E9%9C%80%E8%A6%81%E7%82%B9%E5%87%BB%E4%B8%80%E4%B8%8B%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0/</link>
-      <guid isPermaLink="false">/2018/02/06/js-jquery%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0-%E9%9C%80%E8%A6%81%E7%82%B9%E5%87%BB%E4%B8%80%E4%B8%8B%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">js_jquery获取不到页面元素 需要点击一下才能找到</source>
-      <category>javascript</category>
-      <pubDate>Tue, 06 Feb 2018 19:39:42 GMT</pubDate>
-      <content:encoded><![CDATA[<p>2018-03-23 更新
-更新内容:检查在获取的时候是不是使用class获取元素，如果是则修改为通过id获取元素。通过id获取元素是可以直接获取到的</p>
-<p>以下为原文  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-在项目中，尤其是后台管理常用到iframe嵌套，但是最近遇到一个问题。
-我在页面上想要去获取页面的一个元素，却无法获取到元素
-<img src="http://img.blog.csdn.net/20180206192530612?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="只能找到document，定位不到具体元素" />
-但是使用chrome自带的调试台去选中元素，然后再执行jquery方法，此时可以正常获取到元素
-<img src="http://img.blog.csdn.net/20180206192859897?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="已经可以获取到元素" />
-一开始想到可能是未来元素的原因，尝试过后发现并没有用处。
-后来想到在form表单提交的时候如果有两层form嵌套，就会出现提交不了的现象。那会不会iframe嵌套也会出现这个问题呢？
-当只使用一层iframe层时，也是可以正常获取元素的。那么两层的时候为什么会不行了呢？
-查阅资料得知，当我们去获取元素时，js会默认在外层iframe中寻找元素，如果我们要寻找里层iframe的元素，必须要切换到指定iframe层中。</p>
-<div><pre><code>var obj=document.getElementById(&quot;mainframe&quot;).contentWindow; //填你的需要找到元素的那一层iframe的id
-obj.document.getElementsByClassName(&quot;odd_bg&quot;);//我们可以对元素进行正常的操作了，我这里是寻找的class名，同理可以使用id等获取
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div>]]></content:encoded>
-      <enclosure url="http://img.blog.csdn.net/20180206192530612?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" type="image/"/>
-    </item>
-    <item>
       <title>js_jquery限制input输入框只能输入两位小数的数字</title>
       <link>https://fangweilong.github.io/2018/01/31/js-jquery%E9%99%90%E5%88%B6input%E8%BE%93%E5%85%A5%E6%A1%86%E5%8F%AA%E8%83%BD%E8%BE%93%E5%85%A5%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97/</link>
       <guid isPermaLink="false">/2018/01/31/js-jquery%E9%99%90%E5%88%B6input%E8%BE%93%E5%85%A5%E6%A1%86%E5%8F%AA%E8%83%BD%E8%BE%93%E5%85%A5%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
@@ -2973,6 +2947,32 @@ obj.document.getElementsByClassName(&quot;odd_bg&quot;);//我们可以对元素�
    });
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>js_jquery获取不到页面元素 需要点击一下才能找到</title>
+      <link>https://fangweilong.github.io/2018/02/06/js-jquery%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0-%E9%9C%80%E8%A6%81%E7%82%B9%E5%87%BB%E4%B8%80%E4%B8%8B%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0/</link>
+      <guid isPermaLink="false">/2018/02/06/js-jquery%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0-%E9%9C%80%E8%A6%81%E7%82%B9%E5%87%BB%E4%B8%80%E4%B8%8B%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">js_jquery获取不到页面元素 需要点击一下才能找到</source>
+      <category>javascript</category>
+      <pubDate>Tue, 06 Feb 2018 19:39:42 GMT</pubDate>
+      <content:encoded><![CDATA[<p>2018-03-23 更新
+更新内容:检查在获取的时候是不是使用class获取元素，如果是则修改为通过id获取元素。通过id获取元素是可以直接获取到的</p>
+<p>以下为原文  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+在项目中，尤其是后台管理常用到iframe嵌套，但是最近遇到一个问题。
+我在页面上想要去获取页面的一个元素，却无法获取到元素
+<img src="http://img.blog.csdn.net/20180206192530612?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="只能找到document，定位不到具体元素" />
+但是使用chrome自带的调试台去选中元素，然后再执行jquery方法，此时可以正常获取到元素
+<img src="http://img.blog.csdn.net/20180206192859897?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="已经可以获取到元素" />
+一开始想到可能是未来元素的原因，尝试过后发现并没有用处。
+后来想到在form表单提交的时候如果有两层form嵌套，就会出现提交不了的现象。那会不会iframe嵌套也会出现这个问题呢？
+当只使用一层iframe层时，也是可以正常获取元素的。那么两层的时候为什么会不行了呢？
+查阅资料得知，当我们去获取元素时，js会默认在外层iframe中寻找元素，如果我们要寻找里层iframe的元素，必须要切换到指定iframe层中。</p>
+<div><pre><code>var obj=document.getElementById(&quot;mainframe&quot;).contentWindow; //填你的需要找到元素的那一层iframe的id
+obj.document.getElementsByClassName(&quot;odd_bg&quot;);//我们可以对元素进行正常的操作了，我这里是寻找的class名，同理可以使用id等获取
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div>]]></content:encoded>
+      <enclosure url="http://img.blog.csdn.net/20180206192530612?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" type="image/"/>
     </item>
     <item>
       <title>layui-lay_verify-form表单自定义验证规则</title>
@@ -3015,6 +3015,37 @@ form.verify({
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>利用layer实现放大图片的效果</title>
+      <link>https://fangweilong.github.io/2018/02/07/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</link>
+      <guid isPermaLink="false">/2018/02/07/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">利用layer实现放大图片的效果</source>
+      <category>javascript</category>
+      <pubDate>Wed, 07 Feb 2018 13:59:18 GMT</pubDate>
+      <content:encoded><![CDATA[<p>引用layer.js</p>
+<p>//小图</p>
+<div><pre><code>&lt;a href=&quot;javascript:amplificationImg(&#39;图片名&#39;,&#39;图片地址&#39;)&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;
+</code></pre>
+<div><span>1</span><br></div></div><p>//隐藏域 也就是放大以后的图片位置</p>
+<div><pre><code>&lt;img alt=&quot;&quot; style=&quot;display:none&quot; id=&quot;displayImg&quot; src=&quot;&quot; /&gt;
+</code></pre>
+<div><span>1</span><br></div></div><p>//js方法体</p>
+<div><pre><code>function amplificationImg(name, url) {
+   $(&quot;#displayImg&quot;).attr(&quot;src&quot;, url);
+   var height = $(&quot;#displayImg&quot;).height();//拿的图片原来宽高，建议自定义宽高
+   var width = $(&quot;#displayImg&quot;).width();
+   layer.open({
+      type: 1,
+      title: false,
+      closeBtn: 0,
+      shadeClose: true,
+      area: [width + &#39;px&#39;, height + &#39;px&#39;], //宽高
+	  content: &quot;&lt;img alt=&quot; + name + &quot; title=&quot; + name + &quot; src=&quot; + url + &quot; /&gt;&quot;
+   });
+}
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>layui的laydate控件的使用</title>
       <link>https://fangweilong.github.io/2018/04/28/layui%E7%9A%84laydate%E6%8E%A7%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <guid isPermaLink="false">/2018/04/28/layui%E7%9A%84laydate%E6%8E%A7%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
@@ -3046,37 +3077,6 @@ layui.use(&#39;laydate&#39;, function() {
 });
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>利用layer实现放大图片的效果</title>
-      <link>https://fangweilong.github.io/2018/02/07/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</link>
-      <guid isPermaLink="false">/2018/02/07/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">利用layer实现放大图片的效果</source>
-      <category>javascript</category>
-      <pubDate>Wed, 07 Feb 2018 13:59:18 GMT</pubDate>
-      <content:encoded><![CDATA[<p>引用layer.js</p>
-<p>//小图</p>
-<div><pre><code>&lt;a href=&quot;javascript:amplificationImg(&#39;图片名&#39;,&#39;图片地址&#39;)&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;
-</code></pre>
-<div><span>1</span><br></div></div><p>//隐藏域 也就是放大以后的图片位置</p>
-<div><pre><code>&lt;img alt=&quot;&quot; style=&quot;display:none&quot; id=&quot;displayImg&quot; src=&quot;&quot; /&gt;
-</code></pre>
-<div><span>1</span><br></div></div><p>//js方法体</p>
-<div><pre><code>function amplificationImg(name, url) {
-   $(&quot;#displayImg&quot;).attr(&quot;src&quot;, url);
-   var height = $(&quot;#displayImg&quot;).height();//拿的图片原来宽高，建议自定义宽高
-   var width = $(&quot;#displayImg&quot;).width();
-   layer.open({
-      type: 1,
-      title: false,
-      closeBtn: 0,
-      shadeClose: true,
-      area: [width + &#39;px&#39;, height + &#39;px&#39;], //宽高
-	  content: &quot;&lt;img alt=&quot; + name + &quot; title=&quot; + name + &quot; src=&quot; + url + &quot; /&gt;&quot;
-   });
-}
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>mapbox-glStyleisnotdone_loading</title>
@@ -3753,37 +3753,6 @@ What this means is that Alpine based images are only released for early access r
 ]]></content:encoded>
     </item>
     <item>
-      <title>PostgreSQL在where条件中使用判断条件</title>
-      <link>https://fangweilong.github.io/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</link>
-      <guid isPermaLink="false">/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">PostgreSQL在where条件中使用判断条件</source>
-      <category>postgres</category>
-      <pubDate>Fri, 02 Jul 2021 15:49:03 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="postgresql在where条件中使用判断条件"> PostgreSQL在where条件中使用判断条件</h1>
-<h2 id="需求"> 需求</h2>
-<p>我们平时查询数据是使用的mybatis，所以是这么写的</p>
-<div><pre><code><span>&lt;</span><span>select</span> id<span>=</span><span>"selectTable"</span> resultType<span>=</span><span>"java.util.Map"</span><span>></span>
-    <span>select</span> <span>*</span> <span>from</span> <span>Table</span>
-        <span>&lt;</span><span>where</span><span>></span>
-            <span>&lt;</span><span>if</span> test<span>=</span><span>"keyword!=null and keyword!=''"</span><span>></span>
-                <span>and</span> keyword<span>=</span><span>#{keyword}</span>
-            <span>&lt;</span><span>/</span><span>if</span><span>></span>
-        <span>&lt;</span><span>/</span><span>where</span><span>></span>
-
-<span>&lt;</span><span>select</span><span>></span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>但是项目中有个使用动态sql直接查询的需求，在不能使用mybatis等解析查询语句的情况下该怎么实现呢？</p>
-<h2 id="使用case-when"> 使用case when</h2>
-<div><pre><code><span>select</span> <span>*</span> <span>from</span> <span>Table</span> <span>where</span>  <span>(</span><span>case</span> <span>when</span> 值<span>=</span><span>''</span> <span>then</span> <span>1</span><span>=</span><span>1</span> <span>else</span> <span>Table</span><span>.</span>字段<span>=</span>值 <span>end</span> <span>)</span>
-</code></pre>
-<div><span>1</span><br></div></div><div><p>提示</p>
-<div><pre><code>这里的 == case when == 不是使用的 == case 字段 when ==
-要使用 == case when 字段='' ==
-</code></pre>
-</div></div>
-]]></content:encoded>
-    </item>
-    <item>
       <title>PostgreSQL使用数组类型</title>
       <link>https://fangweilong.github.io/2020/09/01/postgresql%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B/</link>
       <guid isPermaLink="false">/2020/09/01/postgresql%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B/</guid>
@@ -4059,6 +4028,37 @@ What this means is that Alpine based images are only released for early access r
 </table>
 ]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20200901095305595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70#pic_center" type="image/"/>
+    </item>
+    <item>
+      <title>PostgreSQL在where条件中使用判断条件</title>
+      <link>https://fangweilong.github.io/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</link>
+      <guid isPermaLink="false">/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">PostgreSQL在where条件中使用判断条件</source>
+      <category>postgres</category>
+      <pubDate>Fri, 02 Jul 2021 15:49:03 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="postgresql在where条件中使用判断条件"> PostgreSQL在where条件中使用判断条件</h1>
+<h2 id="需求"> 需求</h2>
+<p>我们平时查询数据是使用的mybatis，所以是这么写的</p>
+<div><pre><code><span>&lt;</span><span>select</span> id<span>=</span><span>"selectTable"</span> resultType<span>=</span><span>"java.util.Map"</span><span>></span>
+    <span>select</span> <span>*</span> <span>from</span> <span>Table</span>
+        <span>&lt;</span><span>where</span><span>></span>
+            <span>&lt;</span><span>if</span> test<span>=</span><span>"keyword!=null and keyword!=''"</span><span>></span>
+                <span>and</span> keyword<span>=</span><span>#{keyword}</span>
+            <span>&lt;</span><span>/</span><span>if</span><span>></span>
+        <span>&lt;</span><span>/</span><span>where</span><span>></span>
+
+<span>&lt;</span><span>select</span><span>></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>但是项目中有个使用动态sql直接查询的需求，在不能使用mybatis等解析查询语句的情况下该怎么实现呢？</p>
+<h2 id="使用case-when"> 使用case when</h2>
+<div><pre><code><span>select</span> <span>*</span> <span>from</span> <span>Table</span> <span>where</span>  <span>(</span><span>case</span> <span>when</span> 值<span>=</span><span>''</span> <span>then</span> <span>1</span><span>=</span><span>1</span> <span>else</span> <span>Table</span><span>.</span>字段<span>=</span>值 <span>end</span> <span>)</span>
+</code></pre>
+<div><span>1</span><br></div></div><div><p>提示</p>
+<div><pre><code>这里的 == case when == 不是使用的 == case 字段 when ==
+要使用 == case when 字段='' ==
+</code></pre>
+</div></div>
+]]></content:encoded>
     </item>
     <item>
       <title>PostgreSQL连接数过多</title>
@@ -5614,20 +5614,6 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
       <enclosure url="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
-      <title>idea更改缩进线颜色</title>
-      <link>https://fangweilong.github.io/2018/02/24/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2/</link>
-      <guid isPermaLink="false">/2018/02/24/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">idea更改缩进线颜色</source>
-      <category>idea</category>
-      <pubDate>Sat, 24 Feb 2018 17:16:17 GMT</pubDate>
-      <content:encoded><![CDATA[<p>idea不同的版本会更改一些功能设置的位置，之前将背景色改为了豆沙绿后缩进线就看不到了，在写HTML页面的时候很不舒服，但是网上搜到的一些答案又不对(版本不一致)，花了点功夫找了一下，特此记录。我当前版本为idea 2017.3.4</p>
-<div><pre><code>Settings -&gt; Editor -&gt; Color Scheme -&gt; General -&gt; Editor -&gt; Guides -&gt; Indent guide 
-</code></pre>
-<div><span>1</span><br></div></div><h2 id=""> <img src="http://img.blog.csdn.net/20180224172326891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" /></h2>
-]]></content:encoded>
-      <enclosure url="http://img.blog.csdn.net/20180224172326891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
-    </item>
-    <item>
       <title>idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案</title>
       <link>https://fangweilong.github.io/2019/12/19/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
       <guid isPermaLink="false">/2019/12/19/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
@@ -5640,6 +5626,20 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
 如果是eclipse等，自行使用maven命令行安装</p>
 ]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20191219135916540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
+      <title>idea更改缩进线颜色</title>
+      <link>https://fangweilong.github.io/2018/02/24/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2/</link>
+      <guid isPermaLink="false">/2018/02/24/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">idea更改缩进线颜色</source>
+      <category>idea</category>
+      <pubDate>Sat, 24 Feb 2018 17:16:17 GMT</pubDate>
+      <content:encoded><![CDATA[<p>idea不同的版本会更改一些功能设置的位置，之前将背景色改为了豆沙绿后缩进线就看不到了，在写HTML页面的时候很不舒服，但是网上搜到的一些答案又不对(版本不一致)，花了点功夫找了一下，特此记录。我当前版本为idea 2017.3.4</p>
+<div><pre><code>Settings -&gt; Editor -&gt; Color Scheme -&gt; General -&gt; Editor -&gt; Guides -&gt; Indent guide 
+</code></pre>
+<div><span>1</span><br></div></div><h2 id=""> <img src="http://img.blog.csdn.net/20180224172326891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" /></h2>
+]]></content:encoded>
+      <enclosure url="http://img.blog.csdn.net/20180224172326891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
     </item>
     <item>
       <title>idea设置创建.java文件的模板</title>
@@ -6228,28 +6228,6 @@ Set-PoshPrompt -Theme my
       <enclosure url="https://z3.ax1x.com/2021/09/15/4EOpge.md.png" type="image/png"/>
     </item>
     <item>
-      <title>无需软件通过修改注册表实现wind10透明状态栏效果</title>
-      <link>https://fangweilong.github.io/2021/08/10/%E6%97%A0%E9%9C%80%E8%BD%AF%E4%BB%B6%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0wind10%E9%80%8F%E6%98%8E%E7%8A%B6%E6%80%81%E6%A0%8F%E6%95%88%E6%9E%9C/</link>
-      <guid isPermaLink="false">/2021/08/10/%E6%97%A0%E9%9C%80%E8%BD%AF%E4%BB%B6%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0wind10%E9%80%8F%E6%98%8E%E7%8A%B6%E6%80%81%E6%A0%8F%E6%95%88%E6%9E%9C/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">无需软件通过修改注册表实现wind10透明状态栏效果</source>
-      <category>window</category>
-      <pubDate>Tue, 10 Aug 2021 09:55:12 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="原帖"> 原帖</h2>
-<p>在52pojie上看到的一个帖子，不过原帖中需要手动修改注册表的值。<a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1461968&amp;highlight=%D7%B4%CC%AC%C0%B8" target="_blank" rel="noopener noreferrer">点击我跳转</a></p>
-<h2 id="代码"> 代码</h2>
-<p>我给做成了bat文件，双击调用</p>
-<div><pre><code>@REM 在 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced 路径下添加一个 REG_DWORD类型的TaskbarAcrylicOpacity文件，值为 0
-reg add HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarAcrylicOpacity /t REG_DWORD /d 0
-
-@REM 重启任务管理器
-taskkill /f /im explorer.exe &amp; start explorer.exe
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="效果"> 效果</h2>
-<p><a href="https://imgtu.com/i/fGfzxU" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/08/10/fGfzxU.png" alt="fGfzxU.png" /></a></p>
-]]></content:encoded>
-      <enclosure url="https://z3.ax1x.com/2021/08/10/fGfzxU.png" type="image/png"/>
-    </item>
-    <item>
       <title>git-.gitignore通用配置文件</title>
       <link>https://fangweilong.github.io/2019/08/30/git-gitignore%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</link>
       <guid isPermaLink="false">/2019/08/30/git-gitignore%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</guid>
@@ -6383,6 +6361,28 @@ yarn-lock.json
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br><span>111</span><br><span>112</span><br><span>113</span><br><span>114</span><br><span>115</span><br><span>116</span><br><span>117</span><br><span>118</span><br><span>119</span><br><span>120</span><br><span>121</span><br><span>122</span><br><span>123</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>无需软件通过修改注册表实现wind10透明状态栏效果</title>
+      <link>https://fangweilong.github.io/2021/08/10/%E6%97%A0%E9%9C%80%E8%BD%AF%E4%BB%B6%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0wind10%E9%80%8F%E6%98%8E%E7%8A%B6%E6%80%81%E6%A0%8F%E6%95%88%E6%9E%9C/</link>
+      <guid isPermaLink="false">/2021/08/10/%E6%97%A0%E9%9C%80%E8%BD%AF%E4%BB%B6%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0wind10%E9%80%8F%E6%98%8E%E7%8A%B6%E6%80%81%E6%A0%8F%E6%95%88%E6%9E%9C/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">无需软件通过修改注册表实现wind10透明状态栏效果</source>
+      <category>window</category>
+      <pubDate>Tue, 10 Aug 2021 09:55:12 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="原帖"> 原帖</h2>
+<p>在52pojie上看到的一个帖子，不过原帖中需要手动修改注册表的值。<a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1461968&amp;highlight=%D7%B4%CC%AC%C0%B8" target="_blank" rel="noopener noreferrer">点击我跳转</a></p>
+<h2 id="代码"> 代码</h2>
+<p>我给做成了bat文件，双击调用</p>
+<div><pre><code>@REM 在 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced 路径下添加一个 REG_DWORD类型的TaskbarAcrylicOpacity文件，值为 0
+reg add HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarAcrylicOpacity /t REG_DWORD /d 0
+
+@REM 重启任务管理器
+taskkill /f /im explorer.exe &amp; start explorer.exe
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="效果"> 效果</h2>
+<p><a href="https://imgtu.com/i/fGfzxU" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/08/10/fGfzxU.png" alt="fGfzxU.png" /></a></p>
+]]></content:encoded>
+      <enclosure url="https://z3.ax1x.com/2021/08/10/fGfzxU.png" type="image/png"/>
+    </item>
+    <item>
       <title>gitlab升级</title>
       <link>https://fangweilong.github.io/2021/11/11/gitlab%E5%8D%87%E7%BA%A7/</link>
       <guid isPermaLink="false">/2021/11/11/gitlab%E5%8D%87%E7%BA%A7/</guid>
@@ -6414,7 +6414,17 @@ yarn-lock.json
 <h3 id="小版本更新"> 小版本更新</h3>
 <div><pre><code><span>sudo</span> yum <span>install</span> gitlab-ce
 </code></pre>
-<div><span>1</span><br></div></div>]]></content:encoded>
+<div><span>1</span><br></div></div><hr>
+<h3 id="_13-x升级到14-x"> 13.x升级到14.x</h3>
+<p>需要注意在14.x中gitlab已经弃用了unicorn，改为使用puma。所以在升级中需要注释掉/etc/gitlab/gitlab.rb文件中unicorn的配置，放开并修改对应的puma配置。</p>
+<p>示例：</p>
+<div><pre><code><span># 注释掉</span>
+<span># unicorn['port'] = 8080</span>
+
+<span># 放开</span>
+puma<span>[</span><span>'port'</span><span>]</span> <span>=</span> <span>8080</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>kindeditor富文本编辑器通过参数初始化限制上传图片等功能</title>
@@ -7093,21 +7103,21 @@ patch:
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Thu, 11 Nov 2021 07:44:11 GMT</pubDate>
+      <pubDate>Fri, 12 Nov 2021 02:59:27 GMT</pubDate>
     </item>
     <item>
       <title>项目主页</title>
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Thu, 11 Nov 2021 07:44:11 GMT</pubDate>
+      <pubDate>Fri, 12 Nov 2021 02:59:27 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Thu, 11 Nov 2021 07:44:11 GMT</pubDate>
+      <pubDate>Fri, 12 Nov 2021 02:59:27 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
