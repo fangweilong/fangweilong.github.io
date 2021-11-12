@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 12 Nov 2021 04:45:54 GMT</pubDate>
-    <lastBuildDate>Fri, 12 Nov 2021 04:45:54 GMT</lastBuildDate>
+    <pubDate>Fri, 12 Nov 2021 09:37:20 GMT</pubDate>
+    <lastBuildDate>Fri, 12 Nov 2021 09:37:20 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -68,24 +68,6 @@ UserDo get(@Param(&quot;id&quot;)String id, @Param(&quot;parentId&quot;)String p
 <div><span>1</span><br><span>2</span><br><span>3</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>mybatis传入字符串分割</title>
-      <link>https://fangweilong.github.io/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
-      <guid isPermaLink="false">/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
-      <category>mybatis</category>
-      <pubDate>Wed, 27 Jun 2018 16:20:22 GMT</pubDate>
-      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
-  #{item}
-&lt;/foreach&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！</p>
-<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>mybatis使用枚举类 类型转换错误</title>
       <link>https://fangweilong.github.io/2019/09/05/mybatis%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%E7%B1%BB-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AF/</link>
       <guid isPermaLink="false">/2019/09/05/mybatis%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%E7%B1%BB-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AF/</guid>
@@ -108,6 +90,38 @@ values
       <enclosure url="https://img-blog.csdnimg.cn/20190905174625717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
+      <title>mybatis查询数据赋值到model里面为空</title>
+      <link>https://fangweilong.github.io/2018/05/04/mybatis%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E8%B5%8B%E5%80%BC%E5%88%B0model%E9%87%8C%E9%9D%A2%E4%B8%BA%E7%A9%BA/</link>
+      <guid isPermaLink="false">/2018/05/04/mybatis%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E8%B5%8B%E5%80%BC%E5%88%B0model%E9%87%8C%E9%9D%A2%E4%B8%BA%E7%A9%BA/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">mybatis查询数据赋值到model里面为空</source>
+      <category>mybatis</category>
+      <pubDate>Fri, 04 May 2018 14:31:01 GMT</pubDate>
+      <content:encoded><![CDATA[<p>因为数据多所以在查询中使用分页，但是发现直接执行sql语句是可以获取到数据，而list里面却是空的</p>
+<div><pre><code>&lt;select id=&quot;list&quot; resultType=&quot;DaliyDO&quot;&gt;
+        select a1.* from (
+            select
+                id ,rownum
+            from dual
+            &lt;where&gt;
+                &lt;if test=&quot;id != null and id != &#39;&#39;&quot;&gt; and id = #{id} &lt;/if&gt;
+            &lt;/where&gt;
+            &lt;choose&gt;
+                &lt;otherwise&gt;
+                    order by id desc
+                &lt;/otherwise&gt;
+            &lt;/choose&gt;
+            ) a1
+        &lt;if test=&quot;offset != null and limit != null&quot;&gt;
+            where rownum between #{offset} and #{offset}+#{limit}
+        &lt;/if&gt;
+	&lt;/select&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><p>原因是 resultType属性与model不对应。
+我们使用分页会在查询值加入一个rownum的值，这个值在我们建立model的时候是没有的，所以只要在model里面加上rownum这个属性就可以。
+当然你也可以使用别的分页方法</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>java-stream的各种操作说明</title>
       <link>https://fangweilong.github.io/2021/06/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/</link>
       <guid isPermaLink="false">/2021/06/10/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/</guid>
@@ -125,6 +139,24 @@ values
 <p>过滤器，满足条件的才能被通过。留下的元素都是满足条件的</p>
 <h2 id="stored"> stored</h2>
 <p>排序</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>mybatis传入字符串分割</title>
+      <link>https://fangweilong.github.io/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
+      <guid isPermaLink="false">/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
+      <category>mybatis</category>
+      <pubDate>Wed, 27 Jun 2018 16:20:22 GMT</pubDate>
+      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
+  #{item}
+&lt;/foreach&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！</p>
+<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -216,38 +248,6 @@ values
 <span>}</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>mybatis查询数据赋值到model里面为空</title>
-      <link>https://fangweilong.github.io/2018/05/04/mybatis%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E8%B5%8B%E5%80%BC%E5%88%B0model%E9%87%8C%E9%9D%A2%E4%B8%BA%E7%A9%BA/</link>
-      <guid isPermaLink="false">/2018/05/04/mybatis%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E8%B5%8B%E5%80%BC%E5%88%B0model%E9%87%8C%E9%9D%A2%E4%B8%BA%E7%A9%BA/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">mybatis查询数据赋值到model里面为空</source>
-      <category>mybatis</category>
-      <pubDate>Fri, 04 May 2018 14:31:01 GMT</pubDate>
-      <content:encoded><![CDATA[<p>因为数据多所以在查询中使用分页，但是发现直接执行sql语句是可以获取到数据，而list里面却是空的</p>
-<div><pre><code>&lt;select id=&quot;list&quot; resultType=&quot;DaliyDO&quot;&gt;
-        select a1.* from (
-            select
-                id ,rownum
-            from dual
-            &lt;where&gt;
-                &lt;if test=&quot;id != null and id != &#39;&#39;&quot;&gt; and id = #{id} &lt;/if&gt;
-            &lt;/where&gt;
-            &lt;choose&gt;
-                &lt;otherwise&gt;
-                    order by id desc
-                &lt;/otherwise&gt;
-            &lt;/choose&gt;
-            ) a1
-        &lt;if test=&quot;offset != null and limit != null&quot;&gt;
-            where rownum between #{offset} and #{offset}+#{limit}
-        &lt;/if&gt;
-	&lt;/select&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><p>原因是 resultType属性与model不对应。
-我们使用分页会在查询值加入一个rownum的值，这个值在我们建立model的时候是没有的，所以只要在model里面加上rownum这个属性就可以。
-当然你也可以使用别的分页方法</p>
-]]></content:encoded>
     </item>
     <item>
       <title>maven-dependencyManagement子模块不写版本号无法引入</title>
@@ -2745,6 +2745,37 @@ at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.post
 ]]></content:encoded>
     </item>
     <item>
+      <title>echarts词云会渲染两次</title>
+      <link>https://fangweilong.github.io/2019/12/13/echarts%E8%AF%8D%E4%BA%91%E4%BC%9A%E6%B8%B2%E6%9F%93%E4%B8%A4%E6%AC%A1/</link>
+      <guid isPermaLink="false">/2019/12/13/echarts%E8%AF%8D%E4%BA%91%E4%BC%9A%E6%B8%B2%E6%9F%93%E4%B8%A4%E6%AC%A1/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">echarts词云会渲染两次</source>
+      <category>javascript</category>
+      <pubDate>Fri, 13 Dec 2019 11:16:38 GMT</pubDate>
+      <content:encoded><![CDATA[<p>词云是比较容易出现这个问题的一个图表，所以拿词云做一个示例。</p>
+<p><img src="https://img-blog.csdnimg.cn/20191213110612320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+在上面这张图中可以比较清晰的看到有两个“数值模拟”的词云，在普通的业务逻辑中，我们只需要在代码中这样写</p>
+<div><pre><code>this.chart.setOption(this.config.option, true);
+</code></pre>
+<div><span>1</span><br></div></div><p>即可使图表只渲染一次。</p>
+<div><pre><code>	原理：
+		option:图表的配置项和数据
+		notMerge:可选，是否不跟之前设置的option进行合并，默认为false，即合并。
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>但是在我们的系统业务中，因为一些特殊的业务需求，导致这个function被调用了两次，但是又不能去掉调用。也都尝试过clear()或者resize()，都无法达到要求。
+后来猜测会不会是因为同时调用两次渲染导致echarts认为这是一次，所以加一个延迟加载的配置</p>
+<div><pre><code>this.chart.setOption(this.config.option, true，true);
+</code></pre>
+<div><span>1</span><br></div></div><p>发现成功了
+<img src="https://img-blog.csdnimg.cn/20191213111501697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+<div><pre><code>原理：
+	option:图表的配置项和数据
+	notMerge:可选，是否不跟之前设置的option进行合并，默认为false，即合并。（这里是导致二次渲染不成功的根本）
+	lazyUpdate:可选，在设置完option后是否不立即更新图表，默认为false，即立即更新。
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div>]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20191213110612320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
       <title>elementui-table默认勾选</title>
       <link>https://fangweilong.github.io/2019/11/30/elementui-table%E9%BB%98%E8%AE%A4%E5%8B%BE%E9%80%89/</link>
       <guid isPermaLink="false">/2019/11/30/elementui-table%E9%BB%98%E8%AE%A4%E5%8B%BE%E9%80%89/</guid>
@@ -2791,37 +2822,6 @@ $.each(vm.tableData, function (index, item) {
 <div><pre><code>&lt;el-input v-model=&quot;form.password&quot; show-password auto-complete=&quot;new-password&quot;&gt;&lt;/el-input&gt;
 </code></pre>
 <div><span>1</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>echarts词云会渲染两次</title>
-      <link>https://fangweilong.github.io/2019/12/13/echarts%E8%AF%8D%E4%BA%91%E4%BC%9A%E6%B8%B2%E6%9F%93%E4%B8%A4%E6%AC%A1/</link>
-      <guid isPermaLink="false">/2019/12/13/echarts%E8%AF%8D%E4%BA%91%E4%BC%9A%E6%B8%B2%E6%9F%93%E4%B8%A4%E6%AC%A1/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">echarts词云会渲染两次</source>
-      <category>javascript</category>
-      <pubDate>Fri, 13 Dec 2019 11:16:38 GMT</pubDate>
-      <content:encoded><![CDATA[<p>词云是比较容易出现这个问题的一个图表，所以拿词云做一个示例。</p>
-<p><img src="https://img-blog.csdnimg.cn/20191213110612320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-在上面这张图中可以比较清晰的看到有两个“数值模拟”的词云，在普通的业务逻辑中，我们只需要在代码中这样写</p>
-<div><pre><code>this.chart.setOption(this.config.option, true);
-</code></pre>
-<div><span>1</span><br></div></div><p>即可使图表只渲染一次。</p>
-<div><pre><code>	原理：
-		option:图表的配置项和数据
-		notMerge:可选，是否不跟之前设置的option进行合并，默认为false，即合并。
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>但是在我们的系统业务中，因为一些特殊的业务需求，导致这个function被调用了两次，但是又不能去掉调用。也都尝试过clear()或者resize()，都无法达到要求。
-后来猜测会不会是因为同时调用两次渲染导致echarts认为这是一次，所以加一个延迟加载的配置</p>
-<div><pre><code>this.chart.setOption(this.config.option, true，true);
-</code></pre>
-<div><span>1</span><br></div></div><p>发现成功了
-<img src="https://img-blog.csdnimg.cn/20191213111501697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<div><pre><code>原理：
-	option:图表的配置项和数据
-	notMerge:可选，是否不跟之前设置的option进行合并，默认为false，即合并。（这里是导致二次渲染不成功的根本）
-	lazyUpdate:可选，在设置完option后是否不立即更新图表，默认为false，即立即更新。
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div>]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20191213110612320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>vue+elementui打开弹窗，但是弹窗的接口只会初始调用一次</title>
@@ -4284,49 +4284,6 @@ on A.date=B.date
 ]]></content:encoded>
     </item>
     <item>
-      <title>oracle-full_join-多张表横向关联，拼接多张表所需字段</title>
-      <link>https://fangweilong.github.io/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</link>
-      <guid isPermaLink="false">/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">oracle-full_join-多张表横向关联，拼接多张表所需字段</source>
-      <category>oracle</category>
-      <pubDate>Fri, 12 Jul 2019 17:11:35 GMT</pubDate>
-      <content:encoded><![CDATA[<p>我们在sql中使用最多的关联查询无非是left join.right join,union,union all。
-这几种关联的区别和用法别的教程都太多了 这里不赘述.
-这里讲一下full join的用法
-1.需求
-需要做一张统计表 要能实现多级表头
-<img src="https://img-blog.csdnimg.cn/20190712165236680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-但是这个数据又不是一张表中存在的，分为了乔木，灌木，行道树，古树 四张表
-那么为了最简单有效办法就是考虑在sql中实现了</p>
-<p>2.实现
-直接上代码，有注意的地方会在sql中标出来</p>
-<div><pre><code>select * from 					--最外层一个select，如果不需要rownum可以把*替换成你想要的字段或者使用mybatis中的resultType指定映射字段
-	(select rownum rn,A.*    --这里需要 rownum 否则数据会是杂乱无章且重复的
-		from (
-			select catagoryA,count(catagory) amountA 
-				from 表A group by catagory order by amount
-		)A)B
-	FULL JOIN                 --以full join 拼接
-	(select rownum rn,C.* 
-		from (
-			select catagoryC,count(catagory) amountC 
-				from 表C group by catagory order by amount
-		)C)D
-	ON B.rn=D.rn						--直接以rn相等就行了
-	FULL JOIN
-	(select rownum rn,E.* 
-	from (
-		select catagoryE,count(catagory) amountE
-			from 表E group by catagory order by amount
-	)E)F
-	ON D.rn=F.rn or B.rn=F.rn   --注意 超过两张表的情况下on后面需要以（表数-2）个or拼接 
-	
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><p>注意：如果数据和表特别多，这种拼接写法会有很明显的性能问题</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20190712165236680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>oracle mybatis DATE无法存时分秒</title>
       <link>https://fangweilong.github.io/2018/05/29/oracle-mybatis-date%E6%97%A0%E6%B3%95%E5%AD%98%E6%97%B6%E5%88%86%E7%A7%92/</link>
       <guid isPermaLink="false">/2018/05/29/oracle-mybatis-date%E6%97%A0%E6%B3%95%E5%AD%98%E6%97%B6%E5%88%86%E7%A7%92/</guid>
@@ -4396,6 +4353,49 @@ values
 <div><pre><code>
 DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所以在使用的时候全部换成TIMESTAMP</code></pre>
 <div><span>1</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>oracle-full_join-多张表横向关联，拼接多张表所需字段</title>
+      <link>https://fangweilong.github.io/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</link>
+      <guid isPermaLink="false">/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">oracle-full_join-多张表横向关联，拼接多张表所需字段</source>
+      <category>oracle</category>
+      <pubDate>Fri, 12 Jul 2019 17:11:35 GMT</pubDate>
+      <content:encoded><![CDATA[<p>我们在sql中使用最多的关联查询无非是left join.right join,union,union all。
+这几种关联的区别和用法别的教程都太多了 这里不赘述.
+这里讲一下full join的用法
+1.需求
+需要做一张统计表 要能实现多级表头
+<img src="https://img-blog.csdnimg.cn/20190712165236680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+但是这个数据又不是一张表中存在的，分为了乔木，灌木，行道树，古树 四张表
+那么为了最简单有效办法就是考虑在sql中实现了</p>
+<p>2.实现
+直接上代码，有注意的地方会在sql中标出来</p>
+<div><pre><code>select * from 					--最外层一个select，如果不需要rownum可以把*替换成你想要的字段或者使用mybatis中的resultType指定映射字段
+	(select rownum rn,A.*    --这里需要 rownum 否则数据会是杂乱无章且重复的
+		from (
+			select catagoryA,count(catagory) amountA 
+				from 表A group by catagory order by amount
+		)A)B
+	FULL JOIN                 --以full join 拼接
+	(select rownum rn,C.* 
+		from (
+			select catagoryC,count(catagory) amountC 
+				from 表C group by catagory order by amount
+		)C)D
+	ON B.rn=D.rn						--直接以rn相等就行了
+	FULL JOIN
+	(select rownum rn,E.* 
+	from (
+		select catagoryE,count(catagory) amountE
+			from 表E group by catagory order by amount
+	)E)F
+	ON D.rn=F.rn or B.rn=F.rn   --注意 超过两张表的情况下on后面需要以（表数-2）个or拼接 
+	
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><p>注意：如果数据和表特别多，这种拼接写法会有很明显的性能问题</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20190712165236680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>oracle用户被锁</title>
@@ -5490,6 +5490,28 @@ Enter password for [remote_monitoring_user]:</p>
       <enclosure url="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
+      <title>wsl-debian10使用问题汇总</title>
+      <link>https://fangweilong.github.io/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <guid isPermaLink="false">/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">wsl-debian10使用问题汇总</source>
+      <category>wsl</category>
+      <pubDate>Fri, 18 Jun 2021 10:25:01 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="切换root"> 切换root</h2>
+<div><pre><code><span>sudo</span> <span>su</span> root
+</code></pre>
+<div><span>1</span><br></div></div><hr>
+<h2 id="访问window目录"> 访问window目录</h2>
+<div><pre><code><span>cd</span> /mnt
+</code></pre>
+<div><span>1</span><br></div></div><hr>
+<h2 id="could-not-open-lock-file-var-lib-apt-lists-lock-open-13-permission-denied"> Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)</h2>
+<p>使用root用户更新</p>
+<hr>
+<h2 id="编辑文件如sources-list没有权限"> 编辑文件如sources.list没有权限</h2>
+<p>切换root用户</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>myEclipse项目报错叉，但能正常运行</title>
       <link>https://fangweilong.github.io/2018/02/26/myeclipse%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E5%8F%89-%E4%BD%86%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C/</link>
       <guid isPermaLink="false">/2018/02/26/myeclipse%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E5%8F%89-%E4%BD%86%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C/</guid>
@@ -5518,28 +5540,6 @@ Enter password for [remote_monitoring_user]:</p>
 </code></pre>
 </div>]]></content:encoded>
       <enclosure url="http://img.blog.csdn.net/20180226143718167?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
-    </item>
-    <item>
-      <title>wsl-debian10使用问题汇总</title>
-      <link>https://fangweilong.github.io/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
-      <guid isPermaLink="false">/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">wsl-debian10使用问题汇总</source>
-      <category>wsl</category>
-      <pubDate>Fri, 18 Jun 2021 10:25:01 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="切换root"> 切换root</h2>
-<div><pre><code><span>sudo</span> <span>su</span> root
-</code></pre>
-<div><span>1</span><br></div></div><hr>
-<h2 id="访问window目录"> 访问window目录</h2>
-<div><pre><code><span>cd</span> /mnt
-</code></pre>
-<div><span>1</span><br></div></div><hr>
-<h2 id="could-not-open-lock-file-var-lib-apt-lists-lock-open-13-permission-denied"> Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)</h2>
-<p>使用root用户更新</p>
-<hr>
-<h2 id="编辑文件如sources-list没有权限"> 编辑文件如sources.list没有权限</h2>
-<p>切换root用户</p>
-]]></content:encoded>
     </item>
     <item>
       <title>idea关闭不必要的插件减少内存占用</title>
@@ -5602,6 +5602,18 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
       <enclosure url="https://z3.ax1x.com/2021/08/11/fUCSIJ.png" type="image/png"/>
     </item>
     <item>
+      <title>idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</title>
+      <link>https://fangweilong.github.io/2019/10/30/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</link>
+      <guid isPermaLink="false">/2019/10/30/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</source>
+      <category>idea</category>
+      <pubDate>Wed, 30 Oct 2019 10:08:59 GMT</pubDate>
+      <content:encoded><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+<p>把这两个勾选去掉</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
       <title>idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案</title>
       <link>https://fangweilong.github.io/2019/12/19/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
       <guid isPermaLink="false">/2019/12/19/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
@@ -5614,18 +5626,6 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
 如果是eclipse等，自行使用maven命令行安装</p>
 ]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20191219135916540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
-      <title>idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</title>
-      <link>https://fangweilong.github.io/2019/10/30/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</link>
-      <guid isPermaLink="false">/2019/10/30/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</source>
-      <category>idea</category>
-      <pubDate>Wed, 30 Oct 2019 10:08:59 GMT</pubDate>
-      <content:encoded><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<p>把这两个勾选去掉</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>idea更改缩进线颜色</title>
@@ -7112,14 +7112,14 @@ patch:
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Fri, 12 Nov 2021 04:45:13 GMT</pubDate>
+      <pubDate>Fri, 12 Nov 2021 09:36:37 GMT</pubDate>
     </item>
     <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Fri, 12 Nov 2021 04:45:13 GMT</pubDate>
+      <pubDate>Fri, 12 Nov 2021 09:36:37 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -7129,7 +7129,7 @@ patch:
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Fri, 12 Nov 2021 04:45:13 GMT</pubDate>
+      <pubDate>Fri, 12 Nov 2021 09:36:37 GMT</pubDate>
     </item>
   </channel>
 </rss>
