@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 19 Nov 2021 02:44:18 GMT</pubDate>
-    <lastBuildDate>Fri, 19 Nov 2021 02:44:18 GMT</lastBuildDate>
+    <pubDate>Fri, 19 Nov 2021 02:51:13 GMT</pubDate>
+    <lastBuildDate>Fri, 19 Nov 2021 02:51:13 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -34,8 +34,8 @@
     <category>navicat</category>
     <category>tomcat</category>
     <category>window</category>
-    <category>linux</category>
     <category>vuepress</category>
+    <category>linux</category>
     <category>git</category>
     <category>其它</category>
     <item>
@@ -67,24 +67,6 @@ UserDo get(@Param(&quot;id&quot;)String id, @Param(&quot;parentId&quot;)String p
 &lt;/select&gt;
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>mybatis传入字符串分割</title>
-      <link>https://fangweilong.github.io/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
-      <guid isPermaLink="false">/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
-      <category>mybatis</category>
-      <pubDate>Wed, 27 Jun 2018 16:20:22 GMT</pubDate>
-      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
-  #{item}
-&lt;/foreach&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！</p>
-<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
-]]></content:encoded>
     </item>
     <item>
       <title>mybatis使用枚举类 类型转换错误</title>
@@ -158,6 +140,24 @@ values
 <p>过滤器，满足条件的才能被通过。留下的元素都是满足条件的</p>
 <h2 id="stored"> stored</h2>
 <p>排序</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>mybatis传入字符串分割</title>
+      <link>https://fangweilong.github.io/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
+      <guid isPermaLink="false">/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
+      <category>mybatis</category>
+      <pubDate>Wed, 27 Jun 2018 16:20:22 GMT</pubDate>
+      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
+  #{item}
+&lt;/foreach&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！</p>
+<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -251,6 +251,31 @@ values
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>maven-install提示找不到pom</title>
+      <link>https://fangweilong.github.io/2021/06/25/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</link>
+      <guid isPermaLink="false">/2021/06/25/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">maven-install提示找不到pom</source>
+      <category>maven</category>
+      <pubDate>Fri, 25 Jun 2021 17:18:07 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="mvn-install"> mvn install</h2>
+<p>结果发现报错</p>
+<div><pre><code>The goal you specified requires a project to execute but there is no POM <span>in</span> this directory
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="思考"> 思考</h2>
+<ul>
+<li>这不对啊！其他同事的电脑上直接安装成功啊。这不科学。</li>
+<li>跟我maven版本有关？换个版本试试。失败...</li>
+<li>jdk有关？我也用的是openjdk11啊</li>
+</ul>
+<h2 id="解决"> 解决</h2>
+<p>结果无意中打开cmd执行了一下 我靠为什么成功了？
+<img src="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" alt="成功示例" /></p>
+<h2 id="powershell和cmd"> powershell和cmd</h2>
+<p>powershell百分百失败，cmd可以成功。我也不知道为啥</p>
+]]></content:encoded>
+      <enclosure url="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" type="image/png"/>
+    </item>
+    <item>
       <title>maven-dependencyManagement子模块不写版本号无法引入</title>
       <link>https://fangweilong.github.io/2019/12/23/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</link>
       <guid isPermaLink="false">/2019/12/23/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</guid>
@@ -294,31 +319,6 @@ values
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div>]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20191223094842701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
-      <title>maven-install提示找不到pom</title>
-      <link>https://fangweilong.github.io/2021/06/25/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</link>
-      <guid isPermaLink="false">/2021/06/25/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">maven-install提示找不到pom</source>
-      <category>maven</category>
-      <pubDate>Fri, 25 Jun 2021 17:18:07 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="mvn-install"> mvn install</h2>
-<p>结果发现报错</p>
-<div><pre><code>The goal you specified requires a project to execute but there is no POM <span>in</span> this directory
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="思考"> 思考</h2>
-<ul>
-<li>这不对啊！其他同事的电脑上直接安装成功啊。这不科学。</li>
-<li>跟我maven版本有关？换个版本试试。失败...</li>
-<li>jdk有关？我也用的是openjdk11啊</li>
-</ul>
-<h2 id="解决"> 解决</h2>
-<p>结果无意中打开cmd执行了一下 我靠为什么成功了？
-<img src="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" alt="成功示例" /></p>
-<h2 id="powershell和cmd"> powershell和cmd</h2>
-<p>powershell百分百失败，cmd可以成功。我也不知道为啥</p>
-]]></content:encoded>
-      <enclosure url="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" type="image/png"/>
     </item>
     <item>
       <title>maven添加ojdbc6.jar(11g)包</title>
@@ -1679,138 +1679,6 @@ A模块中我定义了一个@Component
 ]]></content:encoded>
     </item>
     <item>
-      <title>springcloud-gateway-获取入参</title>
-      <link>https://fangweilong.github.io/2019/12/27/springcloud-gateway-%E8%8E%B7%E5%8F%96%E5%85%A5%E5%8F%82/</link>
-      <guid isPermaLink="false">/2019/12/27/springcloud-gateway-%E8%8E%B7%E5%8F%96%E5%85%A5%E5%8F%82/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">springcloud-gateway-获取入参</source>
-      <category>spring cloud</category>
-      <pubDate>Fri, 27 Dec 2019 11:46:16 GMT</pubDate>
-      <content:encoded><![CDATA[<p><strong>在获取入参的时候，get方式的接口可以直接获取到，但是post形式的body获取以后会造成无法再使用，所以必须经过一层转换以后再读取。</strong></p>
-<p>直接上代码</p>
-<div><pre><code>
-@Component
-public class CacheBodyGatewayFilter implements GlobalFilter, Ordered {
-    public static final String CACHE_REQUEST_BODY_OBJECT_KEY = &quot;cachedRequestBodyObject&quot;;
-
-    @Override
-    public Mono&lt;Void&gt; filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        if (exchange.getRequest().getHeaders().getContentType() == null) {
-            return chain.filter(exchange);
-        } else {
-            return DataBufferUtils.join(exchange.getRequest().getBody())
-                    .flatMap(dataBuffer -&gt; {
-                        DataBufferUtils.retain(dataBuffer);
-                        Flux&lt;DataBuffer&gt; cachedFlux = Flux
-                                .defer(() -&gt; Flux.just(dataBuffer.slice(0, dataBuffer.readableByteCount())));
-                        ServerHttpRequest mutatedRequest = new ServerHttpRequestDecorator(
-                                exchange.getRequest()) {
-                            @Override
-                            public Flux&lt;DataBuffer&gt; getBody() {
-                                return cachedFlux;
-                            }
-
-                        };
-                        exchange.getAttributes().put(CACHE_REQUEST_BODY_OBJECT_KEY, cachedFlux);
-
-                        return chain.filter(exchange.mutate().request(mutatedRequest).build());
-                    });
-        }
-    }
-
-    @Override
-    public int getOrder() {
-    	//这个代表了执行顺序，值越小越先执行 
-        return Ordered.HIGHEST_PRECEDENCE;
-    }
-}
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br></div></div><p>接下来是读取方法</p>
-<div><pre><code>
-@Component
-public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
-    public static final String CACHE_REQUEST_BODY_OBJECT_KEY = &quot;cachedRequestBodyObject&quot;;
-
-
-    @Override
-    public Mono&lt;Void&gt; filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        ServerHttpRequest request = exchange.getRequest();
-
-        //Record only http requests (including https)
-        String schema = request.getURI().getScheme();
-        if ((!&quot;http&quot;.equals(schema) &amp;&amp; !&quot;https&quot;.equals(schema))) {
-            return chain.filter(exchange);
-        }
-		//我自定义的实体类，如果不需要 你可以直接删掉
-        LogDTO logDTO = new LogDTO();
-        logDTO.setPath(request.getURI().getPath());
-        logDTO.setQueryParams(request.getQueryParams());
-        logDTO.setMethod(request.getMethod().name());
-        logDTO.setIp(request.getRemoteAddress().getHostName());
-        logDTO.setUserAgent(request.getHeaders().getFirst(&quot;User-Agent&quot;));
-        exchange.getAttributes().put(&quot;startTime&quot;, System.currentTimeMillis());
-
-
-        //获取request body
-        Flux&lt;DataBuffer&gt; cachedBody = exchange.getAttribute(CACHE_REQUEST_BODY_OBJECT_KEY);
-        if(cachedBody!=null){
-            String raw = toRaw(cachedBody);
-            logDTO.setParams(raw);
-        }
-
-
-        return returnMono(chain, exchange, logDTO);
-    }
-
-    private Mono&lt;Void&gt; returnMono(GatewayFilterChain chain, ServerWebExchange exchange, LogDTO logDTO) {
-        return chain.filter(exchange).then(Mono.fromRunnable(() -&gt; {
-            Long startTime = exchange.getAttribute(&quot;startTime&quot;);
-            if (startTime != null) {
-                long executeTime = (System.currentTimeMillis() - startTime);
-                logDTO.setTime(executeTime);
-                logDTO.setResultCode(Objects.requireNonNull(exchange.getResponse().getStatusCode()).value());
-                StaticLog.info(&quot;=================================&quot;);
-                StaticLog.info(&quot;请求方式：[{}]&quot;, logDTO.getMethod());
-                StaticLog.info(&quot;路径：[{}]&quot;, logDTO.getPath());
-                StaticLog.info(&quot;IP：[{}]&quot;, logDTO.getIp());
-                StaticLog.info(&quot;UserAgent：[{}]&quot;, logDTO.getUserAgent());
-                StaticLog.info(&quot;请求格式[{}]&quot;, exchange.getResponse().getHeaders().getContentType());
-                StaticLog.info(&quot;时长：[{}]&quot;, executeTime);
-                StaticLog.info(&quot;code：[{}]&quot;, logDTO.getResultCode());
-                StaticLog.info(&quot;body：[{}]&quot;, logDTO.getParams());
-            }
-        }));
-    }
-
-    @Override
-    public int getOrder() {
-    	//这个filter的执行顺序要在 CacheBodyGatewayFilter 类之后 否则找不到缓存的值
-        return Ordered.HIGHEST_PRECEDENCE+1;
-    }
-
-    /**
-     * 用于获取请求参数
-     *
-     * @param body
-     * @return
-     */
-    private static String toRaw(Flux&lt;DataBuffer&gt; body) {
-        AtomicReference&lt;String&gt; rawRef = new AtomicReference&lt;&gt;();
-        body.subscribe(buffer -&gt; {
-            byte[] bytes = new byte[buffer.readableByteCount()];
-            buffer.read(bytes);
-            DataBufferUtils.release(buffer);
-            rawRef.set(Strings.fromUTF8ByteArray(bytes));
-        });
-        return rawRef.get();
-    }
-
-}
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
       <title>springcloud-gateway整合swagger3.0.0</title>
       <link>https://fangweilong.github.io/2020/12/30/springcloud-gateway%E6%95%B4%E5%90%88swagger3-0-0/</link>
       <guid isPermaLink="false">/2020/12/30/springcloud-gateway%E6%95%B4%E5%90%88swagger3-0-0/</guid>
@@ -2007,6 +1875,138 @@ public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
 <p>找不到中文包的设置方式，虽然说都能看得懂，但是还是想能自己设置语言。</p>
 ]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20201230165529317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
+      <title>springcloud-gateway-获取入参</title>
+      <link>https://fangweilong.github.io/2019/12/27/springcloud-gateway-%E8%8E%B7%E5%8F%96%E5%85%A5%E5%8F%82/</link>
+      <guid isPermaLink="false">/2019/12/27/springcloud-gateway-%E8%8E%B7%E5%8F%96%E5%85%A5%E5%8F%82/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">springcloud-gateway-获取入参</source>
+      <category>spring cloud</category>
+      <pubDate>Fri, 27 Dec 2019 11:46:16 GMT</pubDate>
+      <content:encoded><![CDATA[<p><strong>在获取入参的时候，get方式的接口可以直接获取到，但是post形式的body获取以后会造成无法再使用，所以必须经过一层转换以后再读取。</strong></p>
+<p>直接上代码</p>
+<div><pre><code>
+@Component
+public class CacheBodyGatewayFilter implements GlobalFilter, Ordered {
+    public static final String CACHE_REQUEST_BODY_OBJECT_KEY = &quot;cachedRequestBodyObject&quot;;
+
+    @Override
+    public Mono&lt;Void&gt; filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        if (exchange.getRequest().getHeaders().getContentType() == null) {
+            return chain.filter(exchange);
+        } else {
+            return DataBufferUtils.join(exchange.getRequest().getBody())
+                    .flatMap(dataBuffer -&gt; {
+                        DataBufferUtils.retain(dataBuffer);
+                        Flux&lt;DataBuffer&gt; cachedFlux = Flux
+                                .defer(() -&gt; Flux.just(dataBuffer.slice(0, dataBuffer.readableByteCount())));
+                        ServerHttpRequest mutatedRequest = new ServerHttpRequestDecorator(
+                                exchange.getRequest()) {
+                            @Override
+                            public Flux&lt;DataBuffer&gt; getBody() {
+                                return cachedFlux;
+                            }
+
+                        };
+                        exchange.getAttributes().put(CACHE_REQUEST_BODY_OBJECT_KEY, cachedFlux);
+
+                        return chain.filter(exchange.mutate().request(mutatedRequest).build());
+                    });
+        }
+    }
+
+    @Override
+    public int getOrder() {
+    	//这个代表了执行顺序，值越小越先执行 
+        return Ordered.HIGHEST_PRECEDENCE;
+    }
+}
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br></div></div><p>接下来是读取方法</p>
+<div><pre><code>
+@Component
+public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
+    public static final String CACHE_REQUEST_BODY_OBJECT_KEY = &quot;cachedRequestBodyObject&quot;;
+
+
+    @Override
+    public Mono&lt;Void&gt; filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        ServerHttpRequest request = exchange.getRequest();
+
+        //Record only http requests (including https)
+        String schema = request.getURI().getScheme();
+        if ((!&quot;http&quot;.equals(schema) &amp;&amp; !&quot;https&quot;.equals(schema))) {
+            return chain.filter(exchange);
+        }
+		//我自定义的实体类，如果不需要 你可以直接删掉
+        LogDTO logDTO = new LogDTO();
+        logDTO.setPath(request.getURI().getPath());
+        logDTO.setQueryParams(request.getQueryParams());
+        logDTO.setMethod(request.getMethod().name());
+        logDTO.setIp(request.getRemoteAddress().getHostName());
+        logDTO.setUserAgent(request.getHeaders().getFirst(&quot;User-Agent&quot;));
+        exchange.getAttributes().put(&quot;startTime&quot;, System.currentTimeMillis());
+
+
+        //获取request body
+        Flux&lt;DataBuffer&gt; cachedBody = exchange.getAttribute(CACHE_REQUEST_BODY_OBJECT_KEY);
+        if(cachedBody!=null){
+            String raw = toRaw(cachedBody);
+            logDTO.setParams(raw);
+        }
+
+
+        return returnMono(chain, exchange, logDTO);
+    }
+
+    private Mono&lt;Void&gt; returnMono(GatewayFilterChain chain, ServerWebExchange exchange, LogDTO logDTO) {
+        return chain.filter(exchange).then(Mono.fromRunnable(() -&gt; {
+            Long startTime = exchange.getAttribute(&quot;startTime&quot;);
+            if (startTime != null) {
+                long executeTime = (System.currentTimeMillis() - startTime);
+                logDTO.setTime(executeTime);
+                logDTO.setResultCode(Objects.requireNonNull(exchange.getResponse().getStatusCode()).value());
+                StaticLog.info(&quot;=================================&quot;);
+                StaticLog.info(&quot;请求方式：[{}]&quot;, logDTO.getMethod());
+                StaticLog.info(&quot;路径：[{}]&quot;, logDTO.getPath());
+                StaticLog.info(&quot;IP：[{}]&quot;, logDTO.getIp());
+                StaticLog.info(&quot;UserAgent：[{}]&quot;, logDTO.getUserAgent());
+                StaticLog.info(&quot;请求格式[{}]&quot;, exchange.getResponse().getHeaders().getContentType());
+                StaticLog.info(&quot;时长：[{}]&quot;, executeTime);
+                StaticLog.info(&quot;code：[{}]&quot;, logDTO.getResultCode());
+                StaticLog.info(&quot;body：[{}]&quot;, logDTO.getParams());
+            }
+        }));
+    }
+
+    @Override
+    public int getOrder() {
+    	//这个filter的执行顺序要在 CacheBodyGatewayFilter 类之后 否则找不到缓存的值
+        return Ordered.HIGHEST_PRECEDENCE+1;
+    }
+
+    /**
+     * 用于获取请求参数
+     *
+     * @param body
+     * @return
+     */
+    private static String toRaw(Flux&lt;DataBuffer&gt; body) {
+        AtomicReference&lt;String&gt; rawRef = new AtomicReference&lt;&gt;();
+        body.subscribe(buffer -&gt; {
+            byte[] bytes = new byte[buffer.readableByteCount()];
+            buffer.read(bytes);
+            DataBufferUtils.release(buffer);
+            rawRef.set(Strings.fromUTF8ByteArray(bytes));
+        });
+        return rawRef.get();
+    }
+
+}
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>org.apache.jasper.JasperExceptionUnabletocompileclassforJSP</title>
@@ -2608,54 +2608,6 @@ OK这样就可以了。</p>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>org.springframework.beans.factory.BeanInitializationExceptionCouldnotloadproperties;</title>
-      <link>https://fangweilong.github.io/2018/01/24/org-springframework-beans-factory-beaninitializationexceptioncouldnotloadproperties/</link>
-      <guid isPermaLink="false">/2018/01/24/org-springframework-beans-factory-beaninitializationexceptioncouldnotloadproperties/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">org.springframework.beans.factory.BeanInitializationExceptionCouldnotloadproperties;</source>
-      <category>java</category>
-      <pubDate>Wed, 24 Jan 2018 14:21:35 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="基本报错信息表现为"> 基本报错信息表现为:</h2>
-<div><pre><code>严重: Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
-org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/db.properties]
-at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:147)
-at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
-at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:669)
-at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:461)
-at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
-at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
-at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
-at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5118)
-at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5634)
-at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
-at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1571)
-at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1561)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-at java.lang.Thread.run(Thread.java:745)
-Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/db.properties]
-at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:140)
-at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:143)
-at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:98)
-at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:175)
-at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:156)
-at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:137)
-... 15 more
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><h3 id="可能性1-没有引入数据源"> 可能性1:没有引入数据源</h3>
-<p>在applicationContext.xml添加数据源   (请根据自己的项目引用)</p>
-<div><pre><code>&lt;context:property-placeholder location=&quot;classpath:db.properties&quot;/&gt;
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="可能性2-引入了数据源但是找不到文件"> 可能性2：引入了数据源但是找不到文件</h3>
-<p>这个问题目前我只在idea中遇到,myEclipse中没出现过。</p>
-<p>找到项目的资源文件(resources),查看是否是这种图标<p><img src="https://img-blog.csdn.net/20180124141515461?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>如果不是则在文件上右键→ Mark Dirextory as</p>
-<img src="https://img-blog.csdn.net/20180124141744475?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">
-<p>将文件属性设置为 Resources Root 后重新编译项目重试(我这边已经改过了，所以在上面看不到有Resources Root属性)</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>使用java生成微信随机加好友的链接</title>
       <link>https://fangweilong.github.io/2019/08/14/%E4%BD%BF%E7%94%A8java%E7%94%9F%E6%88%90%E5%BE%AE%E4%BF%A1%E9%9A%8F%E6%9C%BA%E5%8A%A0%E5%A5%BD%E5%8F%8B%E7%9A%84%E9%93%BE%E6%8E%A5/</link>
       <guid isPermaLink="false">/2019/08/14/%E4%BD%BF%E7%94%A8java%E7%94%9F%E6%88%90%E5%BE%AE%E4%BF%A1%E9%9A%8F%E6%9C%BA%E5%8A%A0%E5%A5%BD%E5%8F%8B%E7%9A%84%E9%93%BE%E6%8E%A5/</guid>
@@ -2720,6 +2672,54 @@ at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.post
 <img src="https://img-blog.csdnimg.cn/20190814105936985.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
 ]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/20190814105615981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
+      <title>org.springframework.beans.factory.BeanInitializationExceptionCouldnotloadproperties;</title>
+      <link>https://fangweilong.github.io/2018/01/24/org-springframework-beans-factory-beaninitializationexceptioncouldnotloadproperties/</link>
+      <guid isPermaLink="false">/2018/01/24/org-springframework-beans-factory-beaninitializationexceptioncouldnotloadproperties/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">org.springframework.beans.factory.BeanInitializationExceptionCouldnotloadproperties;</source>
+      <category>java</category>
+      <pubDate>Wed, 24 Jan 2018 14:21:35 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="基本报错信息表现为"> 基本报错信息表现为:</h2>
+<div><pre><code>严重: Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/db.properties]
+at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:147)
+at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:669)
+at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:461)
+at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:389)
+at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:294)
+at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:112)
+at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5118)
+at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5634)
+at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1571)
+at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1561)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/db.properties]
+at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:140)
+at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:143)
+at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:98)
+at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:175)
+at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:156)
+at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:137)
+... 15 more
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><h3 id="可能性1-没有引入数据源"> 可能性1:没有引入数据源</h3>
+<p>在applicationContext.xml添加数据源   (请根据自己的项目引用)</p>
+<div><pre><code>&lt;context:property-placeholder location=&quot;classpath:db.properties&quot;/&gt;
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="可能性2-引入了数据源但是找不到文件"> 可能性2：引入了数据源但是找不到文件</h3>
+<p>这个问题目前我只在idea中遇到,myEclipse中没出现过。</p>
+<p>找到项目的资源文件(resources),查看是否是这种图标<p><img src="https://img-blog.csdn.net/20180124141515461?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<p>如果不是则在文件上右键→ Mark Dirextory as</p>
+<img src="https://img-blog.csdn.net/20180124141744475?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">
+<p>将文件属性设置为 Resources Root 后重新编译项目重试(我这边已经改过了，所以在上面看不到有Resources Root属性)</p>
+]]></content:encoded>
     </item>
     <item>
       <title>ajax返回成功却进入了error</title>
@@ -3140,37 +3140,6 @@ https://www.javaear.com/question/44394573.html</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>一组数差距过大的问题：symbolsize计算公式</title>
-      <link>https://fangweilong.github.io/2021/04/02/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98-symbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/</link>
-      <guid isPermaLink="false">/2021/04/02/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98-symbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">一组数差距过大的问题：symbolsize计算公式</source>
-      <category>javascript</category>
-      <pubDate>Fri, 02 Apr 2021 16:48:56 GMT</pubDate>
-      <content:encoded><![CDATA[<h3 id="解决的问题"> 解决的问题</h3>
-<p>当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了</p>
-<div><pre><code><span>/**
- * symbolsize计算公式
- * minSize：最小的尺寸
- * coefficientSize：系数，自己定义
- * currentValue：当前symbol的值
- * maxValue：所有symbol的最大值
- * minValue：所有symbol的最小值
- * defaultValue：计算失败时的默认值，可不传。默认20
- */</span>
-<span>function</span> <span>symbolSizeCalcu</span><span>(</span><span>minSize<span>,</span> coefficientSize<span>,</span> currentValue<span>,</span> maxValue<span>,</span> minValue<span>,</span> defaultValue</span><span>)</span> <span>{</span>
-    <span>let</span> result<span>=</span><span>20</span><span>;</span>
-	<span>//TODO 这边没写传参为空的判断，有需要请自己加上</span>
-    <span>if</span> <span>(</span>maxValue <span>-</span> minValue <span>&lt;=</span> <span>0</span><span>)</span> <span>{</span>
-        result <span>=</span> defaultValue <span>?</span> defaultValue <span>:</span> <span>20</span><span>;</span>
-    <span>}</span> <span>else</span> <span>{</span>
-        result <span>=</span> minSize <span>+</span> coefficientSize <span>*</span> <span>(</span>currentValue <span>-</span> minValue<span>)</span> <span>/</span> <span>(</span>maxValue <span>-</span> minValue<span>)</span>
-    <span>}</span>
-    <span>return</span> result<span>;</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
       <title>微信浏览器访问ajax接口十秒钟未响应自动重发</title>
       <link>https://fangweilong.github.io/2018/11/08/%E5%BE%AE%E4%BF%A1%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AEajax%E6%8E%A5%E5%8F%A3%E5%8D%81%E7%A7%92%E9%92%9F%E6%9C%AA%E5%93%8D%E5%BA%94%E8%87%AA%E5%8A%A8%E9%87%8D%E5%8F%91/</link>
       <guid isPermaLink="false">/2018/11/08/%E5%BE%AE%E4%BF%A1%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AEajax%E6%8E%A5%E5%8F%A3%E5%8D%81%E7%A7%92%E9%92%9F%E6%9C%AA%E5%93%8D%E5%BA%94%E8%87%AA%E5%8A%A8%E9%87%8D%E5%8F%91/</guid>
@@ -3220,6 +3189,37 @@ https://www.javaear.com/question/44394573.html</p>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>代码仅供参考，请根据实际业务增加判断逻辑</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>一组数差距过大的问题：symbolsize计算公式</title>
+      <link>https://fangweilong.github.io/2021/04/02/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98-symbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/</link>
+      <guid isPermaLink="false">/2021/04/02/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98-symbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">一组数差距过大的问题：symbolsize计算公式</source>
+      <category>javascript</category>
+      <pubDate>Fri, 02 Apr 2021 16:48:56 GMT</pubDate>
+      <content:encoded><![CDATA[<h3 id="解决的问题"> 解决的问题</h3>
+<p>当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了</p>
+<div><pre><code><span>/**
+ * symbolsize计算公式
+ * minSize：最小的尺寸
+ * coefficientSize：系数，自己定义
+ * currentValue：当前symbol的值
+ * maxValue：所有symbol的最大值
+ * minValue：所有symbol的最小值
+ * defaultValue：计算失败时的默认值，可不传。默认20
+ */</span>
+<span>function</span> <span>symbolSizeCalcu</span><span>(</span><span>minSize<span>,</span> coefficientSize<span>,</span> currentValue<span>,</span> maxValue<span>,</span> minValue<span>,</span> defaultValue</span><span>)</span> <span>{</span>
+    <span>let</span> result<span>=</span><span>20</span><span>;</span>
+	<span>//TODO 这边没写传参为空的判断，有需要请自己加上</span>
+    <span>if</span> <span>(</span>maxValue <span>-</span> minValue <span>&lt;=</span> <span>0</span><span>)</span> <span>{</span>
+        result <span>=</span> defaultValue <span>?</span> defaultValue <span>:</span> <span>20</span><span>;</span>
+    <span>}</span> <span>else</span> <span>{</span>
+        result <span>=</span> minSize <span>+</span> coefficientSize <span>*</span> <span>(</span>currentValue <span>-</span> minValue<span>)</span> <span>/</span> <span>(</span>maxValue <span>-</span> minValue<span>)</span>
+    <span>}</span>
+    <span>return</span> result<span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>手机社会化分享到qq好友、qq空间、微信、微信朋友圈、微博等(区分浏览器)</title>
@@ -3754,6 +3754,37 @@ What this means is that Alpine based images are only released for early access r
 ]]></content:encoded>
     </item>
     <item>
+      <title>PostgreSQL在where条件中使用判断条件</title>
+      <link>https://fangweilong.github.io/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</link>
+      <guid isPermaLink="false">/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">PostgreSQL在where条件中使用判断条件</source>
+      <category>postgres</category>
+      <pubDate>Fri, 02 Jul 2021 15:49:03 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="postgresql在where条件中使用判断条件"> PostgreSQL在where条件中使用判断条件</h1>
+<h2 id="需求"> 需求</h2>
+<p>我们平时查询数据是使用的mybatis，所以是这么写的</p>
+<div><pre><code><span>&lt;</span><span>select</span> id<span>=</span><span>"selectTable"</span> resultType<span>=</span><span>"java.util.Map"</span><span>></span>
+    <span>select</span> <span>*</span> <span>from</span> <span>Table</span>
+        <span>&lt;</span><span>where</span><span>></span>
+            <span>&lt;</span><span>if</span> test<span>=</span><span>"keyword!=null and keyword!=''"</span><span>></span>
+                <span>and</span> keyword<span>=</span><span>#{keyword}</span>
+            <span>&lt;</span><span>/</span><span>if</span><span>></span>
+        <span>&lt;</span><span>/</span><span>where</span><span>></span>
+
+<span>&lt;</span><span>select</span><span>></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>但是项目中有个使用动态sql直接查询的需求，在不能使用mybatis等解析查询语句的情况下该怎么实现呢？</p>
+<h2 id="使用case-when"> 使用case when</h2>
+<div><pre><code><span>select</span> <span>*</span> <span>from</span> <span>Table</span> <span>where</span>  <span>(</span><span>case</span> <span>when</span> 值<span>=</span><span>''</span> <span>then</span> <span>1</span><span>=</span><span>1</span> <span>else</span> <span>Table</span><span>.</span>字段<span>=</span>值 <span>end</span> <span>)</span>
+</code></pre>
+<div><span>1</span><br></div></div><div><p>提示</p>
+<div><pre><code>这里的 == case when == 不是使用的 == case 字段 when ==
+要使用 == case when 字段='' ==
+</code></pre>
+</div></div>
+]]></content:encoded>
+    </item>
+    <item>
       <title>PostgreSQL使用数组类型</title>
       <link>https://fangweilong.github.io/2020/09/01/postgresql%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B/</link>
       <guid isPermaLink="false">/2020/09/01/postgresql%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B/</guid>
@@ -4031,37 +4062,6 @@ What this means is that Alpine based images are only released for early access r
       <enclosure url="https://img-blog.csdnimg.cn/20200901095305595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70#pic_center" type="image/"/>
     </item>
     <item>
-      <title>PostgreSQL在where条件中使用判断条件</title>
-      <link>https://fangweilong.github.io/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</link>
-      <guid isPermaLink="false">/2021/07/02/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">PostgreSQL在where条件中使用判断条件</source>
-      <category>postgres</category>
-      <pubDate>Fri, 02 Jul 2021 15:49:03 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="postgresql在where条件中使用判断条件"> PostgreSQL在where条件中使用判断条件</h1>
-<h2 id="需求"> 需求</h2>
-<p>我们平时查询数据是使用的mybatis，所以是这么写的</p>
-<div><pre><code><span>&lt;</span><span>select</span> id<span>=</span><span>"selectTable"</span> resultType<span>=</span><span>"java.util.Map"</span><span>></span>
-    <span>select</span> <span>*</span> <span>from</span> <span>Table</span>
-        <span>&lt;</span><span>where</span><span>></span>
-            <span>&lt;</span><span>if</span> test<span>=</span><span>"keyword!=null and keyword!=''"</span><span>></span>
-                <span>and</span> keyword<span>=</span><span>#{keyword}</span>
-            <span>&lt;</span><span>/</span><span>if</span><span>></span>
-        <span>&lt;</span><span>/</span><span>where</span><span>></span>
-
-<span>&lt;</span><span>select</span><span>></span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>但是项目中有个使用动态sql直接查询的需求，在不能使用mybatis等解析查询语句的情况下该怎么实现呢？</p>
-<h2 id="使用case-when"> 使用case when</h2>
-<div><pre><code><span>select</span> <span>*</span> <span>from</span> <span>Table</span> <span>where</span>  <span>(</span><span>case</span> <span>when</span> 值<span>=</span><span>''</span> <span>then</span> <span>1</span><span>=</span><span>1</span> <span>else</span> <span>Table</span><span>.</span>字段<span>=</span>值 <span>end</span> <span>)</span>
-</code></pre>
-<div><span>1</span><br></div></div><div><p>提示</p>
-<div><pre><code>这里的 == case when == 不是使用的 == case 字段 when ==
-要使用 == case when 字段='' ==
-</code></pre>
-</div></div>
-]]></content:encoded>
-    </item>
-    <item>
       <title>PostgreSQL连接数过多</title>
       <link>https://fangweilong.github.io/2021/06/28/postgresql%E8%BF%9E%E6%8E%A5%E6%95%B0%E8%BF%87%E5%A4%9A/</link>
       <guid isPermaLink="false">/2021/06/28/postgresql%E8%BF%9E%E6%8E%A5%E6%95%B0%E8%BF%87%E5%A4%9A/</guid>
@@ -4285,6 +4285,49 @@ on A.date=B.date
 ]]></content:encoded>
     </item>
     <item>
+      <title>oracle-full_join-多张表横向关联，拼接多张表所需字段</title>
+      <link>https://fangweilong.github.io/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</link>
+      <guid isPermaLink="false">/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">oracle-full_join-多张表横向关联，拼接多张表所需字段</source>
+      <category>oracle</category>
+      <pubDate>Fri, 12 Jul 2019 17:11:35 GMT</pubDate>
+      <content:encoded><![CDATA[<p>我们在sql中使用最多的关联查询无非是left join.right join,union,union all。
+这几种关联的区别和用法别的教程都太多了 这里不赘述.
+这里讲一下full join的用法
+1.需求
+需要做一张统计表 要能实现多级表头
+<img src="https://img-blog.csdnimg.cn/20190712165236680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+但是这个数据又不是一张表中存在的，分为了乔木，灌木，行道树，古树 四张表
+那么为了最简单有效办法就是考虑在sql中实现了</p>
+<p>2.实现
+直接上代码，有注意的地方会在sql中标出来</p>
+<div><pre><code>select * from 					--最外层一个select，如果不需要rownum可以把*替换成你想要的字段或者使用mybatis中的resultType指定映射字段
+	(select rownum rn,A.*    --这里需要 rownum 否则数据会是杂乱无章且重复的
+		from (
+			select catagoryA,count(catagory) amountA 
+				from 表A group by catagory order by amount
+		)A)B
+	FULL JOIN                 --以full join 拼接
+	(select rownum rn,C.* 
+		from (
+			select catagoryC,count(catagory) amountC 
+				from 表C group by catagory order by amount
+		)C)D
+	ON B.rn=D.rn						--直接以rn相等就行了
+	FULL JOIN
+	(select rownum rn,E.* 
+	from (
+		select catagoryE,count(catagory) amountE
+			from 表E group by catagory order by amount
+	)E)F
+	ON D.rn=F.rn or B.rn=F.rn   --注意 超过两张表的情况下on后面需要以（表数-2）个or拼接 
+	
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><p>注意：如果数据和表特别多，这种拼接写法会有很明显的性能问题</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20190712165236680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
       <title>oracle mybatis DATE无法存时分秒</title>
       <link>https://fangweilong.github.io/2018/05/29/oracle-mybatis-date%E6%97%A0%E6%B3%95%E5%AD%98%E6%97%B6%E5%88%86%E7%A7%92/</link>
       <guid isPermaLink="false">/2018/05/29/oracle-mybatis-date%E6%97%A0%E6%B3%95%E5%AD%98%E6%97%B6%E5%88%86%E7%A7%92/</guid>
@@ -4356,49 +4399,6 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
 <div><span>1</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>oracle-full_join-多张表横向关联，拼接多张表所需字段</title>
-      <link>https://fangweilong.github.io/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</link>
-      <guid isPermaLink="false">/2019/07/12/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">oracle-full_join-多张表横向关联，拼接多张表所需字段</source>
-      <category>oracle</category>
-      <pubDate>Fri, 12 Jul 2019 17:11:35 GMT</pubDate>
-      <content:encoded><![CDATA[<p>我们在sql中使用最多的关联查询无非是left join.right join,union,union all。
-这几种关联的区别和用法别的教程都太多了 这里不赘述.
-这里讲一下full join的用法
-1.需求
-需要做一张统计表 要能实现多级表头
-<img src="https://img-blog.csdnimg.cn/20190712165236680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-但是这个数据又不是一张表中存在的，分为了乔木，灌木，行道树，古树 四张表
-那么为了最简单有效办法就是考虑在sql中实现了</p>
-<p>2.实现
-直接上代码，有注意的地方会在sql中标出来</p>
-<div><pre><code>select * from 					--最外层一个select，如果不需要rownum可以把*替换成你想要的字段或者使用mybatis中的resultType指定映射字段
-	(select rownum rn,A.*    --这里需要 rownum 否则数据会是杂乱无章且重复的
-		from (
-			select catagoryA,count(catagory) amountA 
-				from 表A group by catagory order by amount
-		)A)B
-	FULL JOIN                 --以full join 拼接
-	(select rownum rn,C.* 
-		from (
-			select catagoryC,count(catagory) amountC 
-				from 表C group by catagory order by amount
-		)C)D
-	ON B.rn=D.rn						--直接以rn相等就行了
-	FULL JOIN
-	(select rownum rn,E.* 
-	from (
-		select catagoryE,count(catagory) amountE
-			from 表E group by catagory order by amount
-	)E)F
-	ON D.rn=F.rn or B.rn=F.rn   --注意 超过两张表的情况下on后面需要以（表数-2）个or拼接 
-	
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br></div></div><p>注意：如果数据和表特别多，这种拼接写法会有很明显的性能问题</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20190712165236680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>oracle用户被锁</title>
       <link>https://fangweilong.github.io/2019/07/12/oracle%E7%94%A8%E6%88%B7%E8%A2%AB%E9%94%81/</link>
       <guid isPermaLink="false">/2019/07/12/oracle%E7%94%A8%E6%88%B7%E8%A2%AB%E9%94%81/</guid>
@@ -4420,25 +4420,6 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
 <div><pre><code>alter user system account unlock;
 </code></pre>
 <div><span>1</span><br></div></div><p>不输入 ; 会不执行 不知道为啥 有了解的烦请留言解答</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>oracle空间字段在java中能查询出来并返回给接口</title>
-      <link>https://fangweilong.github.io/2019/07/24/oracle%E7%A9%BA%E9%97%B4%E5%AD%97%E6%AE%B5%E5%9C%A8java%E4%B8%AD%E8%83%BD%E6%9F%A5%E8%AF%A2%E5%87%BA%E6%9D%A5%E5%B9%B6%E8%BF%94%E5%9B%9E%E7%BB%99%E6%8E%A5%E5%8F%A3/</link>
-      <guid isPermaLink="false">/2019/07/24/oracle%E7%A9%BA%E9%97%B4%E5%AD%97%E6%AE%B5%E5%9C%A8java%E4%B8%AD%E8%83%BD%E6%9F%A5%E8%AF%A2%E5%87%BA%E6%9D%A5%E5%B9%B6%E8%BF%94%E5%9B%9E%E7%BB%99%E6%8E%A5%E5%8F%A3/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">oracle空间字段在java中能查询出来并返回给接口</source>
-      <category>oracle</category>
-      <pubDate>Wed, 24 Jul 2019 09:24:18 GMT</pubDate>
-      <content:encoded><![CDATA[<p>oracle虽然也支持空间信息，但是要做很多配置。比如安装sde等，不如pgsql等内置支持。
-以下方法只在第三方支持都安装好的情况下适用</p>
-<p>Entity:</p>
-<div><pre><code>priavte String shape;
-</code></pre>
-<div><span>1</span><br></div></div><p>java里面直接用String类型接就可以了</p>
-<p>XML</p>
-<div><pre><code>select  sdo_util.to_gmlgeometry(shape) shape from table
-</code></pre>
-<div><span>1</span><br></div></div><p>这样会把shape转换为GML格式的数据传出来</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -4493,6 +4474,25 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
 }
 </code></pre>
 </div><p>这样写 外网的端口被写死了 还没找出可以动态的配法 不过可以临时顶用</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>oracle空间字段在java中能查询出来并返回给接口</title>
+      <link>https://fangweilong.github.io/2019/07/24/oracle%E7%A9%BA%E9%97%B4%E5%AD%97%E6%AE%B5%E5%9C%A8java%E4%B8%AD%E8%83%BD%E6%9F%A5%E8%AF%A2%E5%87%BA%E6%9D%A5%E5%B9%B6%E8%BF%94%E5%9B%9E%E7%BB%99%E6%8E%A5%E5%8F%A3/</link>
+      <guid isPermaLink="false">/2019/07/24/oracle%E7%A9%BA%E9%97%B4%E5%AD%97%E6%AE%B5%E5%9C%A8java%E4%B8%AD%E8%83%BD%E6%9F%A5%E8%AF%A2%E5%87%BA%E6%9D%A5%E5%B9%B6%E8%BF%94%E5%9B%9E%E7%BB%99%E6%8E%A5%E5%8F%A3/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">oracle空间字段在java中能查询出来并返回给接口</source>
+      <category>oracle</category>
+      <pubDate>Wed, 24 Jul 2019 09:24:18 GMT</pubDate>
+      <content:encoded><![CDATA[<p>oracle虽然也支持空间信息，但是要做很多配置。比如安装sde等，不如pgsql等内置支持。
+以下方法只在第三方支持都安装好的情况下适用</p>
+<p>Entity:</p>
+<div><pre><code>priavte String shape;
+</code></pre>
+<div><span>1</span><br></div></div><p>java里面直接用String类型接就可以了</p>
+<p>XML</p>
+<div><pre><code>select  sdo_util.to_gmlgeometry(shape) shape from table
+</code></pre>
+<div><span>1</span><br></div></div><p>这样会把shape转换为GML格式的数据传出来</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -4959,6 +4959,31 @@ http {
 ]]></content:encoded>
     </item>
     <item>
+      <title>Elastic_search-报错汇总</title>
+      <link>https://fangweilong.github.io/2021/07/12/elastic-search-%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/</link>
+      <guid isPermaLink="false">/2021/07/12/elastic-search-%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">Elastic_search-报错汇总</source>
+      <category>Elastic Search</category>
+      <pubDate>Mon, 12 Jul 2021 15:53:26 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="字段聚合"> 字段聚合</h2>
+<div><p>注意</p>
+<p>Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [] in order to load field data by uninverting the inverted index. Note that this can use significant memory.</p>
+</div>
+<h3 id="解决办法"> 解决办法</h3>
+<p>添加fileddata。但是不推荐，占用内存太大。</p>
+<div><pre><code>POST 索引名/_mapping
+    <span>{</span>
+    <span>"properties"</span><span>:</span> <span>{</span>
+        <span>"字段名"</span><span>:</span> <span>{</span>
+            <span>"type"</span><span>:</span> <span>"text"</span>,
+            <span>"fielddata"</span>:true
+        <span>}</span>
+    <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>Elastic_search-字段指定自带分词器</title>
       <link>https://fangweilong.github.io/2020/08/12/elastic-search-%E5%AD%97%E6%AE%B5%E6%8C%87%E5%AE%9A%E8%87%AA%E5%B8%A6%E5%88%86%E8%AF%8D%E5%99%A8/</link>
       <guid isPermaLink="false">/2020/08/12/elastic-search-%E5%AD%97%E6%AE%B5%E6%8C%87%E5%AE%9A%E8%87%AA%E5%B8%A6%E5%88%86%E8%AF%8D%E5%99%A8/</guid>
@@ -5043,31 +5068,6 @@ http {
 <span>}</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>Elastic_search-报错汇总</title>
-      <link>https://fangweilong.github.io/2021/07/12/elastic-search-%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/</link>
-      <guid isPermaLink="false">/2021/07/12/elastic-search-%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">Elastic_search-报错汇总</source>
-      <category>Elastic Search</category>
-      <pubDate>Mon, 12 Jul 2021 15:53:26 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="字段聚合"> 字段聚合</h2>
-<div><p>注意</p>
-<p>Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [] in order to load field data by uninverting the inverted index. Note that this can use significant memory.</p>
-</div>
-<h3 id="解决办法"> 解决办法</h3>
-<p>添加fileddata。但是不推荐，占用内存太大。</p>
-<div><pre><code>POST 索引名/_mapping
-    <span>{</span>
-    <span>"properties"</span><span>:</span> <span>{</span>
-        <span>"字段名"</span><span>:</span> <span>{</span>
-            <span>"type"</span><span>:</span> <span>"text"</span>,
-            <span>"fielddata"</span>:true
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>Elastic_search-添加帐号密码</title>
@@ -5491,28 +5491,6 @@ Enter password for [remote_monitoring_user]:</p>
       <enclosure url="https://img-blog.csdnimg.cn/20190904175954589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
-      <title>wsl-debian10使用问题汇总</title>
-      <link>https://fangweilong.github.io/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
-      <guid isPermaLink="false">/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">wsl-debian10使用问题汇总</source>
-      <category>wsl</category>
-      <pubDate>Fri, 18 Jun 2021 10:25:01 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="切换root"> 切换root</h2>
-<div><pre><code><span>sudo</span> <span>su</span> root
-</code></pre>
-<div><span>1</span><br></div></div><hr>
-<h2 id="访问window目录"> 访问window目录</h2>
-<div><pre><code><span>cd</span> /mnt
-</code></pre>
-<div><span>1</span><br></div></div><hr>
-<h2 id="could-not-open-lock-file-var-lib-apt-lists-lock-open-13-permission-denied"> Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)</h2>
-<p>使用root用户更新</p>
-<hr>
-<h2 id="编辑文件如sources-list没有权限"> 编辑文件如sources.list没有权限</h2>
-<p>切换root用户</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>myEclipse项目报错叉，但能正常运行</title>
       <link>https://fangweilong.github.io/2018/02/26/myeclipse%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E5%8F%89-%E4%BD%86%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C/</link>
       <guid isPermaLink="false">/2018/02/26/myeclipse%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E5%8F%89-%E4%BD%86%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C/</guid>
@@ -5541,6 +5519,28 @@ Enter password for [remote_monitoring_user]:</p>
 </code></pre>
 </div>]]></content:encoded>
       <enclosure url="http://img.blog.csdn.net/20180226143718167?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
+    </item>
+    <item>
+      <title>wsl-debian10使用问题汇总</title>
+      <link>https://fangweilong.github.io/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <guid isPermaLink="false">/2021/06/18/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">wsl-debian10使用问题汇总</source>
+      <category>wsl</category>
+      <pubDate>Fri, 18 Jun 2021 10:25:01 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="切换root"> 切换root</h2>
+<div><pre><code><span>sudo</span> <span>su</span> root
+</code></pre>
+<div><span>1</span><br></div></div><hr>
+<h2 id="访问window目录"> 访问window目录</h2>
+<div><pre><code><span>cd</span> /mnt
+</code></pre>
+<div><span>1</span><br></div></div><hr>
+<h2 id="could-not-open-lock-file-var-lib-apt-lists-lock-open-13-permission-denied"> Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)</h2>
+<p>使用root用户更新</p>
+<hr>
+<h2 id="编辑文件如sources-list没有权限"> 编辑文件如sources.list没有权限</h2>
+<p>切换root用户</p>
+]]></content:encoded>
     </item>
     <item>
       <title>idea关闭不必要的插件减少内存占用</title>
@@ -6063,56 +6063,6 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
       <enclosure url="https://img-blog.csdnimg.cn/20190111130559489.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
-      <title>centos7挂载新硬盘到/home分区下</title>
-      <link>https://fangweilong.github.io/2021/11/19/centos7%E6%8C%82%E8%BD%BD%E6%96%B0%E7%A1%AC%E7%9B%98%E5%88%B0%E6%97%A7%E5%88%86%E5%8C%BA%E4%B8%8B/</link>
-      <guid isPermaLink="false">/2021/11/19/centos7%E6%8C%82%E8%BD%BD%E6%96%B0%E7%A1%AC%E7%9B%98%E5%88%B0%E6%97%A7%E5%88%86%E5%8C%BA%E4%B8%8B/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">centos7挂载新硬盘到/home分区下</source>
-      <category>linux</category>
-      <pubDate>Fri, 19 Nov 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="查看磁盘空间"> 查看磁盘空间</h2>
-<div><pre><code><span>df</span> -h
-</code></pre>
-<div><span>1</span><br></div></div><p>通过命令可以看到我/home磁盘下的空间已经占用了80%。所以我新加了一块2T的盘上去</p>
-<p><a href="https://imgtu.com/i/I75oQg" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I75oQg.png" alt="I75oQg.png" /></a></p>
-<h2 id="查看硬盘"> 查看硬盘</h2>
-<div><pre><code><span>fdisk</span> -l
-</code></pre>
-<div><span>1</span><br></div></div><p>可以看到我这里有一块2T的硬盘，接下来我们通过一些命令直接挂载到/home下面去，<em>无需重启服务器</em>。</p>
-<p><a href="https://imgtu.com/i/I7IXBd" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7IXBd.png" alt="I7IXBd.png" /></a></p>
-<h2 id="创建分区"> 创建分区</h2>
-<div><pre><code><span>fdisk</span> /dev/sdb
-</code></pre>
-<div><span>1</span><br></div></div><p>输入命令后请根据我截图中的提示输入。</p>
-<p><a href="https://imgtu.com/i/I7TLTA" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7TLTA.png" alt="I7TLTA.png" /></a></p>
-<h2 id="建立物理卷-pv"> 建立物理卷(PV)</h2>
-<div><pre><code> pvcreate /dev/sdb1
-</code></pre>
-<div><span>1</span><br></div></div><p><a href="https://imgtu.com/i/I77Sl8" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77Sl8.png" alt="I77Sl8.png" /></a></p>
-<h2 id="查看原有vg"> 查看原有VG</h2>
-<div><pre><code>vgdisplay
-</code></pre>
-<div><span>1</span><br></div></div><p><a href="https://imgtu.com/i/I77DAA" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77DAA.png" alt="I77DAA.png" /></a></p>
-<h2 id="将pv加入到原有vg中"> 将PV加入到原有VG中</h2>
-<div><pre><code>vgextend centos<span>(</span>这个名字使用上一步的vg name<span>)</span> /dev/sdb1
-</code></pre>
-<div><span>1</span><br></div></div><p><a href="https://imgtu.com/i/I77h7j" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77h7j.png" alt="I77h7j.png" /></a></p>
-<h2 id="调整空间"> 调整空间</h2>
-<div><pre><code>lvextend -L +2048G /dev/mapper/centos-home
-</code></pre>
-<div><span>1</span><br></div></div><p>注意我这里输了两次，因为我第一次写错了空间大小。注意合理分配你的空间</p>
-<p><a href="https://imgtu.com/i/I77xE9" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77xE9.png" alt="I77xE9.png" /></a></p>
-<p><em>/dev/mapper/centos-home</em>可以通过<strong>df -h</strong>找到</p>
-<p><a href="https://imgtu.com/i/I7bCIs" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7bCIs.png" alt="I7bCIs.png" /></a></p>
-<h2 id="使修改生效"> 使修改生效</h2>
-<div><pre><code>xfs_growfs /dev/mapper/centos-home
-</code></pre>
-<div><span>1</span><br></div></div><p>注意这里的等待时间跟你机器有关，我执行了大概10秒左右。耐心等待完成。</p>
-<h2 id="查看修改结果"> 查看修改结果</h2>
-<p><a href="https://imgtu.com/i/I7qFTH" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7qFTH.png" alt="I7qFTH.png" /></a></p>
-]]></content:encoded>
-      <enclosure url="https://z3.ax1x.com/2021/11/19/I75oQg.png" type="image/png"/>
-    </item>
-    <item>
       <title>vuepress中markdown各种用法</title>
       <link>https://fangweilong.github.io/2021/07/02/vuepress%E4%B8%ADmarkdown%E5%90%84%E7%A7%8D%E7%94%A8%E6%B3%95/</link>
       <guid isPermaLink="false">/2021/07/02/vuepress%E4%B8%ADmarkdown%E5%90%84%E7%A7%8D%E7%94%A8%E6%B3%95/</guid>
@@ -6201,6 +6151,74 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
 <p>这是一个详情块，在 IE / Edge 中不生效</p>
 </details>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>centos7挂载新硬盘到/home分区下</title>
+      <link>https://fangweilong.github.io/2021/11/19/centos7%E6%8C%82%E8%BD%BD%E6%96%B0%E7%A1%AC%E7%9B%98%E5%88%B0%E6%97%A7%E5%88%86%E5%8C%BA%E4%B8%8B/</link>
+      <guid isPermaLink="false">/2021/11/19/centos7%E6%8C%82%E8%BD%BD%E6%96%B0%E7%A1%AC%E7%9B%98%E5%88%B0%E6%97%A7%E5%88%86%E5%8C%BA%E4%B8%8B/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">centos7挂载新硬盘到/home分区下</source>
+      <category>linux</category>
+      <pubDate>Fri, 19 Nov 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="挂载空间"> 挂载空间</h2>
+<h3 id="查看磁盘空间"> 查看磁盘空间</h3>
+<div><pre><code><span>df</span> -h
+</code></pre>
+<div><span>1</span><br></div></div><p>通过命令可以看到我/home磁盘下的空间已经占用了80%。所以我新加了一块2T的盘上去</p>
+<p><a href="https://imgtu.com/i/I75oQg" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I75oQg.png" alt="I75oQg.png" /></a></p>
+<h3 id="查看硬盘"> 查看硬盘</h3>
+<div><pre><code><span>fdisk</span> -l
+</code></pre>
+<div><span>1</span><br></div></div><p>可以看到我这里有一块2T的硬盘，接下来我们通过一些命令直接挂载到/home下面去，<em>无需重启服务器</em>。</p>
+<p><a href="https://imgtu.com/i/I7IXBd" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7IXBd.png" alt="I7IXBd.png" /></a></p>
+<h3 id="创建分区"> 创建分区</h3>
+<div><pre><code><span>fdisk</span> /dev/sdb
+</code></pre>
+<div><span>1</span><br></div></div><p>输入命令后请根据我截图中的提示输入。</p>
+<p><a href="https://imgtu.com/i/I7TLTA" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7TLTA.png" alt="I7TLTA.png" /></a></p>
+<h3 id="建立物理卷-pv"> 建立物理卷(PV)</h3>
+<div><pre><code> pvcreate /dev/sdb1
+</code></pre>
+<div><span>1</span><br></div></div><p><a href="https://imgtu.com/i/I77Sl8" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77Sl8.png" alt="I77Sl8.png" /></a></p>
+<h3 id="查看原有vg"> 查看原有VG</h3>
+<div><pre><code>vgdisplay
+</code></pre>
+<div><span>1</span><br></div></div><p><a href="https://imgtu.com/i/I77DAA" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77DAA.png" alt="I77DAA.png" /></a></p>
+<h3 id="将pv加入到原有vg中"> 将PV加入到原有VG中</h3>
+<div><pre><code>vgextend centos<span>(</span>这个名字使用上一步的vg name<span>)</span> /dev/sdb1
+</code></pre>
+<div><span>1</span><br></div></div><p><a href="https://imgtu.com/i/I77h7j" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77h7j.png" alt="I77h7j.png" /></a></p>
+<h3 id="调整空间"> 调整空间</h3>
+<div><pre><code>lvextend -L +2048G /dev/mapper/centos-home
+</code></pre>
+<div><span>1</span><br></div></div><p>注意我这里输了两次，因为我第一次写错了空间大小。注意合理分配你的空间</p>
+<p><a href="https://imgtu.com/i/I77xE9" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77xE9.png" alt="I77xE9.png" /></a></p>
+<p><em>/dev/mapper/centos-home</em>可以通过<strong>df -h</strong>找到</p>
+<p><a href="https://imgtu.com/i/I7bCIs" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7bCIs.png" alt="I7bCIs.png" /></a></p>
+<h3 id="使修改生效"> 使修改生效</h3>
+<div><pre><code>xfs_growfs /dev/mapper/centos-home
+</code></pre>
+<div><span>1</span><br></div></div><p>注意这里的等待时间跟你机器有关，我执行了大概10秒左右。耐心等待完成。</p>
+<h3 id="查看修改结果"> 查看修改结果</h3>
+<p><a href="https://imgtu.com/i/I7qFTH" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7qFTH.png" alt="I7qFTH.png" /></a></p>
+<hr>
+<h2 id="取消空间"> 取消空间</h2>
+<h3 id="取消分配的空间"> 取消分配的空间</h3>
+<div><pre><code>lvreduce -L -50G /dev/mapper/centos-home
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="取消分区"> 取消分区</h3>
+<div><pre><code>vgreduce centos /dev/sdb1
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="移除硬盘"> 移除硬盘</h3>
+<div><pre><code>pvremove /dev/sdb1
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="更新分区"> 更新分区</h3>
+<div><pre><code>partprobe
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="加载配置容量"> 加载配置容量</h3>
+<div><pre><code>xfs_growfs  /dev/mapper/centos-home
+</code></pre>
+<div><span>1</span><br></div></div>]]></content:encoded>
+      <enclosure url="https://z3.ax1x.com/2021/11/19/I75oQg.png" type="image/png"/>
     </item>
     <item>
       <title>powershell安装oh-my-posh进行增强和美化</title>
@@ -6501,79 +6519,6 @@ puma<span>[</span><span>'port'</span><span>]</span> <span>=</span> <span>8080</s
 <p>使用过程中请注意项目中使用的版本，有些参数在新版中才能使用。
 如有不明白的欢迎留言讨论。</p>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>rime-weasel输入法调教</title>
-      <link>https://fangweilong.github.io/2021/10/26/rime-weasel%E8%BE%93%E5%85%A5%E6%B3%95%E8%B0%83%E6%95%99/</link>
-      <guid isPermaLink="false">/2021/10/26/rime-weasel%E8%BE%93%E5%85%A5%E6%B3%95%E8%B0%83%E6%95%99/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">rime-weasel输入法调教</source>
-      <category>其它</category>
-      <pubDate>Tue, 26 Oct 2021 10:50:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="官网"> 官网</h2>
-<p><a href="https://github.com/rime/weasel" target="_blank" rel="noopener noreferrer">github</a></p>
-<h2 id="用户数据文件夹"> 用户数据文件夹</h2>
-<p>C:\Users${user}\AppData\Roaming\Rime</p>
-<h2 id="文件结构"> 文件结构</h2>
-<h3 id="统一标识"> 统一标识</h3>
-<p>├── default.custom.yaml # 全局配置</br>
-├── squirrel.custom.yaml # 外观定制</br>
-├── custom_phrase.txt # 个人短语定制</br>
-├── &lt;词库名&gt;.userdb # 记录用户用字习惯中的文件夹（自动生成）</br>
-├── installation.yaml # 安装信息</br>
-├── user.yaml # 用户状态信息</br>
-├── build # 部署输入方案时产生文件所在的文件夹</br>
-├── &lt;方案标识&gt;.schema.yaml # 预设输入方案</br>
-├── &lt;方案标识&gt;.custom.yaml # 用户对预设输入方案的定制信息</br>
-├── &lt;词库名&gt;.dict.yaml # 主词库</br>
-├── &lt;词库名&gt;.extended.dict.yaml # 副词库</br>
-├── &lt;词库名&gt;.cn_en.dict.yaml # 副词库 - 中英文混合短语</br>
-├── &lt;词库名&gt;.hanyu.dict.yaml # 副词库 - 汉语大词典</br>
-├── &lt;词库名&gt;.poetry.dict.yaml # 副词库 - 唐诗宋词、千家集、楚辞、诗经</br>
-└── &lt;词库名&gt;.sgmain.dict.yaml # 副词库 - 电脑软件分类、计算机术语、全国省地市区县地名、穴位、西药药名、经典小说、音乐专业词库、网络流行新词</br></p>
-<h4 id="default-custom-yaml"> default.custom.yaml</h4>
-<div><pre><code># 全局样式、功能的设置
-patch:
-  schema_list: # 输入方案列表
-    - schema: luna_pinyin # 全拼
-  switcher:
-    hotkeys: #调出方案菜单
-      - &quot;Control+grave&quot; # 注意是control+`，不是command+`
-    save_options:
-      - full_shape
-      - ascii_punct
-      - simplification
-      - zh_hans
-      - emoji_suggestion
-
-  # 以下软件默认英文模式
-  app_options:
-    gvim.exe:
-      ascii_mode: true
-    tcmatch64.exe:
-      ascii_mode: true
-    totalcmd64.exe:
-      ascii_mode: true
-    findandrunrobot.exe:
-      ascii_mode: true
-
-  style: # 样式
-    horizontal: false #横排显示
-    font_face: &quot;JetBrainsMonoMedium NF&quot; #字体
-    font_point: 20 #字体大小
-    inline_preedit: true # 嵌入式候选窗单行显示
-  menu:
-    page_size: 9 # 候选字每页个数
-  ascii_composer: # 设置caps、shift、control等键的作用
-    good_old_caps_lock: true # 若为true，caps只切换大小写
-    switch_key:
-      Shift_L: commit_code # 左shift直接上屏
-      Shift_R: commit_code # 右shift直接上屏
-      Control_L: noop # 左control不做操作
-      Control_R: noop # 右control不做操作
-      Caps_Lock: commit_code # 大写键直接上屏
-      Eisu_toggle: clear # esc清除当前输入内容
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>中国城市中心点坐标</title>
@@ -6939,6 +6884,86 @@ patch:
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br><span>111</span><br><span>112</span><br><span>113</span><br><span>114</span><br><span>115</span><br><span>116</span><br><span>117</span><br><span>118</span><br><span>119</span><br><span>120</span><br><span>121</span><br><span>122</span><br><span>123</span><br><span>124</span><br><span>125</span><br><span>126</span><br><span>127</span><br><span>128</span><br><span>129</span><br><span>130</span><br><span>131</span><br><span>132</span><br><span>133</span><br><span>134</span><br><span>135</span><br><span>136</span><br><span>137</span><br><span>138</span><br><span>139</span><br><span>140</span><br><span>141</span><br><span>142</span><br><span>143</span><br><span>144</span><br><span>145</span><br><span>146</span><br><span>147</span><br><span>148</span><br><span>149</span><br><span>150</span><br><span>151</span><br><span>152</span><br><span>153</span><br><span>154</span><br><span>155</span><br><span>156</span><br><span>157</span><br><span>158</span><br><span>159</span><br><span>160</span><br><span>161</span><br><span>162</span><br><span>163</span><br><span>164</span><br><span>165</span><br><span>166</span><br><span>167</span><br><span>168</span><br><span>169</span><br><span>170</span><br><span>171</span><br><span>172</span><br><span>173</span><br><span>174</span><br><span>175</span><br><span>176</span><br><span>177</span><br><span>178</span><br><span>179</span><br><span>180</span><br><span>181</span><br><span>182</span><br><span>183</span><br><span>184</span><br><span>185</span><br><span>186</span><br><span>187</span><br><span>188</span><br><span>189</span><br><span>190</span><br><span>191</span><br><span>192</span><br><span>193</span><br><span>194</span><br><span>195</span><br><span>196</span><br><span>197</span><br><span>198</span><br><span>199</span><br><span>200</span><br><span>201</span><br><span>202</span><br><span>203</span><br><span>204</span><br><span>205</span><br><span>206</span><br><span>207</span><br><span>208</span><br><span>209</span><br><span>210</span><br><span>211</span><br><span>212</span><br><span>213</span><br><span>214</span><br><span>215</span><br><span>216</span><br><span>217</span><br><span>218</span><br><span>219</span><br><span>220</span><br><span>221</span><br><span>222</span><br><span>223</span><br><span>224</span><br><span>225</span><br><span>226</span><br><span>227</span><br><span>228</span><br><span>229</span><br><span>230</span><br><span>231</span><br><span>232</span><br><span>233</span><br><span>234</span><br><span>235</span><br><span>236</span><br><span>237</span><br><span>238</span><br><span>239</span><br><span>240</span><br><span>241</span><br><span>242</span><br><span>243</span><br><span>244</span><br><span>245</span><br><span>246</span><br><span>247</span><br><span>248</span><br><span>249</span><br><span>250</span><br><span>251</span><br><span>252</span><br><span>253</span><br><span>254</span><br><span>255</span><br><span>256</span><br><span>257</span><br><span>258</span><br><span>259</span><br><span>260</span><br><span>261</span><br><span>262</span><br><span>263</span><br><span>264</span><br><span>265</span><br><span>266</span><br><span>267</span><br><span>268</span><br><span>269</span><br><span>270</span><br><span>271</span><br><span>272</span><br><span>273</span><br><span>274</span><br><span>275</span><br><span>276</span><br><span>277</span><br><span>278</span><br><span>279</span><br><span>280</span><br><span>281</span><br><span>282</span><br><span>283</span><br><span>284</span><br><span>285</span><br><span>286</span><br><span>287</span><br><span>288</span><br><span>289</span><br><span>290</span><br><span>291</span><br><span>292</span><br><span>293</span><br><span>294</span><br><span>295</span><br><span>296</span><br><span>297</span><br><span>298</span><br><span>299</span><br><span>300</span><br><span>301</span><br><span>302</span><br><span>303</span><br><span>304</span><br><span>305</span><br><span>306</span><br><span>307</span><br><span>308</span><br><span>309</span><br><span>310</span><br><span>311</span><br><span>312</span><br><span>313</span><br><span>314</span><br><span>315</span><br><span>316</span><br><span>317</span><br><span>318</span><br><span>319</span><br><span>320</span><br><span>321</span><br><span>322</span><br><span>323</span><br><span>324</span><br><span>325</span><br><span>326</span><br><span>327</span><br><span>328</span><br><span>329</span><br><span>330</span><br><span>331</span><br><span>332</span><br><span>333</span><br><span>334</span><br><span>335</span><br><span>336</span><br><span>337</span><br><span>338</span><br><span>339</span><br><span>340</span><br><span>341</span><br><span>342</span><br><span>343</span><br><span>344</span><br><span>345</span><br><span>346</span><br><span>347</span><br><span>348</span><br><span>349</span><br><span>350</span><br><span>351</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>rime-weasel输入法调教</title>
+      <link>https://fangweilong.github.io/2021/10/26/rime-weasel%E8%BE%93%E5%85%A5%E6%B3%95%E8%B0%83%E6%95%99/</link>
+      <guid isPermaLink="false">/2021/10/26/rime-weasel%E8%BE%93%E5%85%A5%E6%B3%95%E8%B0%83%E6%95%99/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">rime-weasel输入法调教</source>
+      <category>其它</category>
+      <pubDate>Tue, 26 Oct 2021 10:50:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="官网"> 官网</h2>
+<p><a href="https://github.com/rime/weasel" target="_blank" rel="noopener noreferrer">github</a></p>
+<h2 id="用户数据文件夹"> 用户数据文件夹</h2>
+<p>C:\Users${user}\AppData\Roaming\Rime</p>
+<h2 id="文件结构"> 文件结构</h2>
+<h3 id="统一标识"> 统一标识</h3>
+<p>├── default.custom.yaml # 全局配置</br>
+├── squirrel.custom.yaml # 外观定制</br>
+├── custom_phrase.txt # 个人短语定制</br>
+├── &lt;词库名&gt;.userdb # 记录用户用字习惯中的文件夹（自动生成）</br>
+├── installation.yaml # 安装信息</br>
+├── user.yaml # 用户状态信息</br>
+├── build # 部署输入方案时产生文件所在的文件夹</br>
+├── &lt;方案标识&gt;.schema.yaml # 预设输入方案</br>
+├── &lt;方案标识&gt;.custom.yaml # 用户对预设输入方案的定制信息</br>
+├── &lt;词库名&gt;.dict.yaml # 主词库</br>
+├── &lt;词库名&gt;.extended.dict.yaml # 副词库</br>
+├── &lt;词库名&gt;.cn_en.dict.yaml # 副词库 - 中英文混合短语</br>
+├── &lt;词库名&gt;.hanyu.dict.yaml # 副词库 - 汉语大词典</br>
+├── &lt;词库名&gt;.poetry.dict.yaml # 副词库 - 唐诗宋词、千家集、楚辞、诗经</br>
+└── &lt;词库名&gt;.sgmain.dict.yaml # 副词库 - 电脑软件分类、计算机术语、全国省地市区县地名、穴位、西药药名、经典小说、音乐专业词库、网络流行新词</br></p>
+<h4 id="default-custom-yaml"> default.custom.yaml</h4>
+<div><pre><code># 全局样式、功能的设置
+patch:
+  schema_list: # 输入方案列表
+    - schema: luna_pinyin # 全拼
+  switcher:
+    hotkeys: #调出方案菜单
+      - &quot;Control+grave&quot; # 注意是control+`，不是command+`
+    save_options:
+      - full_shape
+      - ascii_punct
+      - simplification
+      - zh_hans
+      - emoji_suggestion
+
+  # 以下软件默认英文模式
+  app_options:
+    gvim.exe:
+      ascii_mode: true
+    tcmatch64.exe:
+      ascii_mode: true
+    totalcmd64.exe:
+      ascii_mode: true
+    findandrunrobot.exe:
+      ascii_mode: true
+
+  style: # 样式
+    horizontal: false #横排显示
+    font_face: &quot;JetBrainsMonoMedium NF&quot; #字体
+    font_point: 20 #字体大小
+    inline_preedit: true # 嵌入式候选窗单行显示
+  menu:
+    page_size: 9 # 候选字每页个数
+  ascii_composer: # 设置caps、shift、control等键的作用
+    good_old_caps_lock: true # 若为true，caps只切换大小写
+    switch_key:
+      Shift_L: commit_code # 左shift直接上屏
+      Shift_R: commit_code # 右shift直接上屏
+      Control_L: noop # 左control不做操作
+      Control_R: noop # 右control不做操作
+      Caps_Lock: commit_code # 大写键直接上屏
+      Eisu_toggle: clear # esc清除当前输入内容
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>房伟龙的日常</title>
+      <link>https://fangweilong.github.io/</link>
+      <guid isPermaLink="false">/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
+      <pubDate>Fri, 19 Nov 2021 02:50:34 GMT</pubDate>
+    </item>
+    <item>
       <title>开发中常用的工具归类</title>
       <link>https://fangweilong.github.io/2018/03/22/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</link>
       <guid isPermaLink="false">/2018/03/22/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</guid>
@@ -7026,28 +7051,14 @@ patch:
 ]]></content:encoded>
     </item>
     <item>
-      <title>房伟龙的日常</title>
-      <link>https://fangweilong.github.io/</link>
-      <guid isPermaLink="false">/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Fri, 19 Nov 2021 02:43:31 GMT</pubDate>
-    </item>
-    <item>
       <title>幻灯片页</title>
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Fri, 19 Nov 2021 02:43:31 GMT</pubDate>
+      <pubDate>Fri, 19 Nov 2021 02:50:34 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
-    </item>
-    <item>
-      <title>项目主页</title>
-      <link>https://fangweilong.github.io/home/</link>
-      <guid isPermaLink="false">/home/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Fri, 19 Nov 2021 02:43:31 GMT</pubDate>
     </item>
     <item>
       <title>个人信息</title>
@@ -7181,6 +7192,13 @@ patch:
 <p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
 ]]></content:encoded>
       <enclosure url="https://z3.ax1x.com/2021/09/22/4NGaVK.png" type="image/png"/>
+    </item>
+    <item>
+      <title>项目主页</title>
+      <link>https://fangweilong.github.io/home/</link>
+      <guid isPermaLink="false">/home/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
+      <pubDate>Fri, 19 Nov 2021 02:50:34 GMT</pubDate>
     </item>
   </channel>
 </rss>
