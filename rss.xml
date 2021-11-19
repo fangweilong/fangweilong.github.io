@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 12 Nov 2021 09:37:20 GMT</pubDate>
-    <lastBuildDate>Fri, 12 Nov 2021 09:37:20 GMT</lastBuildDate>
+    <pubDate>Fri, 19 Nov 2021 02:44:18 GMT</pubDate>
+    <lastBuildDate>Fri, 19 Nov 2021 02:44:18 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -34,6 +34,7 @@
     <category>navicat</category>
     <category>tomcat</category>
     <category>window</category>
+    <category>linux</category>
     <category>vuepress</category>
     <category>git</category>
     <category>其它</category>
@@ -66,6 +67,24 @@ UserDo get(@Param(&quot;id&quot;)String id, @Param(&quot;parentId&quot;)String p
 &lt;/select&gt;
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>mybatis传入字符串分割</title>
+      <link>https://fangweilong.github.io/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
+      <guid isPermaLink="false">/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
+      <category>mybatis</category>
+      <pubDate>Wed, 27 Jun 2018 16:20:22 GMT</pubDate>
+      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
+  #{item}
+&lt;/foreach&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！</p>
+<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
+]]></content:encoded>
     </item>
     <item>
       <title>mybatis使用枚举类 类型转换错误</title>
@@ -139,24 +158,6 @@ values
 <p>过滤器，满足条件的才能被通过。留下的元素都是满足条件的</p>
 <h2 id="stored"> stored</h2>
 <p>排序</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>mybatis传入字符串分割</title>
-      <link>https://fangweilong.github.io/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
-      <guid isPermaLink="false">/2018/06/27/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
-      <category>mybatis</category>
-      <pubDate>Wed, 27 Jun 2018 16:20:22 GMT</pubDate>
-      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
-  #{item}
-&lt;/foreach&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！</p>
-<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -6062,6 +6063,56 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
       <enclosure url="https://img-blog.csdnimg.cn/20190111130559489.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
+      <title>centos7挂载新硬盘到/home分区下</title>
+      <link>https://fangweilong.github.io/2021/11/19/centos7%E6%8C%82%E8%BD%BD%E6%96%B0%E7%A1%AC%E7%9B%98%E5%88%B0%E6%97%A7%E5%88%86%E5%8C%BA%E4%B8%8B/</link>
+      <guid isPermaLink="false">/2021/11/19/centos7%E6%8C%82%E8%BD%BD%E6%96%B0%E7%A1%AC%E7%9B%98%E5%88%B0%E6%97%A7%E5%88%86%E5%8C%BA%E4%B8%8B/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">centos7挂载新硬盘到/home分区下</source>
+      <category>linux</category>
+      <pubDate>Fri, 19 Nov 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="查看磁盘空间"> 查看磁盘空间</h2>
+<div><pre><code><span>df</span> -h
+</code></pre>
+<div><span>1</span><br></div></div><p>通过命令可以看到我/home磁盘下的空间已经占用了80%。所以我新加了一块2T的盘上去</p>
+<p><a href="https://imgtu.com/i/I75oQg" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I75oQg.png" alt="I75oQg.png" /></a></p>
+<h2 id="查看硬盘"> 查看硬盘</h2>
+<div><pre><code><span>fdisk</span> -l
+</code></pre>
+<div><span>1</span><br></div></div><p>可以看到我这里有一块2T的硬盘，接下来我们通过一些命令直接挂载到/home下面去，<em>无需重启服务器</em>。</p>
+<p><a href="https://imgtu.com/i/I7IXBd" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7IXBd.png" alt="I7IXBd.png" /></a></p>
+<h2 id="创建分区"> 创建分区</h2>
+<div><pre><code><span>fdisk</span> /dev/sdb
+</code></pre>
+<div><span>1</span><br></div></div><p>输入命令后请根据我截图中的提示输入。</p>
+<p><a href="https://imgtu.com/i/I7TLTA" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7TLTA.png" alt="I7TLTA.png" /></a></p>
+<h2 id="建立物理卷-pv"> 建立物理卷(PV)</h2>
+<div><pre><code> pvcreate /dev/sdb1
+</code></pre>
+<div><span>1</span><br></div></div><p><a href="https://imgtu.com/i/I77Sl8" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77Sl8.png" alt="I77Sl8.png" /></a></p>
+<h2 id="查看原有vg"> 查看原有VG</h2>
+<div><pre><code>vgdisplay
+</code></pre>
+<div><span>1</span><br></div></div><p><a href="https://imgtu.com/i/I77DAA" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77DAA.png" alt="I77DAA.png" /></a></p>
+<h2 id="将pv加入到原有vg中"> 将PV加入到原有VG中</h2>
+<div><pre><code>vgextend centos<span>(</span>这个名字使用上一步的vg name<span>)</span> /dev/sdb1
+</code></pre>
+<div><span>1</span><br></div></div><p><a href="https://imgtu.com/i/I77h7j" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77h7j.png" alt="I77h7j.png" /></a></p>
+<h2 id="调整空间"> 调整空间</h2>
+<div><pre><code>lvextend -L +2048G /dev/mapper/centos-home
+</code></pre>
+<div><span>1</span><br></div></div><p>注意我这里输了两次，因为我第一次写错了空间大小。注意合理分配你的空间</p>
+<p><a href="https://imgtu.com/i/I77xE9" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I77xE9.png" alt="I77xE9.png" /></a></p>
+<p><em>/dev/mapper/centos-home</em>可以通过<strong>df -h</strong>找到</p>
+<p><a href="https://imgtu.com/i/I7bCIs" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7bCIs.png" alt="I7bCIs.png" /></a></p>
+<h2 id="使修改生效"> 使修改生效</h2>
+<div><pre><code>xfs_growfs /dev/mapper/centos-home
+</code></pre>
+<div><span>1</span><br></div></div><p>注意这里的等待时间跟你机器有关，我执行了大概10秒左右。耐心等待完成。</p>
+<h2 id="查看修改结果"> 查看修改结果</h2>
+<p><a href="https://imgtu.com/i/I7qFTH" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/11/19/I7qFTH.png" alt="I7qFTH.png" /></a></p>
+]]></content:encoded>
+      <enclosure url="https://z3.ax1x.com/2021/11/19/I75oQg.png" type="image/png"/>
+    </item>
+    <item>
       <title>vuepress中markdown各种用法</title>
       <link>https://fangweilong.github.io/2021/07/02/vuepress%E4%B8%ADmarkdown%E5%90%84%E7%A7%8D%E7%94%A8%E6%B3%95/</link>
       <guid isPermaLink="false">/2021/07/02/vuepress%E4%B8%ADmarkdown%E5%90%84%E7%A7%8D%E7%94%A8%E6%B3%95/</guid>
@@ -6975,6 +7026,30 @@ patch:
 ]]></content:encoded>
     </item>
     <item>
+      <title>房伟龙的日常</title>
+      <link>https://fangweilong.github.io/</link>
+      <guid isPermaLink="false">/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
+      <pubDate>Fri, 19 Nov 2021 02:43:31 GMT</pubDate>
+    </item>
+    <item>
+      <title>幻灯片页</title>
+      <link>https://fangweilong.github.io/slides/</link>
+      <guid isPermaLink="false">/slides/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
+      <pubDate>Fri, 19 Nov 2021 02:43:31 GMT</pubDate>
+      <content:encoded><![CDATA[
+<i>Not supported content</i>]]></content:encoded>
+      <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>项目主页</title>
+      <link>https://fangweilong.github.io/home/</link>
+      <guid isPermaLink="false">/home/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
+      <pubDate>Fri, 19 Nov 2021 02:43:31 GMT</pubDate>
+    </item>
+    <item>
       <title>个人信息</title>
       <link>https://fangweilong.github.io/about/</link>
       <guid isPermaLink="false">/about/</guid>
@@ -7106,30 +7181,6 @@ patch:
 <p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
 ]]></content:encoded>
       <enclosure url="https://z3.ax1x.com/2021/09/22/4NGaVK.png" type="image/png"/>
-    </item>
-    <item>
-      <title>房伟龙的日常</title>
-      <link>https://fangweilong.github.io/</link>
-      <guid isPermaLink="false">/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Fri, 12 Nov 2021 09:36:37 GMT</pubDate>
-    </item>
-    <item>
-      <title>幻灯片页</title>
-      <link>https://fangweilong.github.io/slides/</link>
-      <guid isPermaLink="false">/slides/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Fri, 12 Nov 2021 09:36:37 GMT</pubDate>
-      <content:encoded><![CDATA[
-<i>Not supported content</i>]]></content:encoded>
-      <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
-    </item>
-    <item>
-      <title>项目主页</title>
-      <link>https://fangweilong.github.io/home/</link>
-      <guid isPermaLink="false">/home/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Fri, 12 Nov 2021 09:36:37 GMT</pubDate>
     </item>
   </channel>
 </rss>
