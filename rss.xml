@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 15 Dec 2021 01:15:07 GMT</pubDate>
-    <lastBuildDate>Wed, 15 Dec 2021 01:15:07 GMT</lastBuildDate>
+    <pubDate>Wed, 15 Dec 2021 03:35:59 GMT</pubDate>
+    <lastBuildDate>Wed, 15 Dec 2021 03:35:59 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -6989,7 +6989,7 @@ patch:
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Wed, 15 Dec 2021 01:13:59 GMT</pubDate>
+      <pubDate>Wed, 15 Dec 2021 03:35:16 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6999,14 +6999,101 @@ patch:
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Wed, 15 Dec 2021 01:13:59 GMT</pubDate>
+      <pubDate>Wed, 15 Dec 2021 03:35:16 GMT</pubDate>
     </item>
     <item>
       <title>项目主页</title>
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Wed, 15 Dec 2021 01:13:59 GMT</pubDate>
+      <pubDate>Wed, 15 Dec 2021 03:35:16 GMT</pubDate>
+    </item>
+    <item>
+      <title>开发中常用的工具归类</title>
+      <link>https://fangweilong.github.io/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</link>
+      <guid isPermaLink="false">/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">开发中常用的工具归类</source>
+      <category>其它</category>
+      <pubDate>Thu, 22 Mar 2018 13:55:01 GMT</pubDate>
+      <content:encoded><![CDATA[<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>工具</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据库</td>
+<td>Navicat pro</td>
+<td>可以连接多种数据库，使用更快捷内存占用小</td>
+<td>付费，功能没有官网的工具多</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td>MongoDB Compass Community</td>
+<td>mongo数据库图形化工具，单文件直接使用</td>
+<td>速度慢，英文</td>
+</tr>
+<tr>
+<td>开发工具</td>
+<td>idea</td>
+<td>功能齐全，使用方便</td>
+<td>付费，内存占用大，初始配置繁琐</td>
+</tr>
+<tr>
+<td>版本控制</td>
+<td>TrtoiseSVN</td>
+<td>有中文，说明简单，配置简单</td>
+<td>暂未发现</td>
+</tr>
+<tr>
+<td>版本控制</td>
+<td>TrtoiseGit</td>
+<td>有中文，说明简单，配置简单</td>
+<td>暂未发现</td>
+</tr>
+<tr>
+<td>服务器工具</td>
+<td>IIS</td>
+<td>微软官方工具，功能强大，自带中文</td>
+<td>占用大，配置繁琐</td>
+</tr>
+<tr>
+<td>服务器工具</td>
+<td>Tomcat</td>
+<td>开源服务器工具，配置简单，占用小，操作简单</td>
+<td>开发环境中经常重启容易崩，其他暂未发现</td>
+</tr>
+<tr>
+<td>远程工具</td>
+<td>mstc</td>
+<td>本身自带，操作简单，中文界面</td>
+<td>功能少，容易崩，只适用window</td>
+</tr>
+<tr>
+<td>远程工具</td>
+<td>xshell</td>
+<td>界面直观，功能齐全</td>
+<td>付费。免费版本有窗口限制。只适用于linux</td>
+</tr>
+<tr>
+<td>浏览器</td>
+<td>chrome</td>
+<td>市场份额高，适配好，插件多</td>
+<td>内存占用高，同步麻烦</td>
+</tr>
+<tr>
+<td>浏览器</td>
+<td>edge</td>
+<td>基于chromium，适配chrome，插件多，同步快</td>
+<td>内存占用也不少</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
     </item>
     <item>
       <title>个人信息</title>
@@ -7140,93 +7227,6 @@ patch:
 <p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
 ]]></content:encoded>
       <enclosure url="https://z3.ax1x.com/2021/09/22/4NGaVK.png" type="image/png"/>
-    </item>
-    <item>
-      <title>开发中常用的工具归类</title>
-      <link>https://fangweilong.github.io/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</link>
-      <guid isPermaLink="false">/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">开发中常用的工具归类</source>
-      <category>其它</category>
-      <pubDate>Thu, 22 Mar 2018 13:55:01 GMT</pubDate>
-      <content:encoded><![CDATA[<table>
-<thead>
-<tr>
-<th>分类</th>
-<th>工具</th>
-<th>优点</th>
-<th>缺点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>数据库</td>
-<td>Navicat pro</td>
-<td>可以连接多种数据库，使用更快捷内存占用小</td>
-<td>付费，功能没有官网的工具多</td>
-</tr>
-<tr>
-<td>数据库</td>
-<td>MongoDB Compass Community</td>
-<td>mongo数据库图形化工具，单文件直接使用</td>
-<td>速度慢，英文</td>
-</tr>
-<tr>
-<td>开发工具</td>
-<td>idea</td>
-<td>功能齐全，使用方便</td>
-<td>付费，内存占用大，初始配置繁琐</td>
-</tr>
-<tr>
-<td>版本控制</td>
-<td>TrtoiseSVN</td>
-<td>有中文，说明简单，配置简单</td>
-<td>暂未发现</td>
-</tr>
-<tr>
-<td>版本控制</td>
-<td>TrtoiseGit</td>
-<td>有中文，说明简单，配置简单</td>
-<td>暂未发现</td>
-</tr>
-<tr>
-<td>服务器工具</td>
-<td>IIS</td>
-<td>微软官方工具，功能强大，自带中文</td>
-<td>占用大，配置繁琐</td>
-</tr>
-<tr>
-<td>服务器工具</td>
-<td>Tomcat</td>
-<td>开源服务器工具，配置简单，占用小，操作简单</td>
-<td>开发环境中经常重启容易崩，其他暂未发现</td>
-</tr>
-<tr>
-<td>远程工具</td>
-<td>mstc</td>
-<td>本身自带，操作简单，中文界面</td>
-<td>功能少，容易崩，只适用window</td>
-</tr>
-<tr>
-<td>远程工具</td>
-<td>xshell</td>
-<td>界面直观，功能齐全</td>
-<td>付费。免费版本有窗口限制。只适用于linux</td>
-</tr>
-<tr>
-<td>浏览器</td>
-<td>chrome</td>
-<td>市场份额高，适配好，插件多</td>
-<td>内存占用高，同步麻烦</td>
-</tr>
-<tr>
-<td>浏览器</td>
-<td>edge</td>
-<td>基于chromium，适配chrome，插件多，同步快</td>
-<td>内存占用也不少</td>
-</tr>
-</tbody>
-</table>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
