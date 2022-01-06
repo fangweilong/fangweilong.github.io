@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 15 Dec 2021 03:35:59 GMT</pubDate>
-    <lastBuildDate>Wed, 15 Dec 2021 03:35:59 GMT</lastBuildDate>
+    <pubDate>Thu, 06 Jan 2022 03:02:11 GMT</pubDate>
+    <lastBuildDate>Thu, 06 Jan 2022 03:02:11 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -31,8 +31,8 @@
     <category>wsl</category>
     <category>myEclipse</category>
     <category>idea</category>
-    <category>navicat</category>
     <category>tomcat</category>
+    <category>navicat</category>
     <category>window</category>
     <category>linux</category>
     <category>vuepress</category>
@@ -67,24 +67,6 @@ UserDo get(@Param(&quot;id&quot;)String id, @Param(&quot;parentId&quot;)String p
 &lt;/select&gt;
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>mybatis传入字符串分割</title>
-      <link>https://fangweilong.github.io/1970/01/01/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
-      <guid isPermaLink="false">/1970/01/01/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
-      <category>mybatis</category>
-      <pubDate>Wed, 27 Jun 2018 16:20:22 GMT</pubDate>
-      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
-  #{item}
-&lt;/foreach&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！</p>
-<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
-]]></content:encoded>
     </item>
     <item>
       <title>mybatis使用枚举类 类型转换错误</title>
@@ -138,6 +120,24 @@ values
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><p>原因是 resultType属性与model不对应。
 我们使用分页会在查询值加入一个rownum的值，这个值在我们建立model的时候是没有的，所以只要在model里面加上rownum这个属性就可以。
 当然你也可以使用别的分页方法</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>mybatis传入字符串分割</title>
+      <link>https://fangweilong.github.io/1970/01/01/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
+      <guid isPermaLink="false">/1970/01/01/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
+      <category>mybatis</category>
+      <pubDate>Wed, 27 Jun 2018 16:20:22 GMT</pubDate>
+      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
+  #{item}
+&lt;/foreach&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！</p>
+<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -2451,6 +2451,21 @@ public class LogFilter implements Filter {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>java.lang.NoSuchMethodError</title>
+      <link>https://fangweilong.github.io/1970/01/01/java-lang-nosuchmethoderror/</link>
+      <guid isPermaLink="false">/1970/01/01/java-lang-nosuchmethoderror/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">java.lang.NoSuchMethodError</source>
+      <category>java</category>
+      <pubDate>Tue, 20 Mar 2018 10:25:27 GMT</pubDate>
+      <content:encoded><![CDATA[<p><strong>出现这个问题检查</strong></p>
+<p><strong>1.jar包版本</strong>
+有些jar包对版本有要求，不同版本之间是不互通的，有些还对jdk有强制要求，比如Google的番石榴就要求JDK1.8版本</p>
+<p><strong>2.是否将所有修改的class文件布置到服务器</strong>
+这个问题是最容易出现的，可能有一天更改的文件较多，布置的时候又是点对点布置，就会遗漏掉一两个class文件。
+解决办法就是在每次更改文件就用文本记下来，或者用Git等版本控制读取到更改记录，一个个文件对照着布置。</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>java-String字符串split分割无效</title>
       <link>https://fangweilong.github.io/1970/01/01/java-string%E5%AD%97%E7%AC%A6%E4%B8%B2split%E5%88%86%E5%89%B2%E6%97%A0%E6%95%88/</link>
       <guid isPermaLink="false">/1970/01/01/java-string%E5%AD%97%E7%AC%A6%E4%B8%B2split%E5%88%86%E5%89%B2%E6%97%A0%E6%95%88/</guid>
@@ -2476,21 +2491,6 @@ OK这样就可以了。</p>
 <div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>如果还遇到有需要转义的字符，欢迎留言</p>
 ]]></content:encoded>
       <enclosure url="https://img-blog.csdn.net/20180626095402193?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
-    </item>
-    <item>
-      <title>java.lang.NoSuchMethodError</title>
-      <link>https://fangweilong.github.io/1970/01/01/java-lang-nosuchmethoderror/</link>
-      <guid isPermaLink="false">/1970/01/01/java-lang-nosuchmethoderror/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">java.lang.NoSuchMethodError</source>
-      <category>java</category>
-      <pubDate>Tue, 20 Mar 2018 10:25:27 GMT</pubDate>
-      <content:encoded><![CDATA[<p><strong>出现这个问题检查</strong></p>
-<p><strong>1.jar包版本</strong>
-有些jar包对版本有要求，不同版本之间是不互通的，有些还对jdk有强制要求，比如Google的番石榴就要求JDK1.8版本</p>
-<p><strong>2.是否将所有修改的class文件布置到服务器</strong>
-这个问题是最容易出现的，可能有一天更改的文件较多，布置的时候又是点对点布置，就会遗漏掉一两个class文件。
-解决办法就是在每次更改文件就用文本记下来，或者用Git等版本控制读取到更改记录，一个个文件对照着布置。</p>
-]]></content:encoded>
     </item>
     <item>
       <title>javax.el.PropertyNotFoundException</title>
@@ -3016,6 +3016,37 @@ form.verify({
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>利用layer实现放大图片的效果</title>
+      <link>https://fangweilong.github.io/1970/01/01/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</link>
+      <guid isPermaLink="false">/1970/01/01/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">利用layer实现放大图片的效果</source>
+      <category>javascript</category>
+      <pubDate>Wed, 07 Feb 2018 13:59:18 GMT</pubDate>
+      <content:encoded><![CDATA[<p>引用layer.js</p>
+<p>//小图</p>
+<div><pre><code>&lt;a href=&quot;javascript:amplificationImg(&#39;图片名&#39;,&#39;图片地址&#39;)&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;
+</code></pre>
+<div><span>1</span><br></div></div><p>//隐藏域 也就是放大以后的图片位置</p>
+<div><pre><code>&lt;img alt=&quot;&quot; style=&quot;display:none&quot; id=&quot;displayImg&quot; src=&quot;&quot; /&gt;
+</code></pre>
+<div><span>1</span><br></div></div><p>//js方法体</p>
+<div><pre><code>function amplificationImg(name, url) {
+   $(&quot;#displayImg&quot;).attr(&quot;src&quot;, url);
+   var height = $(&quot;#displayImg&quot;).height();//拿的图片原来宽高，建议自定义宽高
+   var width = $(&quot;#displayImg&quot;).width();
+   layer.open({
+      type: 1,
+      title: false,
+      closeBtn: 0,
+      shadeClose: true,
+      area: [width + &#39;px&#39;, height + &#39;px&#39;], //宽高
+	  content: &quot;&lt;img alt=&quot; + name + &quot; title=&quot; + name + &quot; src=&quot; + url + &quot; /&gt;&quot;
+   });
+}
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>layui的laydate控件的使用</title>
       <link>https://fangweilong.github.io/1970/01/01/layui%E7%9A%84laydate%E6%8E%A7%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <guid isPermaLink="false">/1970/01/01/layui%E7%9A%84laydate%E6%8E%A7%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
@@ -3047,37 +3078,6 @@ layui.use(&#39;laydate&#39;, function() {
 });
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>利用layer实现放大图片的效果</title>
-      <link>https://fangweilong.github.io/1970/01/01/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</link>
-      <guid isPermaLink="false">/1970/01/01/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">利用layer实现放大图片的效果</source>
-      <category>javascript</category>
-      <pubDate>Wed, 07 Feb 2018 13:59:18 GMT</pubDate>
-      <content:encoded><![CDATA[<p>引用layer.js</p>
-<p>//小图</p>
-<div><pre><code>&lt;a href=&quot;javascript:amplificationImg(&#39;图片名&#39;,&#39;图片地址&#39;)&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;
-</code></pre>
-<div><span>1</span><br></div></div><p>//隐藏域 也就是放大以后的图片位置</p>
-<div><pre><code>&lt;img alt=&quot;&quot; style=&quot;display:none&quot; id=&quot;displayImg&quot; src=&quot;&quot; /&gt;
-</code></pre>
-<div><span>1</span><br></div></div><p>//js方法体</p>
-<div><pre><code>function amplificationImg(name, url) {
-   $(&quot;#displayImg&quot;).attr(&quot;src&quot;, url);
-   var height = $(&quot;#displayImg&quot;).height();//拿的图片原来宽高，建议自定义宽高
-   var width = $(&quot;#displayImg&quot;).width();
-   layer.open({
-      type: 1,
-      title: false,
-      closeBtn: 0,
-      shadeClose: true,
-      area: [width + &#39;px&#39;, height + &#39;px&#39;], //宽高
-	  content: &quot;&lt;img alt=&quot; + name + &quot; title=&quot; + name + &quot; src=&quot; + url + &quot; /&gt;&quot;
-   });
-}
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content:encoded>
     </item>
     <item>
       <title>mapbox-glStyleisnotdone_loading</title>
@@ -4779,6 +4779,29 @@ http {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>vue-router_link-声明式返回上一页</title>
+      <link>https://fangweilong.github.io/1970/01/01/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</link>
+      <guid isPermaLink="false">/1970/01/01/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">vue-router_link-声明式返回上一页</source>
+      <category>vue</category>
+      <pubDate>Tue, 06 Aug 2019 15:34:28 GMT</pubDate>
+      <content:encoded><![CDATA[<p>因为只有一个点击的操作，没有任何其他的逻辑操作，我就不想写一个方法来承载它，就一直在找声明式的写法</p>
+<p>官网文档链接：https://router.vuejs.org/zh/guide/essentials/navigation.html</p>
+<p>在文档中介绍了一种router.go(n)来返回上一页，但是没有示例，经过测试无法使用这种写法</p>
+<div><pre><code>&lt;router-link :to=&quot;router.go(1)&quot;&gt;
+	&lt;el-button&gt;返回&lt;/el-button&gt;
+&lt;/router-link&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>搜索一些博客，都是使用的编程式的方法来返回上一页。
+所以就经过简化后，将方法绑定在@click中</p>
+<div><pre><code>&lt;router-link to&gt;
+	&lt;el-button @click=&quot;$router.back(-1)&quot;&gt;返回&lt;/el-button&gt;
+&lt;/router-link&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>注意：router-link中的<strong>to要留空</strong>，否则@click方法不起作用</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>nginx-部署多个vue项目，分vue-cli2.x和3.x</title>
       <link>https://fangweilong.github.io/1970/01/01/nginx-%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AAvue%E9%A1%B9%E7%9B%AE-%E5%88%86vue-cli2-x%E5%92%8C3-x/</link>
       <guid isPermaLink="false">/1970/01/01/nginx-%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AAvue%E9%A1%B9%E7%9B%AE-%E5%88%86vue-cli2-x%E5%92%8C3-x/</guid>
@@ -4814,29 +4837,6 @@ http {
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div>]]></content:encoded>
       <enclosure url="https://img-blog.csdnimg.cn/2019071613392824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
-      <title>vue-router_link-声明式返回上一页</title>
-      <link>https://fangweilong.github.io/1970/01/01/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</link>
-      <guid isPermaLink="false">/1970/01/01/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">vue-router_link-声明式返回上一页</source>
-      <category>vue</category>
-      <pubDate>Tue, 06 Aug 2019 15:34:28 GMT</pubDate>
-      <content:encoded><![CDATA[<p>因为只有一个点击的操作，没有任何其他的逻辑操作，我就不想写一个方法来承载它，就一直在找声明式的写法</p>
-<p>官网文档链接：https://router.vuejs.org/zh/guide/essentials/navigation.html</p>
-<p>在文档中介绍了一种router.go(n)来返回上一页，但是没有示例，经过测试无法使用这种写法</p>
-<div><pre><code>&lt;router-link :to=&quot;router.go(1)&quot;&gt;
-	&lt;el-button&gt;返回&lt;/el-button&gt;
-&lt;/router-link&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>搜索一些博客，都是使用的编程式的方法来返回上一页。
-所以就经过简化后，将方法绑定在@click中</p>
-<div><pre><code>&lt;router-link to&gt;
-	&lt;el-button @click=&quot;$router.back(-1)&quot;&gt;返回&lt;/el-button&gt;
-&lt;/router-link&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>注意：router-link中的<strong>to要留空</strong>，否则@click方法不起作用</p>
-]]></content:encoded>
     </item>
     <item>
       <title>Elastic_Search-添加split自定义分词方法</title>
@@ -5543,6 +5543,18 @@ Enter password for [remote_monitoring_user]:</p>
       <enclosure url="http://img.blog.csdn.net/20180226143718167?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
     </item>
     <item>
+      <title>idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</title>
+      <link>https://fangweilong.github.io/1970/01/01/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</link>
+      <guid isPermaLink="false">/1970/01/01/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</source>
+      <category>idea</category>
+      <pubDate>Wed, 30 Oct 2019 10:08:59 GMT</pubDate>
+      <content:encoded><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+<p>把这两个勾选去掉</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
       <title>idea关闭不必要的插件减少内存占用</title>
       <link>https://fangweilong.github.io/1970/01/01/idea%E5%85%B3%E9%97%AD%E4%B8%8D%E5%BF%85%E8%A6%81%E7%9A%84%E6%8F%92%E4%BB%B6%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8/</link>
       <guid isPermaLink="false">/1970/01/01/idea%E5%85%B3%E9%97%AD%E4%B8%8D%E5%BF%85%E8%A6%81%E7%9A%84%E6%8F%92%E4%BB%B6%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8/</guid>
@@ -5601,18 +5613,6 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
 <img src="https://img-blog.csdn.net/20180425094331834?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" /><img src="https://img-blog.csdn.net/20180425094339290?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" /><img src="https://img-blog.csdn.net/20180425094345784?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" /></p>
 ]]></content:encoded>
       <enclosure url="https://z3.ax1x.com/2021/08/11/fUCSIJ.png" type="image/png"/>
-    </item>
-    <item>
-      <title>idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</title>
-      <link>https://fangweilong.github.io/1970/01/01/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</link>
-      <guid isPermaLink="false">/1970/01/01/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</source>
-      <category>idea</category>
-      <pubDate>Wed, 30 Oct 2019 10:08:59 GMT</pubDate>
-      <content:encoded><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<p>把这两个勾选去掉</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案</title>
@@ -5729,49 +5729,6 @@ ${MONTH_NAME_FULL} - 一个月的全名。例如: 1月、2月等。
       <enclosure url="https://img-blog.csdnimg.cn/img_convert/5ed382af96fc5ec47a18166d761b17d6.png" type="image/png"/>
     </item>
     <item>
-      <title>Navicat12连接Oracle失败，报错ORA-28547或者oraclelibraryisnot_loaded</title>
-      <link>https://fangweilong.github.io/1970/01/01/navicat12%E8%BF%9E%E6%8E%A5oracle%E5%A4%B1%E8%B4%A5-%E6%8A%A5%E9%94%99-ora-28547-%E6%88%96%E8%80%85-oracle-library-is-not-loaded/</link>
-      <guid isPermaLink="false">/1970/01/01/navicat12%E8%BF%9E%E6%8E%A5oracle%E5%A4%B1%E8%B4%A5-%E6%8A%A5%E9%94%99-ora-28547-%E6%88%96%E8%80%85-oracle-library-is-not-loaded/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">Navicat12连接Oracle失败，报错ORA-28547或者oraclelibraryisnot_loaded</source>
-      <category>navicat</category>
-      <pubDate>Tue, 16 Apr 2019 10:25:25 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="首先看一下两种错误"> <strong>首先看一下两种错误</strong></h2>
-<p>1：ORA-28547
-原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。
-<img src="https://img-blog.csdnimg.cn/201904161009174.png" alt="在这里插入图片描述" />
-2.oracle library is not loaded
-其实就是说dll文件不能正确载入</p>
-<p>**</p>
-<h2 id="解决"> 解决：</h2>
-<p>**
-这两种问题其实都可以通过一种办法结局
-<strong>详细步骤：</strong></p>
-<ol>
-<li>
-<p>点击链接前往<a href="https://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html" target="_blank" rel="noopener noreferrer">Oracle官网</a>进行下载</p>
-</li>
-<li>
-<p>选择与自己系统相对应的版本点进去  <img src="https://img-blog.csdnimg.cn/20190416101522274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-</li>
-<li>
-<p>千万记得勾选上同意协议，否则无法下载
-<img src="https://img-blog.csdnimg.cn/20190416101603200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-</li>
-<li>
-<p>下载自己对应的Oracle版本到本地，解压缩。我下的是11.2版本的如图所示</p>
-</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20190416101750932.png" alt="在这里插入图片描述" />
-5.  找到Navicat的安装目录
-<img src="https://img-blog.csdnimg.cn/20190416101931123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-6.这个时候你会发现你解压出来的包和你目录里面的文件夹名字是一样的。
-这个时候我看很多博文是直接复制oci.dll文件，但其实是应该整个“instantclient_11_2”文件夹覆盖到Navicat安装目录
-7.接下来就是去navicat里面更改OCI.dll文件的位置了。<img src="https://img-blog.csdnimg.cn/20190416102342639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-接下来就ok了。如有疑问欢迎留言</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/201904161009174.png" type="image/png"/>
-    </item>
-    <item>
       <title>tomcat使用log4j2打日志</title>
       <link>https://fangweilong.github.io/1970/01/01/tomcat%E4%BD%BF%E7%94%A8log4j2%E6%89%93%E6%97%A5%E5%BF%97/</link>
       <guid isPermaLink="false">/1970/01/01/tomcat%E4%BD%BF%E7%94%A8log4j2%E6%89%93%E6%97%A5%E5%BF%97/</guid>
@@ -5843,6 +5800,49 @@ log4j2.xml，放到tomcat目录下lib文件夹下</li>
 <p>启动tomcat，在tomcat目录下logs文件夹下查看日志文件</p>
 <p>原文转载自：https://blog.csdn.net/Json0108/article/details/80258933</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>Navicat12连接Oracle失败，报错ORA-28547或者oraclelibraryisnot_loaded</title>
+      <link>https://fangweilong.github.io/1970/01/01/navicat12%E8%BF%9E%E6%8E%A5oracle%E5%A4%B1%E8%B4%A5-%E6%8A%A5%E9%94%99-ora-28547-%E6%88%96%E8%80%85-oracle-library-is-not-loaded/</link>
+      <guid isPermaLink="false">/1970/01/01/navicat12%E8%BF%9E%E6%8E%A5oracle%E5%A4%B1%E8%B4%A5-%E6%8A%A5%E9%94%99-ora-28547-%E6%88%96%E8%80%85-oracle-library-is-not-loaded/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">Navicat12连接Oracle失败，报错ORA-28547或者oraclelibraryisnot_loaded</source>
+      <category>navicat</category>
+      <pubDate>Tue, 16 Apr 2019 10:25:25 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="首先看一下两种错误"> <strong>首先看一下两种错误</strong></h2>
+<p>1：ORA-28547
+原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。
+<img src="https://img-blog.csdnimg.cn/201904161009174.png" alt="在这里插入图片描述" />
+2.oracle library is not loaded
+其实就是说dll文件不能正确载入</p>
+<p>**</p>
+<h2 id="解决"> 解决：</h2>
+<p>**
+这两种问题其实都可以通过一种办法结局
+<strong>详细步骤：</strong></p>
+<ol>
+<li>
+<p>点击链接前往<a href="https://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html" target="_blank" rel="noopener noreferrer">Oracle官网</a>进行下载</p>
+</li>
+<li>
+<p>选择与自己系统相对应的版本点进去  <img src="https://img-blog.csdnimg.cn/20190416101522274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+</li>
+<li>
+<p>千万记得勾选上同意协议，否则无法下载
+<img src="https://img-blog.csdnimg.cn/20190416101603200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+</li>
+<li>
+<p>下载自己对应的Oracle版本到本地，解压缩。我下的是11.2版本的如图所示</p>
+</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20190416101750932.png" alt="在这里插入图片描述" />
+5.  找到Navicat的安装目录
+<img src="https://img-blog.csdnimg.cn/20190416101931123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+6.这个时候你会发现你解压出来的包和你目录里面的文件夹名字是一样的。
+这个时候我看很多博文是直接复制oci.dll文件，但其实是应该整个“instantclient_11_2”文件夹覆盖到Navicat安装目录
+7.接下来就是去navicat里面更改OCI.dll文件的位置了。<img src="https://img-blog.csdnimg.cn/20190416102342639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+接下来就ok了。如有疑问欢迎留言</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/201904161009174.png" type="image/png"/>
     </item>
     <item>
       <title>tomcat布置多个项目</title>
@@ -6989,7 +6989,7 @@ patch:
       <link>https://fangweilong.github.io/slides/</link>
       <guid isPermaLink="false">/slides/</guid>
       <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Wed, 15 Dec 2021 03:35:16 GMT</pubDate>
+      <pubDate>Thu, 06 Jan 2022 03:00:59 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
@@ -6999,101 +6999,14 @@ patch:
       <link>https://fangweilong.github.io/</link>
       <guid isPermaLink="false">/</guid>
       <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Wed, 15 Dec 2021 03:35:16 GMT</pubDate>
+      <pubDate>Thu, 06 Jan 2022 03:00:59 GMT</pubDate>
     </item>
     <item>
       <title>项目主页</title>
       <link>https://fangweilong.github.io/home/</link>
       <guid isPermaLink="false">/home/</guid>
       <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Wed, 15 Dec 2021 03:35:16 GMT</pubDate>
-    </item>
-    <item>
-      <title>开发中常用的工具归类</title>
-      <link>https://fangweilong.github.io/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</link>
-      <guid isPermaLink="false">/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">开发中常用的工具归类</source>
-      <category>其它</category>
-      <pubDate>Thu, 22 Mar 2018 13:55:01 GMT</pubDate>
-      <content:encoded><![CDATA[<table>
-<thead>
-<tr>
-<th>分类</th>
-<th>工具</th>
-<th>优点</th>
-<th>缺点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>数据库</td>
-<td>Navicat pro</td>
-<td>可以连接多种数据库，使用更快捷内存占用小</td>
-<td>付费，功能没有官网的工具多</td>
-</tr>
-<tr>
-<td>数据库</td>
-<td>MongoDB Compass Community</td>
-<td>mongo数据库图形化工具，单文件直接使用</td>
-<td>速度慢，英文</td>
-</tr>
-<tr>
-<td>开发工具</td>
-<td>idea</td>
-<td>功能齐全，使用方便</td>
-<td>付费，内存占用大，初始配置繁琐</td>
-</tr>
-<tr>
-<td>版本控制</td>
-<td>TrtoiseSVN</td>
-<td>有中文，说明简单，配置简单</td>
-<td>暂未发现</td>
-</tr>
-<tr>
-<td>版本控制</td>
-<td>TrtoiseGit</td>
-<td>有中文，说明简单，配置简单</td>
-<td>暂未发现</td>
-</tr>
-<tr>
-<td>服务器工具</td>
-<td>IIS</td>
-<td>微软官方工具，功能强大，自带中文</td>
-<td>占用大，配置繁琐</td>
-</tr>
-<tr>
-<td>服务器工具</td>
-<td>Tomcat</td>
-<td>开源服务器工具，配置简单，占用小，操作简单</td>
-<td>开发环境中经常重启容易崩，其他暂未发现</td>
-</tr>
-<tr>
-<td>远程工具</td>
-<td>mstc</td>
-<td>本身自带，操作简单，中文界面</td>
-<td>功能少，容易崩，只适用window</td>
-</tr>
-<tr>
-<td>远程工具</td>
-<td>xshell</td>
-<td>界面直观，功能齐全</td>
-<td>付费。免费版本有窗口限制。只适用于linux</td>
-</tr>
-<tr>
-<td>浏览器</td>
-<td>chrome</td>
-<td>市场份额高，适配好，插件多</td>
-<td>内存占用高，同步麻烦</td>
-</tr>
-<tr>
-<td>浏览器</td>
-<td>edge</td>
-<td>基于chromium，适配chrome，插件多，同步快</td>
-<td>内存占用也不少</td>
-</tr>
-</tbody>
-</table>
-]]></content:encoded>
+      <pubDate>Thu, 06 Jan 2022 03:00:59 GMT</pubDate>
     </item>
     <item>
       <title>个人信息</title>
@@ -7103,20 +7016,18 @@ patch:
       <pubDate>Wed, 23 Jun 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="联系方式"> 联系方式</h1>
 <ul>
-<li>手机：   17626675521</li>
 <li>Email： fangweilong@outlook.com</li>
 <li>QQ：<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=799094770&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">点击加好友</a></li>
 </ul>
 <hr>
 <h1 id="个人信息"> 个人信息</h1>
 <ul>
-<li><em>房伟龙</em> / 男 / 1996</li>
-<li>无锡南洋职业技术学院</li>
+<li>男</li>
 <li>工作年限：2016-至今</li>
 <li>个人博客：<a href="https://fangweilong.github.io/" target="_blank" rel="noopener noreferrer">点击直达</a></li>
 <li>Github：<a href="https://github.com/fangweilong" target="_blank" rel="noopener noreferrer">点击直达</a></li>
 <li>期望职位：Java开发</li>
-<li>期望薪资：<strong>税前13k-15k</strong></li>
+<li>期望薪资：<strong>税前15k</strong></li>
 <li>期望城市：<strong>江苏无锡</strong></li>
 </ul>
 <hr>
@@ -7227,6 +7138,93 @@ patch:
 <p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
 ]]></content:encoded>
       <enclosure url="https://z3.ax1x.com/2021/09/22/4NGaVK.png" type="image/png"/>
+    </item>
+    <item>
+      <title>开发中常用的工具归类</title>
+      <link>https://fangweilong.github.io/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</link>
+      <guid isPermaLink="false">/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">开发中常用的工具归类</source>
+      <category>其它</category>
+      <pubDate>Thu, 22 Mar 2018 13:55:01 GMT</pubDate>
+      <content:encoded><![CDATA[<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>工具</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据库</td>
+<td>Navicat pro</td>
+<td>可以连接多种数据库，使用更快捷内存占用小</td>
+<td>付费，功能没有官网的工具多</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td>MongoDB Compass Community</td>
+<td>mongo数据库图形化工具，单文件直接使用</td>
+<td>速度慢，英文</td>
+</tr>
+<tr>
+<td>开发工具</td>
+<td>idea</td>
+<td>功能齐全，使用方便</td>
+<td>付费，内存占用大，初始配置繁琐</td>
+</tr>
+<tr>
+<td>版本控制</td>
+<td>TrtoiseSVN</td>
+<td>有中文，说明简单，配置简单</td>
+<td>暂未发现</td>
+</tr>
+<tr>
+<td>版本控制</td>
+<td>TrtoiseGit</td>
+<td>有中文，说明简单，配置简单</td>
+<td>暂未发现</td>
+</tr>
+<tr>
+<td>服务器工具</td>
+<td>IIS</td>
+<td>微软官方工具，功能强大，自带中文</td>
+<td>占用大，配置繁琐</td>
+</tr>
+<tr>
+<td>服务器工具</td>
+<td>Tomcat</td>
+<td>开源服务器工具，配置简单，占用小，操作简单</td>
+<td>开发环境中经常重启容易崩，其他暂未发现</td>
+</tr>
+<tr>
+<td>远程工具</td>
+<td>mstc</td>
+<td>本身自带，操作简单，中文界面</td>
+<td>功能少，容易崩，只适用window</td>
+</tr>
+<tr>
+<td>远程工具</td>
+<td>xshell</td>
+<td>界面直观，功能齐全</td>
+<td>付费。免费版本有窗口限制。只适用于linux</td>
+</tr>
+<tr>
+<td>浏览器</td>
+<td>chrome</td>
+<td>市场份额高，适配好，插件多</td>
+<td>内存占用高，同步麻烦</td>
+</tr>
+<tr>
+<td>浏览器</td>
+<td>edge</td>
+<td>基于chromium，适配chrome，插件多，同步快</td>
+<td>内存占用也不少</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
     </item>
   </channel>
 </rss>
