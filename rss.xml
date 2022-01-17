@@ -6,8 +6,8 @@
     <link>https://fangweilong.github.io/</link>
     <description>房伟龙的博客小站</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 06 Jan 2022 03:02:11 GMT</pubDate>
-    <lastBuildDate>Thu, 06 Jan 2022 03:02:11 GMT</lastBuildDate>
+    <pubDate>Mon, 17 Jan 2022 01:13:24 GMT</pubDate>
+    <lastBuildDate>Mon, 17 Jan 2022 01:13:24 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>© 2021 房伟龙 版权所有</copyright>
@@ -31,8 +31,8 @@
     <category>wsl</category>
     <category>myEclipse</category>
     <category>idea</category>
-    <category>tomcat</category>
     <category>navicat</category>
+    <category>tomcat</category>
     <category>window</category>
     <category>linux</category>
     <category>vuepress</category>
@@ -44,7 +44,7 @@
       <guid isPermaLink="false">/1970/01/01/mybatis%E4%BC%A0%E5%85%A5%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0/</guid>
       <source url="https://fangweilong.github.io/rss.xml">mybatis传入多个参数</source>
       <category>mybatis</category>
-      <pubDate>Fri, 13 Jul 2018 13:11:50 GMT</pubDate>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>我们在调用myabtis的时候往往是传入一个entity或者map。
 但是在一些特殊情况下例如url传参，这时候再put进map总感觉多此一举。</p>
 <p><strong>controller:</strong></p>
@@ -69,26 +69,22 @@ UserDo get(@Param(&quot;id&quot;)String id, @Param(&quot;parentId&quot;)String p
 <div><span>1</span><br><span>2</span><br><span>3</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>mybatis使用枚举类 类型转换错误</title>
-      <link>https://fangweilong.github.io/1970/01/01/mybatis%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%E7%B1%BB-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AF/</link>
-      <guid isPermaLink="false">/1970/01/01/mybatis%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%E7%B1%BB-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AF/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">mybatis使用枚举类 类型转换错误</source>
+      <title>mybatis传入字符串分割</title>
+      <link>https://fangweilong.github.io/1970/01/01/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
+      <guid isPermaLink="false">/1970/01/01/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
       <category>mybatis</category>
-      <pubDate>Thu, 05 Sep 2019 17:51:12 GMT</pubDate>
-      <content:encoded><![CDATA[<p>如何使用请查看其他博客</p>
-<p>你如果是使用百度查询的，那请仔细看这篇博文。</p>
-<p>在很多的博客中都会是只讲了怎么转换，如果是查询语句，并且使用resultMap的时候是能正常使用的。
-但是一旦你使用insert的时候 你会发现开始报类型错误(我使用了mybatis log插件 )
-<img src="https://img-blog.csdnimg.cn/20190905174625717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="" /></p>
-<p>改起来简单 在你具体的sql中那个枚举字段上加一个typeHandler，这样就能对应的到具体的code了。当然前提是你之前已经按照其他博客配好了自动转换</p>
-<div><pre><code>inisert into  INFO
-(states)
-values
-(#{state, typeHandler=com.java..typehandler.EnumTypeHandler, jdbcType=NUMERIC})
+      <pubDate>Wed, 27 Jun 2018 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
+  #{item}
+&lt;/foreach&gt;
 </code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>路径改为i你自己的枚举类，这样就能成功插入了</p>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！
+千万不要手动给你的字符串添加''符号！</p>
+<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
 ]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20190905174625717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>mybatis查询数据赋值到model里面为空</title>
@@ -96,7 +92,7 @@ values
       <guid isPermaLink="false">/1970/01/01/mybatis%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E8%B5%8B%E5%80%BC%E5%88%B0model%E9%87%8C%E9%9D%A2%E4%B8%BA%E7%A9%BA/</guid>
       <source url="https://fangweilong.github.io/rss.xml">mybatis查询数据赋值到model里面为空</source>
       <category>mybatis</category>
-      <pubDate>Fri, 04 May 2018 14:31:01 GMT</pubDate>
+      <pubDate>Fri, 04 May 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>因为数据多所以在查询中使用分页，但是发现直接执行sql语句是可以获取到数据，而list里面却是空的</p>
 <div><pre><code>&lt;select id=&quot;list&quot; resultType=&quot;DaliyDO&quot;&gt;
         select a1.* from (
@@ -123,30 +119,12 @@ values
 ]]></content:encoded>
     </item>
     <item>
-      <title>mybatis传入字符串分割</title>
-      <link>https://fangweilong.github.io/1970/01/01/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</link>
-      <guid isPermaLink="false">/1970/01/01/mybatis%E4%BC%A0%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">mybatis传入字符串分割</source>
-      <category>mybatis</category>
-      <pubDate>Wed, 27 Jun 2018 16:20:22 GMT</pubDate>
-      <content:encoded><![CDATA[<div><pre><code>&lt;foreach item=&quot;item&quot; index=&quot;index&quot; collection=&quot;cardNo.split(&#39;,&#39;)&quot; open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
-  #{item}
-&lt;/foreach&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！
-千万不要手动给你的字符串添加''符号！</p>
-<p>转载，但是是在一个博客下面的评论里面发现的，不知道怎么放连接</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>java-stream的各种操作说明</title>
       <link>https://fangweilong.github.io/1970/01/01/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/</link>
       <guid isPermaLink="false">/1970/01/01/java-stream%E7%9A%84%E5%90%84%E7%A7%8D%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java-stream的各种操作说明</source>
       <category>lambda</category>
-      <pubDate>Thu, 10 Jun 2021 18:03:40 GMT</pubDate>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="列一下stream常用的function-防止遗忘"> 列一下stream常用的Function，防止遗忘</h1>
 <h2 id="map"> map</h2>
 <p>修改的元素需要return后</p>
@@ -166,7 +144,7 @@ values
       <guid isPermaLink="false">/1970/01/01/%E4%BD%BF%E7%94%A8lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BF%AB%E6%8D%B7%E5%AE%8C%E6%88%90tree%E7%BB%93%E6%9E%84/</guid>
       <source url="https://fangweilong.github.io/rss.xml">使用lambda表达式快捷完成Tree结构</source>
       <category>lambda</category>
-      <pubDate>Thu, 27 May 2021 10:01:48 GMT</pubDate>
+      <pubDate>Thu, 27 May 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言"> 前言</h2>
 <p>以前在java中构建菜单、区划等都是使用递归或是数据库。
 数据库如pg、mysql等原生不支持tree结构，递归不是很好理解，同时代码太长。所以考虑使用java1.8以后支持的lambda操作一波</p>
@@ -251,12 +229,34 @@ values
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>mybatis使用枚举类 类型转换错误</title>
+      <link>https://fangweilong.github.io/1970/01/01/mybatis%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%E7%B1%BB-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AF/</link>
+      <guid isPermaLink="false">/1970/01/01/mybatis%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%E7%B1%BB-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AF/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">mybatis使用枚举类 类型转换错误</source>
+      <category>mybatis</category>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>如何使用请查看其他博客</p>
+<p>你如果是使用百度查询的，那请仔细看这篇博文。</p>
+<p>在很多的博客中都会是只讲了怎么转换，如果是查询语句，并且使用resultMap的时候是能正常使用的。
+但是一旦你使用insert的时候 你会发现开始报类型错误(我使用了mybatis log插件 )
+<img src="https://img-blog.csdnimg.cn/20190905174625717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="" /></p>
+<p>改起来简单 在你具体的sql中那个枚举字段上加一个typeHandler，这样就能对应的到具体的code了。当然前提是你之前已经按照其他博客配好了自动转换</p>
+<div><pre><code>inisert into  INFO
+(states)
+values
+(#{state, typeHandler=com.java..typehandler.EnumTypeHandler, jdbcType=NUMERIC})
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>路径改为i你自己的枚举类，这样就能成功插入了</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20190905174625717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
       <title>maven-dependencyManagement子模块不写版本号无法引入</title>
       <link>https://fangweilong.github.io/1970/01/01/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</link>
       <guid isPermaLink="false">/1970/01/01/maven-dependencymanagement%E5%AD%90%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%86%99%E7%89%88%E6%9C%AC%E5%8F%B7%E6%97%A0%E6%B3%95%E5%BC%95%E5%85%A5/</guid>
       <source url="https://fangweilong.github.io/rss.xml">maven-dependencyManagement子模块不写版本号无法引入</source>
       <category>maven</category>
-      <pubDate>Mon, 23 Dec 2019 09:50:34 GMT</pubDate>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="现象"> 现象</h1>
 <p>在父模块中使用 dependencyManagement 来控制子模块按需引入jar包  而不是照盘全收</p>
 <div><pre><code>&lt;dependencyManagement&gt;
@@ -296,37 +296,12 @@ values
       <enclosure url="https://img-blog.csdnimg.cn/20191223094842701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
-      <title>maven-install提示找不到pom</title>
-      <link>https://fangweilong.github.io/1970/01/01/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</link>
-      <guid isPermaLink="false">/1970/01/01/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">maven-install提示找不到pom</source>
-      <category>maven</category>
-      <pubDate>Fri, 25 Jun 2021 17:18:07 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="mvn-install"> mvn install</h2>
-<p>结果发现报错</p>
-<div><pre><code>The goal you specified requires a project to execute but there is no POM <span>in</span> this directory
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="思考"> 思考</h2>
-<ul>
-<li>这不对啊！其他同事的电脑上直接安装成功啊。这不科学。</li>
-<li>跟我maven版本有关？换个版本试试。失败...</li>
-<li>jdk有关？我也用的是openjdk11啊</li>
-</ul>
-<h2 id="解决"> 解决</h2>
-<p>结果无意中打开cmd执行了一下 我靠为什么成功了？
-<img src="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" alt="成功示例" /></p>
-<h2 id="powershell和cmd"> powershell和cmd</h2>
-<p>powershell百分百失败，cmd可以成功。我也不知道为啥</p>
-]]></content:encoded>
-      <enclosure url="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" type="image/png"/>
-    </item>
-    <item>
       <title>maven添加ojdbc6.jar(11g)包</title>
       <link>https://fangweilong.github.io/1970/01/01/maven%E6%B7%BB%E5%8A%A0ojdbc6-jar-11g-%E5%8C%85/</link>
       <guid isPermaLink="false">/1970/01/01/maven%E6%B7%BB%E5%8A%A0ojdbc6-jar-11g-%E5%8C%85/</guid>
       <source url="https://fangweilong.github.io/rss.xml">maven添加ojdbc6.jar(11g)包</source>
       <category>maven</category>
-      <pubDate>Mon, 26 Nov 2018 16:55:08 GMT</pubDate>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p><em>不要通过oracle官网下，折腾了我一下午都没安装成功。
 建议通过maven repo网站的下载：https://mvnrepository.com/artifact/oracle/ojdbc6/11.2.0.3</em></p>
 <p>PS:以下步骤默认你maven已经装好了，配置都做好了。如果配置还没搞好请参阅我另一篇博客：https://blog.csdn.net/tutian2000/article/details/79132758
@@ -348,12 +323,37 @@ values
       <enclosure url="https://img-blog.csdnimg.cn/20181126162921798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
+      <title>maven-install提示找不到pom</title>
+      <link>https://fangweilong.github.io/1970/01/01/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</link>
+      <guid isPermaLink="false">/1970/01/01/maven-install%E6%8F%90%E7%A4%BA%E6%89%BE%E4%B8%8D%E5%88%B0pom/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">maven-install提示找不到pom</source>
+      <category>maven</category>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="mvn-install"> mvn install</h2>
+<p>结果发现报错</p>
+<div><pre><code>The goal you specified requires a project to execute but there is no POM <span>in</span> this directory
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="思考"> 思考</h2>
+<ul>
+<li>这不对啊！其他同事的电脑上直接安装成功啊。这不科学。</li>
+<li>跟我maven版本有关？换个版本试试。失败...</li>
+<li>jdk有关？我也用的是openjdk11啊</li>
+</ul>
+<h2 id="解决"> 解决</h2>
+<p>结果无意中打开cmd执行了一下 我靠为什么成功了？
+<img src="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" alt="成功示例" /></p>
+<h2 id="powershell和cmd"> powershell和cmd</h2>
+<p>powershell百分百失败，cmd可以成功。我也不知道为啥</p>
+]]></content:encoded>
+      <enclosure url="https://p9.toutiaoimg.com/origin/pgc-image/1dbf4d8125df49e3bd4010cbcdded8de.png" type="image/png"/>
+    </item>
+    <item>
       <title>maven的配置以及IDEA导入本地maven</title>
       <link>https://fangweilong.github.io/1970/01/01/maven%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8Aidea%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0maven/</link>
       <guid isPermaLink="false">/1970/01/01/maven%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8Aidea%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0maven/</guid>
       <source url="https://fangweilong.github.io/rss.xml">maven的配置以及IDEA导入本地maven</source>
       <category>maven</category>
-      <pubDate>Mon, 22 Jan 2018 20:17:30 GMT</pubDate>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="_1-maven安装前先确定你本地的jdk是否安装-环境变量是否配置"> 1.maven安装前先确定你本地的jdk是否安装，环境变量是否配置</h2>
 <hr>
 <h2 id="_2-maven的官网-点击打开官网"> 2.maven的官网:<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener noreferrer">点击打开官网</a></h2>
@@ -421,7 +421,7 @@ C:\Users\用户名.m2\settings.xml文件后再试。</p>
       <guid isPermaLink="false">/1970/01/01/java-spark-kmeans%E7%AE%97%E6%B3%95/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java-spark-kMeans算法</source>
       <category>spark</category>
-      <pubDate>Thu, 10 Dec 2020 11:10:13 GMT</pubDate>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h3 id="配置"> 配置</h3>
 <p>配置请看我的<a href="https://blog.csdn.net/tutian2000/article/details/110948695" target="_blank" rel="noopener noreferrer">其他文章 点击跳转</a></p>
 <h3 id="spark官方文档"> spark官方文档</h3>
@@ -602,7 +602,7 @@ C:\Users\用户名.m2\settings.xml文件后再试。</p>
       <guid isPermaLink="false">/1970/01/01/java-spark-%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%E7%AE%97%E6%B3%95-pca/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java-spark-主成分分析算法-pca</source>
       <category>spark</category>
-      <pubDate>Thu, 10 Dec 2020 11:10:13 GMT</pubDate>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h3 id="配置"> 配置</h3>
 <p>配置请看我的<a href="https://blog.csdn.net/tutian2000/article/details/110948695" target="_blank" rel="noopener noreferrer">其他文章 点击跳转</a></p>
 <h3 id="spark官方文档"> spark官方文档</h3>
@@ -760,7 +760,7 @@ C:\Users\用户名.m2\settings.xml文件后再试。</p>
       <guid isPermaLink="false">/1970/01/01/java-spark-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95-naive-bayes/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java-spark-朴素贝叶斯算法(naive-bayes)</source>
       <category>spark</category>
-      <pubDate>Thu, 10 Dec 2020 11:10:13 GMT</pubDate>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h3 id="配置"> 配置</h3>
 <p>配置请看我的<a href="https://blog.csdn.net/tutian2000/article/details/110948695" target="_blank" rel="noopener noreferrer">其他文章 点击跳转</a></p>
 <h3 id="spark官方文档"> spark官方文档</h3>
@@ -950,7 +950,7 @@ C:\Users\用户名.m2\settings.xml文件后再试。</p>
       <guid isPermaLink="false">/1970/01/01/java-spark%E4%B8%80%E5%85%83-%E5%A4%9A%E5%85%83-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java-spark一元(多元)线性回归</source>
       <category>spark</category>
-      <pubDate>Thu, 10 Dec 2020 11:10:13 GMT</pubDate>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h3 id="配置"> 配置</h3>
 <p>配置请看我的<a href="https://blog.csdn.net/tutian2000/article/details/110948695" target="_blank" rel="noopener noreferrer">其他文章 点击跳转</a></p>
 <h3 id="spark官方文档"> spark官方文档</h3>
@@ -1168,7 +1168,7 @@ C:\Users\用户名.m2\settings.xml文件后再试。</p>
       <guid isPermaLink="false">/1970/01/01/java-spark%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java-spark的使用和配置</source>
       <category>spark</category>
-      <pubDate>Thu, 10 Dec 2020 11:10:13 GMT</pubDate>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言"> 前言</h2>
 <p>spark在java使用比较少，多是scala的用法，我这里介绍一下我在项目中使用的代码配置
 详细算法的使用请点击我主页列表查看</p>
@@ -1288,7 +1288,7 @@ C:\Users\用户名.m2\settings.xml文件后再试。</p>
       <guid isPermaLink="false">/1970/01/01/minmaxnormalize%E8%A7%84%E4%B8%80%E5%8C%96%E7%AE%97%E6%B3%95/</guid>
       <source url="https://fangweilong.github.io/rss.xml">MinMaxNormalize规一化算法</source>
       <category>java</category>
-      <pubDate>Fri, 16 Apr 2021 09:52:08 GMT</pubDate>
+      <pubDate>Fri, 16 Apr 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div><pre><code><span>public</span> <span>class</span> <span>MinMaxNormalize</span> <span>{</span>
 
 	<span>/**
@@ -1401,7 +1401,7 @@ C:\Users\用户名.m2\settings.xml文件后再试。</p>
       <guid isPermaLink="false">/1970/01/01/springboot-mybatis%E4%BA%8B%E5%8A%A1/</guid>
       <source url="https://fangweilong.github.io/rss.xml">springboot+mybatis事务</source>
       <category>spring boot</category>
-      <pubDate>Thu, 03 May 2018 16:44:10 GMT</pubDate>
+      <pubDate>Thu, 03 May 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>使用</p>
 <div><pre><code>    @Transactional
 </code></pre>
@@ -1415,7 +1415,7 @@ C:\Users\用户名.m2\settings.xml文件后再试。</p>
       <guid isPermaLink="false">/1970/01/01/springboot-aop%E4%BD%BF%E7%94%A8-before%E5%92%8C-after%E5%81%9A%E4%B8%80%E4%B8%AA%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%88%87%E9%9D%A2/</guid>
       <source url="https://fangweilong.github.io/rss.xml">springboot-AOP使用@Before和@After做一个最简单的切面</source>
       <category>spring boot</category>
-      <pubDate>Fri, 30 Aug 2019 15:51:28 GMT</pubDate>
+      <pubDate>Fri, 30 Aug 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>写一个最简单明细的切面，希望可以复制了直接用。我会尽量把注释写详细</p>
 <p>1.引入jar
 因为我是用的springboot，所以只需要引入一个包，如果你习惯的是引入两个包 也可以引入下面的两个包
@@ -1571,7 +1571,7 @@ public void before(){}
       <guid isPermaLink="false">/1970/01/01/springboot-field-rolemapper-in-required-a-bbean-of-type-that-could-not-be-found/</guid>
       <source url="https://fangweilong.github.io/rss.xml">springboot-FieldroleMapperin‘’requireda bbeanoftype''thatcouldnotbe_found.</source>
       <category>spring boot</category>
-      <pubDate>Thu, 07 Jun 2018 14:55:21 GMT</pubDate>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>其实在报错信息上就能看出来问题是什么，但是因为现在文档少，不容易找到解决方案。特此记录
 <img src="https://img-blog.csdn.net/2018060714520428?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" />
 意思是扫描不到mapper层，我们需要在Application.java这个启动文件上加一个注解告诉springboot我们的mapper位置在哪</p>
@@ -1587,7 +1587,7 @@ public void before(){}
       <guid isPermaLink="false">/1970/01/01/springboot-%E5%90%AF%E5%8A%A8%E6%97%B6%E8%8E%B7%E5%8F%96%E7%AB%AF%E5%8F%A3%E5%92%8C%E9%A1%B9%E7%9B%AE%E5%90%8D/</guid>
       <source url="https://fangweilong.github.io/rss.xml">springboot-启动时获取端口和项目名</source>
       <category>spring boot</category>
-      <pubDate>Fri, 27 Mar 2020 17:45:12 GMT</pubDate>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="背景"> 背景</h2>
 <h3 id="项目启动每次都要手动输url在浏览器中访问-就想能和vue项目一样启动能直接在控制台打印出url"> 项目启动每次都要手动输url在浏览器中访问，就想能和vue项目一样启动能直接在控制台打印出url</h3>
 <p><img src="https://img-blog.csdnimg.cn/20200327173925228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
@@ -1618,7 +1618,7 @@ public void before(){}
       <guid isPermaLink="false">/1970/01/01/springboot-%E6%97%A0%E6%B3%95%E6%89%AB%E6%8F%8F%E5%88%B0%E7%88%B6%E7%B1%BB%E6%A8%A1%E5%9D%97%E4%B8%AD%E7%9A%84bean/</guid>
       <source url="https://fangweilong.github.io/rss.xml">springboot-AOP使用@Before和@After做一个最简单的切面</source>
       <category>spring boot</category>
-      <pubDate>Thu, 10 Sep 2020 10:24:53 GMT</pubDate>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h3 id="现象"> 现象：</h3>
 <div><pre><code>我定义了两个模块 A 和 B 。B模块依赖A模块
 A模块中我定义了一个@Component
@@ -1654,7 +1654,7 @@ A模块中我定义了一个@Component
       <guid isPermaLink="false">/1970/01/01/springcloud-resttemplate%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1/</guid>
       <source url="https://fangweilong.github.io/rss.xml">springcloud-RestTemplate访问不到其他服务</source>
       <category>spring cloud</category>
-      <pubDate>Wed, 16 Jun 2021 16:42:17 GMT</pubDate>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="_1-检查启动类或配置类有没有加-enablediscoveryclient"> 1.检查启动类或配置类有没有加@EnableDiscoveryClient</h2>
 <hr>
 <h2 id="_2-检查-resttemplate有没有加-bean-loadbalanced-非必须-注解"> 2.检查 RestTemplate有没有加@Bean @LoadBalanced(非必须)注解</h2>
@@ -1684,7 +1684,7 @@ A模块中我定义了一个@Component
       <guid isPermaLink="false">/1970/01/01/springcloud-gateway-%E8%8E%B7%E5%8F%96%E5%85%A5%E5%8F%82/</guid>
       <source url="https://fangweilong.github.io/rss.xml">springcloud-gateway-获取入参</source>
       <category>spring cloud</category>
-      <pubDate>Fri, 27 Dec 2019 11:46:16 GMT</pubDate>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p><strong>在获取入参的时候，get方式的接口可以直接获取到，但是post形式的body获取以后会造成无法再使用，所以必须经过一层转换以后再读取。</strong></p>
 <p>直接上代码</p>
 <div><pre><code>
@@ -1816,7 +1816,7 @@ public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
       <guid isPermaLink="false">/1970/01/01/springcloud-gateway%E6%95%B4%E5%90%88swagger3-0-0/</guid>
       <source url="https://fangweilong.github.io/rss.xml">springcloud-gateway整合swagger3.0.0</source>
       <category>spring cloud</category>
-      <pubDate>Wed, 30 Dec 2020 17:15:59 GMT</pubDate>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="版本和说明"> 版本和说明</h1>
 <ul>
 <li>swagger:3.0.0</li>
@@ -2014,7 +2014,7 @@ public class AccessLogGlobalFilter implements GlobalFilter, Ordered {
       <guid isPermaLink="false">/1970/01/01/org-apache-jasper-jasperexceptionunabletocompileclassforjsp/</guid>
       <source url="https://fangweilong.github.io/rss.xml">org.apache.jasper.JasperExceptionUnabletocompileclassforJSP</source>
       <category>java</category>
-      <pubDate>Fri, 26 Jan 2018 09:31:26 GMT</pubDate>
+      <pubDate>Fri, 26 Jan 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="出错信息"> 出错信息</h2>
 <p>出现这种情况往往都是在 include 多个JSP页面后出现，报错信息为:
 ERROR LogErrorInfoImpl:42 - Error Happen:</p>
@@ -2057,7 +2057,7 @@ The code of method _jspService(HttpServletRequest, HttpServletResponse) is excee
       <guid isPermaLink="false">/1970/01/01/long%E8%BF%94%E5%9B%9E%E7%BB%99%E5%89%8D%E5%8F%B0%E5%9C%A8js%E4%B8%AD%E4%B8%A2%E5%A4%B1%E7%B2%BE%E5%BA%A6/</guid>
       <source url="https://fangweilong.github.io/rss.xml">Long返回给前台在js中丢失精度</source>
       <category>java</category>
-      <pubDate>Thu, 03 Jun 2021 11:24:06 GMT</pubDate>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="现象"> 现象</h2>
 <p>1.后台id等使用long（雪花算法生成id）存储
 2.后台将id返回给前台
@@ -2100,7 +2100,7 @@ The code of method _jspService(HttpServletRequest, HttpServletResponse) is excee
       <guid isPermaLink="false">/1970/01/01/mongodb%E6%9F%A5%E8%AF%A2/</guid>
       <source url="https://fangweilong.github.io/rss.xml">MongoDB查询</source>
       <category>mongo</category>
-      <pubDate>Wed, 07 Feb 2018 11:03:48 GMT</pubDate>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>//配置</p>
 <div><pre><code>public class Mongodb {
    private static String host = &quot;&quot;;//域名
@@ -2174,7 +2174,7 @@ document.get(&quot;key&quot;);
       <guid isPermaLink="false">/1970/01/01/bootdo%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4%E6%80%BB%E7%BB%93/</guid>
       <source url="https://fangweilong.github.io/rss.xml">bootdo框架使用步骤总结</source>
       <category>bootdo</category>
-      <pubDate>Thu, 19 Apr 2018 17:45:00 GMT</pubDate>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h4 id="_2020-06-21-16-01-00"> 2020-06-21 16:01:00</h4>
 <p>食言了 不更新了 自己写框架真快乐</p>
 <p>=================================</p>
@@ -2223,7 +2223,7 @@ document.get(&quot;key&quot;);
       <guid isPermaLink="false">/1970/01/01/filter%E6%8B%A6%E6%88%AA%E5%99%A8%E8%8E%B7%E5%8F%96http%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/</guid>
       <source url="https://fangweilong.github.io/rss.xml">filter 拦截器 获取http请求参数</source>
       <category>java</category>
-      <pubDate>Thu, 19 Apr 2018 17:45:00 GMT</pubDate>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p><em>PS:里面一些方法使用了hutool的工具类 可以替换成你自己习惯的 工具类不是记录的主要东西。</em></p>
 <p>记录点
 1.怎么创建拦截器
@@ -2451,27 +2451,12 @@ public class LogFilter implements Filter {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>java.lang.NoSuchMethodError</title>
-      <link>https://fangweilong.github.io/1970/01/01/java-lang-nosuchmethoderror/</link>
-      <guid isPermaLink="false">/1970/01/01/java-lang-nosuchmethoderror/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">java.lang.NoSuchMethodError</source>
-      <category>java</category>
-      <pubDate>Tue, 20 Mar 2018 10:25:27 GMT</pubDate>
-      <content:encoded><![CDATA[<p><strong>出现这个问题检查</strong></p>
-<p><strong>1.jar包版本</strong>
-有些jar包对版本有要求，不同版本之间是不互通的，有些还对jdk有强制要求，比如Google的番石榴就要求JDK1.8版本</p>
-<p><strong>2.是否将所有修改的class文件布置到服务器</strong>
-这个问题是最容易出现的，可能有一天更改的文件较多，布置的时候又是点对点布置，就会遗漏掉一两个class文件。
-解决办法就是在每次更改文件就用文本记下来，或者用Git等版本控制读取到更改记录，一个个文件对照着布置。</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>java-String字符串split分割无效</title>
       <link>https://fangweilong.github.io/1970/01/01/java-string%E5%AD%97%E7%AC%A6%E4%B8%B2split%E5%88%86%E5%89%B2%E6%97%A0%E6%95%88/</link>
       <guid isPermaLink="false">/1970/01/01/java-string%E5%AD%97%E7%AC%A6%E4%B8%B2split%E5%88%86%E5%89%B2%E6%97%A0%E6%95%88/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java-String字符串split分割无效</source>
       <category>java</category>
-      <pubDate>Tue, 26 Jun 2018 10:21:12 GMT</pubDate>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>这个问题之前就遇到过，这次又遇到了特别纪录一下。
 1。
 <img src="https://img-blog.csdn.net/20180626095402193?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" />
@@ -2493,12 +2478,27 @@ OK这样就可以了。</p>
       <enclosure url="https://img-blog.csdn.net/20180626095402193?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
     </item>
     <item>
+      <title>java.lang.NoSuchMethodError</title>
+      <link>https://fangweilong.github.io/1970/01/01/java-lang-nosuchmethoderror/</link>
+      <guid isPermaLink="false">/1970/01/01/java-lang-nosuchmethoderror/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">java.lang.NoSuchMethodError</source>
+      <category>java</category>
+      <pubDate>Tue, 20 Mar 2018 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p><strong>出现这个问题检查</strong></p>
+<p><strong>1.jar包版本</strong>
+有些jar包对版本有要求，不同版本之间是不互通的，有些还对jdk有强制要求，比如Google的番石榴就要求JDK1.8版本</p>
+<p><strong>2.是否将所有修改的class文件布置到服务器</strong>
+这个问题是最容易出现的，可能有一天更改的文件较多，布置的时候又是点对点布置，就会遗漏掉一两个class文件。
+解决办法就是在每次更改文件就用文本记下来，或者用Git等版本控制读取到更改记录，一个个文件对照着布置。</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>javax.el.PropertyNotFoundException</title>
       <link>https://fangweilong.github.io/1970/01/01/javax-el-propertynotfoundexception/</link>
       <guid isPermaLink="false">/1970/01/01/javax-el-propertynotfoundexception/</guid>
       <source url="https://fangweilong.github.io/rss.xml">javax.el.PropertyNotFoundException</source>
       <category>java</category>
-      <pubDate>Mon, 19 Mar 2018 14:03:04 GMT</pubDate>
+      <pubDate>Mon, 19 Mar 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="_1-model中没有get-和set方法"> 1.model中没有get()和set方法</h2>
 <p><em>如果没有get()和set()方法，el表达式就会出现javax.el.PropertyNotFoundException错误</em></p>
 <h2 id="_2-model中有get-和set-方法"> 2.model中有get()和set()方法</h2>
@@ -2511,7 +2511,7 @@ OK这样就可以了。</p>
       <guid isPermaLink="false">/1970/01/01/java%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4-%E8%B0%83%E7%94%A8-net%E7%9A%84webservice%E4%B9%B1%E7%A0%81/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java表单提交，调用.net的webservice乱码</source>
       <category>java</category>
-      <pubDate>Thu, 19 Apr 2018 09:38:46 GMT</pubDate>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>昨天调用webservice接口的时候发现传进去的中文参数全部变成了  '?'，但是使用main方法去调用的时候一切正常，今天终于解决了，特此记录。</p>
 <p>这是我之前的的form表单</p>
 <div><pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;form&quot;&gt;
@@ -2535,7 +2535,7 @@ OK这样就可以了。</p>
       <guid isPermaLink="false">/1970/01/01/java%E8%AE%BF%E9%97%AEwebservice/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java访问webservice</source>
       <category>java</category>
-      <pubDate>Fri, 13 Apr 2018 15:19:15 GMT</pubDate>
+      <pubDate>Fri, 13 Apr 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="直接调用"> 直接调用</h1>
 <p>使用这种方法可以较为方便，也比较直观，网上找到的方法感觉不太友好，而且还有区分什么的</p>
 <div><pre><code><span>import</span> <span>org<span>.</span>dom4j<span>.</span></span><span>VisitorSupport</span><span>;</span>
@@ -2613,7 +2613,7 @@ OK这样就可以了。</p>
       <guid isPermaLink="false">/1970/01/01/org-springframework-beans-factory-beaninitializationexceptioncouldnotloadproperties/</guid>
       <source url="https://fangweilong.github.io/rss.xml">org.springframework.beans.factory.BeanInitializationExceptionCouldnotloadproperties;</source>
       <category>java</category>
-      <pubDate>Wed, 24 Jan 2018 14:21:35 GMT</pubDate>
+      <pubDate>Wed, 24 Jan 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="基本报错信息表现为"> 基本报错信息表现为:</h2>
 <div><pre><code>严重: Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
 org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/db.properties]
@@ -2661,7 +2661,7 @@ at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.post
       <guid isPermaLink="false">/1970/01/01/%E4%BD%BF%E7%94%A8java%E7%94%9F%E6%88%90%E5%BE%AE%E4%BF%A1%E9%9A%8F%E6%9C%BA%E5%8A%A0%E5%A5%BD%E5%8F%8B%E7%9A%84%E9%93%BE%E6%8E%A5/</guid>
       <source url="https://fangweilong.github.io/rss.xml">使用java生成微信随机加好友的链接</source>
       <category>java</category>
-      <pubDate>Wed, 14 Aug 2019 11:01:22 GMT</pubDate>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="随机生成链接"> 随机生成链接</h1>
 <h2 id="前言"> 前言</h2>
 <ol>
@@ -2727,7 +2727,7 @@ at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.post
       <guid isPermaLink="false">/1970/01/01/ajax%E8%BF%94%E5%9B%9E%E6%88%90%E5%8A%9F%E5%8D%B4%E8%BF%9B%E5%85%A5%E4%BA%86error/</guid>
       <source url="https://fangweilong.github.io/rss.xml">ajax返回成功却进入了error</source>
       <category>javascript</category>
-      <pubDate>Wed, 16 May 2018 13:08:03 GMT</pubDate>
+      <pubDate>Wed, 16 May 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div><pre><code>$.ajax({
         type: &quot;POST&quot;,
         url: &quot;&quot;,
@@ -2751,7 +2751,7 @@ at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.post
       <guid isPermaLink="false">/1970/01/01/echarts%E8%AF%8D%E4%BA%91%E4%BC%9A%E6%B8%B2%E6%9F%93%E4%B8%A4%E6%AC%A1/</guid>
       <source url="https://fangweilong.github.io/rss.xml">echarts词云会渲染两次</source>
       <category>javascript</category>
-      <pubDate>Fri, 13 Dec 2019 11:16:38 GMT</pubDate>
+      <pubDate>Fri, 13 Dec 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>词云是比较容易出现这个问题的一个图表，所以拿词云做一个示例。</p>
 <p><img src="https://img-blog.csdnimg.cn/20191213110612320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
 在上面这张图中可以比较清晰的看到有两个“数值模拟”的词云，在普通的业务逻辑中，我们只需要在代码中这样写</p>
@@ -2782,7 +2782,7 @@ at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.post
       <guid isPermaLink="false">/1970/01/01/elementui-table%E9%BB%98%E8%AE%A4%E5%8B%BE%E9%80%89/</guid>
       <source url="https://fangweilong.github.io/rss.xml">elementui-table默认勾选</source>
       <category>javascript</category>
-      <pubDate>Sat, 30 Nov 2019 11:58:37 GMT</pubDate>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="html-table"> html table</h2>
 <div><pre><code>&lt;el-table :stripe=&quot;true&quot; style=&quot;width: 100%&quot; border highlight-current-row
                   ref=&quot;table&quot;
@@ -2813,7 +2813,7 @@ $.each(vm.tableData, function (index, item) {
       <guid isPermaLink="false">/1970/01/01/elementui%E7%A6%81%E6%AD%A2%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E7%94%A8%E6%88%B7%E5%90%8D%E5%AF%86%E7%A0%81/</guid>
       <source url="https://fangweilong.github.io/rss.xml">elementui禁止浏览器自动填充用户名密码</source>
       <category>javascript</category>
-      <pubDate>Sat, 30 Nov 2019 11:58:37 GMT</pubDate>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>浏览器这功能在登录的时候挺好用的，但是在注册和管理的时候就很难受了</p>
 <p>所以</p>
 <p>在普通的input上直接off就行了</p>
@@ -2830,7 +2830,7 @@ $.each(vm.tableData, function (index, item) {
       <guid isPermaLink="false">/1970/01/01/vue-elementui%E6%89%93%E5%BC%80%E5%BC%B9%E7%AA%97-%E4%BD%86%E6%98%AF%E5%BC%B9%E7%AA%97%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%AA%E4%BC%9A%E5%88%9D%E5%A7%8B%E8%B0%83%E7%94%A8%E4%B8%80%E6%AC%A1/</guid>
       <source url="https://fangweilong.github.io/rss.xml">vue+elementui打开弹窗，但是弹窗的接口只会初始调用一次</source>
       <category>javascript</category>
-      <pubDate>Sat, 30 Nov 2019 11:58:37 GMT</pubDate>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>使用element的dialog弹窗的时候</p>
 <div><pre><code>	&lt;el-dialog
       :title=&quot;title&quot;
@@ -2861,7 +2861,7 @@ $.each(vm.tableData, function (index, item) {
       <guid isPermaLink="false">/1970/01/01/input%E4%B8%8B%E6%8B%89%E9%80%89%E6%8B%A9%E6%A1%86%E5%8F%AF%E4%BB%A5%E8%87%AA%E8%A1%8C%E8%BE%93%E5%85%A5%E4%B9%9F%E5%8F%AF%E4%BB%A5%E4%B8%8B%E6%8B%89%E9%80%89%E6%8B%A9/</guid>
       <source url="https://fangweilong.github.io/rss.xml">input下拉选择框可以自行输入也可以下拉选择</source>
       <category>javascript</category>
-      <pubDate>Wed, 18 Apr 2018 09:35:35 GMT</pubDate>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>我这里使用的是原生H5标签  datalist</p>
 <div><pre><code>			&lt;input class=&quot;browsers&quot; list=&quot;browsers&quot;&gt;
 			&lt;datalist id=&quot;browsers&quot;&gt;browsers
@@ -2884,7 +2884,7 @@ $.each(vm.tableData, function (index, item) {
       <guid isPermaLink="false">/1970/01/01/jquery-%E8%8A%82%E6%B5%81%E9%98%B2%E6%8A%96/</guid>
       <source url="https://fangweilong.github.io/rss.xml">jquery 节流防抖</source>
       <category>javascript</category>
-      <pubDate>Wed, 25 Mar 2020 16:02:12 GMT</pubDate>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="前言"> 前言</h2>
 <h4 id="在一些大数量或者有延迟性的操作下-为了页面不要每次输入或者点击的时候闪烁-我们需要对接口进行调用频率限制。"> 在一些大数量或者有延迟性的操作下，为了页面不要每次输入或者点击的时候闪烁，我们需要对接口进行调用频率限制。</h4>
 <p>直接上代码</p>
@@ -2904,32 +2904,12 @@ $.each(vm.tableData, function (index, item) {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>jquery点击浏览器返回上一页按钮并能直接刷新</title>
-      <link>https://fangweilong.github.io/1970/01/01/jquery%E7%82%B9%E5%87%BB%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5%E6%8C%89%E9%92%AE%E5%B9%B6%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%88%B7%E6%96%B0/</link>
-      <guid isPermaLink="false">/1970/01/01/jquery%E7%82%B9%E5%87%BB%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5%E6%8C%89%E9%92%AE%E5%B9%B6%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%88%B7%E6%96%B0/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">jquery点击浏览器返回上一页按钮并能直接刷新</source>
-      <category>javascript</category>
-      <pubDate>Tue, 06 Nov 2018 11:17:36 GMT</pubDate>
-      <content:encoded><![CDATA[<p>A，B两个页面，从B页面点击浏览器的返回上一页按钮，跳转到A页面，此时需要A页面重新加载，则可以在A页面加上这一段</p>
-<div><pre><code> var isPageHide = false;  
-    window.addEventListener('pageshow', function () {  
-        if (isPageHide) {  
-            window.location.reload();  
-        }  
-    });  
-    window.addEventListener('pagehide', function () {  
-        isPageHide = true;  
-    });
-</code></pre>
-</div>]]></content:encoded>
-    </item>
-    <item>
       <title>js_jquery获取不到页面元素 需要点击一下才能找到</title>
       <link>https://fangweilong.github.io/1970/01/01/js-jquery%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0-%E9%9C%80%E8%A6%81%E7%82%B9%E5%87%BB%E4%B8%80%E4%B8%8B%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0/</link>
       <guid isPermaLink="false">/1970/01/01/js-jquery%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0-%E9%9C%80%E8%A6%81%E7%82%B9%E5%87%BB%E4%B8%80%E4%B8%8B%E6%89%8D%E8%83%BD%E6%89%BE%E5%88%B0/</guid>
       <source url="https://fangweilong.github.io/rss.xml">js_jquery获取不到页面元素 需要点击一下才能找到</source>
       <category>javascript</category>
-      <pubDate>Tue, 06 Feb 2018 19:39:42 GMT</pubDate>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>2018-03-23 更新
 更新内容:检查在获取的时候是不是使用class获取元素，如果是则修改为通过id获取元素。通过id获取元素是可以直接获取到的</p>
 <p>以下为原文  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
@@ -2950,12 +2930,32 @@ obj.document.getElementsByClassName(&quot;odd_bg&quot;);//我们可以对元素�
       <enclosure url="http://img.blog.csdn.net/20180206192530612?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" type="image/"/>
     </item>
     <item>
+      <title>jquery点击浏览器返回上一页按钮并能直接刷新</title>
+      <link>https://fangweilong.github.io/1970/01/01/jquery%E7%82%B9%E5%87%BB%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5%E6%8C%89%E9%92%AE%E5%B9%B6%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%88%B7%E6%96%B0/</link>
+      <guid isPermaLink="false">/1970/01/01/jquery%E7%82%B9%E5%87%BB%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5%E6%8C%89%E9%92%AE%E5%B9%B6%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%88%B7%E6%96%B0/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">jquery点击浏览器返回上一页按钮并能直接刷新</source>
+      <category>javascript</category>
+      <pubDate>Tue, 06 Nov 2018 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>A，B两个页面，从B页面点击浏览器的返回上一页按钮，跳转到A页面，此时需要A页面重新加载，则可以在A页面加上这一段</p>
+<div><pre><code> var isPageHide = false;  
+    window.addEventListener('pageshow', function () {  
+        if (isPageHide) {  
+            window.location.reload();  
+        }  
+    });  
+    window.addEventListener('pagehide', function () {  
+        isPageHide = true;  
+    });
+</code></pre>
+</div>]]></content:encoded>
+    </item>
+    <item>
       <title>js_jquery限制input输入框只能输入两位小数的数字</title>
       <link>https://fangweilong.github.io/1970/01/01/js-jquery%E9%99%90%E5%88%B6input%E8%BE%93%E5%85%A5%E6%A1%86%E5%8F%AA%E8%83%BD%E8%BE%93%E5%85%A5%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97/</link>
       <guid isPermaLink="false">/1970/01/01/js-jquery%E9%99%90%E5%88%B6input%E8%BE%93%E5%85%A5%E6%A1%86%E5%8F%AA%E8%83%BD%E8%BE%93%E5%85%A5%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
       <source url="https://fangweilong.github.io/rss.xml">js_jquery限制input输入框只能输入两位小数的数字</source>
       <category>javascript</category>
-      <pubDate>Wed, 31 Jan 2018 20:53:55 GMT</pubDate>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>//正整数 两位小数</p>
 <div><pre><code>$(&#39;.inputWrap&#39;).on(&#39;input&#39;, function () {
         var num = $(this).val();
@@ -2981,7 +2981,7 @@ obj.document.getElementsByClassName(&quot;odd_bg&quot;);//我们可以对元素�
       <guid isPermaLink="false">/1970/01/01/layui-lay-verify-form%E8%A1%A8%E5%8D%95%E8%87%AA%E5%AE%9A%E4%B9%89%E9%AA%8C%E8%AF%81%E8%A7%84%E5%88%99/</guid>
       <source url="https://fangweilong.github.io/rss.xml">layui-lay_verify-form表单自定义验证规则</source>
       <category>javascript</category>
-      <pubDate>Thu, 25 Oct 2018 14:56:06 GMT</pubDate>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>官方文档详见：https://www.layui.com/doc/modules/form.html#verify
 虽然layui的官方文档已经是写的比较详细，但是初次使用的时候总会懵一下，这里纪录一下lay-verify自定义验证规则的时候到底放哪。</p>
 <div><pre><code>html：
@@ -3016,43 +3016,12 @@ form.verify({
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>利用layer实现放大图片的效果</title>
-      <link>https://fangweilong.github.io/1970/01/01/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</link>
-      <guid isPermaLink="false">/1970/01/01/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">利用layer实现放大图片的效果</source>
-      <category>javascript</category>
-      <pubDate>Wed, 07 Feb 2018 13:59:18 GMT</pubDate>
-      <content:encoded><![CDATA[<p>引用layer.js</p>
-<p>//小图</p>
-<div><pre><code>&lt;a href=&quot;javascript:amplificationImg(&#39;图片名&#39;,&#39;图片地址&#39;)&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;
-</code></pre>
-<div><span>1</span><br></div></div><p>//隐藏域 也就是放大以后的图片位置</p>
-<div><pre><code>&lt;img alt=&quot;&quot; style=&quot;display:none&quot; id=&quot;displayImg&quot; src=&quot;&quot; /&gt;
-</code></pre>
-<div><span>1</span><br></div></div><p>//js方法体</p>
-<div><pre><code>function amplificationImg(name, url) {
-   $(&quot;#displayImg&quot;).attr(&quot;src&quot;, url);
-   var height = $(&quot;#displayImg&quot;).height();//拿的图片原来宽高，建议自定义宽高
-   var width = $(&quot;#displayImg&quot;).width();
-   layer.open({
-      type: 1,
-      title: false,
-      closeBtn: 0,
-      shadeClose: true,
-      area: [width + &#39;px&#39;, height + &#39;px&#39;], //宽高
-	  content: &quot;&lt;img alt=&quot; + name + &quot; title=&quot; + name + &quot; src=&quot; + url + &quot; /&gt;&quot;
-   });
-}
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
       <title>layui的laydate控件的使用</title>
       <link>https://fangweilong.github.io/1970/01/01/layui%E7%9A%84laydate%E6%8E%A7%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <guid isPermaLink="false">/1970/01/01/layui%E7%9A%84laydate%E6%8E%A7%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <source url="https://fangweilong.github.io/rss.xml">layui的laydate控件的使用</source>
       <category>javascript</category>
-      <pubDate>Sat, 28 Apr 2018 10:53:26 GMT</pubDate>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>目前使用的layui版，没有单独使用laydate。
 官网上的例子是每个属性单独设置的，我稍微整合了一下常用属性。</p>
 <p>引入了css和js以后</p>
@@ -3080,12 +3049,43 @@ layui.use(&#39;laydate&#39;, function() {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>利用layer实现放大图片的效果</title>
+      <link>https://fangweilong.github.io/1970/01/01/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</link>
+      <guid isPermaLink="false">/1970/01/01/%E5%88%A9%E7%94%A8layer%E5%AE%9E%E7%8E%B0%E6%94%BE%E5%A4%A7%E5%9B%BE%E7%89%87%E7%9A%84%E6%95%88%E6%9E%9C/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">利用layer实现放大图片的效果</source>
+      <category>javascript</category>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>引用layer.js</p>
+<p>//小图</p>
+<div><pre><code>&lt;a href=&quot;javascript:amplificationImg(&#39;图片名&#39;,&#39;图片地址&#39;)&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;/&gt;&lt;/a&gt;
+</code></pre>
+<div><span>1</span><br></div></div><p>//隐藏域 也就是放大以后的图片位置</p>
+<div><pre><code>&lt;img alt=&quot;&quot; style=&quot;display:none&quot; id=&quot;displayImg&quot; src=&quot;&quot; /&gt;
+</code></pre>
+<div><span>1</span><br></div></div><p>//js方法体</p>
+<div><pre><code>function amplificationImg(name, url) {
+   $(&quot;#displayImg&quot;).attr(&quot;src&quot;, url);
+   var height = $(&quot;#displayImg&quot;).height();//拿的图片原来宽高，建议自定义宽高
+   var width = $(&quot;#displayImg&quot;).width();
+   layer.open({
+      type: 1,
+      title: false,
+      closeBtn: 0,
+      shadeClose: true,
+      area: [width + &#39;px&#39;, height + &#39;px&#39;], //宽高
+	  content: &quot;&lt;img alt=&quot; + name + &quot; title=&quot; + name + &quot; src=&quot; + url + &quot; /&gt;&quot;
+   });
+}
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>mapbox-glStyleisnotdone_loading</title>
       <link>https://fangweilong.github.io/1970/01/01/mapbox-gl-style-is-not-done-loading/</link>
       <guid isPermaLink="false">/1970/01/01/mapbox-gl-style-is-not-done-loading/</guid>
       <source url="https://fangweilong.github.io/rss.xml">mapbox-glStyleisnotdone_loading</source>
       <category>javascript</category>
-      <pubDate>Thu, 16 May 2019 11:01:54 GMT</pubDate>
+      <pubDate>Thu, 16 May 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>这个错误是因为画的时候样式还没加载完成，下面就调用了。
 在一些论坛上也能找到别人有遇到这些问题：
 https://stackoverflow.com/questions/44394573/mapbox-gl-js-style-is-not-done-loading?rq=1
@@ -3116,7 +3116,7 @@ https://www.javaear.com/question/44394573.html</p>
       <guid isPermaLink="false">/1970/01/01/radio%E5%8F%96%E6%B6%88%E9%80%89%E4%B8%AD%E5%B9%B6%E8%83%BD%E5%86%8D%E6%AC%A1%E9%80%89%E4%B8%AD/</guid>
       <source url="https://fangweilong.github.io/rss.xml">radio取消选中并能再次选中</source>
       <category>javascript</category>
-      <pubDate>Wed, 09 May 2018 17:28:11 GMT</pubDate>
+      <pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>网上很多都是只能取消选中，之后就无法选中了。
 按照这个方法可以再次选中</p>
 <div><pre><code>$(document).ready(function(){
@@ -3145,7 +3145,7 @@ https://www.javaear.com/question/44394573.html</p>
       <guid isPermaLink="false">/1970/01/01/%E4%B8%80%E7%BB%84%E6%95%B0%E5%B7%AE%E8%B7%9D%E8%BF%87%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98-symbolsize%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F/</guid>
       <source url="https://fangweilong.github.io/rss.xml">一组数差距过大的问题：symbolsize计算公式</source>
       <category>javascript</category>
-      <pubDate>Fri, 02 Apr 2021 16:48:56 GMT</pubDate>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h3 id="解决的问题"> 解决的问题</h3>
 <p>当一组数据的值相差太大，导致在页面渲染的效果太差。比如一个点占据了整个屏幕，一个点小到看不见。这时候这个计算公式就可以起作用了</p>
 <div><pre><code><span>/**
@@ -3176,7 +3176,7 @@ https://www.javaear.com/question/44394573.html</p>
       <guid isPermaLink="false">/1970/01/01/%E5%BE%AE%E4%BF%A1%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AEajax%E6%8E%A5%E5%8F%A3%E5%8D%81%E7%A7%92%E9%92%9F%E6%9C%AA%E5%93%8D%E5%BA%94%E8%87%AA%E5%8A%A8%E9%87%8D%E5%8F%91/</guid>
       <source url="https://fangweilong.github.io/rss.xml">微信浏览器访问ajax接口十秒钟未响应自动重发</source>
       <category>javascript</category>
-      <pubDate>Thu, 08 Nov 2018 14:41:47 GMT</pubDate>
+      <pubDate>Thu, 08 Nov 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>2018-12-21更新：
 在url或者ajax带上 connect_redirect=1 这个参数，我在项目中遇到的会自动重发的手机确实不重发了，但是有人说有很小一部分的手机还是会重发
 原文地址见：https://developers.weixin.qq.com/community/develop/doc/b8f9f09573e92ffb0e23308d54bcdcf7
@@ -3227,7 +3227,7 @@ https://www.javaear.com/question/44394573.html</p>
       <guid isPermaLink="false">/1970/01/01/%E6%89%8B%E6%9C%BA%E7%A4%BE%E4%BC%9A%E5%8C%96%E5%88%86%E4%BA%AB%E5%88%B0qq%E5%A5%BD%E5%8F%8B%E3%80%81qq%E7%A9%BA%E9%97%B4%E3%80%81%E5%BE%AE%E4%BF%A1%E3%80%81%E5%BE%AE%E4%BF%A1%E6%9C%8B%E5%8F%8B%E5%9C%88%E3%80%81%E5%BE%AE%E5%8D%9A%E7%AD%89-%E5%8C%BA%E5%88%86%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
       <source url="https://fangweilong.github.io/rss.xml">手机社会化分享到qq好友、qq空间、微信、微信朋友圈、微博等(区分浏览器)</source>
       <category>javascript</category>
-      <pubDate>Wed, 07 Feb 2018 14:18:05 GMT</pubDate>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>先下载js包并引用
 官网:http://www.calledt.com/soshm/
 github:https://github.com/calledT/soshm</p>
@@ -3266,7 +3266,7 @@ github:https://github.com/calledT/soshm</p>
       <guid isPermaLink="false">/1970/01/01/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEjs-uncaught-typeerror-cannot-read-property-gc-of-undefined/</guid>
       <source url="https://fangweilong.github.io/rss.xml">百度地图js-UncaughtTypeErrorCannotreadproperty‘gc‘of_undefined</source>
       <category>javascript</category>
-      <pubDate>Mon, 26 Feb 2018 15:07:32 GMT</pubDate>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>我们在使用百度地图的js时往往是这样初始化参数它的</p>
 <div><pre><code>	var map = new BMap.Map(&quot;allmap&quot;);//请注意这段
 	var lng=&#39;&#39;;
@@ -3297,7 +3297,7 @@ github:https://github.com/calledT/soshm</p>
       <guid isPermaLink="false">/1970/01/01/centos7-docker-%E6%9B%B4%E6%8D%A2%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE%E7%9B%AE%E5%BD%95/</guid>
       <source url="https://fangweilong.github.io/rss.xml">centos7-docker-更换迁移数据目录</source>
       <category>docker</category>
-      <pubDate>Sun, 02 Feb 2020 22:45:01 GMT</pubDate>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="先决条件"> 先决条件</h1>
 <h3 id="版本"> 版本</h3>
 <div><pre><code>docker version:19.03.3, build a872fc2f86
@@ -3330,7 +3330,7 @@ graph后面是你自己设置的存储路径
 <li>
 <p>重启docker
 实际上docker自己会加载配置文件 但是为了保险起见 我们还是手动重启一下</p>
-<div><pre><code>systemctl restart docker
+<div><pre><code>systemctl restart <span>docker</span>
 </code></pre>
 <div><span>1</span><br></div></div></li>
 <li>
@@ -3338,7 +3338,7 @@ graph后面是你自己设置的存储路径
 通过命令查看</p>
 </li>
 </ol>
-<div><pre><code>docker info
+<div><pre><code><span>docker</span> info
 </code></pre>
 <div><span>1</span><br></div></div><p><img src="https://img-blog.csdnimg.cn/20200303142501202.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
 可以看到路径已经切换过来了</p>
@@ -3351,7 +3351,7 @@ graph后面是你自己设置的存储路径
       <guid isPermaLink="false">/1970/01/01/centos7%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85docker%E5%92%8Cdocker-compose/</guid>
       <source url="https://fangweilong.github.io/rss.xml">centos7离线安装docker和docker-compose</source>
       <category>docker</category>
-      <pubDate>Sun, 02 Feb 2020 22:45:01 GMT</pubDate>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="实测版本说明"> 实测版本说明</h2>
 <div><pre><code>centos：7.5
 docker：19.03.5
@@ -3452,7 +3452,7 @@ docker-compose：1.24.3
                 <span>exit</span>
             <span>fi</span>
             <span>echo</span> -e <span>'\n启动docker...'</span>
-            systemctl start docker
+            systemctl start <span>docker</span>
             <span>if</span> <span>[</span> <span>$?</span> -ne <span>0</span> <span>]</span><span>;</span><span>then</span>
                 <span>echo</span> -e <span>'\n启动失败'</span>
                 <span>exit</span>
@@ -3464,7 +3464,7 @@ docker-compose：1.24.3
                 <span>exit</span>
             <span>fi</span>
             <span>echo</span> -e <span>'\ndocker版本：'</span>
-            docker -v
+            <span>docker</span> -v
         <span>else</span>
             <span>echo</span> -e <span>'\n复制失败'</span>
             <span>exit</span>
@@ -3493,7 +3493,7 @@ docker-compose：1.24.3
         <span>chmod</span> +x /usr/local/bin/docker-compose
 
         <span>echo</span> <span>'\ndocker-compose版本：'</span>
-        docker-compose -v
+        <span>docker-compose</span> -v
     <span>else</span> 
         <span>echo</span> <span>'\n复制失败'</span>
     <span>fi</span>
@@ -3568,7 +3568,7 @@ init
       <guid isPermaLink="false">/1970/01/01/docker-hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F-java%E4%B8%8A%E4%BC%A0%E6%8A%A5%E9%94%99/</guid>
       <source url="https://fangweilong.github.io/rss.xml">docker-hadoop伪分布式-java上传报错</source>
       <category>docker</category>
-      <pubDate>Sun, 02 Feb 2020 22:45:01 GMT</pubDate>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p><mark>2020-11-06更新</mark></p>
 <p><a href="https://gitee.com/Teler/docker-warehouse/tree/master/hadoop" target="_blank" rel="noopener noreferrer">docker-compose 脚本地址</a></p>
 <h2 id="更新目的"> 更新目的</h2>
@@ -3698,7 +3698,7 @@ init
       <guid isPermaLink="false">/1970/01/01/java%E6%89%93%E5%8C%85%E6%88%90docker-images/</guid>
       <source url="https://fangweilong.github.io/rss.xml">java打包成docker-images</source>
       <category>docker</category>
-      <pubDate>Tue, 23 Mar 2021 15:07:59 GMT</pubDate>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="一个最简单的jar包的dockerfile制作"> 一个最简单的jar包的Dockerfile制作</h1>
 <h2 id="openjdk的dockerhub地址"> <a href="https://hub.docker.com/_/openjdk" target="_blank" rel="noopener noreferrer">openjdk的dockerhub地址</a></h2>
 <hr>
@@ -3721,7 +3721,7 @@ EXPOSE <span>8080</span>
 <ol>
 <li>当前根目录</li>
 </ol>
-<div><pre><code>docker build -t teler/app:1.0.1 <span>.</span>
+<div><pre><code><span>docker</span> build -t teler/app:1.0.1 <span>.</span>
 </code></pre>
 <div><span>1</span><br></div></div><ul>
 <li>-t指images名称</li>
@@ -3730,7 +3730,7 @@ EXPOSE <span>8080</span>
 <ol start="2">
 <li>指定目录</li>
 </ol>
-<div><pre><code>    docker build -f <span>&lt;</span>path<span>></span>/Dockerfile -t <span>&lt;</span>name<span>></span>:<span>&lt;</span>version<span>></span> <span>.</span>
+<div><pre><code>    <span>docker</span> build -f <span>&lt;</span>path<span>></span>/Dockerfile -t <span>&lt;</span>name<span>></span>:<span>&lt;</span>version<span>></span> <span>.</span>
 </code></pre>
 <div><span>1</span><br></div></div><hr>
 <h3 id="说明-注意点"> 说明&amp;注意点</h3>
@@ -3759,7 +3759,7 @@ What this means is that Alpine based images are only released for early access r
       <guid isPermaLink="false">/1970/01/01/postgresql%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B/</guid>
       <source url="https://fangweilong.github.io/rss.xml">PostgreSQL使用数组类型</source>
       <category>postgres</category>
-      <pubDate>Tue, 01 Sep 2020 10:12:11 GMT</pubDate>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="版本"> 版本</h1>
 <h2 id="pgsql-9-6"> pgsql:9.6</h2>
 <h2 id="navicat-15"> navicat:15</h2>
@@ -4036,7 +4036,7 @@ What this means is that Alpine based images are only released for early access r
       <guid isPermaLink="false">/1970/01/01/postgresql%E5%9C%A8where%E6%9D%A1%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6/</guid>
       <source url="https://fangweilong.github.io/rss.xml">PostgreSQL在where条件中使用判断条件</source>
       <category>postgres</category>
-      <pubDate>Fri, 02 Jul 2021 15:49:03 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="postgresql在where条件中使用判断条件"> PostgreSQL在where条件中使用判断条件</h1>
 <h2 id="需求"> 需求</h2>
 <p>我们平时查询数据是使用的mybatis，所以是这么写的</p>
@@ -4067,7 +4067,7 @@ What this means is that Alpine based images are only released for early access r
       <guid isPermaLink="false">/1970/01/01/postgresql%E8%BF%9E%E6%8E%A5%E6%95%B0%E8%BF%87%E5%A4%9A/</guid>
       <source url="https://fangweilong.github.io/rss.xml">PostgreSQL连接数过多</source>
       <category>postgres</category>
-      <pubDate>Mon, 28 Jun 2021 10:17:52 GMT</pubDate>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="报错信息"> 报错信息</h2>
 <div><pre><code>FATAL: sorry, too many clients already
 </code></pre>
@@ -4122,7 +4122,7 @@ What this means is that Alpine based images are only released for early access r
       <guid isPermaLink="false">/1970/01/01/mysql-com-mysql-jdbc-exceptions-jdbc4-communicationsexception/</guid>
       <source url="https://fangweilong.github.io/rss.xml">mysql-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException</source>
       <category>mysql</category>
-      <pubDate>Wed, 19 Dec 2018 10:26:39 GMT</pubDate>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>1、现象：
 连接mysql时报错</p>
 <div><pre><code> com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
@@ -4145,7 +4145,7 @@ maxReconnects：autoReconnect设置为true时，重试连接的次数</p>
       <guid isPermaLink="false">/1970/01/01/no-result-defined-for-action-%E9%9B%86%E7%BE%A4%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E7%8E%B0%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E4%B8%8D%E4%B8%8A/</guid>
       <source url="https://fangweilong.github.io/rss.xml">Noresultdefinedforaction,集群服务器出现的数据库连不上</source>
       <category>oracle</category>
-      <pubDate>Thu, 13 Sep 2018 14:38:10 GMT</pubDate>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>1.返回类型找不到
 这种情况我没出现，但是我在翻阅资料中很多人都有出现，这里不详细介绍，请查阅他人的文章。</p>
 <p>2.集群服务器
@@ -4170,7 +4170,7 @@ jdbc.password=123
       <guid isPermaLink="false">/1970/01/01/oracle-group-by%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2%E6%B1%87%E6%80%BB-%E6%B2%A1%E6%95%B0%E6%8D%AE%E7%9A%84%E6%97%B6%E5%80%99%E8%AE%A9%E6%AD%A4%E9%A1%B9%E6%98%BE%E7%A4%BA%E4%B8%BA0/</guid>
       <source url="https://fangweilong.github.io/rss.xml">oracle group by分类查询汇总 没数据的时候让此项显示为0</source>
       <category>oracle</category>
-      <pubDate>Wed, 24 Jul 2019 10:20:18 GMT</pubDate>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="_1-表数据"> 1.表数据</h2>
 <p>表名:table</p>
 <table>
@@ -4290,7 +4290,7 @@ on A.date=B.date
       <guid isPermaLink="false">/1970/01/01/oracle-mybatis-date%E6%97%A0%E6%B3%95%E5%AD%98%E6%97%B6%E5%88%86%E7%A7%92/</guid>
       <source url="https://fangweilong.github.io/rss.xml">oracle mybatis DATE无法存时分秒</source>
       <category>oracle</category>
-      <pubDate>Tue, 29 May 2018 16:36:44 GMT</pubDate>
+      <pubDate>Tue, 29 May 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div><pre><code>&lt;sql id=&quot;sys_sms_id&quot;&gt;SYS_SMS_ID.NEXTVAL&lt;/sql&gt;
 &lt;insert id=&quot;save&quot; parameterType=&quot;SmsDO&quot;&gt;
 		insert into SYS_SMS
@@ -4361,7 +4361,7 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
       <guid isPermaLink="false">/1970/01/01/oracle-full-join-%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%A8%AA%E5%90%91%E5%85%B3%E8%81%94-%E6%8B%BC%E6%8E%A5%E5%A4%9A%E5%BC%A0%E8%A1%A8%E6%89%80%E9%9C%80%E5%AD%97%E6%AE%B5/</guid>
       <source url="https://fangweilong.github.io/rss.xml">oracle-full_join-多张表横向关联，拼接多张表所需字段</source>
       <category>oracle</category>
-      <pubDate>Fri, 12 Jul 2019 17:11:35 GMT</pubDate>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>我们在sql中使用最多的关联查询无非是left join.right join,union,union all。
 这几种关联的区别和用法别的教程都太多了 这里不赘述.
 这里讲一下full join的用法
@@ -4404,7 +4404,7 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
       <guid isPermaLink="false">/1970/01/01/oracle%E7%94%A8%E6%88%B7%E8%A2%AB%E9%94%81/</guid>
       <source url="https://fangweilong.github.io/rss.xml">oracle用户被锁</source>
       <category>oracle</category>
-      <pubDate>Fri, 12 Jul 2019 10:05:54 GMT</pubDate>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>oracle的账户多次输入错误密码会被锁定(十次)，尤其是在新建立的时候动不动被锁
 记录一下账户被锁的解锁步骤
 请完整复制代码内容</p>
@@ -4423,31 +4423,12 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
 ]]></content:encoded>
     </item>
     <item>
-      <title>oracle空间字段在java中能查询出来并返回给接口</title>
-      <link>https://fangweilong.github.io/1970/01/01/oracle%E7%A9%BA%E9%97%B4%E5%AD%97%E6%AE%B5%E5%9C%A8java%E4%B8%AD%E8%83%BD%E6%9F%A5%E8%AF%A2%E5%87%BA%E6%9D%A5%E5%B9%B6%E8%BF%94%E5%9B%9E%E7%BB%99%E6%8E%A5%E5%8F%A3/</link>
-      <guid isPermaLink="false">/1970/01/01/oracle%E7%A9%BA%E9%97%B4%E5%AD%97%E6%AE%B5%E5%9C%A8java%E4%B8%AD%E8%83%BD%E6%9F%A5%E8%AF%A2%E5%87%BA%E6%9D%A5%E5%B9%B6%E8%BF%94%E5%9B%9E%E7%BB%99%E6%8E%A5%E5%8F%A3/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">oracle空间字段在java中能查询出来并返回给接口</source>
-      <category>oracle</category>
-      <pubDate>Wed, 24 Jul 2019 09:24:18 GMT</pubDate>
-      <content:encoded><![CDATA[<p>oracle虽然也支持空间信息，但是要做很多配置。比如安装sde等，不如pgsql等内置支持。
-以下方法只在第三方支持都安装好的情况下适用</p>
-<p>Entity:</p>
-<div><pre><code>priavte String shape;
-</code></pre>
-<div><span>1</span><br></div></div><p>java里面直接用String类型接就可以了</p>
-<p>XML</p>
-<div><pre><code>select  sdo_util.to_gmlgeometry(shape) shape from table
-</code></pre>
-<div><span>1</span><br></div></div><p>这样会把shape转换为GML格式的数据传出来</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>nginx-代理项目内部跳转导致丢失端口</title>
       <link>https://fangweilong.github.io/1970/01/01/nginx-%E4%BB%A3%E7%90%86%E9%A1%B9%E7%9B%AE%E5%86%85%E9%83%A8%E8%B7%B3%E8%BD%AC%E5%AF%BC%E8%87%B4%E4%B8%A2%E5%A4%B1%E7%AB%AF%E5%8F%A3/</link>
       <guid isPermaLink="false">/1970/01/01/nginx-%E4%BB%A3%E7%90%86%E9%A1%B9%E7%9B%AE%E5%86%85%E9%83%A8%E8%B7%B3%E8%BD%AC%E5%AF%BC%E8%87%B4%E4%B8%A2%E5%A4%B1%E7%AB%AF%E5%8F%A3/</guid>
       <source url="https://fangweilong.github.io/rss.xml">nginx-代理项目内部跳转导致丢失端口</source>
       <category>nginx</category>
-      <pubDate>Fri, 29 Nov 2019 20:19:47 GMT</pubDate>
+      <pubDate>Fri, 29 Nov 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="外网访问的url"> 外网访问的url</h2>
 <div><pre><code> xxxxx:8080/demo
 </code></pre>
@@ -4496,12 +4477,31 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
 ]]></content:encoded>
     </item>
     <item>
+      <title>oracle空间字段在java中能查询出来并返回给接口</title>
+      <link>https://fangweilong.github.io/1970/01/01/oracle%E7%A9%BA%E9%97%B4%E5%AD%97%E6%AE%B5%E5%9C%A8java%E4%B8%AD%E8%83%BD%E6%9F%A5%E8%AF%A2%E5%87%BA%E6%9D%A5%E5%B9%B6%E8%BF%94%E5%9B%9E%E7%BB%99%E6%8E%A5%E5%8F%A3/</link>
+      <guid isPermaLink="false">/1970/01/01/oracle%E7%A9%BA%E9%97%B4%E5%AD%97%E6%AE%B5%E5%9C%A8java%E4%B8%AD%E8%83%BD%E6%9F%A5%E8%AF%A2%E5%87%BA%E6%9D%A5%E5%B9%B6%E8%BF%94%E5%9B%9E%E7%BB%99%E6%8E%A5%E5%8F%A3/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">oracle空间字段在java中能查询出来并返回给接口</source>
+      <category>oracle</category>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>oracle虽然也支持空间信息，但是要做很多配置。比如安装sde等，不如pgsql等内置支持。
+以下方法只在第三方支持都安装好的情况下适用</p>
+<p>Entity:</p>
+<div><pre><code>priavte String shape;
+</code></pre>
+<div><span>1</span><br></div></div><p>java里面直接用String类型接就可以了</p>
+<p>XML</p>
+<div><pre><code>select  sdo_util.to_gmlgeometry(shape) shape from table
+</code></pre>
+<div><span>1</span><br></div></div><p>这样会把shape转换为GML格式的数据传出来</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>nginx-使用https加密ip</title>
       <link>https://fangweilong.github.io/1970/01/01/nginx-%E4%BD%BF%E7%94%A8https%E5%8A%A0%E5%AF%86ip/</link>
       <guid isPermaLink="false">/1970/01/01/nginx-%E4%BD%BF%E7%94%A8https%E5%8A%A0%E5%AF%86ip/</guid>
       <source url="https://fangweilong.github.io/rss.xml">nginx-使用https加密ip</source>
       <category>nginx</category>
-      <pubDate>Fri, 23 Jul 2021 14:06:20 GMT</pubDate>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="openssl"> openssl</h2>
 <h3 id="官网"> 官网</h3>
 <div><pre><code>https://www.openssl.org/
@@ -4576,7 +4576,7 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
       <guid isPermaLink="false">/1970/01/01/nginx-%E5%8F%8D%E4%BB%A3%E7%99%BE%E5%BA%A6%E7%AD%89%E5%A4%96%E7%BD%91%E5%9C%B0%E5%9D%80/</guid>
       <source url="https://fangweilong.github.io/rss.xml">nginx-反代百度等外网地址</source>
       <category>nginx</category>
-      <pubDate>Mon, 19 Jul 2021 11:46:23 GMT</pubDate>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="需求"> 需求</h2>
 <div><pre><code>由一台统一的外网服务器作中转，左右的外网接口请求都走这台服务器。
 考虑下来使用nginx的反代。
@@ -4612,7 +4612,7 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
       <guid isPermaLink="false">/1970/01/01/nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%AB%AF%E5%8F%A3%E4%B8%A2%E5%A4%B1/</guid>
       <source url="https://fangweilong.github.io/rss.xml">nginx-反向代理端口丢失</source>
       <category>nginx</category>
-      <pubDate>Tue, 17 Mar 2020 11:25:00 GMT</pubDate>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p><strong>此情况会出现在代理外网情况下 访问端口不是80、443，并且访问url末尾不带 / 的时候</strong></p>
 <h3 id="举例"> 举例</h3>
 <h5 id="xx-xx-xx-xx-9000-url-经过nginx转代-url会变成-xx-xx-xx-xx-url-而实际资源需求的url是这样的-xx-xx-xx-xx-9000-url"> <em>xx.xx.xx.xx:9000/url</em> 经过nginx转代 url会变成  	<em>xx.xx.xx.xx/url</em>，而实际资源需求的url是这样的 <em>xx.xx.xx.xx:9000/url/</em></h5>
@@ -4648,7 +4648,7 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
       <guid isPermaLink="false">/1970/01/01/nginx-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE-%E5%A4%9A%E4%B8%AAlocation%E8%BD%AC%E5%8F%91%E4%BB%BB%E6%84%8F%E8%AF%B7%E6%B1%82%E6%88%96%E8%AE%BF%E9%97%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6/</guid>
       <source url="https://fangweilong.github.io/rss.xml">nginx-基础配置：多个location转发任意请求或访问静态资源文件</source>
       <category>nginx</category>
-      <pubDate>Thu, 09 Aug 2018 10:07:48 GMT</pubDate>
+      <pubDate>Thu, 09 Aug 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>2018-08-10更新</p>
 <div><pre><code>server {
 		#监听的端口
@@ -4704,7 +4704,7 @@ DATE在oracle中只能存储年月日，TIMESTAMP可以存储到时分秒，所�
       <guid isPermaLink="false">/1970/01/01/nginx-%E8%BD%AC%E5%8F%91%E8%A7%84%E5%88%99%E6%A1%88%E4%BE%8B%E8%AF%A6%E8%A7%A3/</guid>
       <source url="https://fangweilong.github.io/rss.xml">nginx-转发规则案例详解</source>
       <category>nginx</category>
-      <pubDate>Fri, 11 Jan 2019 13:24:09 GMT</pubDate>
+      <pubDate>Fri, 11 Jan 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>本文以http协议举例，https的暂未列举
 如有错误请指正</p>
 <div><pre><code>
@@ -4779,35 +4779,12 @@ http {
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>vue-router_link-声明式返回上一页</title>
-      <link>https://fangweilong.github.io/1970/01/01/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</link>
-      <guid isPermaLink="false">/1970/01/01/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">vue-router_link-声明式返回上一页</source>
-      <category>vue</category>
-      <pubDate>Tue, 06 Aug 2019 15:34:28 GMT</pubDate>
-      <content:encoded><![CDATA[<p>因为只有一个点击的操作，没有任何其他的逻辑操作，我就不想写一个方法来承载它，就一直在找声明式的写法</p>
-<p>官网文档链接：https://router.vuejs.org/zh/guide/essentials/navigation.html</p>
-<p>在文档中介绍了一种router.go(n)来返回上一页，但是没有示例，经过测试无法使用这种写法</p>
-<div><pre><code>&lt;router-link :to=&quot;router.go(1)&quot;&gt;
-	&lt;el-button&gt;返回&lt;/el-button&gt;
-&lt;/router-link&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>搜索一些博客，都是使用的编程式的方法来返回上一页。
-所以就经过简化后，将方法绑定在@click中</p>
-<div><pre><code>&lt;router-link to&gt;
-	&lt;el-button @click=&quot;$router.back(-1)&quot;&gt;返回&lt;/el-button&gt;
-&lt;/router-link&gt;
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>注意：router-link中的<strong>to要留空</strong>，否则@click方法不起作用</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>nginx-部署多个vue项目，分vue-cli2.x和3.x</title>
       <link>https://fangweilong.github.io/1970/01/01/nginx-%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AAvue%E9%A1%B9%E7%9B%AE-%E5%88%86vue-cli2-x%E5%92%8C3-x/</link>
       <guid isPermaLink="false">/1970/01/01/nginx-%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AAvue%E9%A1%B9%E7%9B%AE-%E5%88%86vue-cli2-x%E5%92%8C3-x/</guid>
       <source url="https://fangweilong.github.io/rss.xml">nginx-部署多个vue项目，分vue-cli2.x和3.x</source>
       <category>nginx</category>
-      <pubDate>Tue, 16 Jul 2019 16:23:23 GMT</pubDate>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="_1-vue-cli3-x"> 1.vue-cli3.x</h2>
 <p><img src="https://img-blog.csdnimg.cn/2019071613392824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
 在根目录下找到&quot;vue.config.js&quot;
@@ -4839,12 +4816,35 @@ http {
       <enclosure url="https://img-blog.csdnimg.cn/2019071613392824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
+      <title>vue-router_link-声明式返回上一页</title>
+      <link>https://fangweilong.github.io/1970/01/01/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</link>
+      <guid isPermaLink="false">/1970/01/01/vue-router-link-%E5%A3%B0%E6%98%8E%E5%BC%8F%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">vue-router_link-声明式返回上一页</source>
+      <category>vue</category>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>因为只有一个点击的操作，没有任何其他的逻辑操作，我就不想写一个方法来承载它，就一直在找声明式的写法</p>
+<p>官网文档链接：https://router.vuejs.org/zh/guide/essentials/navigation.html</p>
+<p>在文档中介绍了一种router.go(n)来返回上一页，但是没有示例，经过测试无法使用这种写法</p>
+<div><pre><code>&lt;router-link :to=&quot;router.go(1)&quot;&gt;
+	&lt;el-button&gt;返回&lt;/el-button&gt;
+&lt;/router-link&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>搜索一些博客，都是使用的编程式的方法来返回上一页。
+所以就经过简化后，将方法绑定在@click中</p>
+<div><pre><code>&lt;router-link to&gt;
+	&lt;el-button @click=&quot;$router.back(-1)&quot;&gt;返回&lt;/el-button&gt;
+&lt;/router-link&gt;
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>注意：router-link中的<strong>to要留空</strong>，否则@click方法不起作用</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>Elastic_Search-添加split自定义分词方法</title>
       <link>https://fangweilong.github.io/1970/01/01/elastic-search-%E6%B7%BB%E5%8A%A0split%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E8%AF%8D%E6%96%B9%E6%B3%95/</link>
       <guid isPermaLink="false">/1970/01/01/elastic-search-%E6%B7%BB%E5%8A%A0split%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E8%AF%8D%E6%96%B9%E6%B3%95/</guid>
       <source url="https://fangweilong.github.io/rss.xml">Elastic_Search-添加split自定义分词方法</source>
       <category>Elastic Search</category>
-      <pubDate>Wed, 12 Aug 2020 15:32:07 GMT</pubDate>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="版本"> 版本</h1>
 <div><pre><code>5.4.2
 </code></pre>
@@ -4890,7 +4890,7 @@ http {
       <guid isPermaLink="false">/1970/01/01/elastic-search-%E9%80%9A%E8%BF%87reindex%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/</guid>
       <source url="https://fangweilong.github.io/rss.xml">Elastic_Search-通过reindex实现集群数据迁移</source>
       <category>Elastic Search</category>
-      <pubDate>Thu, 18 Mar 2021 14:58:00 GMT</pubDate>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="以下方案仅适用于不同环境的集群数据迁移-如果是同一个集群内直接使用第三步-拉取数据-即可-不需要账号密码等参数"> 以下方案仅适用于不同环境的集群数据迁移，如果是同一个集群内直接使用第三步“拉取数据”即可，不需要账号密码等参数</h2>
 <h2 id="版本"> 版本</h2>
 <p>老集群ES 5.4
@@ -4964,7 +4964,7 @@ http {
       <guid isPermaLink="false">/1970/01/01/elastic-search-%E5%AD%97%E6%AE%B5%E6%8C%87%E5%AE%9A%E8%87%AA%E5%B8%A6%E5%88%86%E8%AF%8D%E5%99%A8/</guid>
       <source url="https://fangweilong.github.io/rss.xml">Elastic_search-字段指定自带分词器</source>
       <category>Elastic Search</category>
-      <pubDate>Wed, 12 Aug 2020 15:32:07 GMT</pubDate>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="版本"> 版本</h1>
 <h2 id="es"> ES</h2>
 <div><pre><code>5.4.2
@@ -5050,7 +5050,7 @@ http {
       <guid isPermaLink="false">/1970/01/01/elastic-search-%E6%8A%A5%E9%94%99%E6%B1%87%E6%80%BB/</guid>
       <source url="https://fangweilong.github.io/rss.xml">Elastic_search-报错汇总</source>
       <category>Elastic Search</category>
-      <pubDate>Mon, 12 Jul 2021 15:53:26 GMT</pubDate>
+      <pubDate>Mon, 12 Jul 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="字段聚合"> 字段聚合</h2>
 <div><p>注意</p>
 <p>Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [] in order to load field data by uninverting the inverted index. Note that this can use significant memory.</p>
@@ -5137,7 +5137,7 @@ Enter password for [remote_monitoring_user]:</p>
       <guid isPermaLink="false">/1970/01/01/kibana-%E6%9F%A5%E8%AF%A2es-%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95/</guid>
       <source url="https://fangweilong.github.io/rss.xml">kibana-查询ES 的一些语法</source>
       <category>Elastic Search</category>
-      <pubDate>Thu, 06 Aug 2020 11:29:49 GMT</pubDate>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="前言"> 前言</h1>
 <h2 id="不断增补ing"> 不断增补ing</h2>
 <h2 id="版本7-8-0"> 版本	7.8.0</h2>
@@ -5453,7 +5453,7 @@ Enter password for [remote_monitoring_user]:</p>
       <guid isPermaLink="false">/1970/01/01/window%E7%9A%84linux%E5%AD%90%E7%B3%BB%E7%BB%9F-wsl/</guid>
       <source url="https://fangweilong.github.io/rss.xml">window的linux子系统-wsl</source>
       <category>wsl</category>
-      <pubDate>Wed, 04 Sep 2019 18:05:22 GMT</pubDate>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="如何开启安装linux子系统请自行百度-这里只记录一些详细的操作点-给自己一个留档"> 如何开启安装linux子系统请自行百度，这里只记录一些详细的操作点，给自己一个留档</h2>
 <p>1.安装目录</p>
 <div><pre><code>C:\Users\{用户名}\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs
@@ -5496,7 +5496,7 @@ Enter password for [remote_monitoring_user]:</p>
       <guid isPermaLink="false">/1970/01/01/wsl-debian10%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
       <source url="https://fangweilong.github.io/rss.xml">wsl-debian10使用问题汇总</source>
       <category>wsl</category>
-      <pubDate>Fri, 18 Jun 2021 10:25:01 GMT</pubDate>
+      <pubDate>Fri, 18 Jun 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="切换root"> 切换root</h2>
 <div><pre><code><span>sudo</span> <span>su</span> root
 </code></pre>
@@ -5518,7 +5518,7 @@ Enter password for [remote_monitoring_user]:</p>
       <guid isPermaLink="false">/1970/01/01/myeclipse%E9%A1%B9%E7%9B%AE%E6%8A%A5%E9%94%99%E5%8F%89-%E4%BD%86%E8%83%BD%E6%AD%A3%E5%B8%B8%E8%BF%90%E8%A1%8C/</guid>
       <source url="https://fangweilong.github.io/rss.xml">myEclipse项目报错叉，但能正常运行</source>
       <category>myEclipse</category>
-      <pubDate>Mon, 26 Feb 2018 14:44:28 GMT</pubDate>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>这种情况往往出现在别的项目更换了JDK版本，在当前项目上JDK版本也被更改了。虽然不会对项目造成什么影响，但是看着别扭啊。下面就分享下去除项目红叉的过程，我使用的MyEclipse版本为MyEclipse10。</p>
 <ul>
 <li>
@@ -5543,24 +5543,12 @@ Enter password for [remote_monitoring_user]:</p>
       <enclosure url="http://img.blog.csdn.net/20180226143718167?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHV0aWFuMjAwMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" type="image/"/>
     </item>
     <item>
-      <title>idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</title>
-      <link>https://fangweilong.github.io/1970/01/01/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</link>
-      <guid isPermaLink="false">/1970/01/01/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</source>
-      <category>idea</category>
-      <pubDate>Wed, 30 Oct 2019 10:08:59 GMT</pubDate>
-      <content:encoded><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-<p>把这两个勾选去掉</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>idea关闭不必要的插件减少内存占用</title>
       <link>https://fangweilong.github.io/1970/01/01/idea%E5%85%B3%E9%97%AD%E4%B8%8D%E5%BF%85%E8%A6%81%E7%9A%84%E6%8F%92%E4%BB%B6%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8/</link>
       <guid isPermaLink="false">/1970/01/01/idea%E5%85%B3%E9%97%AD%E4%B8%8D%E5%BF%85%E8%A6%81%E7%9A%84%E6%8F%92%E4%BB%B6%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8/</guid>
       <source url="https://fangweilong.github.io/rss.xml">idea关闭不必要的插件减少内存占用</source>
       <category>idea</category>
-      <pubDate>Wed, 25 Apr 2018 09:44:26 GMT</pubDate>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="_2021-08-11更新"> 2021-08-11更新</h1>
 <h2 id="idea版本-2021-2"> idea版本：2021.2</h2>
 <h2 id="项目"> 项目</h2>
@@ -5615,12 +5603,24 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
       <enclosure url="https://z3.ax1x.com/2021/08/11/fUCSIJ.png" type="image/png"/>
     </item>
     <item>
+      <title>idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</title>
+      <link>https://fangweilong.github.io/1970/01/01/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</link>
+      <guid isPermaLink="false">/1970/01/01/idea%E5%90%AF%E5%8A%A8java-avax-management-instancenotfoundexception-org-springframework-boot-type-admin-name-springapplicati/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">idea启动java avax.management.InstanceNotFoundExceptionorg.springframework.boot_type=Admin,name=SpringApplicati</source>
+      <category>idea</category>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+<p>把这两个勾选去掉</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20191030100813384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" type="image/"/>
+    </item>
+    <item>
       <title>idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案</title>
       <link>https://fangweilong.github.io/1970/01/01/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
       <guid isPermaLink="false">/1970/01/01/idea%E5%90%AF%E5%8A%A8java-%E9%94%99%E8%AF%AF-%E6%89%BE%E4%B8%8D%E5%88%B0%E6%88%96%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%B8%BB%E7%B1%BBxxx-xxx%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
       <source url="https://fangweilong.github.io/rss.xml">idea启动java-错误_ 找不到或无法加载主类xxx.xxx的解决方案</source>
       <category>idea</category>
-      <pubDate>Thu, 19 Dec 2019 14:00:37 GMT</pubDate>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>原因未知
 通过idea的maven插件，install即可
 <img src="https://img-blog.csdnimg.cn/20191219135916540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
@@ -5634,7 +5634,7 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
       <guid isPermaLink="false">/1970/01/01/idea%E6%9B%B4%E6%94%B9%E7%BC%A9%E8%BF%9B%E7%BA%BF%E9%A2%9C%E8%89%B2/</guid>
       <source url="https://fangweilong.github.io/rss.xml">idea更改缩进线颜色</source>
       <category>idea</category>
-      <pubDate>Sat, 24 Feb 2018 17:16:17 GMT</pubDate>
+      <pubDate>Sat, 24 Feb 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>idea不同的版本会更改一些功能设置的位置，之前将背景色改为了豆沙绿后缩进线就看不到了，在写HTML页面的时候很不舒服，但是网上搜到的一些答案又不对(版本不一致)，花了点功夫找了一下，特此记录。我当前版本为idea 2017.3.4</p>
 <div><pre><code>Settings -&gt; Editor -&gt; Color Scheme -&gt; General -&gt; Editor -&gt; Guides -&gt; Indent guide 
 </code></pre>
@@ -5676,7 +5676,7 @@ idea在java开发中是很好用，但是内存占用太高，里面有很多的
       <guid isPermaLink="false">/1970/01/01/idea%E8%AE%BE%E7%BD%AE%E5%88%9B%E5%BB%BA-java%E6%96%87%E4%BB%B6%E7%9A%84%E6%A8%A1%E6%9D%BF/</guid>
       <source url="https://fangweilong.github.io/rss.xml">idea设置创建.java文件的模板</source>
       <category>idea</category>
-      <pubDate>Fri, 20 Apr 2018 11:22:27 GMT</pubDate>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>打开路径</p>
 <div><pre><code>File-Settings-Editor-Code style-File and Code Templates-Includea-File Header
 </code></pre>
@@ -5714,7 +5714,7 @@ ${MONTH_NAME_FULL} - 一个月的全名。例如: 1月、2月等。
       <guid isPermaLink="false">/1970/01/01/idea%E9%83%A8%E5%88%86%E6%88%96%E6%95%B4%E4%BD%93java%E6%96%87%E4%BB%B6%E4%B8%8D%E7%BC%96%E8%AF%91%E4%B8%BAclass%E6%96%87%E4%BB%B6-%E6%88%96%E7%BC%96%E8%AF%91%E5%90%8E%E4%B8%8D%E6%98%AF%E6%9C%80%E6%96%B0%E7%9A%84/</guid>
       <source url="https://fangweilong.github.io/rss.xml">idea部分或整体java文件不编译为class文件，或编译后不是最新的</source>
       <category>idea</category>
-      <pubDate>Thu, 08 Mar 2018 09:45:17 GMT</pubDate>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>PS：2018-03-08 10:11更新 修改编译的路径
 原路径为WebRoot，修改为WebRoot/classes，否则会出现include会找不到jsp等问题</p>
 <h2 id="_1-出现这个问题先检查一下输出路径"> <strong>1.出现这个问题先检查一下输出路径</strong></h2>
@@ -5729,12 +5729,55 @@ ${MONTH_NAME_FULL} - 一个月的全名。例如: 1月、2月等。
       <enclosure url="https://img-blog.csdnimg.cn/img_convert/5ed382af96fc5ec47a18166d761b17d6.png" type="image/png"/>
     </item>
     <item>
+      <title>Navicat12连接Oracle失败，报错ORA-28547或者oraclelibraryisnot_loaded</title>
+      <link>https://fangweilong.github.io/1970/01/01/navicat12%E8%BF%9E%E6%8E%A5oracle%E5%A4%B1%E8%B4%A5-%E6%8A%A5%E9%94%99-ora-28547-%E6%88%96%E8%80%85-oracle-library-is-not-loaded/</link>
+      <guid isPermaLink="false">/1970/01/01/navicat12%E8%BF%9E%E6%8E%A5oracle%E5%A4%B1%E8%B4%A5-%E6%8A%A5%E9%94%99-ora-28547-%E6%88%96%E8%80%85-oracle-library-is-not-loaded/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">Navicat12连接Oracle失败，报错ORA-28547或者oraclelibraryisnot_loaded</source>
+      <category>navicat</category>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="首先看一下两种错误"> <strong>首先看一下两种错误</strong></h2>
+<p>1：ORA-28547
+原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。
+<img src="https://img-blog.csdnimg.cn/201904161009174.png" alt="在这里插入图片描述" />
+2.oracle library is not loaded
+其实就是说dll文件不能正确载入</p>
+<p>**</p>
+<h2 id="解决"> 解决：</h2>
+<p>**
+这两种问题其实都可以通过一种办法结局
+<strong>详细步骤：</strong></p>
+<ol>
+<li>
+<p>点击链接前往<a href="https://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html" target="_blank" rel="noopener noreferrer">Oracle官网</a>进行下载</p>
+</li>
+<li>
+<p>选择与自己系统相对应的版本点进去  <img src="https://img-blog.csdnimg.cn/20190416101522274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+</li>
+<li>
+<p>千万记得勾选上同意协议，否则无法下载
+<img src="https://img-blog.csdnimg.cn/20190416101603200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+</li>
+<li>
+<p>下载自己对应的Oracle版本到本地，解压缩。我下的是11.2版本的如图所示</p>
+</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20190416101750932.png" alt="在这里插入图片描述" />
+5.  找到Navicat的安装目录
+<img src="https://img-blog.csdnimg.cn/20190416101931123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+6.这个时候你会发现你解压出来的包和你目录里面的文件夹名字是一样的。
+这个时候我看很多博文是直接复制oci.dll文件，但其实是应该整个“instantclient_11_2”文件夹覆盖到Navicat安装目录
+7.接下来就是去navicat里面更改OCI.dll文件的位置了。<img src="https://img-blog.csdnimg.cn/20190416102342639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
+接下来就ok了。如有疑问欢迎留言</p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/201904161009174.png" type="image/png"/>
+    </item>
+    <item>
       <title>tomcat使用log4j2打日志</title>
       <link>https://fangweilong.github.io/1970/01/01/tomcat%E4%BD%BF%E7%94%A8log4j2%E6%89%93%E6%97%A5%E5%BF%97/</link>
       <guid isPermaLink="false">/1970/01/01/tomcat%E4%BD%BF%E7%94%A8log4j2%E6%89%93%E6%97%A5%E5%BF%97/</guid>
       <source url="https://fangweilong.github.io/rss.xml">tomcat使用log4j2打日志</source>
       <category>tomcat</category>
-      <pubDate>Tue, 21 Aug 2018 11:00:56 GMT</pubDate>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p><strong>开始前准备</strong></p>
 <ol>
 <li>tomcat版本8.0.51
@@ -5802,55 +5845,12 @@ log4j2.xml，放到tomcat目录下lib文件夹下</li>
 ]]></content:encoded>
     </item>
     <item>
-      <title>Navicat12连接Oracle失败，报错ORA-28547或者oraclelibraryisnot_loaded</title>
-      <link>https://fangweilong.github.io/1970/01/01/navicat12%E8%BF%9E%E6%8E%A5oracle%E5%A4%B1%E8%B4%A5-%E6%8A%A5%E9%94%99-ora-28547-%E6%88%96%E8%80%85-oracle-library-is-not-loaded/</link>
-      <guid isPermaLink="false">/1970/01/01/navicat12%E8%BF%9E%E6%8E%A5oracle%E5%A4%B1%E8%B4%A5-%E6%8A%A5%E9%94%99-ora-28547-%E6%88%96%E8%80%85-oracle-library-is-not-loaded/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">Navicat12连接Oracle失败，报错ORA-28547或者oraclelibraryisnot_loaded</source>
-      <category>navicat</category>
-      <pubDate>Tue, 16 Apr 2019 10:25:25 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="首先看一下两种错误"> <strong>首先看一下两种错误</strong></h2>
-<p>1：ORA-28547
-原因：navicate Primium版本的OCi和本地数据库的OCI版本不一致。
-<img src="https://img-blog.csdnimg.cn/201904161009174.png" alt="在这里插入图片描述" />
-2.oracle library is not loaded
-其实就是说dll文件不能正确载入</p>
-<p>**</p>
-<h2 id="解决"> 解决：</h2>
-<p>**
-这两种问题其实都可以通过一种办法结局
-<strong>详细步骤：</strong></p>
-<ol>
-<li>
-<p>点击链接前往<a href="https://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html" target="_blank" rel="noopener noreferrer">Oracle官网</a>进行下载</p>
-</li>
-<li>
-<p>选择与自己系统相对应的版本点进去  <img src="https://img-blog.csdnimg.cn/20190416101522274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-</li>
-<li>
-<p>千万记得勾选上同意协议，否则无法下载
-<img src="https://img-blog.csdnimg.cn/20190416101603200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-</li>
-<li>
-<p>下载自己对应的Oracle版本到本地，解压缩。我下的是11.2版本的如图所示</p>
-</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20190416101750932.png" alt="在这里插入图片描述" />
-5.  找到Navicat的安装目录
-<img src="https://img-blog.csdnimg.cn/20190416101931123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-6.这个时候你会发现你解压出来的包和你目录里面的文件夹名字是一样的。
-这个时候我看很多博文是直接复制oci.dll文件，但其实是应该整个“instantclient_11_2”文件夹覆盖到Navicat安装目录
-7.接下来就是去navicat里面更改OCI.dll文件的位置了。<img src="https://img-blog.csdnimg.cn/20190416102342639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3R1dGlhbjIwMDA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" />
-接下来就ok了。如有疑问欢迎留言</p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/201904161009174.png" type="image/png"/>
-    </item>
-    <item>
       <title>tomcat布置多个项目</title>
       <link>https://fangweilong.github.io/1970/01/01/tomcat%E5%B8%83%E7%BD%AE%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE/</link>
       <guid isPermaLink="false">/1970/01/01/tomcat%E5%B8%83%E7%BD%AE%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE/</guid>
       <source url="https://fangweilong.github.io/rss.xml">tomcat布置多个项目</source>
       <category>tomcat</category>
-      <pubDate>Thu, 21 Jun 2018 16:02:00 GMT</pubDate>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>常规的操作是一个Tomcat下只有一个项目，但是需求总是千变万化的，今天就遇到了一个服务器上需要布置两个项目。</p>
 <p>详解步骤：
 1、将两个项目打包放入tomcat的webapps目录下（这个步骤就不用说了，直接复制class还是war什么的随你开心）
@@ -5894,7 +5894,7 @@ log4j2.xml，放到tomcat目录下lib文件夹下</li>
       <guid isPermaLink="false">/1970/01/01/windows-terminal-settings-json%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%B3%A8%E9%87%8A/</guid>
       <source url="https://fangweilong.github.io/rss.xml">windows-terminal-settings.json的一些个人配置与注释</source>
       <category>window</category>
-      <pubDate>Wed, 08 Jul 2020 11:36:04 GMT</pubDate>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="版本-1-0-1811-0"> 版本：1.0.1811.0</h2>
 <div><pre><code>//该文件最初由Windows终端1.0.1811.0生成
 //在更新的版本中它应该仍然可用，但是更新的版本可能有额外的设置、帮助文本或更改，除非您清除此文件并让我们为您生成一个新文件，否则您将看不到这些更改。
@@ -6062,7 +6062,7 @@ log4j2.xml，放到tomcat目录下lib文件夹下</li>
       <guid isPermaLink="false">/1970/01/01/windows%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8jar-nginx-redis%E7%AD%89/</guid>
       <source url="https://fangweilong.github.io/rss.xml">windows开机自启动jarnginxredis等</source>
       <category>window</category>
-      <pubDate>Fri, 11 Jan 2019 13:08:09 GMT</pubDate>
+      <pubDate>Fri, 11 Jan 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ol>
 <li>
 <p>jar包需要命令行启动，所以做了一个bat+vbe启动的操作
@@ -6164,7 +6164,7 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
       <guid isPermaLink="false">/1970/01/01/vuepress%E4%B8%ADmarkdown%E5%90%84%E7%A7%8D%E7%94%A8%E6%B3%95/</guid>
       <source url="https://fangweilong.github.io/rss.xml">vuepress中markdown各种用法</source>
       <category>vuepress</category>
-      <pubDate>Fri, 02 Jul 2021 16:25:57 GMT</pubDate>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="vuepress中markdown各种用法"> vuepress中markdown各种用法</h1>
 <h2 id="基本都是vuepress官网的指南-为了方便自己查看"> 基本都是vuepress官网的指南，为了方便自己查看</h2>
 <hr>
@@ -6254,7 +6254,7 @@ jar包只需要创建.vbe的快捷方式，nginx创建.exe的快捷方式
       <guid isPermaLink="false">/1970/01/01/powershell%E5%AE%89%E8%A3%85oh-my-posh%E8%BF%9B%E8%A1%8C%E5%A2%9E%E5%BC%BA%E5%92%8C%E7%BE%8E%E5%8C%96/</guid>
       <source url="https://fangweilong.github.io/rss.xml">powershell安装oh-my-posh进行增强和美化</source>
       <category>window</category>
-      <pubDate>Wed, 15 Sep 2021 09:38:00 GMT</pubDate>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="效果"> 效果</h2>
 <p><a href="https://imgtu.com/i/4EOpge" target="_blank" rel="noopener noreferrer"><img src="https://z3.ax1x.com/2021/09/15/4EOpge.md.png" alt="4EOpge.md.png" /></a></p>
 <h2 id="前言"> 前言</h2>
@@ -6330,7 +6330,7 @@ Set-PoshPrompt -Theme my
       <guid isPermaLink="false">/1970/01/01/%E6%97%A0%E9%9C%80%E8%BD%AF%E4%BB%B6%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0wind10%E9%80%8F%E6%98%8E%E7%8A%B6%E6%80%81%E6%A0%8F%E6%95%88%E6%9E%9C/</guid>
       <source url="https://fangweilong.github.io/rss.xml">无需软件通过修改注册表实现wind10透明状态栏效果</source>
       <category>window</category>
-      <pubDate>Tue, 10 Aug 2021 09:55:12 GMT</pubDate>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="原帖"> 原帖</h2>
 <p>在52pojie上看到的一个帖子，不过原帖中需要手动修改注册表的值。<a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1461968&amp;highlight=%D7%B4%CC%AC%C0%B8" target="_blank" rel="noopener noreferrer">点击我跳转</a></p>
 <h2 id="代码"> 代码</h2>
@@ -6352,7 +6352,7 @@ taskkill /f /im explorer.exe &amp; start explorer.exe
       <guid isPermaLink="false">/1970/01/01/git-gitignore%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</guid>
       <source url="https://fangweilong.github.io/rss.xml">git-.gitignore通用配置文件</source>
       <category>git</category>
-      <pubDate>Fri, 30 Aug 2019 17:32:36 GMT</pubDate>
+      <pubDate>Fri, 30 Aug 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div><pre><code>## .gitignore for Grails 1.2 and 1.3
 
 ### maven  ###
@@ -6480,6 +6480,22 @@ yarn-lock.json
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br><span>111</span><br><span>112</span><br><span>113</span><br><span>114</span><br><span>115</span><br><span>116</span><br><span>117</span><br><span>118</span><br><span>119</span><br><span>120</span><br><span>121</span><br><span>122</span><br><span>123</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>kindeditor富文本编辑器通过参数初始化限制上传图片等功能</title>
+      <link>https://fangweilong.github.io/1970/01/01/kindeditor%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E9%80%9A%E8%BF%87%E5%8F%82%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E9%99%90%E5%88%B6%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD/</link>
+      <guid isPermaLink="false">/1970/01/01/kindeditor%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E9%80%9A%E8%BF%87%E5%8F%82%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E9%99%90%E5%88%B6%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">kindeditor富文本编辑器通过参数初始化限制上传图片等功能</source>
+      <category>javascript</category>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>我们某些时候需要在kindeditor富文本编辑器上限制用户不能使用某些功能，虽然可以通过class来限制，但是这样毫无疑问很low。
+无意翻到了官网的一篇初始化编辑器的参数。</p>
+<p>详情点击↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+<a href="http://kindeditor.net/docs/option.html#items" target="_blank" rel="noopener noreferrer">点击跳转官网原文</a>
+详情点击↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
+<p>使用过程中请注意项目中使用的版本，有些参数在新版中才能使用。
+如有不明白的欢迎留言讨论。</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>gitlab升级</title>
       <link>https://fangweilong.github.io/1970/01/01/gitlab%E5%8D%87%E7%BA%A7/</link>
       <guid isPermaLink="false">/1970/01/01/gitlab%E5%8D%87%E7%BA%A7/</guid>
@@ -6519,7 +6535,7 @@ yarn-lock.json
 <span># unicorn['port'] = 8080</span>
 
 <span># 放开</span>
-puma<span>[</span><span>'port'</span><span>]</span> <span>=</span> <span>8080</span>
+puma<span>[</span><span><span>'port'</span></span><span>]</span> <span>=</span> <span>8080</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><hr>
 <h3 id="遇到的问题及解决-不一定跟我问题相同-但可以尝试一下"> 遇到的问题及解决(不一定跟我问题相同，但可以尝试一下)</h3>
@@ -6533,28 +6549,12 @@ puma<span>[</span><span>'port'</span><span>]</span> <span>=</span> <span>8080</s
 <div><span>1</span><br><span>2</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>kindeditor富文本编辑器通过参数初始化限制上传图片等功能</title>
-      <link>https://fangweilong.github.io/1970/01/01/kindeditor%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E9%80%9A%E8%BF%87%E5%8F%82%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E9%99%90%E5%88%B6%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD/</link>
-      <guid isPermaLink="false">/1970/01/01/kindeditor%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E9%80%9A%E8%BF%87%E5%8F%82%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E9%99%90%E5%88%B6%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E7%AD%89%E5%8A%9F%E8%83%BD/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">kindeditor富文本编辑器通过参数初始化限制上传图片等功能</source>
-      <category>javascript</category>
-      <pubDate>Wed, 31 Jan 2018 21:04:10 GMT</pubDate>
-      <content:encoded><![CDATA[<p>我们某些时候需要在kindeditor富文本编辑器上限制用户不能使用某些功能，虽然可以通过class来限制，但是这样毫无疑问很low。
-无意翻到了官网的一篇初始化编辑器的参数。</p>
-<p>详情点击↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-<a href="http://kindeditor.net/docs/option.html#items" target="_blank" rel="noopener noreferrer">点击跳转官网原文</a>
-详情点击↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
-<p>使用过程中请注意项目中使用的版本，有些参数在新版中才能使用。
-如有不明白的欢迎留言讨论。</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>rime-weasel输入法调教</title>
       <link>https://fangweilong.github.io/1970/01/01/rime-weasel%E8%BE%93%E5%85%A5%E6%B3%95%E8%B0%83%E6%95%99/</link>
       <guid isPermaLink="false">/1970/01/01/rime-weasel%E8%BE%93%E5%85%A5%E6%B3%95%E8%B0%83%E6%95%99/</guid>
       <source url="https://fangweilong.github.io/rss.xml">rime-weasel输入法调教</source>
       <category>其它</category>
-      <pubDate>Tue, 26 Oct 2021 10:50:00 GMT</pubDate>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="官网"> 官网</h2>
 <p><a href="https://github.com/rime/weasel" target="_blank" rel="noopener noreferrer">github</a></p>
 <h2 id="用户数据文件夹"> 用户数据文件夹</h2>
@@ -6622,12 +6622,99 @@ patch:
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br></div></div>]]></content:encoded>
     </item>
     <item>
+      <title>开发中常用的工具归类</title>
+      <link>https://fangweilong.github.io/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</link>
+      <guid isPermaLink="false">/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">开发中常用的工具归类</source>
+      <category>其它</category>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>工具</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据库</td>
+<td>Navicat pro</td>
+<td>可以连接多种数据库，使用更快捷内存占用小</td>
+<td>付费，功能没有官网的工具多</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td>MongoDB Compass Community</td>
+<td>mongo数据库图形化工具，单文件直接使用</td>
+<td>速度慢，英文</td>
+</tr>
+<tr>
+<td>开发工具</td>
+<td>idea</td>
+<td>功能齐全，使用方便</td>
+<td>付费，内存占用大，初始配置繁琐</td>
+</tr>
+<tr>
+<td>版本控制</td>
+<td>TrtoiseSVN</td>
+<td>有中文，说明简单，配置简单</td>
+<td>暂未发现</td>
+</tr>
+<tr>
+<td>版本控制</td>
+<td>TrtoiseGit</td>
+<td>有中文，说明简单，配置简单</td>
+<td>暂未发现</td>
+</tr>
+<tr>
+<td>服务器工具</td>
+<td>IIS</td>
+<td>微软官方工具，功能强大，自带中文</td>
+<td>占用大，配置繁琐</td>
+</tr>
+<tr>
+<td>服务器工具</td>
+<td>Tomcat</td>
+<td>开源服务器工具，配置简单，占用小，操作简单</td>
+<td>开发环境中经常重启容易崩，其他暂未发现</td>
+</tr>
+<tr>
+<td>远程工具</td>
+<td>mstc</td>
+<td>本身自带，操作简单，中文界面</td>
+<td>功能少，容易崩，只适用window</td>
+</tr>
+<tr>
+<td>远程工具</td>
+<td>xshell</td>
+<td>界面直观，功能齐全</td>
+<td>付费。免费版本有窗口限制。只适用于linux</td>
+</tr>
+<tr>
+<td>浏览器</td>
+<td>chrome</td>
+<td>市场份额高，适配好，插件多</td>
+<td>内存占用高，同步麻烦</td>
+</tr>
+<tr>
+<td>浏览器</td>
+<td>edge</td>
+<td>基于chromium，适配chrome，插件多，同步快</td>
+<td>内存占用也不少</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+    </item>
+    <item>
       <title>中国城市中心点坐标</title>
       <link>https://fangweilong.github.io/1970/01/01/%E4%B8%AD%E5%9B%BD%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83%E7%82%B9%E5%9D%90%E6%A0%87/</link>
       <guid isPermaLink="false">/1970/01/01/%E4%B8%AD%E5%9B%BD%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83%E7%82%B9%E5%9D%90%E6%A0%87/</guid>
       <source url="https://fangweilong.github.io/rss.xml">中国城市中心点坐标</source>
       <category>tomcat</category>
-      <pubDate>Thu, 30 May 2019 16:29:02 GMT</pubDate>
+      <pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>原数据：https://www.cnblogs.com/hhhz/p/7591852.html</p>
 <p>以下为经过整理的地区数据，可以直接复制到json中使用</p>
 <div><pre><code>&#39;上海&#39;: [121.487899486, 31.24916171],
@@ -6985,30 +7072,6 @@ patch:
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br><span>111</span><br><span>112</span><br><span>113</span><br><span>114</span><br><span>115</span><br><span>116</span><br><span>117</span><br><span>118</span><br><span>119</span><br><span>120</span><br><span>121</span><br><span>122</span><br><span>123</span><br><span>124</span><br><span>125</span><br><span>126</span><br><span>127</span><br><span>128</span><br><span>129</span><br><span>130</span><br><span>131</span><br><span>132</span><br><span>133</span><br><span>134</span><br><span>135</span><br><span>136</span><br><span>137</span><br><span>138</span><br><span>139</span><br><span>140</span><br><span>141</span><br><span>142</span><br><span>143</span><br><span>144</span><br><span>145</span><br><span>146</span><br><span>147</span><br><span>148</span><br><span>149</span><br><span>150</span><br><span>151</span><br><span>152</span><br><span>153</span><br><span>154</span><br><span>155</span><br><span>156</span><br><span>157</span><br><span>158</span><br><span>159</span><br><span>160</span><br><span>161</span><br><span>162</span><br><span>163</span><br><span>164</span><br><span>165</span><br><span>166</span><br><span>167</span><br><span>168</span><br><span>169</span><br><span>170</span><br><span>171</span><br><span>172</span><br><span>173</span><br><span>174</span><br><span>175</span><br><span>176</span><br><span>177</span><br><span>178</span><br><span>179</span><br><span>180</span><br><span>181</span><br><span>182</span><br><span>183</span><br><span>184</span><br><span>185</span><br><span>186</span><br><span>187</span><br><span>188</span><br><span>189</span><br><span>190</span><br><span>191</span><br><span>192</span><br><span>193</span><br><span>194</span><br><span>195</span><br><span>196</span><br><span>197</span><br><span>198</span><br><span>199</span><br><span>200</span><br><span>201</span><br><span>202</span><br><span>203</span><br><span>204</span><br><span>205</span><br><span>206</span><br><span>207</span><br><span>208</span><br><span>209</span><br><span>210</span><br><span>211</span><br><span>212</span><br><span>213</span><br><span>214</span><br><span>215</span><br><span>216</span><br><span>217</span><br><span>218</span><br><span>219</span><br><span>220</span><br><span>221</span><br><span>222</span><br><span>223</span><br><span>224</span><br><span>225</span><br><span>226</span><br><span>227</span><br><span>228</span><br><span>229</span><br><span>230</span><br><span>231</span><br><span>232</span><br><span>233</span><br><span>234</span><br><span>235</span><br><span>236</span><br><span>237</span><br><span>238</span><br><span>239</span><br><span>240</span><br><span>241</span><br><span>242</span><br><span>243</span><br><span>244</span><br><span>245</span><br><span>246</span><br><span>247</span><br><span>248</span><br><span>249</span><br><span>250</span><br><span>251</span><br><span>252</span><br><span>253</span><br><span>254</span><br><span>255</span><br><span>256</span><br><span>257</span><br><span>258</span><br><span>259</span><br><span>260</span><br><span>261</span><br><span>262</span><br><span>263</span><br><span>264</span><br><span>265</span><br><span>266</span><br><span>267</span><br><span>268</span><br><span>269</span><br><span>270</span><br><span>271</span><br><span>272</span><br><span>273</span><br><span>274</span><br><span>275</span><br><span>276</span><br><span>277</span><br><span>278</span><br><span>279</span><br><span>280</span><br><span>281</span><br><span>282</span><br><span>283</span><br><span>284</span><br><span>285</span><br><span>286</span><br><span>287</span><br><span>288</span><br><span>289</span><br><span>290</span><br><span>291</span><br><span>292</span><br><span>293</span><br><span>294</span><br><span>295</span><br><span>296</span><br><span>297</span><br><span>298</span><br><span>299</span><br><span>300</span><br><span>301</span><br><span>302</span><br><span>303</span><br><span>304</span><br><span>305</span><br><span>306</span><br><span>307</span><br><span>308</span><br><span>309</span><br><span>310</span><br><span>311</span><br><span>312</span><br><span>313</span><br><span>314</span><br><span>315</span><br><span>316</span><br><span>317</span><br><span>318</span><br><span>319</span><br><span>320</span><br><span>321</span><br><span>322</span><br><span>323</span><br><span>324</span><br><span>325</span><br><span>326</span><br><span>327</span><br><span>328</span><br><span>329</span><br><span>330</span><br><span>331</span><br><span>332</span><br><span>333</span><br><span>334</span><br><span>335</span><br><span>336</span><br><span>337</span><br><span>338</span><br><span>339</span><br><span>340</span><br><span>341</span><br><span>342</span><br><span>343</span><br><span>344</span><br><span>345</span><br><span>346</span><br><span>347</span><br><span>348</span><br><span>349</span><br><span>350</span><br><span>351</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>幻灯片页</title>
-      <link>https://fangweilong.github.io/slides/</link>
-      <guid isPermaLink="false">/slides/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
-      <pubDate>Thu, 06 Jan 2022 03:00:59 GMT</pubDate>
-      <content:encoded><![CDATA[
-<i>Not supported content</i>]]></content:encoded>
-      <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
-    </item>
-    <item>
-      <title>房伟龙的日常</title>
-      <link>https://fangweilong.github.io/</link>
-      <guid isPermaLink="false">/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
-      <pubDate>Thu, 06 Jan 2022 03:00:59 GMT</pubDate>
-    </item>
-    <item>
-      <title>项目主页</title>
-      <link>https://fangweilong.github.io/home/</link>
-      <guid isPermaLink="false">/home/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
-      <pubDate>Thu, 06 Jan 2022 03:00:59 GMT</pubDate>
-    </item>
-    <item>
       <title>个人信息</title>
       <link>https://fangweilong.github.io/about/</link>
       <guid isPermaLink="false">/about/</guid>
@@ -7140,91 +7203,28 @@ patch:
       <enclosure url="https://z3.ax1x.com/2021/09/22/4NGaVK.png" type="image/png"/>
     </item>
     <item>
-      <title>开发中常用的工具归类</title>
-      <link>https://fangweilong.github.io/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</link>
-      <guid isPermaLink="false">/1970/01/01/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%BD%92%E7%B1%BB/</guid>
-      <source url="https://fangweilong.github.io/rss.xml">开发中常用的工具归类</source>
-      <category>其它</category>
-      <pubDate>Thu, 22 Mar 2018 13:55:01 GMT</pubDate>
-      <content:encoded><![CDATA[<table>
-<thead>
-<tr>
-<th>分类</th>
-<th>工具</th>
-<th>优点</th>
-<th>缺点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>数据库</td>
-<td>Navicat pro</td>
-<td>可以连接多种数据库，使用更快捷内存占用小</td>
-<td>付费，功能没有官网的工具多</td>
-</tr>
-<tr>
-<td>数据库</td>
-<td>MongoDB Compass Community</td>
-<td>mongo数据库图形化工具，单文件直接使用</td>
-<td>速度慢，英文</td>
-</tr>
-<tr>
-<td>开发工具</td>
-<td>idea</td>
-<td>功能齐全，使用方便</td>
-<td>付费，内存占用大，初始配置繁琐</td>
-</tr>
-<tr>
-<td>版本控制</td>
-<td>TrtoiseSVN</td>
-<td>有中文，说明简单，配置简单</td>
-<td>暂未发现</td>
-</tr>
-<tr>
-<td>版本控制</td>
-<td>TrtoiseGit</td>
-<td>有中文，说明简单，配置简单</td>
-<td>暂未发现</td>
-</tr>
-<tr>
-<td>服务器工具</td>
-<td>IIS</td>
-<td>微软官方工具，功能强大，自带中文</td>
-<td>占用大，配置繁琐</td>
-</tr>
-<tr>
-<td>服务器工具</td>
-<td>Tomcat</td>
-<td>开源服务器工具，配置简单，占用小，操作简单</td>
-<td>开发环境中经常重启容易崩，其他暂未发现</td>
-</tr>
-<tr>
-<td>远程工具</td>
-<td>mstc</td>
-<td>本身自带，操作简单，中文界面</td>
-<td>功能少，容易崩，只适用window</td>
-</tr>
-<tr>
-<td>远程工具</td>
-<td>xshell</td>
-<td>界面直观，功能齐全</td>
-<td>付费。免费版本有窗口限制。只适用于linux</td>
-</tr>
-<tr>
-<td>浏览器</td>
-<td>chrome</td>
-<td>市场份额高，适配好，插件多</td>
-<td>内存占用高，同步麻烦</td>
-</tr>
-<tr>
-<td>浏览器</td>
-<td>edge</td>
-<td>基于chromium，适配chrome，插件多，同步快</td>
-<td>内存占用也不少</td>
-</tr>
-</tbody>
-</table>
-]]></content:encoded>
+      <title>房伟龙的日常</title>
+      <link>https://fangweilong.github.io/</link>
+      <guid isPermaLink="false">/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">房伟龙的日常</source>
+      <pubDate>Mon, 17 Jan 2022 01:11:41 GMT</pubDate>
+    </item>
+    <item>
+      <title>项目主页</title>
+      <link>https://fangweilong.github.io/home/</link>
+      <guid isPermaLink="false">/home/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">项目主页</source>
+      <pubDate>Mon, 17 Jan 2022 01:11:41 GMT</pubDate>
+    </item>
+    <item>
+      <title>幻灯片页</title>
+      <link>https://fangweilong.github.io/slides/</link>
+      <guid isPermaLink="false">/slides/</guid>
+      <source url="https://fangweilong.github.io/rss.xml">幻灯片页</source>
+      <pubDate>Mon, 17 Jan 2022 01:11:41 GMT</pubDate>
+      <content:encoded><![CDATA[
+<i>Not supported content</i>]]></content:encoded>
+      <enclosure url="https://fangweilong.github.io/logo.svg" type="image/svg+xml"/>
     </item>
   </channel>
 </rss>
