@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>centos7离线安装docker和docker-compose | 博客小站</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="博客小站">
+    <meta name="keywords" content="前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.bf9de544.css" as="style"><link rel="preload" href="/assets/js/app.9e2350fe.js" as="script"><link rel="preload" href="/assets/js/2.9ef8d4bd.js" as="script"><link rel="preload" href="/assets/js/61.579eca51.js" as="script"><link rel="prefetch" href="/assets/js/10.de6f1278.js"><link rel="prefetch" href="/assets/js/100.165161ce.js"><link rel="prefetch" href="/assets/js/101.9b485f5a.js"><link rel="prefetch" href="/assets/js/102.08c47915.js"><link rel="prefetch" href="/assets/js/103.b3f913c1.js"><link rel="prefetch" href="/assets/js/104.448a75c2.js"><link rel="prefetch" href="/assets/js/105.39df726f.js"><link rel="prefetch" href="/assets/js/106.502832a7.js"><link rel="prefetch" href="/assets/js/107.4fd56a4e.js"><link rel="prefetch" href="/assets/js/108.2625c3f4.js"><link rel="prefetch" href="/assets/js/109.c46b4456.js"><link rel="prefetch" href="/assets/js/11.158101b8.js"><link rel="prefetch" href="/assets/js/110.26ac62e7.js"><link rel="prefetch" href="/assets/js/111.00337fdd.js"><link rel="prefetch" href="/assets/js/112.73f1d2c1.js"><link rel="prefetch" href="/assets/js/113.34619b19.js"><link rel="prefetch" href="/assets/js/114.3626c700.js"><link rel="prefetch" href="/assets/js/115.78df2d31.js"><link rel="prefetch" href="/assets/js/116.c91905de.js"><link rel="prefetch" href="/assets/js/117.6faafd6f.js"><link rel="prefetch" href="/assets/js/118.10dd2769.js"><link rel="prefetch" href="/assets/js/119.81783ab7.js"><link rel="prefetch" href="/assets/js/12.e05f67e4.js"><link rel="prefetch" href="/assets/js/120.299c84d9.js"><link rel="prefetch" href="/assets/js/13.36ee5e62.js"><link rel="prefetch" href="/assets/js/14.5cfb2058.js"><link rel="prefetch" href="/assets/js/15.ad186525.js"><link rel="prefetch" href="/assets/js/16.ed7314c8.js"><link rel="prefetch" href="/assets/js/17.753cb44e.js"><link rel="prefetch" href="/assets/js/18.b620e0a3.js"><link rel="prefetch" href="/assets/js/19.b2c8ec65.js"><link rel="prefetch" href="/assets/js/20.9ae45218.js"><link rel="prefetch" href="/assets/js/21.b0db8fbc.js"><link rel="prefetch" href="/assets/js/22.7b2d64d0.js"><link rel="prefetch" href="/assets/js/23.480eaa35.js"><link rel="prefetch" href="/assets/js/24.9301399f.js"><link rel="prefetch" href="/assets/js/25.a12de32b.js"><link rel="prefetch" href="/assets/js/26.74af3219.js"><link rel="prefetch" href="/assets/js/27.d6521b1a.js"><link rel="prefetch" href="/assets/js/28.6cfe8cdf.js"><link rel="prefetch" href="/assets/js/29.2fec9d46.js"><link rel="prefetch" href="/assets/js/3.2f3f8d55.js"><link rel="prefetch" href="/assets/js/30.1d9b015d.js"><link rel="prefetch" href="/assets/js/31.74aa6c8d.js"><link rel="prefetch" href="/assets/js/32.8ff36961.js"><link rel="prefetch" href="/assets/js/33.6c3f4d2a.js"><link rel="prefetch" href="/assets/js/34.3d8a1f20.js"><link rel="prefetch" href="/assets/js/35.cecbaf5a.js"><link rel="prefetch" href="/assets/js/36.c075500a.js"><link rel="prefetch" href="/assets/js/37.3a6ee131.js"><link rel="prefetch" href="/assets/js/38.ec3bb898.js"><link rel="prefetch" href="/assets/js/39.5b610ecf.js"><link rel="prefetch" href="/assets/js/4.c2292ca5.js"><link rel="prefetch" href="/assets/js/40.37c36663.js"><link rel="prefetch" href="/assets/js/41.ca4151ba.js"><link rel="prefetch" href="/assets/js/42.5fd99255.js"><link rel="prefetch" href="/assets/js/43.3dc5ecda.js"><link rel="prefetch" href="/assets/js/44.d2c66beb.js"><link rel="prefetch" href="/assets/js/45.3fdaa74e.js"><link rel="prefetch" href="/assets/js/46.b47d4262.js"><link rel="prefetch" href="/assets/js/47.d0e4be53.js"><link rel="prefetch" href="/assets/js/48.9e69fe59.js"><link rel="prefetch" href="/assets/js/49.0df32a41.js"><link rel="prefetch" href="/assets/js/5.6d874a79.js"><link rel="prefetch" href="/assets/js/50.9700b4c8.js"><link rel="prefetch" href="/assets/js/51.150cf84a.js"><link rel="prefetch" href="/assets/js/52.ad621145.js"><link rel="prefetch" href="/assets/js/53.136957ba.js"><link rel="prefetch" href="/assets/js/54.0b63e751.js"><link rel="prefetch" href="/assets/js/55.28d16015.js"><link rel="prefetch" href="/assets/js/56.26090530.js"><link rel="prefetch" href="/assets/js/57.b8c4676c.js"><link rel="prefetch" href="/assets/js/58.71877227.js"><link rel="prefetch" href="/assets/js/59.3fee2b1e.js"><link rel="prefetch" href="/assets/js/6.fb3986d1.js"><link rel="prefetch" href="/assets/js/60.a53c89ed.js"><link rel="prefetch" href="/assets/js/62.1a09deb4.js"><link rel="prefetch" href="/assets/js/63.82e37e06.js"><link rel="prefetch" href="/assets/js/64.a4652351.js"><link rel="prefetch" href="/assets/js/65.a92265c7.js"><link rel="prefetch" href="/assets/js/66.f1050f29.js"><link rel="prefetch" href="/assets/js/67.e27899a1.js"><link rel="prefetch" href="/assets/js/68.a3d9f61b.js"><link rel="prefetch" href="/assets/js/69.46aa7514.js"><link rel="prefetch" href="/assets/js/7.64acb6dc.js"><link rel="prefetch" href="/assets/js/70.5bca39c9.js"><link rel="prefetch" href="/assets/js/71.8917cf03.js"><link rel="prefetch" href="/assets/js/72.9910a593.js"><link rel="prefetch" href="/assets/js/73.0deb6fab.js"><link rel="prefetch" href="/assets/js/74.986dbde8.js"><link rel="prefetch" href="/assets/js/75.7c7ba722.js"><link rel="prefetch" href="/assets/js/76.c2fad79b.js"><link rel="prefetch" href="/assets/js/77.cb445258.js"><link rel="prefetch" href="/assets/js/78.34991e9f.js"><link rel="prefetch" href="/assets/js/79.654a48f5.js"><link rel="prefetch" href="/assets/js/8.3b6f9dbc.js"><link rel="prefetch" href="/assets/js/80.0dfd95a1.js"><link rel="prefetch" href="/assets/js/81.ce6115f2.js"><link rel="prefetch" href="/assets/js/82.170644e8.js"><link rel="prefetch" href="/assets/js/83.d87ac283.js"><link rel="prefetch" href="/assets/js/84.4af31e5e.js"><link rel="prefetch" href="/assets/js/85.064b2f75.js"><link rel="prefetch" href="/assets/js/86.27f3eaae.js"><link rel="prefetch" href="/assets/js/87.43282799.js"><link rel="prefetch" href="/assets/js/88.d9dc0f6e.js"><link rel="prefetch" href="/assets/js/89.387970d2.js"><link rel="prefetch" href="/assets/js/9.dcf2628f.js"><link rel="prefetch" href="/assets/js/90.ea4e5a14.js"><link rel="prefetch" href="/assets/js/91.7582f69a.js"><link rel="prefetch" href="/assets/js/92.11a2607d.js"><link rel="prefetch" href="/assets/js/93.bf2f3a14.js"><link rel="prefetch" href="/assets/js/94.a542d75b.js"><link rel="prefetch" href="/assets/js/95.e4267274.js"><link rel="prefetch" href="/assets/js/96.47bba83e.js"><link rel="prefetch" href="/assets/js/97.6ee0b265.js"><link rel="prefetch" href="/assets/js/98.718173d0.js"><link rel="prefetch" href="/assets/js/99.91d347f3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bf9de544.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="博客小站" class="logo"> <span class="site-name can-hide">博客小站</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div> <a href="https://github.com/fangweilong" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/logo.png"> <div class="blogger-info"><h3>Teler</h3> <span>Day Day Up</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div> <a href="https://github.com/fangweilong" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-0c557b5e><div class="articleInfo" data-v-0c557b5e><ul class="breadcrumbs" data-v-0c557b5e><li data-v-0c557b5e><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-0c557b5e></a></li> <li data-v-0c557b5e><a href="/categories/?category=docker" title="分类" data-v-0c557b5e>docker</a></li></ul> <div class="info" data-v-0c557b5e><div title="作者" class="author iconfont icon-touxiang" data-v-0c557b5e><a href="https://github.com/fangweilong" target="_blank" title="作者" class="beLink" data-v-0c557b5e>Teler</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-0c557b5e><a href="javascript:;" data-v-0c557b5e>2020-02-02</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">centos7离线安装docker和docker-compose<!----></h1>  <div class="theme-vdoing-content content__default"><h2 id="实测版本说明"><a href="#实测版本说明" class="header-anchor">#</a> 实测版本说明</h2> <div class="language- extra-class"><pre><code>centos：7.5
+docker：19.03.5
+docker-compose：1.24.3
+</code></pre></div><h2 id="官方资源下载地址"><a href="#官方资源下载地址" class="header-anchor">#</a> 官方资源下载地址</h2> <div class="language- extra-class"><pre><code>自行下载需要的版本。
+[docker](https://download.docker.com/linux/static/stable/x86_64/)
+[docker-compose](https://github.com/docker/compose/releases)
+</code></pre></div><h2 id="上传到服务器"><a href="#上传到服务器" class="header-anchor">#</a> 上传到服务器</h2> <div class="language- extra-class"><pre><code>上传 install-docker-offline.sh docker.service docker-ce docker-compose-Linux-x86_64压缩包到任意的同一文件夹下  
+建议到/home
+</code></pre></div><h2 id="执行"><a href="#执行" class="header-anchor">#</a> 执行</h2> <div class="language- extra-class"><pre><code>sh install-docker-offline.sh
+
+其他的根据脚本提示操作
+</code></pre></div><h2 id="install-sh"><a href="#install-sh" class="header-anchor">#</a> install.sh</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token shebang important">#!/bin/sh</span>
+<span class="token builtin class-name">echo</span> -e <span class="token string">'作者：Teler'</span>
+<span class="token builtin class-name">echo</span> -e <span class="token string">'版本：v0.0.1'</span>
+<span class="token builtin class-name">echo</span> -e <span class="token string">'创建时间:2020-02-02'</span>
+<span class="token builtin class-name">echo</span> -e <span class="token string">'更新时间:2020-02-02 22:21'</span>
+
+<span class="token builtin class-name">echo</span> -e <span class="token string">'给自己赋权限\n'</span>
+<span class="token function">chmod</span> +x ./<span class="token variable">$0</span>
+
+<span class="token comment">#初始化</span>
+<span class="token keyword">function</span> <span class="token function-name function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">clear</span>
+    <span class="token builtin class-name">echo</span> -e <span class="token string">'请选择操作\n'</span>
+    <span class="token builtin class-name">echo</span> -e <span class="token string">'1.安装docker\n'</span>
+    <span class="token builtin class-name">echo</span> -e <span class="token string">'2.安装docker-compose\n'</span>
+    <span class="token builtin class-name">echo</span> -e <span class="token string">'exit:退出'</span>
+    
+    call
+<span class="token punctuation">}</span> 
+
+<span class="token comment">#决定调用什么方法</span>
+<span class="token keyword">function</span> <span class="token function-name function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin class-name">echo</span> -e <span class="token string">'\n'</span>
+    <span class="token builtin class-name">read</span> -p <span class="token string">'请输入:'</span> INPUT
+    <span class="token keyword">case</span> <span class="token variable">$INPUT</span> <span class="token keyword">in</span>
+        <span class="token number">1</span><span class="token punctuation">)</span>
+        installDocker
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token number">2</span><span class="token punctuation">)</span>
+        installDockerCompose
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+               
+        *<span class="token punctuation">)</span>
+        <span class="token comment">#noFound</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">'感谢使用........'</span>
+        <span class="token builtin class-name">exit</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token keyword">esac</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -eq <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+        init
+    <span class="token keyword">fi</span> 
+<span class="token punctuation">}</span>
+
+<span class="token comment">#安装docker</span>
+<span class="token keyword">function</span> <span class="token function-name function">installDocker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin class-name">read</span> -p <span class="token string">'请输入完整的docker压缩包文件名:'</span> FILENAME
+
+    searchFile <span class="token variable">$FILENAME</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -ne <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> -e <span class="token string">'\n文件不存在'</span>
+        installDocker
+    <span class="token keyword">fi</span>
+
+    <span class="token builtin class-name">echo</span> -e <span class="token string">'\n解压文件...'</span>
+    <span class="token function">tar</span> -xzvf <span class="token variable">$FILENAME</span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -eq <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> -e <span class="token string">'\n将docker目录移到/usr/bin目录下...'</span>
+        <span class="token function">cp</span> docker/* /usr/bin/
+        <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -ne <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+            <span class="token builtin class-name">echo</span> -e <span class="token string">'\n复制失败'</span>
+            <span class="token builtin class-name">exit</span>
+        <span class="token keyword">fi</span>
+        <span class="token builtin class-name">echo</span> -e <span class="token string">'\n将docker.service 移到/etc/systemd/system/ 目录...'</span>
+        <span class="token function">cp</span> docker.service /etc/systemd/system/
+        <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -eq <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+            <span class="token builtin class-name">echo</span> -e <span class="token string">'\n添加文件权限...'</span>
+            <span class="token function">chmod</span> +x /etc/systemd/system/docker.service
+            <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -ne <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+                <span class="token builtin class-name">echo</span> -e <span class="token string">'\n添加失败'</span>
+                <span class="token builtin class-name">exit</span>
+            <span class="token keyword">fi</span>
+            <span class="token builtin class-name">echo</span> -e <span class="token string">'\n重新加载配置文件...'</span>
+            systemctl daemon-reload
+            <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -ne <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+                <span class="token builtin class-name">echo</span> -e <span class="token string">'\n加载失败'</span>
+                <span class="token builtin class-name">exit</span>
+            <span class="token keyword">fi</span>
+            <span class="token builtin class-name">echo</span> -e <span class="token string">'\n启动docker...'</span>
+            systemctl start <span class="token function">docker</span>
+            <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -ne <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+                <span class="token builtin class-name">echo</span> -e <span class="token string">'\n启动失败'</span>
+                <span class="token builtin class-name">exit</span>
+            <span class="token keyword">fi</span>
+            <span class="token builtin class-name">echo</span> -e <span class="token string">'\n设置开机自启...'</span>
+            systemctl <span class="token builtin class-name">enable</span> docker.service
+            <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -ne <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+                <span class="token builtin class-name">echo</span> -e <span class="token string">'\n开机启动失败'</span>
+                <span class="token builtin class-name">exit</span>
+            <span class="token keyword">fi</span>
+            <span class="token builtin class-name">echo</span> -e <span class="token string">'\ndocker版本：'</span>
+            <span class="token function">docker</span> -v
+        <span class="token keyword">else</span>
+            <span class="token builtin class-name">echo</span> -e <span class="token string">'\n复制失败'</span>
+            <span class="token builtin class-name">exit</span>
+        <span class="token keyword">fi</span>
+    <span class="token keyword">else</span>
+        <span class="token builtin class-name">echo</span> -e <span class="token string">'\n解压失败'</span>
+        <span class="token builtin class-name">exit</span>    
+    <span class="token keyword">fi</span>
+    <span class="token builtin class-name">return</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+<span class="token comment">#安装docker-compose</span>
+<span class="token keyword">function</span> <span class="token function-name function">installDockerCompose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin class-name">read</span> -p <span class="token string">'请输入完整的docker compose文件名:'</span> FILENAME
+
+    searchFile <span class="token variable">$FILENAME</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -ne <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> -e <span class="token string">'\n文件不存在'</span>
+        installDockerCompose
+    <span class="token keyword">fi</span>
+
+    <span class="token builtin class-name">echo</span> -e <span class="token string">'\n复制文件到/usr/local/bin下 并重命名为docker-compose'</span>
+    <span class="token function">cp</span> -y <span class="token variable">$FILENAME</span> /usr/local/bin/docker-compose
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -ne <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> -e <span class="token string">'\n赋予执行权限'</span>
+        <span class="token function">chmod</span> +x /usr/local/bin/docker-compose
+
+        <span class="token builtin class-name">echo</span> <span class="token string">'\ndocker-compose版本：'</span>
+        <span class="token function">docker-compose</span> -v
+    <span class="token keyword">else</span> 
+        <span class="token builtin class-name">echo</span> <span class="token string">'\n复制失败'</span>
+    <span class="token keyword">fi</span>
+
+
+    <span class="token builtin class-name">return</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">#暂未支持</span>
+<span class="token keyword">function</span> <span class="token function-name function">noFound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin class-name">echo</span> -e <span class="token string">'暂未支持'</span>
+    <span class="token builtin class-name">return</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">#检查文件是否存在</span>
+<span class="token comment">#存在返回0 不存在返回1</span>
+<span class="token keyword">function</span> <span class="token function-name function">searchFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> -f <span class="token string">&quot;<span class="token variable">$1</span>&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token builtin class-name">return</span> <span class="token number">0</span>
+    <span class="token keyword">else</span> 
+        <span class="token builtin class-name">return</span> <span class="token number">1</span>
+    <span class="token keyword">fi</span>
+<span class="token punctuation">}</span>
+
+
+
+
+init
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br></div></div><h2 id="docker-service"><a href="#docker-service" class="header-anchor">#</a> docker.service</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token punctuation">[</span>Unit<span class="token punctuation">]</span>
+<span class="token assign-left variable">Description</span><span class="token operator">=</span>Docker Application Container Engine
+<span class="token assign-left variable">Documentation</span><span class="token operator">=</span>https://docs.docker.com
+<span class="token assign-left variable">After</span><span class="token operator">=</span>network-online.target firewalld.service
+<span class="token assign-left variable">Wants</span><span class="token operator">=</span>network-online.target
+ 
+<span class="token punctuation">[</span>Service<span class="token punctuation">]</span>
+<span class="token assign-left variable">Type</span><span class="token operator">=</span>notify
+<span class="token comment"># the default is not to use systemd for cgroups because the delegate issues still</span>
+<span class="token comment"># exists and systemd currently does not support the cgroup feature set required</span>
+<span class="token comment"># for containers run by docker</span>
+<span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/usr/bin/dockerd
+<span class="token assign-left variable">ExecReload</span><span class="token operator">=</span>/bin/kill -s HUP <span class="token variable">$MAINPID</span>
+<span class="token comment"># Having non-zero Limit*s causes performance problems due to accounting overhead</span>
+<span class="token comment"># in the kernel. We recommend using cgroups to do container-local accounting.</span>
+<span class="token assign-left variable">LimitNOFILE</span><span class="token operator">=</span>infinity
+<span class="token assign-left variable">LimitNPROC</span><span class="token operator">=</span>infinity
+<span class="token assign-left variable">LimitCORE</span><span class="token operator">=</span>infinity
+<span class="token comment"># Uncomment TasksMax if your systemd version supports it.</span>
+<span class="token comment"># Only systemd 226 and above support this version.</span>
+<span class="token comment">#TasksMax=infinity</span>
+<span class="token assign-left variable">TimeoutStartSec</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token comment"># set delegate yes so that systemd does not reset the cgroups of docker containers</span>
+<span class="token assign-left variable">Delegate</span><span class="token operator">=</span>yes
+<span class="token comment"># kill only the docker process, not all processes in the cgroup</span>
+<span class="token assign-left variable">KillMode</span><span class="token operator">=</span>process
+<span class="token comment"># restart the docker process if it exits prematurely</span>
+<span class="token assign-left variable">Restart</span><span class="token operator">=</span>on-failure
+<span class="token assign-left variable">StartLimitBurst</span><span class="token operator">=</span><span class="token number">3</span>
+<span class="token assign-left variable">StartLimitInterval</span><span class="token operator">=</span>60s
+ 
+<span class="token punctuation">[</span>Install<span class="token punctuation">]</span>
+<span class="token assign-left variable">WantedBy</span><span class="token operator">=</span>multi-user.target
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div></div></div>  <div class="page-edit"><div class="edit-link"><a href="https://github.com/fangweilong/edit/master/docs/03.docker/centos7离线安装docker和docker-compose.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="tags"><a href="/tags/?tag=docker" title="标签">#docker</a><a href="/tags/?tag=docker-compose" title="标签">#docker-compose</a></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2022-01-17, 07:56:08</span></div></div> <div class="page-nav-wapper"><!----> <!----></div></div> <div class="article-list"><div class="article-title"><a href="/archives" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/dc7183/"><div>
+            idea的.http测试用例无法使用环境变量
+            <!----></div></a> <span class="date">11-23</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/c7dba5/"><div>
+            centos7挂载新硬盘到/home分区下
+            <!----></div></a> <span class="date">11-19</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/f8f629/"><div>
+            gitlab升级
+            <!----></div></a> <span class="date">11-11</span></dt></dl> <dl><dd></dd> <dt><a href="/archives" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="fangweilong@outlook.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/fangweilong" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2022
+    <span> 房伟龙 版权所有 | 房伟龙的博客小站。欢迎评论OR转发！样式使用<a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank">vuepress-theme-vdoing</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.9e2350fe.js" defer></script><script src="/assets/js/2.9ef8d4bd.js" defer></script><script src="/assets/js/61.579eca51.js" defer></script>
+  </body>
+</html>
